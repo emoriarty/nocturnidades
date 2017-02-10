@@ -1,0 +1,58 @@
+@import 'bourbon/bourbon'
+
+*
+  font-family: inherit
+  margin: 0
+  padding: 0
+
+body
+  background: #fff
+  color: #222
+  font-family: Inconsolata, Consolas, "Liberation Mono", Menlo, Courier, monospace
+  font-size: 16px
+  line-height: 1.5
+  font-smoothing: subpixel-antialiased
+  scroll-behavior: smooth
+  text-rendering: optimizeLegibility
+  text-rendering: geometricPrecision
+  font-feature-settings: "kern" 1, "liga" 1
+
+.wrapper
+  max-width: 720px
+  width: 100%
+  margin: 0 auto
+
+.site-header
+  .wrapper
+    height: 100px
+    +display(flex)
+    +justify-content(space-between)
+
+  &__title
+    +display(flex)
+    +flex(1)
+    +flex-direction(column)
+    +justify-content(center)
+
+  &__nav
+    ul
+      +align-items(stretch)
+      +display(flex)
+      +flex(1)
+      height: 100%
+
+    li
+      list-style: none
+      +display(flex)
+      +flex-direction(column)
+      +justify-content(center)
+
+.page-content
+  min-height: calc(100vh - 170px)
+
+  .wrapper
+    +margin(0 auto 3rem auto)
+
+.site-footer
+  font-size: 12px
+  height: 70px
