@@ -2,20 +2,25 @@
 layout: default
 ---
 {% for post in site.posts limit:10 %}
-  <a>
-    <article>
-      <header>
-      <h3>{{ post.title }}</h3>
-      </header>
-      <section class="body">
-        <p>
-          {% if post.description %}
-            {{ post.description | markdownify | strip_html }}
-          {% else %}
-            {{ post.excerpt | strip_html }}
-          {% endif %}
-        </p>
-      </section>
-    </article>
-  </a>
+  <article class="post-preview">
+    <a href="
+      {% if post.permalink %}
+      {{ post.permalink }}
+      {% else %}
+      {{ post.url }}
+      {% endif %}">
+        <header>
+          <h3 class="post-preview__heading">{{ post.title }}</h3>
+        </header>
+        <section class="body">
+          <p>
+            {% if post.description %}
+              {{ post.description | markdownify | strip_html }}
+            {% else %}
+              {{ post.excerpt | strip_html }}
+            {% endif %}
+          </p>
+        </section>
+    </a>
+  </article>
 {% endfor %}

@@ -3,7 +3,9 @@
   <div class="wrapper">
 
     <h1 class="site-header__title">
-      <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <a href="{{ "/" | relative_url }}">
+        {{ site.html_title }}
+      </a>
     </h1>
 
     <nav class="site-header__nav">
