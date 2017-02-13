@@ -5,7 +5,7 @@ layout: default
   <article class="post-preview">
     <a href="
       {% if post.permalink %}
-      {{ post.permalink }}
+      {{ post.permalink | relative_url }}
       {% else %}
       {{ post.url }}
       {% endif %}">
