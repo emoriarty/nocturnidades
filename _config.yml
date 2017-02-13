@@ -34,6 +34,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - build.sh
+  - build.prod.sh
 collections:
   relatos:
     output: true
@@ -42,5 +44,6 @@ collections:
 host: 0.0.0.0
 
 # Github
+repository: emoriarty/nocturnidades
 github:
-  url: 'https://emoriarty.github.io/nocturnidades'
+  url: https://emoriarty.github.io/nocturnidades
