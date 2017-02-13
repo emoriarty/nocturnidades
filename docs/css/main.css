@@ -28,16 +28,14 @@ p { margin-bottom: 2rem; }
 
 .wrapper { margin: 0 2rem; }
 
-.site-header { color: #aaa; opacity: 0.1; }
-.site-header:hover { opacity: 1; }
-.site-header:hover .site-header__title { color: #040404; }
+.site-header { color: #040404; }
 .site-header .wrapper { height: 100px; display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -moz-box-orient: vertical; box-orient: vertical; -webkit-box-direction: normal; -moz-box-direction: normal; box-direction: normal; -webkit-flex-direction: column; -moz-flex-direction: column; flex-direction: column; -ms-flex-direction: column; margin-top: 16px; margin-bottom: 16px; -webkit-box-pack: distribute; -moz-box-pack: distribute; box-pack: distribute; -webkit-justify-content: space-around; -moz-justify-content: space-around; -ms-justify-content: space-around; -o-justify-content: space-around; justify-content: space-around; -ms-flex-pack: distribute; }
 .site-header__title { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -moz-box-orient: vertical; box-orient: vertical; -webkit-box-direction: normal; -moz-box-direction: normal; box-direction: normal; -webkit-flex-direction: column; -moz-flex-direction: column; flex-direction: column; -ms-flex-direction: column; -webkit-box-pack: center; -moz-box-pack: center; box-pack: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; -o-justify-content: center; justify-content: center; -ms-flex-pack: center; margin: 0; }
 .site-header__title i { font-style: inherit; }
 .site-header__nav { color: #aaa; }
-.site-header__nav ul { -webkit-box-align: stretch; -moz-box-align: stretch; box-align: stretch; -webkit-align-items: stretch; -moz-align-items: stretch; -ms-align-items: stretch; -o-align-items: stretch; align-items: stretch; -ms-flex-align: stretch; display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1; -webkit-flex: 1; -moz-flex: 1; -ms-flex: 1; flex: 1; height: 100%; }
+.site-header__nav ul { -webkit-box-align: stretch; -moz-box-align: stretch; box-align: stretch; -webkit-align-items: stretch; -moz-align-items: stretch; -ms-align-items: stretch; -o-align-items: stretch; align-items: stretch; -ms-flex-align: stretch; display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1; -webkit-flex: 1; -moz-flex: 1; -ms-flex: 1; flex: 1; -webkit-box-orient: horizontal; -moz-box-orient: horizontal; box-orient: horizontal; -webkit-box-direction: reverse; -moz-box-direction: reverse; box-direction: reverse; -webkit-flex-direction: row-reverse; -moz-flex-direction: row-reverse; flex-direction: row-reverse; -ms-flex-direction: row-reverse; height: 100%; }
 .site-header__nav li { list-style: none; display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -moz-box-orient: vertical; box-orient: vertical; -webkit-box-direction: normal; -moz-box-direction: normal; box-direction: normal; -webkit-flex-direction: column; -moz-flex-direction: column; flex-direction: column; -ms-flex-direction: column; -webkit-box-pack: center; -moz-box-pack: center; box-pack: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; -o-justify-content: center; justify-content: center; -ms-flex-pack: center; }
-.site-header__nav a[href] { text-rendering: geometricPrecision; }
+.site-header__nav a[href] { margin: 0 0.8em; text-rendering: geometricPrecision; }
 .site-header a[href] { background: none; text-decoration: none; text-shadow: none; }
 .site-header a[href]:hover { background: none; }
 
@@ -50,19 +48,15 @@ p { margin-bottom: 2rem; }
 .site-footer a { text-decoration: underline; }
 .site-footer p { margin-bottom: 0; }
 
-.post-preview { margin: 0 0 2.5em; }
-.post-preview > a { background: none; color: inherit; display: block; text-shadow: none; }
-.post-preview > a:hover { background: none; }
-.post-preview__heading { display: inline-block; margin-bottom: 0; }
-.post-preview__subheading { color: #aaa; display: block; font-size: 14px; margin-bottom: 0.5rem; }
-.post-preview__body p { margin-bottom: 0; }
-.post-preview:hover .post-preview__heading { background-color: black; color: white; }
+.post-preview, .tale-preview { margin: 0 0 2.5em; }
+.post-preview > a, .tale-preview > a { background: none; color: inherit; display: block; text-shadow: none; }
+.post-preview > a:hover, .tale-preview > a:hover { background: none; }
+.post-preview__heading, .tale-preview__heading { display: inline-block; margin-bottom: 0; }
+.post-preview__subheading, .tale-preview__subheading { color: #aaa; display: block; font-size: 14px; margin-bottom: 0.5rem; }
+.post-preview__body p, .tale-preview__body p { margin-bottom: 0; }
+.post-preview:hover .post-preview__heading, .tale-preview:hover .post-preview__heading { background-color: black; color: white; }
 
 /* post */
-.post__header__subheading { color: #aaa; font-size: 14px; }
-
-/* main modififer */
-.main .site-header { opacity: 1; }
-.main .site-header__title { color: #040404; }
+.post__header__subheading, .tale__header__subheading { color: #aaa; font-size: 14px; }
 
 @media only screen and (min-device-width: 568px) { .site-header .wrapper { -webkit-box-orient: horizontal; -moz-box-orient: horizontal; box-orient: horizontal; -webkit-box-direction: normal; -moz-box-direction: normal; box-direction: normal; -webkit-flex-direction: row; -moz-flex-direction: row; flex-direction: row; -ms-flex-direction: row; -webkit-box-pack: justify; -moz-box-pack: justify; box-pack: justify; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; -o-justify-content: space-between; justify-content: space-between; -ms-flex-pack: justify; } }

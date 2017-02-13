@@ -1,0 +1,33 @@
+---
+layout: default
+title: Relatos
+permalink: /relatos/
+---
+{% for relato in site.relatos limit:10 %}
+  <article class="tale-preview">
+    <a href="
+      {% if relato.permalink %}
+      {{ relato.permalink | relative_url }}
+      {% else %}
+      {{ relato.url | relative_url }}
+      {% endif %}">
+        <header class="tale-preview__header">
+          <h3 class="tale-preview__heading">
+            {{ relato.title }}
+          </h3>
+          <span class="tale-preview__subheading">
+            {% include date-relato.html %}
+          </span>
+        </header>
+        <section class="tale-preview__body">
+          <p>
+            {% if relato.description %}
+              {{ relato.description | markdownify | strip_html }}
+            {% else %}
+              {{ relato.excerpt | strip_html }}
+            {% endif %}
+          </p>
+        </section>
+    </a>
+  </article>
+{% endfor %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Copenhague-Gotinga"
-date:   2017-02-13 00:00:56 +0100
+date:   2017-02-14 00:01:56 +0100
 categories: tale
 permalink: /relatos/copenhague-gotinga.html
 ---

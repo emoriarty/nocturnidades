@@ -14,18 +14,7 @@ layout: default
             {{ post.title }}
           </h3>
           <span class="post-preview__subheading">
-            {{ post.date | date: "%e %B %Y"
-            | replace:"January","Enero"
-            | replace:"February","Febrero"
-            | replace:"March","Marzo"
-            | replace:"May","Mayo"
-            | replace:"June","Junio"
-            | replace:"July","Julio"
-            | replace:"August","Agosto"
-            | replace:"September","Septiembre"
-            | replace:"October","octubre"
-            | replace:"November","noviembre"
-            | replace:"December","Diciembre" }}
+            {% include date-post.html %}
           </span>
         </header>
         <section class="post-preview__body">
