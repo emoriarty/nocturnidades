@@ -3,7 +3,6 @@ title: Compromiso continuo
 date: 2017-02-07 20:01:00 +0100
 layout: tale
 ---
-## {{ page.title }}
 Maldita sea no consigo acabar el nuevo requerimiento funcional. Llevo horas con
 este problema y no veo donde puede estar el error. Para colmo he quedado esta
 tarde y ya es casi la hora. Lo he intentado de maneras diferentes y cada vez

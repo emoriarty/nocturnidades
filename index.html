@@ -9,10 +9,26 @@ layout: default
       {% else %}
       {{ post.url }}
       {% endif %}">
-        <header>
-          <h3 class="post-preview__heading">{{ post.title }}</h3>
+        <header class="post-preview__header">
+          <h3 class="post-preview__heading">
+            {{ post.title }}
+          </h3>
+          <span class="post-preview__subheading">
+            {{ post.date | date: "%e %B %Y"
+            | replace:"January","Enero"
+            | replace:"February","Febrero"
+            | replace:"March","Marzo"
+            | replace:"May","Mayo"
+            | replace:"June","Junio"
+            | replace:"July","Julio"
+            | replace:"August","Agosto"
+            | replace:"September","Septiembre"
+            | replace:"October","octubre"
+            | replace:"November","noviembre"
+            | replace:"December","Diciembre" }}
+          </span>
         </header>
-        <section class="body">
+        <section class="post-preview__body">
           <p>
             {% if post.description %}
               {{ post.description | markdownify | strip_html }}
