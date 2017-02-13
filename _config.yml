@@ -37,3 +37,10 @@ exclude:
 collections:
   relatos:
     output: true
+
+# Server
+host: 0.0.0.0
+
+# Github
+github:
+  url: 'https://emoriarty.github.io/nocturnidades'
