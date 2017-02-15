@@ -36,6 +36,7 @@ exclude:
   - Gemfile.lock
   - build.sh
   - build.prod.sh
+  - serve.sh
 collections:
   relatos:
     output: true
