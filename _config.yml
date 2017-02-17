@@ -31,6 +31,8 @@ github_username:  emoriarty
 markdown: kramdown
 gems:
   - jekyll-feed
+keep_files:
+  - CNAME
 exclude:
   - Gemfile
   - Gemfile.lock
