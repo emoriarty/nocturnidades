@@ -26,7 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: emoriarty81
 github_username:  emoriarty
-
+permalink: /:title
 # Build settings
 markdown: kramdown
 gems:
@@ -37,14 +37,11 @@ exclude:
   - build.sh
   - build.prod.sh
   - serve.sh
+keep_files:
+  - CNAME
 collections:
   relatos:
     output: true
 
 # Server
 host: 0.0.0.0
-
-# Github
-repository: emoriarty/nocturnidades
-github:
-  url: https://emoriarty.github.io/nocturnidades

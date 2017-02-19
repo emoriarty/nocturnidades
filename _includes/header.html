@@ -11,7 +11,7 @@
     <nav class="site-header__nav">
       {% if site.pages %}
         <ul>
-          {% for m_page in site.pages %}
+          {% for m_page in site.pages reversed %}
             {% if m_page.title %}
               <li>
                 <a href="{{ m_page.url | relative_url }}">{{ m_page.title }}</a>

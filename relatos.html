@@ -19,15 +19,6 @@ permalink: /relatos/
             {% include date-relato.html %}
           </span>
         </header>
-        <section class="tale-preview__body">
-          <p>
-            {% if relato.description %}
-              {{ relato.description | markdownify | strip_html }}
-            {% else %}
-              {{ relato.excerpt | strip_html }}
-            {% endif %}
-          </p>
-        </section>
     </a>
   </article>
 {% endfor %}
