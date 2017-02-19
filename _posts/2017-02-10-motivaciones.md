@@ -27,7 +27,7 @@ recurrente serían [Superlópez][superlopez], [Groonan][groo] —posteriormente 
 , [Mortadelo y Filemón][mortadelo], [Pafman][pafman], Spiderman y algunos
 más que ahora no recuerdo. Más tarde, durante mucho tiempo, estos dejarían de
 interesarme y me centraría en la narrativa aunque por suerte gracias a [Alan
-Moore][alanr-.moore], [Neil Gaiman][neil-gaiman], [Paco Roca][paco-roca], 
+Moore][alan-moore], [Neil Gaiman][neil-gaiman], [Paco Roca][paco-roca], 
 [Moebius][moebius] y algunos otros volverían a reconciliarme con el género.
 
 Posteriormente llegó la narrativa. El primer libro que recuerdo poseer y
