@@ -27,6 +27,7 @@ body
 
 h1, h2, h3, h4, h5, h6
   +margin(0 0 .5em)
+  font-family: 'Roboto Condensed', helvetica, sans-serif
 
   &> a
     background-color: transition !important
@@ -68,23 +69,22 @@ a.img
   border: none
   background: transparent !important 
 
-/* anchors: headings */
-h1, h2, h3, h4, h5, h6
-  & > a
-    color: inherit !important
-
-    &:hover
-      color: inherit !important
-
 p
   +margin(null null 2rem)
 
+.main
+  h1, h2, h3, h4, h5, h6
+    font-family: Inconsolata, Consolas, "Liberation Mono", Menlo, Courier, monospace
+  .site-header
+    h1
+      font-family: 'Roboto Condensed', helvetica, sans-serif
 
 .wrapper
   +margin(0 2rem)
 
 .site-header
   color: #040404
+  font-family: 'Roboto Condensed', helvetica, sans-serif
 
   .wrapper
     height: $header-height
@@ -189,6 +189,8 @@ p
 /* post */
 .post, .tale
   &__header
+    &__heading
+      font-weight: 300
     &__subheading
       color: #aaa
       font-size: 14px
