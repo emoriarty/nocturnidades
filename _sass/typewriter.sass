@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6
 img
   border: none
   max-width: 100%
+p,
+img,
+figure
+  +margin(null null 1em)
 
 /* anchors */
 a[href] 
@@ -69,10 +73,6 @@ a[href^="#"]:hover
 a.img
   border: none
   background: transparent !important 
-
-p
-  +margin(null null 2rem)
-
 
 .main
   h1, h2, h3, h4, h5, h6
