@@ -11,6 +11,9 @@
     <nav class="site-header__nav">
       {% if site.pages %}
         <ul>
+          <li class="main__hidden">
+            <a href="/">Hogar</a>
+          </li>
           {% for m_page in site.pages reversed %}
             {% if m_page.title %}
               <li>

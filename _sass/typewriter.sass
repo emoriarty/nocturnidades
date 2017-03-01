@@ -1,6 +1,7 @@
 @import 'bourbon/bourbon'
 
-$header-height: 100px
+$header-main-height: 100px
+$header-height: 50px
 $footer-height: 70px
 
 @viewport
@@ -72,12 +73,30 @@ a.img
 p
   +margin(null null 2rem)
 
+
 .main
   h1, h2, h3, h4, h5, h6
     font-family: Inconsolata, Consolas, "Liberation Mono", Menlo, Courier, monospace
   .site-header
-    h1
+    +margin(1rem null 3rem)
+    &__title
+      +display(flex)
+      +flex-direction(column)
+      +justify-content(center)
+      // +transition(font 0.3s ease)
+      +margin(0)
+      +flex(1 1 100%)
       font-family: 'Roboto Condensed', helvetica, sans-serif
+    &__nav
+      ul
+        float: inherit
+    .wrapper
+      height: $header-main-height
+  .main__hidden
+    display: none
+
+.main__hidden
+  display: inherit
 
 .wrapper
   +margin(0 2rem)
@@ -85,20 +104,16 @@ p
 .site-header
   color: #040404
   font-family: 'Roboto Condensed', helvetica, sans-serif
+  +margin(1rem null)
 
   .wrapper
     height: $header-height
     +display(flex)
     +flex-direction(column)
-    +margin(16px null)
     +justify-content(space-around)
 
   &__title
-    +display(flex)
-    +flex-direction(column)
-    +justify-content(center)
-    +margin(0)
-    // +transition(font 0.3s ease)
+    +display(none)
 
     i
       font-style: inherit
@@ -108,17 +123,16 @@ p
 
   &__nav
     color: #aaa
-
+    ul
+      float: right
     li
       display: inline
       list-style: none
-
-      &:first-child
+      &:last-child
         a[href]
-          margin-left: 0
-
+          margin-right: 0
     a[href]
-      +margin(0 .8em)
+      +margin(0 .8em 0 0)
       text-rendering: geometricPrecision
 
   a[href]
@@ -156,7 +170,7 @@ p
 
 .post-preview,
 .tale-preview
-  +margin(0 0 2.5em)
+  +margin(0 0 2em)
 
   &> a 
     background: none
@@ -191,27 +205,26 @@ p
   &__header
     &__heading
       font-weight: 300
+      +margin(0)
     &__subheading
       color: #aaa
       font-size: 14px
 
 @media only screen and (min-device-width: 568px)
   .site-header
+    +margin(1rem null)
     &__nav
-      color: #aaa
-
       ul
+        float: inherit
         +align-items(stretch)
         +display(flex)
         +flex(1)
         height: 100%
-
       li
         list-style: none
         +display(flex)
         +flex-direction(column)
         +justify-content(center)
-
         &:first-child
           a[href]
             margin-left: .8em
@@ -221,4 +234,4 @@ p
 
     .wrapper
       +flex-direction(row)
-      +justify-content(space-between)
+      +justify-content(flex-end)

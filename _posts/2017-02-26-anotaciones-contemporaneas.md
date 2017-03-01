@@ -6,7 +6,7 @@ categories: [ensayo]
 description: Modesta reflexión a partir de unos textos sobre la obra de Maquiavelo y lo poco que ha cambiado desde entonces.
 ---
 
-Mientras leía un compendio resumido sobre las ideas y reflexiones políticas de Maquiavelo, escrito por [Quentin Skinner][quentin-skinner] y de [título homónimo][book], hubo un pasaje que me llamó especialmente la atención. Dicho fragmento versa sobre la corrupción y las secuelas que deja en la sociedad, obstaculizando un proceso de mejora continuo, incluso en ocasiones llegando a retrasarlo.
+Mientras leía un compendio resumido sobre las ideas y reflexiones políticas de Maquiavelo, escrito por [Quentin Skinner][quentin-skinner] y de [título homónimo][book], hubo un pasaje que me llamó especialmente la atención. Dicho fragmento versaba sobre las secuelas que la corrupción deja en la sociedad, obstaculizando así, un proceso de mejora continuo. E Incluso, en ocasiones llegando a retrasar este proceso.
 
 Mientras estaba leyéndolo no he podido evitar pensar en la semejanza de este razonamiento con la historia reciente de España.
 
@@ -26,7 +26,7 @@ Tras estas disgresiones me viene la idea de que el sistema educativo actual no c
 
 Siguiendo en este marco de la educación, recuerdo que cuando iba al colegio sólo hice una única exposición delante de la clase —no recuerdo ni el tema escogido— en todo el tiempo que duró la E.G.B. Tampoco recuerdo haberlas hecho en el instituto. Hasta aquí todo bien, nunca había pensado en ello hasta que un día charlando con mi pareja sobre educación, me comentó que tanto en la escuela como en el lycée realizó varias exposiciones ante sus compañeros. Me parece importante remarcar que Julie, como su nombre puede suponer, realizó todos sus estudios en Francia. Muchas veces se dice, a modo de sabiduría popular, que la educación francesa es mejor que la española. La verdad que no puedo afirmar algo así y aunque esto pueda carecer totalmente de sentido práctico, bien al contrario, creo que esta práctica ayuda a formar en el estudio, redacción y presentación de ideas, desarrollando así la capacidad analítica del individuo y no sólo creando máquinas de memorización.
 
-Tras estos observaciones sobre educación, tengo la impresión de que tanto estado como esferas de poder mantienen un acuerdo tácito para la formación de autómatas con el único objetivo de participar en un juego, como las carreras de cuadrigas romanas, para ver quien gana emulando los antiguos dioses griegos. Lo que estos androides no tienen idea es que no hay recompensa al final de la partida.
+Tras estas observaciones sobre educación, tengo la impresión de que tanto estado como esferas de poder mantienen un acuerdo tácito para la formación de autómatas con el único objetivo de participar en un juego, como las carreras de cuadrigas romanas, para ver quien gana emulando los antiguos dioses griegos. Lo que estos androides no tienen idea es que no hay recompensa al final de la partida.
 
 Personalmente, nunca he creído en teorías conspiranóicas —aunque me fascinan— sobre una gran confabulación que mantenga el statu quo tan favorable a los intereses de los más poderosos, perpetuándose así a lo largo de la historia mientras subyugan al vulgo mediante una educación manipulada. Más bien considero que el problema de la educación está influido por peculiaridades del entorno, ideología del gobierno de turno, línea educativa que se imparte en el colegio en cuestión, tradición laboral de la región o que el centro educativo sea público, concertado o privado.
 
