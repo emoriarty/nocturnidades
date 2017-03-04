@@ -3,6 +3,10 @@ module Jekyll
   # Read measures from image file
   # Lazy loading
   # Thanks to https://jmperezperez.com/medium-image-progressive-loading-placeholder/
+  # https://jmperezperez.com/lazy-loading-images/
+  # https://jmperezperez.com/webp-placeholder-images/
+  # https://jmperezperez.com/ssim-jpeg-io/
+  # https://github.com/sstephenson/dimensions
   class ProgressivePictureTag < Liquid::Tag
     def initialize(tag_name, markup, tokens)
       super
