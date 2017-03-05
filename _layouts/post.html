@@ -21,5 +21,8 @@ layout: default
         | replace:"December","Diciembre" }}
     </p>
   </header>
+  {% if page.picture %}
+    <p><img src={{ page.picture }} {% if page.picture_class %}class="{{ page.picture_class }}"{% endif %} {% if page.picture_alt %}alt="{{ page.picture_alt }}"{% endif %}></p>
+  {% endif %}
   {{ content }}
 </div>
