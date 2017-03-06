@@ -38,6 +38,9 @@ h1, h2, h3, h4, h5, h6
       background-color: transition !important
       color: inherit !important
 
+p, ul, ol, pre, blockquote, hr, object
+  +margin(1em 0)
+
 img
   border: none
   max-width: 100%
@@ -152,6 +155,12 @@ p
   img
     display: block
 
+  li
+    +margin(null null .2em 2em)
+  
+  p
+    +margin(null null 1rem)
+
 .site-footer
   color: #ccc
   font-size: 14px
@@ -211,6 +220,12 @@ p
       font-size: 14px
 
 @media only screen and (min-device-width: 568px)
+  .main
+    .site-header
+      &__nav
+        display: flex
+        justify-content: center
+        align-items: center
   .site-header
     +margin(1rem null)
     &__nav
@@ -219,7 +234,7 @@ p
         +align-items(stretch)
         +display(flex)
         +flex(1)
-        height: 100%
+        height: auto
       li
         list-style: none
         +display(flex)
