@@ -1,7 +1,6 @@
 ---
 title: Copenhague-Gotinga
 date: 2017-02-14 00:01:00 +0100
-layout: tale
 ---
 
 ![Antigua estación de tren de Copenhague][picture]

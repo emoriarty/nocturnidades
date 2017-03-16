@@ -1,7 +1,6 @@
 ---
 title: Pues le recé, pero no me ha hecho caso
 date: 2017-03-05 00:00:00 +0100
-layout: tale
 picture: /assets/pues-le-rece-ero-no-me-ha-hecho-caso.jpg
 picture_class: picture-shrink
 picture_alt: Viñeta con las dos señoras
