@@ -245,7 +245,7 @@ Cómo podemos comprobar, dentro de las carpetas {% ihighlight shell %}_layouts{%
 
 Para poder entender mejor como funcionan en conjunto _layouts_ e _includes_, lo mejor es ver como se utilizan, para ello tomaremos como ejemplo el único artículo creado del blog.
 
-### Como se compone un _Post_ (o artículo)
+### Composición un _Post_
 En la siguiente imagen podemos el artículo que _Jekyll_ genera como ejemplo.
 
 ![Diferentes secciones de un post](/assets/jekyll-4.png)
@@ -255,6 +255,7 @@ Rodeado en verde vemos la sección correspondiente al contenido de la página, e
 Ahora que ya sabemos qué es qué en un _post_, veamos cómo es el archivo. Para abrirlo, dirijámonos a la siguiente ruta {% ihighlight shell %}_post/2017-02-28-welcome-to-jekyll.markdown{% endihighlight %}. ¿Lo tienes delante? Bien, veamos como se compone.
 
 #### _YAML Front Matter_
+Esta sección se la puede consideradar como una cabecera donde se especifican las preferencias particulares e información adicional que Jekyll utilizará para procesar el archivo. Siguiendo como referencia con el _post_ de ejemplo, la cabecera es la siguiente.
 
 {% highlight yaml %}
 ---
@@ -265,7 +266,7 @@ categories: jekyll update
 ---
 {% endhighlight %}
 
-En el recuadro anterior se puede ver la parte superior del _post_. Este fragmento corresponde a la sección llamada _YAML Front Matter_ y que como su nombre señala, utiliza la sintaxis [_YAML_][yaml]. Cómo más adelante veremos, el archivo {% ihighlight shell %}_config.yml{% endihighlight %}, donde se deinen las opciones globgenrealesales, hace uso de este mismo formato. Por contra, en el _front matter_ de un _post_ se establecen las opciones particulares al mismo, sobrescribiendo así lo preferencia definida en el archivo de configuraión global.
+En la figura anterior se puede ver la parte superior del _post_. Este fragmento corresponde a la sección llamada _YAML Front Matter_ y que como su nombre señala, utiliza la sintaxis [_YAML_][yaml]. Cómo más adelante veremos, el archivo {% ihighlight shell %}_config.yml{% endihighlight %}, donde se deinen las opciones globgenrealesales, hace uso de este mismo formato. Por contra, en el _front matter_ de un _post_ se establecen las opciones particulares al mismo, sobrescribiendo así lo preferencia definida en el archivo de configuraión global.
 
 A continucación, en la lista se muestranla descripción de cada una de la opciones específicas de un _post_.
 * {% ihighlight yaml %}layout{% endihighlight %}: indica cual es la layout (plantilla) a usar.
@@ -275,11 +276,80 @@ A continucación, en la lista se muestranla descripción de cada una de la opcio
 
 Exceptuando {% ihighlight yaml %}layout{% endihighlight %}, el resto de las preferencias son sólo específicas del archivo. Es decir, no se definirían en el {% ihighlight shell %}_config.yml{% endihighlight %}.
 
-Es importante recalcar qué para que _Jekyll_ interprete la sección _front matter_, esta debe in al inicio de cada archivo. Otra peculiaridad, es que siempre todas esta opciones deben envueltas entre dos línes de tres guiones ({% ihighlight yaml %}---{% endihighlight %}). Todo las variables que se encuentren dentro estas dos «líneas» serán utilizadas como opciones particulares.
+Es importante recalcar qué para que _Jekyll_ interprete la sección _front matter_, esta debe *situar al inicio de cada archivo*. Otra peculiaridad, es que todas esta opciones deben ir *envueltas entre dos línes de tres guiones ({% ihighlight yaml %}---{% endihighlight %})*. Todo las variables que se encuentren dentro estas dos «líneas» serán utilizadas como opciones particulares.
 
 El resto del archivo es el contenido como se muestra en la imagen del _post_. El formato que se ha utiliza se llama _markdown_ y al igual que HTML es un lenguaje de marcado ligero pero mucho más legible. No te preocupes si no sabes _Markdown_, hay muchos conversores que te facilitarán la tarea de transcribirlos desde un archivo _word_ o _google docs_.
 
 Por último, cade señalar que cualquier archivo que contenga esta sección al inicio del mismo será procesado al igual que un _post_.
+
+### _Templating (Liquid)_
+Si _YAML front matter_ es la cabecera, como es obvio, el resto del archivo será el cuerpo. En esta sección, a parte de redactar el artículo con _markdown_, también se pueden incluir sentencias condicionales y funciones aportando un mayor dinamismo al resultado. Estas sentencias son procesadas mediante un motor de plantillas llamado _[Liquid][liquid]_.
+
+{% highlight liquid %}
+{% raw %}{% highlight ruby %}{% endraw %} 
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% raw %}{% endhighlight %}{% endraw %}
+{% endhighlight %}
+
+En el fragmento superior, las sentencias {% raw %}{% highlight ruby %}{% endraw %} y {% raw %}{% endhighlight %}{% endraw %} delimitan el contenido del texto que será procesado por _Liquid_. En este caso concreto, el resultado generado es el siguiente.
+
+{% highlight html %}
+<figure class="highlight">
+  <pre>
+    <code class="language-ruby" data-lang="ruby">
+      <span class="k">def</span>
+      <span class="nf">print_hi</span>
+      <span class="p">(</span>
+      <span class="nb">name</span>
+      <span class="p">)</span>
+      <span class="nb">puts</span>
+      <span class="s2">"Hi, </span>
+      <span class="si">#{</span>
+      <span class="nb">name</span>
+      <span class="si">}</span>
+      <span class="s2">"</span>
+      <span class="k">end</span>
+      <span class="n">print_hi</span>
+      <span class="p">(</span>
+      <span class="s1">'Tom'</span>
+      <span class="p">)</span>
+      <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span>
+    </code>
+  </pre>
+</figure>
+{% endhighlight %}
+
+Como vemos el texto inicial es transformado a una serie de etiquetas _HTML_ para poder ser decorado mediante estilos. Al final, esto es lo que veríamos en el navegador.
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Otros ejemplos de sentencias _Liquid_ serían los siguientes.
+
+{% highlight liquid %}
+{% raw %}{{ page.title }}{% endraw %}
+{% raw %}{{ post.url | relative_url }}{% endraw %}
+{% raw %}{% include head.html %}{% endraw %}  
+{% endhighlight %}
+
+Cómo bien habremos observado, las etiquetas están envueltas entre los símbolos **{% raw %}{% %}**{% endraw %} y **{% raw %}{{ }}{% endraw %}**. Esto no es sólo por una cuestión estética, los corchetes y porcentajes (**{% raw %}{% %}**{% endraw %}) permiten ejecutar condiciones o funciones, como por ejemplo {% ihighlight liquid %}{% raw %}{% if expression %}{% endif %}{% endraw %}{% endihighlight %} o recorrer una lista {% ihighlight liquid %}{% raw %}{% for product in collection.products %}{% endfor %}{% endraw %}{% endihighlight %}. Por contra **{% raw %}{{ }}{% endraw %}** devuelve el valor que contenga la propiedad de un objeto o el valor de una variable.
+
+Hay también un tercer llamado filtro y está representado por **{% ihighlight liquid %}|{% endihighlight %}**. Se utiliza para modificar el valor devuelto por el objeto o variable contenido. En la figura anterior, {% ihighlight liquid %}{% raw %}| relative_url{% endraw %}{% endihighlight %} prefija el valor de {% ihighlight liquid %}{% raw %}post.url{% endraw %}{% endihighlight %} la ruta relativa del sitio web, especificada en el archivo de configuración global, {% ihighlight bash %}_config.yml{% endihighlight %}.
+
+Para profundizar en liquid puedes leer la [documentación oficial][liquid-doc].
+
+A continuación vamos a ver cómo es el _layout_ que se utilizó en el _post_.
+
+### _Layout_
 
 [html]: https://es.wikipedia.org/wiki/HTML5
 [css]: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
@@ -323,3 +393,5 @@ Por último, cade señalar que cualquier archivo que contenga esta sección al i
 [3.2.0]: https://github.com/jekyll/jekyll/pull/4595
 [rss]: https://es.wikipedia.org/wiki/RSS
 [yaml]: http://yaml.org/
+[liquid]: https://shopify.github.io/liquid/
+[liquid-doc]: https://shopify.github.io/liquid/basics/introduction/
