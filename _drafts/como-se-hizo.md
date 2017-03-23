@@ -210,7 +210,7 @@ Para ver que archivos contiene _minima_ podemos ejecutar uno de los siguientes c
 $ ls -l `bundle show minima` # Muestra en consola el contenido del directorio
 {% endhighlight %}
 
-Aunque, si lo prefieres, puedes abrirlo en una ventana de sistema con una de las siguentes instrucciones dependiendo del sistema operativo.
+<a name="open-bundle-show"></a>Aunque, si lo prefieres, puedes abrirlo en una ventana de sistema con una de las siguentes instrucciones dependiendo del sistema operativo.
 
 _MacOS_
 {% highlight shell %}
@@ -229,7 +229,7 @@ _Windows_
 > explorer /usr/local/lib/ruby/gems/2.3.0/gems/minima-2.1.0
 {% endhighlight %}
 
-Una vez ejecutado el comando, encontraremos los siguientes archivos.
+<a name="minima-content"></a>Una vez ejecutado el comando, encontraremos los siguientes archivos.
 
 {% highlight shell %}
 .
@@ -350,6 +350,63 @@ Para profundizar en liquid puedes leer la [documentación oficial][liquid-doc].
 A continuación vamos a ver cómo es el _layout_ que se utilizó en el _post_.
 
 ### _Layout_
+Cómo ya se introdujo antes, el _layout_ contiene la estructura donde se incluirá el contenido procesado del _post_ que hemos visto en el apartado anterior. Por defecto, este archivo se hallará en la raíz del proyecto bajo la carpeta {% ihighlight liquid %}_layouts{% endihighlight %} pero como bien podemos ver dicho directorio no existe.
+
+Ya sabemos que este directorio se encuentra en situado en el directorio donde está instalada la gema _minima_, que incluye la estructura y estilo general del sitio web. ¿Pero cómo se importa el archivo? Tranquilos, no es magia, aunque lo desconocido se pueda considerar como tal. _Jekyll_ primero busca si existe el _layout_ bajo nuestro proyecto, si no lo encuentra irá a buscarlo bajo el directorio donde se encuentre el tema. Para poder ver el contenido del tema en una ventana de sistema, puedes consultarlo en la [sección anterior, dedicada a cómo funciona Jekyll](#open-bundle-show). De ahora en adelante, me limitaré a usar la versión en terminal.
+
+{% highlight shell %}
+$ ls -l `bundle show minima`
+{% endhighlight %}
+
+{% ihighlight shell %}bundle show{% endihighlight %} retorna la ruta donde se encuentra la gema indicada, en este caso _minima_ es el nombre de la misma. {% ihighlight shell %}` `{% endihighlight %} básicamente ejecuta el comando que se encuentre en su interior,devolviemdo el resultado para poder ser utilizado en otro contexto. En este caso la salida del comando es una ruta que usará la instrucción {% ihighlight shell %}ls{% endihighlight %} para listar el contenido de la ruta. El resultado lo puedes ver en la siguiente [enlace](#minima-content).
+
+El nombre del _layout_ utilizado es _post_, por lo tanto buscaremos un archivo con el mismo nombre con la extensión {% ihighlight shell %}.html{% endihighlight %} dentro del directorio {% ihighlight shell %}_layouts{% endihighlight %}. En la siguiente figura se muestra el archivo reducido para focalizarnos en lo que ahora nos interesa.
+
+{% highlight html %}
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  .
+  .
+  .
+  <div class="post-content" itemprop="articleBody">
+    {% raw %}{{ content }}{% endraw %}
+  </div>
+  .
+  .
+  .
+</article>
+{% endhighlight %}
+
+En este archivo encontramos dos peculiaridades. La primera es que la sección _front matter_ se hace referencia otro layout. Por lo tanto este archivo no es el contenedor principal sino una parte del conjunto. La segunda es la sentencia {% ihighlight liquid %}{% raw %}{{content}}{% endraw %}{% endihighlight %}. Aquí es donde se embeberá el contenido del archivo que utilice el _layout post_. Cómo analogía, podríamos pensar que al igual que en un puzzle infantil que se fuera construyendo de dentro hacia afuera.
+
+Ahora que sabemos que el otro _layout_ se llama _default_, debemos encontrar un archivo nombrado {% ihighlight shell %}default.html{% endihighlight %} dentro de {% ihighlight shell %}_layouts{% endihighlight %}.
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% raw %}{% include head.html %}{% endraw %}
+
+  <body>
+
+    {% raw %}{% include header.html %}{% endraw %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {% raw %}{{ content }}{% endraw %}
+      </div>
+    </main>
+
+    {% raw %}{% include footer.html %}{% endraw %}
+
+  </body>
+
+</html>
+{% endhighlight %}
+
+¡Al fin! Ya hemos completado el puzzle. Cómo podemos ver, tanto el {% ihighlight html %}DOCTYPE{% endihighlight %} cómo la etiqueta {% ihighlight html %}html{% endihighlight %} están presentes. Como ocurriera en el layout post, este también contiene la sentencia {% ihighlight liquid %}{% raw %}{{content}}{% endraw %}{% endihighlight %}. Aquí es donde se incluirá el _layout post_ junto con el contenido del _post_.
 
 [html]: https://es.wikipedia.org/wiki/HTML5
 [css]: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
