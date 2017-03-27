@@ -29,7 +29,9 @@
   <link
     rel="stylesheet"
     href="/css/main.css">
-
+  <link
+    rel="stylesheet"
+    href="/css/syntax.css">
 </head>
 
 
@@ -51,8 +53,6 @@
           <li class="main__hidden">
             <a href="/">Hogar</a>
           </li>
-          
-            
           
             
           
@@ -85,9 +85,8 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que son concebidos y redactados.</p>
-
-
+        <p>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que son concebidos y redactados.
+</p>
 
 <h2>Lo que estoy leyendo ahora</h2>
       <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
@@ -139,7 +138,8 @@
     float: right;
   }
   center {
-    flex: 1 0 100%
+    display: none;
+    /* flex: 1 0 100%; */
   }
 
   @media only screen and (min-device-width: 568px) {
@@ -187,6 +187,30 @@
 
       </div>
       <script src="https://www.goodreads.com/review/custom_widget/64896106.Enrique's%20bookshelf:%20currently-reading?cover_position=left&cover_size=medium&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=1&widget_id=1487339563&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
+
+<h2 id="algunos-recursos-técnicos">Algunos recursos técnicos</h2>
+<h3 id="js">JS</h3>
+<ul>
+  <li><a href="https://bocoup.com/blog/javascript-developers-watch-your-language">Babel - Sobre los riesgos al incluir features todavía no aprobadas</a>.</li>
+  <li><a href="https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript">Una serie de videos introductorios sobre programación funcional en JS</a>.</li>
+</ul>
+
+<h3 id="git">Git</h3>
+<ul>
+  <li><a href="https://www.atlassian.com/git/tutorials/advanced-overview">Consejos avanzados</a></li>
+</ul>
+
+<h3 id="librerías-interesantes">Librerías interesantes</h3>
+<ul>
+  <li><a href="http://mithril.js.org/">Mithril</a></li>
+  <li><a href="https://facebook.github.io/react/">React</a></li>
+  <li><a href="http://redux.js.org/docs/introduction/">Redux</a></li>
+  <li><a href="https://github.com/substack/tape/">Tape</a></li>
+  <li><a href="https://github.com/google/traceur-compiler/">Traceur</a></li>
+  <li><a href="http://ramdajs.com/">Ramda</a></li>
+  <li><a href="https://lodash.com/">Lodash</a></li>
+</ul>
+
 
       </div>
     </main>

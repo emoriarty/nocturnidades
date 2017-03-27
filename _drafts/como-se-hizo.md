@@ -567,11 +567,32 @@ Para solucionar este problema, _Jekyll_ propone dos opciones. Los filtros {% ihi
 ![Staircase]({% raw %}{{“/assets/img/staircase-1601133_1920.jpg” | absolute_url}}{% endraw %} “Staircase”)
 {% endhighlight %}
 
-Con {% ihighlight shell %}relative_url{% endihighlight %}, suponiendo que la subruta fuese {% ihighlight shell %}/blog{% endihighlight %}, tras ser procesado el archivo, quedaría de la siguiente manera: {% ihighlight shell %}/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. La función principal de este filtro es prefijar la subruta delante de cualquier ruta suministrada. Esta subruta se especifica en el archivo {% ihighlight yml %}_config.yml{% endihighlight %} con la opción {% ihighlight yml %}/baseurl{% endihighlight %}.
+Con {% ihighlight shell %}relative_url{% endihighlight %}, suponiendo que la subruta fuese {% ihighlight shell %}/blog{% endihighlight %}, tras ser procesado el archivo, quedaría de la siguiente manera: {% ihighlight shell %}/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. La función principal de este filtro es prefijar la subruta delante de cualquier ruta suministrada. Esta subruta se especifica en el archivo {% ihighlight yml %}_config.yml{% endihighlight %} con la opción {% ihighlight yml %}baseurl{% endihighlight %}.
 
-{% ihighlight shell %}absolute_url{% endihighlight %} haría lo mismo pero con la ruta completa: {% ihighlight shell %}http://mi-pagina.com/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. Al igual que relative_url también puede ser configurado desde {% ihighlight shell %}_config.yml{% endihighlight %}. La diferencia entre ambos métodos es que {% ihighlight shell %}absolute_url{% endihighlight %} utiliza dos opciones: {% ihighlight shell %}url{% endihighlight %} y {% ihighlight shell %}baseurl{% endihighlight %}. Concatenando esta dos se conforma la ruta completa o absoluta.
+{% ihighlight shell %}absolute_url{% endihighlight %} haría lo mismo pero con la ruta completa: {% ihighlight shell %}http://mi-pagina.com/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. Al igual que relative_url también puede ser configurado desde {% ihighlight shell %}_config.yml{% endihighlight %}. La diferencia entre ambos métodos es que {% ihighlight shell %}absolute_url{% endihighlight %} utiliza dos opciones: {% ihighlight yml %}url{% endihighlight %} y {% ihighlight yml %}baseurl{% endihighlight %}. Concatenando respectivamente los valores cada opción se conforma la _url_ absoluta.
 
 Cualquiera de las dos opciones son válidas. Utiliza la que consideres más apropiada. Personalmente suelo utilizar {% ihighlight shell %}relative_url{% endihighlight %} así no tengo que incluir el nombre del dominio en el {% ihighlight shell %}_config.yml{% endihighlight %}, lo cual me proporciona un proyecto agnóstico del dominio que vaya a utilizar. Aunque realmente poco importa, puesto que cada vez que ejecutemos {% ihighlight shell %}jekyll build{% endihighlight %} todas las ruta son contruidas mientras se utilice una de los dos métodos.
+
+## Crear una página
+Además de crear artículos también se puede crear páginas estáticas. A diferencia de los _posts_, estas son independientes de la fecha de publicación y la categoría. Exceptuando estos dos requisitos, el resto de opciones de configuración son los mismas.
+
+Podemos crear todas las páginas que deseemos y almacenarlas en cualquier lugar del proyecto. No importa si están en directorios inferiores puesto que la misma estructura de carpetas es replicada en el directorio de salida tras ser procesado por _Jekyll_.
+
+A continuación podemos ver la relación de páginas en el proyecto con su correspondiente url asociada.
+
+{% highlight shell %}
+.
+|-- _config.yml
+|-- _posts/
+|-- _site/
+|-- about.md      # => http://mi-pagina.com/about.html
+|-- index.md      # => http://mi-pagina.com/
+└── lorem.html    # => http://mi-pagina.com/contacto.html
+{% endhighlight %}
+
+
+
+
 
 [html]: https://es.wikipedia.org/wiki/HTML5
 [css]: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada

@@ -2,3 +2,6 @@ url: "http://nocturnidades.blog"
 destination: docs
 keep_files:
   - CNAME
+sass:
+  sass_dir: _sass
+  style: compressed
