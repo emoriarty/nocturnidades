@@ -551,7 +551,7 @@ ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
 
 El resultado es el siguiente.
 
-![Artículo con imagen](/assets/jekyll-7.jpg "Staircase")
+![Artículo con imagen](/assets/jekyll-7.jpg)
 
 Esto funcionará correctamente si la carpeta {% ihighlight shell %}assets{% endihighlight %} está situada en el mismo directorio al que apunta el servidor. En caso de econtrarse en un directorio inferior, no se mostrará la imagen puesto que la ruta suministrada el archivo no referenciará donde se halla realmente. Además, es importante saber que cualquier ruta que comience por {% ihighlight shell %}/{% endihighlight %} significa que el archivo se buscará de manera absoluta, es decir desde la raíz del sistema. Tratándose de un servidor será el directorio marcado como contenido web.
 
@@ -578,21 +578,74 @@ Además de crear artículos también se puede crear páginas estáticas. A difer
 
 Podemos crear todas las páginas que deseemos y almacenarlas en cualquier lugar del proyecto. No importa si están en directorios inferiores puesto que la misma estructura de carpetas es replicada en el directorio de salida tras ser procesado por _Jekyll_.
 
-A continuación podemos ver la relación de páginas en el proyecto con su correspondiente url asociada.
+A continuación podemos ver la relación de páginas estáticas en el proyecto con su correspondiente _url_ asociada.
 
 {% highlight shell %}
 .
-|-- _config.yml
-|-- _posts/
-|-- _site/
-|-- about.md      # => http://mi-pagina.com/about.html
-|-- index.md      # => http://mi-pagina.com/
-└── lorem.html    # => http://mi-pagina.com/contacto.html
+├── _config.yml
+├── _posts/
+├── _site/
+├── about.md      # => http://mi-pagina.com/about.html
+├── index.md      # => http://mi-pagina.com/
+└── lorem.html    # => http://mi-pagina.com/lorem.html
 {% endhighlight %}
 
+Como bien podemos comprobar, el archivo {% ihighlight shell %}lorem.html{% endihighlight %} no existe todavía, así que  vamos a crearlo. Este archivo contendrá un listado con todos los _posts_ que pertenezcan a la categoría lorem, que definimos al crear el anterior artículo. Para ello, tomaremos prestada la estructura definida en la página de inicio ({% ihighlight shell %}index.md{% endihighlight %}).
 
+Al abrir el archivo {% ihighlight shell %}index.md{% endihighlight %} observaremos que está vacío. Si bien recordamos, los _layouts_ nos proveen de un marco contenedor, por lo tanto aunque el archivo no contenga nada, debemos suponer que el _layout_ indicado compone este listado automáticamente. En este caso el _layout_ es {% ihighlight yml %}home{% endihighlight %}. Podemos ver que contiene con el siguiente comando.
 
+{% highlight shell %}
+$ cat `bundle show minima`/_layouts/home.html
+{% endhighlight %}
 
+A continuación se muestra como queda el archivo {% ihighlight shell %}lorem.html{% endihighlight %}.
+
+{% highlight html %}
+---
+layout: page
+title: Lorem
+permalink: /lorem/
+---
+<ul class="post-list">
+{% raw %}{% for post in site.categories.lorem %}{% endraw %}
+<li>
+  <span class="post-meta">{% raw %}{{post.date | date: "%b %-d, %Y"}}{% endraw %}</span>
+  <h2>
+    <a class="post-link" href="{{post.url | relaative_url}}">{% raw %}{{post.title | escape}}{% endraw %}</a>
+  </h2>
+</li>
+{% raw %}{% endfor %}{% endraw %}
+</ul>
+{% endhighlight %}
+
+La dos diferencias fundamentales con {% ihighlight yml %}index.md{% endihighlight %} es la extensión del archivo y el _layout_ utilizado. En este caso hemos usado un archivo _HTML_ ya que nos permite ajustar mas al detalle que un _Markdown_. Por otro el layout es {% ihighlight yml %}page{% endihighlight %}. En caso de haber usado el _layout_ {% ihighlight yml %}home{% endihighlight %}, se mostrarían dos listados: en primer lugar el que acabamos de crear y justo debajo el mismo que muestra la página de inicio. Para evitar este incoveniente usaremos el layout {% ihighlight yml %}page{% endihighlight %} que es el mismo que se define en {% ihighlight shell %}about.md{% endihighlight %}.
+
+Si todo ha sido salido correctamente, en la barra de navegación veremos un nuevo enlace con el nombre lorem.
+
+![Cabecera y barra de navegación](/assets/jekyll-8.png)
+
+Y el resultado de la página es el siguiente.
+
+![Imagen de la página mostrando las catageríos lorem](/assets/jekyll-9.png)
+
+¡Genial! Ya tenemos una nueva página creada. Para ver que todo funciona correctamente, te invito a que crees una nueva página bajo la categoría lorem. Verás como automáticamente aparecerá listada aquí.
+
+### Variables
+Durante las secciones anteriores hemos estado usando una serie de variables. Estas variables son recopiladas desde el _Front Matter_ y el archivo de configuración global ({% ihighlight shell %}_config.yml{% endihighlight %}) por _Jekyll_, haciéndolas accesibles a través del sistema de plantillas _Liquid_.
+
+Un ejemplo de esto es la siguiente sentencia que devolverá todos los artículos pertenecientes a la categoría _lorem_.
+
+{% highlight liquid %}
+{% raw %}{% for post in site.categories.lorem %}{% endraw %}
+{% endhighlight %}
+
+En este otro ejemplo desde la variable {% ihighlight liquid %}post{% endihighlight %} se recupera la _url_ y el título definido en el _post_.
+
+{% highlight html %}
+<a class="post-link" href="{% raw %}{{post.url | relaative_url}}{% endraw %}">{% raw %}{{post.title | escape}}{% endraw %}</a>
+{% endhighlight %}
+
+Podemos ver la relación completa de estas variables que _Jekyll_ provee en el siguiente [enlace][jekyll-vars].
 
 [html]: https://es.wikipedia.org/wiki/HTML5
 [css]: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
@@ -647,3 +700,4 @@ A continuación podemos ver la relación de páginas en el proyecto con su corre
 [cdn]: https://es.wikipedia.org/wiki/Red_de_entrega_de_contenidos
 [pixbay]: https://pixabay.com/es/escalera-berl%C3%ADn-arquitectura-1601133/
 [md-images]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images
+[jekyll-vars]: http://jekyllrb.com/docs/variables/
