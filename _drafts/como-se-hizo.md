@@ -639,13 +639,103 @@ Un ejemplo de esto es la siguiente sentencia que devolverá todos los artículos
 {% raw %}{% for post in site.categories.lorem %}{% endraw %}
 {% endhighlight %}
 
-En este otro ejemplo desde la variable {% ihighlight liquid %}post{% endihighlight %} se recupera la _url_ y el título definido en el _post_.
+En este otro ejemplo desde la variable {% ihighlight liquid %}post{% endihighlight %} se recupera la _URL_ y el título definido en el _post_.
 
 {% highlight html %}
 <a class="post-link" href="{% raw %}{{post.url | relaative_url}}{% endraw %}">{% raw %}{{post.title | escape}}{% endraw %}</a>
 {% endhighlight %}
 
 Podemos ver la relación completa de estas variables que _Jekyll_ provee en el siguiente [enlace][jekyll-vars].
+
+## _Permalinks_
+Los _permalinks_ hacen referencia a la _URL_ permenente de los _posts_ o páginas del blog. _Jekyll_ nos permite configurar cual será esta _URL_ a través de la opción {% ihighlight yml %}permalink{% endihighlight %} mediante el uso de plantillas _URL_ o utilizando un nombre acorde a la especificación _[URI][uri-spec]_ (sin espacios ni diacríticos). Para configurarlo se usaremos la siguiente opción.
+
+{% highlight yml %}
+permalink: [variable|estilo|título_que_desees]
+{% endhighlight %}
+
+Cómo es de suponer, esta opción se puede incluir en el archivo de configuración global, {% ihighlight shell %}_config.yml{% endihighlight %}, o en el _Front Matter_ al archivo pertinente. Recordemos que la opción _Front Matter_ prevalece ante la configuración global. _Front Matter_ no acepta el uso de plantillas URL.
+
+Por defecto, _Jekyll_ utiliza el siguiente la siguiente plantilla.
+
+{% highlight yml %}
+permalink: /:categories/:year/:month/:day/:title.html
+{% endhighlight %}
+
+Todas los _posts_ del blog tendrán este formato. De hecho este estilo de _permalink_ puede ser modificado por una plantilla predefinida mediante la variable {% ihighlight yml %}date{% endihighlight %} como se muestra a continuación. Podemos consultar todos las variables [aquí][permalink-variables].
+
+{% highlight yml %}
+permalink: date
+{% endhighlight %}
+
+El valor de {% ihighlight yml %}date{% endihighlight %} equivale a {% ihighlight yml %}/:categories/:year/:month/:day/:title.html{% endihighlight %}.
+
+Personalmente no me gusta este formato de _permalink_, así que lo vamos a cambiar por algo más corto y recordable. Abajo podemos ver un ejemplo.
+
+{% highlight yml %}
+permalink: /artículos/:title
+{% endhighlight %}
+
+Si configuramos esta opción en el _Front Matter_ de artículo que hemos creado la URL será la siguiente.
+
+{% highlight shell %}
+127.0.0.1:4000/articulos/lorem-ipsum
+{% endhighlight %}
+
+Esto también modificará el lugar de salida del archivo, situándose bajo la carpeta {% ihighlight shell %}articulos{% endihighlight %}.
+
+Si esta opción es configurada en el {% ihighlight shell %}_config.yml{% endihighlight %}, se atribuirá a todos los _posts_. Abajo podemos ver el resultado del directorio de salida tras cambiar el _permalink_ global.
+
+{% highlight shell %}
+_site
+├── about
+│   └── index.html
+├── articulos
+│   ├── lorem-ipsum-2.html
+│   ├── lorem-ipsum.html
+│   └── welcome-to-jekyll.html
+├── assets
+│   ├── img
+│   │   └── staircase-1601133_1920.jpg
+│   └── main.css
+├── feed.xml
+├── index.html
+├── lorem
+│   └── index.html
+└── res.txt
+{% endhighlight %}
+
+Para saber más, podemos consultar este [enlace][permalink].
+
+## Configuración
+Ahora que ya hemos visto cómo funciona jekyll y cómo crear nuevos artículos y páginas, es hora de saber como se configura. Como vimos antes, en cada uno de _post_ o página podemos especificar las opciones en el _YAML Front Matter_ de manera individual. ALgunas opciones como {% ihighlight shell %}title{% endihighlight %} solo pueden ser declaradas en esta sección. Pero otras se pueden incluir en el archivo de configuración general, {% ihighlight shell %}_config.yml{% endihighlight %}.
+
+Este archivo se halla en la raíz del proyecto. Si no se ha modificado el contenido del archivo es el siguiente.
+
+{% highlight yml %}
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+{% endhighlight %}
+
+Principalmente las opciones se dividen en dos secciones: las relativas al _Front Matter_ y las que _Jekyll_ utilizará para configurar y construir la página web.
+
 
 [html]: https://es.wikipedia.org/wiki/HTML5
 [css]: https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
@@ -701,3 +791,6 @@ Podemos ver la relación completa de estas variables que _Jekyll_ provee en el s
 [pixbay]: https://pixabay.com/es/escalera-berl%C3%ADn-arquitectura-1601133/
 [md-images]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images
 [jekyll-vars]: http://jekyllrb.com/docs/variables/
+[uri-spec]: https://tools.ietf.org/html/rfc3986#section-2
+[permalink-variables]: https://jekyllrb.com/docs/permalinks/#template-variables
+[permalink]: https://jekyllrb.com/docs/permalinks/
