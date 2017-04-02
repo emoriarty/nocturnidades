@@ -1,8 +1,11 @@
 ---
-title: Como construir tu propio blog con Jekyll
-categories: ["programación web", jekyll]
-description: Taller sobre como poder crear un blog o página web mediante Jekyll. Es necesario tener unos conocimientos mínimos de programación.
+title: "Cómo crear un blog o sitio web con Jekyll"
+date: 2017-04-03 00:00:00 +0100
+categories: [tecnología, jekyll]
+description: Taller sobre como poder crear un blog o sitio web mediante Jekyll. Es necesario tener unos conocimientos mínimos de programación.
+permalink: /articulos/como-crear-un-blog-con-jekyll
 ---
+
 En este artículo voy a explicar cómo puedes crear tu propio blog o página web. El mismo lo he concebido como un taller donde podrás ver paso a paso desde la instalación de las herramientas necesarias hasta la finalización del sitio web. 
 
 Antes de empezar debo advertirte que para la realización de este taller, son necesarios unos conocimientos mínimos en _[HTML][html]_, _[CSS][css]_ y programación en _[Javascript][js]_. La finalidad del artículo no es solo publicar contenido (artículos o textos) sino tener un completo control del contenedor (la página web) para poder modificar su estructura, cambiar estilos y/o añadir comportamiento.
@@ -11,10 +14,10 @@ Tampoco es necesario ser una experta o experto en esta disciplina, solo hay que 
 
 También me gustaría recalcar que no voy a profundizar en las tecnologías mencionadas. Si quieres aprender o tener un mejor dominio en las mismas, te recomiendo que eches un vistazo otros tutoriales, como por ejemplo los de [librosweb][librosweb]. Puedes encontrar otras páginas web de aprendizaje realizando una sencilla búsqueda en _[google][google-search]_. Abajo muestro unos resultados de la búsqueda indicada.
 
-* [https://devcode.la/cursos/html-css/][web-course-1]
-* [https://www.codecademy.com/es/tracks/html-css-traduccion-al-espanol-america-latina-clone][web-course-2]
-* [http://www.aulafacil.com/cursos/t2204/informatica/crear-paginas-web/html][web-course-3]
-* [http://blogthinkbig.com/20-cursos-programacion-gratuitos-tomar-linea/][web-course-4]
+* [devcode.la/cursos/html-css][web-course-1]
+* [codecademy.com/es/tracks/html-css-traduccion-al-espanol-america-latina-clone][web-course-2]
+* [aulafacil.com/cursos/t2204/informatica/crear-paginas-web/html][web-course-3]
+* [blogthinkbig.com/20-cursos-programacion-gratuitos-tomar-linea][web-course-4]
 
 Lo que si haré, en la medida de lo que me sea posible, es aportar explicaciones sobre conceptos que considere necesarios para un mejor entendimiento en la creación de páginas web. Así que si eres de esos que no se asusta ensuciarse las manos y sientes curiosidad por cómo funcionan las cosas (una página web en este caso) entonces sigue leyendo. En caso contrario, si lo único que deseas es publicar contenido y no te importa el aspecto del contenedor, lo mejor es busques otras opciones como pueda ser _[medium][medium]_ o _[wordpress][wordpress]_.
 
@@ -184,7 +187,7 @@ Luego explicaré cada uno de los archivos presentes, y no presentes, en la carpe
 $ jekyll serve
 {% endhighlight %}
 
-Tras la ejecución del anterior comando han aparecido unos mesajes en la consola. Si nos fijamos en las dos últimas líneas, podremos ver una dirección url y una acción de comando.
+Tras la ejecución del anterior comando han aparecido unos mesajes en la consola. Si nos fijamos en las dos últimas líneas, podremos ver una dirección _URL_ y una acción de comando.
 
 {% highlight shell %}
 Server address: http://127.0.0.1:4000/
@@ -555,7 +558,7 @@ El resultado es el siguiente.
 
 Esto funcionará correctamente si la carpeta {% ihighlight shell %}assets{% endihighlight %} está situada en el mismo directorio al que apunta el servidor. En caso de econtrarse en un directorio inferior, no se mostrará la imagen puesto que la ruta suministrada el archivo no referenciará donde se halla realmente. Además, es importante saber que cualquier ruta que comience por {% ihighlight shell %}/{% endihighlight %} significa que el archivo se buscará de manera absoluta, es decir desde la raíz del sistema. Tratándose de un servidor será el directorio marcado como contenido web.
 
-Pongamos un ejemplo para entender esto más claramente. Si el blog se titula {% ihighlight shell %}http://mi-pagina.com{% endihighlight %}, nuestro artículo mostrará la imagen correctamente ya que el proyecto colgará desde la misma ruta. Por tanto, la url completa sería {% ihighlight shell %}http://mi-pagina.com/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. Pero en el caso que el proyecto estivuese alojado en un directorio inferior llamado {% ihighlight shell %}blog{% endihighlight %}, donde estarían todos los archivos pertenecientes a nuestro sitio web, la url de acceso sería {% ihighlight shell %} http://mi-pagina.com/blog{% endihighlight %}. Esto provocaría que la ruta que señala la imagen (y el resto de archivos) no funcionase puesto que sería incorrecta. La nueva ruta debería contener el nombre del directorio donde se halla actualmente: {% ihighlight shell %}/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. Conformando la url siguiente {% ihighlight shell %}http://mi-pagina.com/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}.
+Pongamos un ejemplo para entender esto más claramente. Si el blog se titula {% ihighlight shell %}http://mi-pagina.com{% endihighlight %}, nuestro artículo mostrará la imagen correctamente ya que el proyecto colgará desde la misma ruta. Por tanto, la _URL_ completa sería {% ihighlight shell %}http://mi-pagina.com/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. Pero en el caso que el proyecto estivuese alojado en un directorio inferior llamado {% ihighlight shell %}blog{% endihighlight %}, donde estarían todos los archivos pertenecientes a nuestro sitio web, la _URL_ de acceso sería {% ihighlight shell %} http://mi-pagina.com/blog{% endihighlight %}. Esto provocaría que la ruta que señala la imagen (y el resto de archivos) no funcionase puesto que sería incorrecta. La nueva ruta debería contener el nombre del directorio donde se halla actualmente: {% ihighlight shell %}/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}. Conformando la _URL_ siguiente {% ihighlight shell %}http://mi-pagina.com/blog/assets/img/staircase-1601133_1920.jpg{% endihighlight %}.
 
 Una solución sería actualizar manualmente todas las rutas que hagan referencia a todos los archivos estáticos, pero a parte de ser una tarea tediosa imagina que el volumen de artículos fuese mayor a 100 y al menos cada uno tuviese una imagen. Llevaría demasiado tiempo cambiarlo todo.
 
@@ -654,7 +657,7 @@ Los _permalinks_ hacen referencia a la _URL_ permenente de los _posts_ o página
 permalink: [variable|estilo|título_que_desees]
 {% endhighlight %}
 
-Cómo es de suponer, esta opción se puede incluir en el archivo de configuración global, {% ihighlight shell %}_config.yml{% endihighlight %}, o en el _Front Matter_ al archivo pertinente. Recordemos que la opción _Front Matter_ prevalece ante la configuración global. _Front Matter_ no acepta el uso de plantillas URL.
+Cómo es de suponer, esta opción se puede incluir en el archivo de configuración global, {% ihighlight shell %}_config.yml{% endihighlight %}, o en el _Front Matter_ al archivo pertinente. Recordemos que la opción _Front Matter_ prevalece ante la configuración global. _Front Matter_ no acepta el uso de plantillas _URL_.
 
 Por defecto, _Jekyll_ utiliza el siguiente la siguiente plantilla.
 
@@ -676,7 +679,7 @@ Personalmente no me gusta este formato de _permalink_, así que lo vamos a cambi
 permalink: /artículos/:title
 {% endhighlight %}
 
-Si configuramos esta opción en el _Front Matter_ de artículo que hemos creado la URL será la siguiente.
+Si configuramos esta opción en el _Front Matter_ de artículo que hemos creado la _URL_ será la siguiente.
 
 {% highlight shell %}
 127.0.0.1:4000/articulos/lorem-ipsum
@@ -734,7 +737,210 @@ exclude:
   - Gemfile.lock
 {% endhighlight %}
 
-Principalmente las opciones se dividen en dos secciones: las relativas al _Front Matter_ y las que _Jekyll_ utilizará para configurar y construir la página web.
+Principalmente las opciones se dividen en dos grupos: las relativas al _Front Matter_ y las que _Jekyll_ utilizará para configurar y construir la página web.
+
+En el primer grupo se encontrarían las opciones como que _layouts_ deben utilizarse en todos los _posts_ o el _permalink_ global. Esto evitará que tengamos que incluir estas preferencias en el _Front Matter_ de cada archivo ya que _Jekyll_ lo incluirá por nosotros de manera automática.
+
+Estas opciones se pueden incluir por tipos de archivo como se muestra en la siguiente figura.
+
+{% highlight yml %}
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+{% endhighlight %}
+
+Con las opciones anteriores estaremos diciendo a _Jekyll_ que el _layout_ por defecto para todos lo artículos sea {% ihighlight shell %}post.html{% endihighlight %}. Cada uno de los {% ihighlight yml %}scope{% endihighlight %} definidos hace referencia al conjunto de archivos filtrados por su tipo (_posts_, _pages_, etcétera). {% ihighlight yml %}path{% endihighlight %} aplicará las preferencias definidas por scope sólo a los archivos que se encuentren bajo la ruta especificada (relativa al proyecto). Si {% ihighlight yml %}path{% endihighlight %} se deja vacío, las preferencias serán aplicadas en todo el proyecto.
+
+Como alternativa, no hace falta escribir la opción y dejarla vacía, simplemente con no incluirla también funcionará. En el siguiente ejemplo podemos ver cómo queda las opciones eliminando las vacías. También se incorpora las páginas.
+
+{% highlight yml %}
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+      permalink: /articulos/:title
+  -
+    scope:
+      types: pages
+    values:
+      layout: page
+{% endhighlight %}
+
+Una vez aplicados estos cambios, las opciones _layout_ pueden ser borradas de los respectivos archivos. Cómo vimos en la sección [permalinks](#permalinks), la opción específica (_Front Matter_) prevalece ante la global ({% ihighlight shell %}_config.yml{% endihighlight %}) por tanto estas preferencias pueden ser sobreescritas en cada archivo.
+
+En el ejemplo anterior también se puede ver la opción {% ihighlight yml %}permalink: /articulos/:title{% endihighlight %} conenido dentro del ámbito de los _posts_.
+
+Otra característica interesante de este archivo de configuración general es poder declarar tantas opciones como así deseemos. Unos ejemplos son las opciones {% ihighlight yml %}title{% endihighlight %}, {% ihighlight yml %}description{% endihighlight %}, {% ihighlight yml %}twitter_username{% endihighlight %} o {% ihighlight yml %}email{% endihighlight %}. Así que si necesitas el uso de alguna variable global, no dudes en crearlas en {% ihighlight shell %}_config.yml{% endihighlight %}. Todas estas opciones están disponibles en la variable global {% ihighlight liquid %}site{% endihighlight %}.
+
+Podemos ver un ejemplo de uso de la {% ihighlight yml %}site.variable{% endihighlight %} title en el _include_ header.html del tema _minima_.
+
+{% highlight html %}
+<a class=”site-title” href=”{% raw %}{{ “/” | relative_url }}{% endraw %}”>{% raw %}{{ site.title | escape }}{% endraw %}</a>
+{% endhighlight %}
+
+El resto de preferencias pertenecen a cómo _Jekyll_ procesa el proyecto. Entre estas se encuentran opciones como modificiar el directorio de entrada y salida del proyecto, añadir [plugins][jekyll-plugins] o cambiar las opciones del servidor local. Te recomiendo que les eches un vistazo en la [página oficial][jekyll-conf].
+
+**Nota importante**. Debemos tener en cuenta que cualquier modificación realizada en  {% ihighlight shell %}_config.yml{% endihighlight %} requiere que el servidor sea reiniciado para utilizar los nuevos cambios.
+
+### Variables de entorno
+En ocasiones hay ciertos contenidos que queremos que solo se muestren en un entorno de desarrollo como los _logs_. También podemos querer incluir una librería analítica, como _google analytics_, cuando la página esté en producción. Para conseguir esto, _Jekyll_ provee una variable de entorno llamada {% ihighlight shell %}JEKYLL_ENV{% endihighlight %}.
+
+Por defecto esta variable se establece como el valor {% ihighlight shell %}development{% endihighlight %} (desarrollo). La otra opción es {% ihighlight shell %}production{% endihighlight %} (producción). Aunque jekyll utiliza estos dos valores por convención, podemos definir tantos como deseemos.
+
+Un ejemplo de esto lo podemos encontrar dentro del tema _minima_. Si abrimos el archivo {% ihighlight shell %}_includes/head.html{% endihighlight %} veremos las siguientes líneas al final del mismo.
+
+{% highlight yml %}
+{% raw %}{% if jekyll.environment == 'production' and site.google_analytics %}{% endraw %}
+  {% raw %}{% include google-analytics.html %}{% endraw %}
+{% raw %}{% endif %}{% endraw %}
+{% endhighlight %}
+
+En este caso, se comprueba si la variable de entorno es {% ihighlight liquid %}production{% endihighlight %}` y si en la configuración general ha sido establecida la opción {% ihighlight liquid %}google_analytics{% endihighlight %} con el id como valor. Si bien recordamos, cualquier opción puede ser declarada en {% ihighlight shell %}_config.yml{% endihighlight %}. Por lo tanto si queremos incluir esta librería, tendremos que declarar la variable y cambiar {% ihighlight shell %}JEKYLL_ENV{% endihighlight %} a {% ihighlight shell %}production{% endihighlight %}. Para poder modificarla podemos ejecutar el comando build de la siguiente manera.
+
+{% highlight shell %}
+$ JEKYLL_ENV=production jekyll build
+{% endhighlight %}
+
+Otra característica importante en _Jekyll_ es poder definir varios archivos de configuración. Estos pueden ser usarlos individualmente o en conjunto. Para ello incluirá la opción {% ihighlight shell %}--config{% endihighlight %} seguida del archivo o archivos (separados por comas) que deseemos utilizar.
+
+{% highlight shell %}
+$ jekyll build --config=_config.yml,_config.prod.yml
+{% endhighlight %}
+
+Es importante tener en cuenta el orden en que se insertan los archivos. Una misma opción establecida en los dos archivos del ejemplo anterior, tendrá el valor del último archivo concatenado.
+
+## Temas (_Themes_)
+Durante todo el taller hemos estado viendo referencias al tema _minima_. Si has seguido el tutorial hasta aquí, sabrás de sobra que este tema se incluye por defecto cada vez que se crea un proyecto nuevo. Este tema se instala junto con el resto de gemas de _Ruby_. Puedes ver como se accede al contenido de esta gema [aquí](#ls-bundle-show).
+
+Puede que nos preguntemos ¿porqué incluir las plantillas y estilos en una librería externa? Y está bien que nos hagas esta pregunta sobre todo teniendo en cuenta que esta caraterística se incluye a partir de la versión [3.2][jekyll-3.2], pues anterior a esta versión el tema se incluía junto al resto de archivos en el proyecto.
+
+La principal ventaja, en el caso que decidamos usar el tema _minima_ o unos de los disponibles, es que estas gemas son mantenidas por una comunidad de desarrolladores. Por lo tanto, cada vez que haya una actualización donde se añaden nuevas características o mejoras, estas se instalarán automáticamente cada vez que ejecutemos el comando {% ihighlight shell %}bundle update{% endihighlight %}. También se pueden actualizar individualmente incluyendo el nombre de la gema al final del mismo comando: {% ihighlight shell %}bundle update minima{% endihighlight %}.
+
+### Instalar un tema
+A parte de _minima_ podemos instalar otros temas. Por convención todos los temas tienen el siguiente formato: {% ihighlight shell %}jekyll-theme-nombre{% endihighlight %}. Podemos encontrar todos los disponibles en la de _[RubyGems][jekyll-themes-rubygems]_.
+
+Para exponer como se instala un tema he elegido [cayman][cayman]. Para instalarlo recomiendo crear un nuevo proyecto _Jekyll_ evitando que se ejecute {% ihighlight shell %}bundle install{% endihighlight %}. Para ello incluiremos la opción {% ihighlight shell %}--skip-bundle{% endihighlight %}. Todas la librerías asociadas al proyecto no serán instaladas, entre ellas el propio tema _minima_.
+
+{% highlight shell %}
+$ jekyll new --skip-bundle nuevo-proyecto
+{% endhighlight %}
+
+Tras esto se deben modificar los archivos {% ihighlight shell %}Gemfile{% endihighlight %} y {% ihighlight shell %}_config.yml{% endihighlight %}. En el primero, buscaremos la línea que contenga la sentencia {% ihighlight ruby %}gem "minima", "~> 2.0"{% endihighlight %} y se cambia por {% ihighlight ruby %}gem "jekyll-theme-cayman", "~> 0.0.3"{% endihighlight %}. En el segundo, modificaremos la opción {% ihighlight yml %}theme: minima{% endihighlight %} por {% ihighlight yml %}theme: jekyll-theme-cayman{% endihighlight %}.
+
+Tras estos pasos, ejecutaremos el comando {% ihighlight shell %}bundle install{% endihighlight %} manualmente para instalar todas las dependecias del proyecto junto con el nuevo tema.
+
+Para poder ver cómo luce el nuevo tema, ejecutaremos el servidor con la instrucción _Jekyll serve_. Pero como veremos, ocurre un error. Esto es debido a que el archivo {% ihighlight shell %}about.md{% endihighlight %} está incluyendo un archivo perteneciente al tema minima que ahora no existe. El error mostrado es el siguiente.
+
+{% highlight shell %}
+Liquid Exception: Could not locate the included file 'icon-github.html' in any of
+["/Users/enric/Workspace/jekyll-tut/cayman/_includes"]. Ensure it exists in one of those 
+directories and, if it is a symlink, does not point outside your site source. in about.md
+{% endhighlight %}
+
+Para solucionarlo, debemos editar el archivo en cuestión y borrar las líneas donde se incluya ese archivo. A continuación volvemos a ejecutar el servidor y el proyecto se compilará correctamente. Para verlo, accederemo al siguiente enlace: http://127.0.0.1:4000.
+
+Pero veremos que algo extraño sigue sucediendo. El navegador muestra una página en blanco. La causa de esto es debido a que _minima_ incluía un _layout_ que proporcionaba todo el contenido de la página de inicio. Así que para que este nuevo tema funcione correctamente, se deben crear las plantillas necesarias.
+
+A estas alturas del taller, considero que podrías crear los archivos tú mismo. De hecho te lo recomiendo encarecidamente, es la mejor forma de aprender. Aunque si tuvieses dudas o necesitas ver algunos ejemplos, puedes descargar los fuentes usados en este taller desde [github][jekyll-tut]. Dentro de la carpeta _cayman_ están los archivos usados en esta sección. Vuelvo a insistir que vale la pena que los escribas aunque sea copiándolo a que pegues el archivo directemente.
+
+También podemos encontrar otros temas en diferentes páginas cómo los ejemplos que incluyo a continuación.
+
+* [themes.jekyllrc.org](http://themes.jekyllrc.org/)
+* [jekyllthemes.org](http://jekyllthemes.org/)
+* [jekyllthemes.io](https://jekyllthemes.io/)
+
+Es importante saber que estos no se instalarán como una gema al igual que hicieramos anteriormente. Normalmente se ofrecen cómo un archivo comprimido que incluirá todos los recursos necesarios para iniciar un proyecto desde cero. La principal diferencia con los temas basados en gemas es que se pierde la ventaja de actualización automática, aunque todos los archivos estarán disponibles en el mismo directorio del proyecto.
+
+### Sobrescribir el tema
+Puede que el tema que hayamos elegido al principio nos sirva para la finalidad de nuestro sitio web, pero probablemente, en un momento determinado deseemos extenderlo agregando nuevos estilos o modificando los _layouts_ existentes. Esto es relativamente sencillo, para ello localizaremos cual es el archivo en cuestión para sobrescribir en la carpeta del tema. A continuación, crearemos un archivo con el mismo nombre y lo situaremos en el mismo lugar donde se halle el original en nuestro proyecto. Tras esto ya podremos editar el nuevo archivo.
+
+Esto es debido a que _Jekyll_ busca primero los archivos en el directorio donde se situa el proyecto. En caso de no hallarlos los intenta localizar en la carpeta donde el tema está instalado.
+
+Supongamos que queremos agregar una serie de estilos nuevos en nuestra página. Al abrir el directorio donde está instalado el tema, observamos que el estilo principal se encuentra en la siguiente ruta relativa al tema: {% ihighlight shell %}assets/css/style.scss{% endihighlight %}. Sabiendo esto, debemos crear el mismo archivo bajo la misma ruta en nuestro proyecto. Cuando este se haya reconstruido, utilizará el {% ihighlight shell %}style.scss{% endihighlight %} ubicado en en el proyecto.
+
+Aunque esto tiene un inconveniente: los estilos originales los habremos perdido. Para solucionar este problema deberemos editar este nuevo archivo y añadir la siguiente sentencia.
+
+{% highlight sass %}
+---
+---
+@import "{% raw %}{{ site.theme }}{% endraw %}";
+
+# Agrega aquí tus nuevos estilos
+{% endhighlight %}
+
+Con la anterior línea, estaremos indicando a _Jekyll_ que incluya la ruta donde se encuentra el archivo original para que preprocesador de estilos lo pueda importar. Si te has fijado bien, las dos primera líneas son tres guiones consecutivos, esto permite a _Jekyll_ saber que archivo deben ser procesados.
+
+Por defecto, _Jekyll_ soporta _[SASS][sass]_ como generador de estilos, aunque si lo preferimos siempre podemos usar _CSS_. De hecho, incluso, podemos usar ambos formatos.
+
+De la misma manera sobrescribiremos un _layout_ o _include_. La única diferencia es que una vez sobrescrito no habrá manera de poder importarlo como hicimos con los estilos.
+
+Cómo colofón a esta sección, sólo me queda mencionar que podemos crear nuestro propio tema y publicarlo para compartirlo con otros desarrolladores. Aunque por la finalidad del artículo este tema no puede ser tratado, si te interesa puedes saber más en el siguiente [enlace][jekyll-new-theme].
+
+## _Assets_
+Durante todo el taller hemos visto que todos los archivos que _Jekyll_ encuentra en el proyecto son procesados si estos llevan al inicio del mismo dos líneas de guiones y son situados en el directorio de salida (por defecto {% ihighlight shell %}_site{% endihighlight %}, aunque esto se puede modicar en el {% ihighlight shell %}_config.yml{% endihighlight %}). También hemos visto que los archivos que empiecen por un guión bajo (_) son omitidos en el resultado de salida. ¿Pero qué pasa con el resto?
+
+El resto de archivos se incluyen en el sitio web resultante. Por lo tanto, todos los recursos como imágenes, estilos y archivos _Javascript_ son importados intactos para su uso. Normalmente por convención estos archivos se situan en el directorio {% ihighlight shell %}assets{% endihighlight %} aunque los podemos ubicar donde queramos.
+
+### Sass
+Cómo ya mencioné en el apartado anterior, _Jekyll_ incorpora soporte para _Sass_. Como en todo archivo que _Jekyll_ debe procersar, se deben incluir las dos líneas de tres guiones reglamentarias. Aunque no es necesario incluir estas en el resto de archivos parciales que importan a través de _Sass_. La extensión de estos archivos puede ser {% ihighlight shell %}.scss{% endihighlight %} o {% ihighlight shell %}.sass{% endihighlight %}.
+
+Estos archivos parciales deberán estar situados, una vez más por convención, bajo una carpeta nombrada {% ihighlight shell %}_sass{% endihighlight %} y que colgará en la raíz del proyecto. _Jekyll_ utiliza esta carpeta para «decirle» a _Sass_ donde encontrar los archivos importados. Por supuesto, esta opción puede ser modificada en el {% ihighlight shell %}_config.yml{% endihighlight %} de la siguiente forma.
+
+{% highlight yml %}
+sass:
+    sass_dir: _sass
+    style: compressed
+{% endhighlight %}
+
+Cómo podemos ver, también se puede especificar el estilo de salida de los nuevos archivos _CSS_. En este caso los archivos serán comprimidos.
+
+Para ilustrar mejor este proceso supongamos que tenmos la siguiente estructura de carpetas.
+
+{% highlight shell %}
+├── _sass
+│   ├── _typography.scss
+│   ├── _colors.scss
+│   └── _welcome-to-jekyll.html
+└──css
+    ├── main.scss
+    └── print.scss
+{% endhighlight %}
+
+Tras ser compilado, el contenido de los archivos parciales que hayan sido importados, es agregado en los archivos principales (los que contienen las dos líneas con tres guiones, en este caso {% ihighlight shell %}main.scss{% endihighlight %}) y {% ihighlight shell %}print.scss{% endihighlight %}). El resultado será tal y como se muestra abajo.
+
+{% highlight shell %}
+_site
+└── css
+    ├── main.css
+    └── print.css
+{% endhighlight %}
+
+En el este [enlace][sass-example] podemos encontrar un ejemplo sobre este proceso.
+
+## Conclusión
+Llegados a este punto del taller y con el conocimiento adquirido, deberías poder utilizar _Jekyll_ con cierta soltura. Por supuesto, se me dejo mucho en el tintero como las [colecciones][jekyll-collections], los [archivos de datos][jekyll-data], los _[plugins][jekyll-plugins]_ o la [paginación][jekyll-pagination] pero he considerado este artículo como una introducción a _Jekyll_ y por tanto el contenido incluido en el taller es más que suficiente para empezar. De hecho, no he incluido esas y otras _features_ por no considerarlas necesarias para la construcción de un blog.
+
+De todas formas, si deseas saber más sobre la herramienta tras estas líneas he incluido una serie de enlaces a los recursos utilizados para elaborar este texto y que puedes usar para ampliar conocimiento.
+
+Te vuelvo a recordar que peudes descargar desde github el [código fuente][jekyll-tut] usado para elaborar este taller y que también puede servirte de ayuda.
+
+## Fuentes
+* [jekyllrb.com](https://jekyllrb.com/)
+* [jekyll.tips](http://jekyll.tips/)
+* [Building a jekyll site](https://css-tricks.com/building-a-jekyll-site-part-1-of-3/)
+* [pages.github.com](https://pages.github.com/)
+* [Creating project pages using the command line](https://help.github.com/articles/creating-project-pages-using-the-command-line/)
+* [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Sass guide](http://sass-lang.com/guide)
+* [Jekyll on windows](https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command* -prompt-entries-and-chocolatey/)
+* [Jekyll collections](http://ben.balter.com/2015/02/20/jekyll-collections/)
+
 
 
 [html]: https://es.wikipedia.org/wiki/HTML5
@@ -794,3 +1000,16 @@ Principalmente las opciones se dividen en dos secciones: las relativas al _Front
 [uri-spec]: https://tools.ietf.org/html/rfc3986#section-2
 [permalink-variables]: https://jekyllrb.com/docs/permalinks/#template-variables
 [permalink]: https://jekyllrb.com/docs/permalinks/
+[jekyll-plugins]: https://jekyllrb.com/docs/plugins/
+[jekyll-conf]: https://jekyllrb.com/docs/configuration/
+[jekyll-3.2]: https://jekyllrb.com/news/2016/07/26/jekyll-3-2-0-released/
+[jekyll-themes-rubygems]: https://rubygems.org/search?utf8=%E2%9C%93&query=jekyll-theme
+[cayman]: https://github.com/pages-themes/cayman
+[jekyll-tut]: https://github.com/emoriarty/jekyll-tut
+[sass]: http://sass-lang.com/
+[jekyll-new-theme]: https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme
+[jekyll-collections]: https://jekyllrb.com/docs/collections/
+[jekyll-data]: [jekyll-collections]
+[jekyll-plugins]: https://jekyllrb.com/docs/plugins/
+[jekyll-pagination]: https://jekyllrb.com/docs/pagination/
+[sass-example]: https://github.com/jekyll/jekyll-sass-converter/tree/master/example

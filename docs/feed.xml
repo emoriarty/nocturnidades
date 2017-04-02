@@ -1,5 +1,830 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://nocturnidades.blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidades.blog/" rel="alternate" type="text/html" /><updated>2017-03-27T13:00:05+02:00</updated><id>http://nocturnidades.blog/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que son concebidos y redactados.
-</subtitle><entry><title type="html">Pues le recé, pero no me ha hecho caso</title><link href="http://nocturnidades.blog/relatos/pues-le-rece-pero-no-me-ha-hecho-caso" rel="alternate" type="text/html" title="Pues le recé, pero no me ha hecho caso" /><published>2017-03-05T00:00:00+01:00</published><updated>2017-03-05T00:00:00+01:00</updated><id>http://nocturnidades.blog/relatos/pues-le-rece-pero-no-me-ha-hecho-caso</id><content type="html" xml:base="http://nocturnidades.blog/relatos/pues-le-rece-pero-no-me-ha-hecho-caso">&lt;p&gt;Microrrelato extraido a partir de una viñeta de no recuerdo que autor.&lt;/p&gt;</content><author><name></name></author><summary type="html">Microrrelato extraido a partir de una viñeta de no recuerdo que autor.</summary></entry><entry><title type="html">Anotaciones contemporáneas</title><link href="http://nocturnidades.blog/articulos/anotaciones-contemporaneas" rel="alternate" type="text/html" title="Anotaciones contemporáneas" /><published>2017-02-26T01:56:00+01:00</published><updated>2017-02-26T01:56:00+01:00</updated><id>http://nocturnidades.blog/articulos/anotaciones-contemporaneas</id><content type="html" xml:base="http://nocturnidades.blog/articulos/anotaciones-contemporaneas">&lt;p&gt;Mientras leía un compendio resumido sobre las ideas y reflexiones políticas de Maquiavelo, escrito por &lt;a href=&quot;https://es.wikipedia.org/wiki/Quentin_Skinner&quot;&gt;Quentin Skinner&lt;/a&gt; y de &lt;a href=&quot;http://www.alianzaeditorial.es/libro.php?id=1849294&amp;amp;id_col=100508&quot;&gt;título homónimo&lt;/a&gt;, hubo un pasaje que me llamó especialmente la atención. Dicho fragmento versaba sobre las secuelas que la corrupción deja en la sociedad, obstaculizando así, un proceso de mejora continuo. E Incluso, en ocasiones llegando a retrasar este proceso.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.0">Jekyll</generator><link href="http://nocturnidades.blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidades.blog/" rel="alternate" type="text/html" /><updated>2017-04-03T01:10:23+02:00</updated><id>http://nocturnidades.blog/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que son concebidos y redactados.
+</subtitle><entry><title type="html">Cómo crear un blog o sitio web con Jekyll</title><link href="http://nocturnidades.blog/articulos/como-crear-un-blog-con-jekyll" rel="alternate" type="text/html" title="Cómo crear un blog o sitio web con Jekyll" /><published>2017-04-03T01:00:00+02:00</published><updated>2017-04-03T01:00:00+02:00</updated><id>http://nocturnidades.blog/articulos/como-crear-un-blog-con-jekyll</id><content type="html" xml:base="http://nocturnidades.blog/articulos/como-crear-un-blog-con-jekyll">&lt;p&gt;En este artículo voy a explicar cómo puedes crear tu propio blog o página web. El mismo lo he concebido como un taller donde podrás ver paso a paso desde la instalación de las herramientas necesarias hasta la finalización del sitio web.&lt;/p&gt;
+
+&lt;p&gt;Antes de empezar debo advertirte que para la realización de este taller, son necesarios unos conocimientos mínimos en &lt;em&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/HTML5&quot;&gt;HTML&lt;/a&gt;&lt;/em&gt;, &lt;em&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada&quot;&gt;CSS&lt;/a&gt;&lt;/em&gt; y programación en &lt;em&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/JavaScript&quot;&gt;Javascript&lt;/a&gt;&lt;/em&gt;. La finalidad del artículo no es solo publicar contenido (artículos o textos) sino tener un completo control del contenedor (la página web) para poder modificar su estructura, cambiar estilos y/o añadir comportamiento.&lt;/p&gt;
+
+&lt;p&gt;Tampoco es necesario ser una experta o experto en esta disciplina, solo hay que tener ganas y curiosidad. Cómo verás el programa que vamos a usar nos ofrece unos diseños predefinidos, lo cual facilitará la labor de arranque inicial.&lt;/p&gt;
+
+&lt;p&gt;También me gustaría recalcar que no voy a profundizar en las tecnologías mencionadas. Si quieres aprender o tener un mejor dominio en las mismas, te recomiendo que eches un vistazo otros tutoriales, como por ejemplo los de &lt;a href=&quot;http://librosweb.es&quot;&gt;librosweb&lt;/a&gt;. Puedes encontrar otras páginas web de aprendizaje realizando una sencilla búsqueda en &lt;em&gt;&lt;a href=&quot;https://www.google.es/?gws_rd=ssl#safe=active&amp;amp;q=curso+de+html+y+css&amp;amp;*&quot;&gt;google&lt;/a&gt;&lt;/em&gt;. Abajo muestro unos resultados de la búsqueda indicada.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://devcode.la/cursos/html-css/&quot;&gt;devcode.la/cursos/html-css&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.codecademy.com/es/tracks/html-css-traduccion-al-espanol-america-latina-clone&quot;&gt;codecademy.com/es/tracks/html-css-traduccion-al-espanol-america-latina-clone&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.aulafacil.com/cursos/t2204/informatica/crear-paginas-web/html&quot;&gt;aulafacil.com/cursos/t2204/informatica/crear-paginas-web/html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blogthinkbig.com/20-cursos-programacion-gratuitos-tomar-linea/&quot;&gt;blogthinkbig.com/20-cursos-programacion-gratuitos-tomar-linea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lo que si haré, en la medida de lo que me sea posible, es aportar explicaciones sobre conceptos que considere necesarios para un mejor entendimiento en la creación de páginas web. Así que si eres de esos que no se asusta ensuciarse las manos y sientes curiosidad por cómo funcionan las cosas (una página web en este caso) entonces sigue leyendo. En caso contrario, si lo único que deseas es publicar contenido y no te importa el aspecto del contenedor, lo mejor es busques otras opciones como pueda ser &lt;em&gt;&lt;a href=&quot;https://medium.com/&quot;&gt;medium&lt;/a&gt;&lt;/em&gt; o &lt;em&gt;&lt;a href=&quot;https://es.wordpress.com/&quot;&gt;wordpress&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por cierto, quiero advertirte que para el desarrollo de este taller he usado un sistema operativo &lt;em&gt;MacOS&lt;/em&gt;. Si usas un sistema &lt;em&gt;Unix/Linux&lt;/em&gt; casi la mayoría de comandos que utilice son los mismos. Si por contra utilizas un &lt;em&gt;Windows&lt;/em&gt;, será mejor que te deshagas de él cuanto antes. Bromas a parte, cuando sea necesario también incluiré cómo hacerlo con &lt;em&gt;Windows&lt;/em&gt; aunque no garantizo su completo funcionamiento.&lt;/p&gt;
+
+&lt;p&gt;Antes de empezar, si quieres puedes descargar el código fuente usado en el tutorial desde &lt;a href=&quot;https://github.com/emoriarty/jekyll-tut&quot;&gt;aquí&lt;/a&gt;. De esta forma puedes contrastar los avances que vayas realizando con el proyecto ya finalizado como referencia.&lt;/p&gt;
+
+&lt;p&gt;Por último, si os interesa podéis leer las &lt;a href=&quot;/motivaciones&quot;&gt;motivaciones&lt;/a&gt; que me han llevado a crear este blog. Probablemente tú tengas otras distintas y aunque no sean las mismas ni sepa cuáles son, sí hay una cosa que es cierta: si estás leyendo este artículo es porque estás pensando en crear uno. Así que sin más dilación empecemos con el taller.&lt;/p&gt;
+
+&lt;h2 id=&quot;consideraciones-antes-de-empezar&quot;&gt;Consideraciones antes de empezar&lt;/h2&gt;
+&lt;p&gt;Al principio estuve valorando si utilizar un servicio de publicación de blogs o crear el mío propio. De los primeros hay muy buenos, cómo puede ser &lt;a href=&quot;https://medium.com/&quot;&gt;medium&lt;/a&gt;,  pero no dejan mucho margen para la personalización de la página. Cierto es que cada vez ofrecen más opciones de adaptación cómo cambiar el color de la cabecera o añadir un logo propio. Aunque la idea de una estructura y diseño impuestos no me pareció nada atractiva de tal manera que me decidí por la segunda opción. Siendo ésta mucho más versátil me daba mucha pereza tener que hacerlo todo desde cero. Al final opté por una tercera vía: utilizar un &lt;a href=&quot;https://er1x.github.io/2015/12/generadores-web-estaticas/&quot;&gt;generador de páginas estáticas&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo interesante de un generador es que puedes redactar los artículos en archivos de texto plano y de fácil lectura, evitando el engorro y distracciones que un archivo &lt;em&gt;HTML&lt;/em&gt; puede acarrear. Aunque esto no es del todo cierto, os aseguro que es mucho más sencillo que escribir un texto de dos mil palabras en un &lt;em&gt;HTML&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cuando utilizo el término &lt;strong&gt;página estática&lt;/strong&gt; no pretendo decir que se quede congelada y ni tan siquiera se pueda hacer &lt;em&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Scroll&quot;&gt;scroll&lt;/a&gt;&lt;/em&gt;. Lo que expresa es que no habrá ningún tipo de interacción con el servidor más que devolver la página previamente alojada. Es decir, no habrá ninguna base de datos ni servicios web desde donde recuperar los datos necesarios para construir la página por cada petición de usuario. Este tipo de página web se le denomina &lt;strong&gt;página dinámica&lt;/strong&gt;. Bien cabe remarcar, que los servicios web se pueden utilizar desde la propia página pero para ello será necesario el uso de librerías Javascript. En definitiva, una página estática es un archivo permanente que será devuelto por el servidor sin previa tratamiento. Para saber más puede consultar en este &lt;a href=&quot;https://es.wikipedia.org/wiki/P%C3%A1gina_web#P.C3.A1ginas_est.C3.A1ticas_versus_p.C3.A1ginas_din.C3.A1micas&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hay una amplia oferta de &lt;a href=&quot;https://github.com/pinceladasdaweb/Static-Site-Generators&quot;&gt;generadores&lt;/a&gt;. Cual utilices dependerá de tus conocimientos y la experiencia que hayas tenido con alguno. Pero al final cualquiera de estas herramientas requerirán, en mayor o menor medida, tener conocimientos en &lt;em&gt;HTML&lt;/em&gt;, &lt;em&gt;CSS&lt;/em&gt; y &lt;em&gt;Javascript&lt;/em&gt;. Personalmente recomiendo siempre optar entre las cinco más usadas y entre estas las que mayor soporte ofrezca.&lt;/p&gt;
+
+&lt;p&gt;De entre todas la opciones posibles al final decidí emplear &lt;em&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/em&gt;. También estuve considerando &lt;em&gt;&lt;a href=&quot;https://middlemanapp.com/&quot;&gt;middleman&lt;/a&gt;&lt;/em&gt; pero &lt;em&gt;Jekyll&lt;/em&gt; lleva más tiempo siendo desarrollado, lo cual garantiza que los posibles errores de diseño ya fueron corregidos. En el momento de la edición de este artículo, la última versión disponible es la &lt;a href=&quot;https://jekyllrb.com/news/2017/03/02/jekyll-3-4-1-released/&quot;&gt;3.4.2&lt;/a&gt;. Otra buena razón por la que lo elegí es que un sitio web cómo &lt;em&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;Github&lt;/a&gt;&lt;/em&gt; lo utiliza como motor interno para la generación de páginas estáticas. Lo cual avala un continuo mantenimiento además de ofrecer una buena documentación. Cómo curiosidad, la misma herramienta fue creada por &lt;a href=&quot;https://en.wikipedia.org/wiki/Tom_Preston-Werner&quot;&gt;uno de los co-fundadores&lt;/a&gt; de &lt;em&gt;Github&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por tanto, para utilizar Jekyll necesitaremos instalar las siguientes herramientas.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;un terminal o consola de comandos (todos los s.o. la tienen),&lt;/li&gt;
+  &lt;li&gt;un editor de textos (&lt;em&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;visual studio code&lt;/a&gt;&lt;/em&gt;, &lt;em&gt;&lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;sublime&lt;/a&gt;&lt;/em&gt;, &lt;em&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;atom&lt;/a&gt;&lt;/em&gt;, &lt;em&gt;&lt;a href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt;&lt;/em&gt;, &lt;em&gt;&lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;notepad++&lt;/a&gt;&lt;/em&gt;),&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;a href=&quot;https://www.ruby-lang.org/es/&quot;&gt;el intérprete de Ruby&lt;/a&gt;&lt;/em&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Jekyll&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No te preocupes si no conoces alguno de los puntos en el listado anterior, los explicaré más adelante. Así que teniendo claro que es lo que necesitamos, procedamos a hacer la instalación.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalación&quot;&gt;Instalación&lt;/h2&gt;
+&lt;p&gt;Para la instalación necesitaremos abrir un terminal y nos dirigimos al directorio donde queramos situar el proyecto. Una vez dentro, lo primero será confirmar que ruby está instalado en el sistema y que su versión sea igual o superior a la 2.0.&lt;/p&gt;
+
+&lt;p&gt;Para comprobar si está instalado teclea lo siguiente en la consola.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ruby -v&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si el mensaje devuelto se muestra &lt;code class=&quot;highlighter-rouge&quot;&gt;bash: ruby: command not found&lt;/code&gt; entonces es que no existe. En caso contrario devolverá un mensaje informando de la versión utilizada. En muestra el siguiente mensaje.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;ruby 2.4.0p0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2016-12-24 revision 57164&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;x86_64-darwin16]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En caso de no tenerlo o ser una versión anterior, la mejor opción es utilizar un gestor de versiones. Imagino que habrán algunos más disponibles pero los más conocidos son &lt;em&gt;&lt;a href=&quot;https://rvm.io/&quot;&gt;rvm&lt;/a&gt;&lt;/em&gt; y &lt;em&gt;&lt;a href=&quot;https://github.com/rbenv/rbenv&quot;&gt;rbenv&lt;/a&gt;&lt;/em&gt;. Personalmente utilizo &lt;em&gt;rbenv&lt;/em&gt;, me gusta la sencillez con la que maneja las diferentes versiones de ruby simplemente modificando el &lt;em&gt;PATH&lt;/em&gt; del sistema. De todas formas con las dos herramientas es bien sencillo instalar &lt;em&gt;Ruby&lt;/em&gt;. Por costumbre de uso, vamos a continuar la instalación con &lt;em&gt;rbenv&lt;/em&gt;. Si utilizas un Mac, recomiendo utilizar &lt;em&gt;&lt;a href=&quot;https://brew.sh/index_es.html&quot;&gt;Homebrew&lt;/a&gt;&lt;/em&gt; para instalar &lt;em&gt;rbenv&lt;/em&gt;. Una vez hayas instalado &lt;em&gt;Homebrew&lt;/em&gt;, ejecuta el siguiente comando en el terminal que previamente teníamos abierto.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;brew install rbenv&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;No voy a entrar en detalles en cuanto a la instalación de &lt;em&gt;rbenv&lt;/em&gt;. Para ello puedes consultar en su página de github donde viene muy bien detallado &lt;a href=&quot;https://github.com/rbenv/rbenv#installation&quot;&gt;cómo hacerlo&lt;/a&gt;. Eso sí, es requisito indispensable saber leer en inglés.&lt;/p&gt;
+
+&lt;p&gt;Tras la intalación de rbenv, el siguiente paso será ejecutar el siguiente comando.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;rbenv install 2.4.0 &lt;span class=&quot;c&quot;&gt;# número de versión debe superior a la 2.0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Acto seguido instalaremos &lt;em&gt;bundler&lt;/em&gt;. Esta herramienta nos ayudará a gestionar las dependencias que vayamos a utilizar en nuestro proyecto &lt;em&gt;Jekyll&lt;/em&gt; a través de un archivo llamado &lt;em&gt;Gemfile&lt;/em&gt;. Por cierto, en &lt;em&gt;Ruby&lt;/em&gt; a las librerías se les llaman gemas, por tanto de ahora en adelante me referiré a ellas como tales.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install bundler&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Realizados los dos pasos anteriores satisfactoriamente, procederemos a instalar &lt;em&gt;Jekyll&lt;/em&gt;. Para ello, utilizaremos la herramienta &lt;em&gt;gem&lt;/em&gt; que viene instalado junto con &lt;em&gt;Ruby&lt;/em&gt;.  &lt;em&gt;gem&lt;/em&gt; es un sistema de gestión de paquetes, de hecho &lt;em&gt;bundler&lt;/em&gt; hace uso de este comando. Teclea lo siguiente en la consola.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si todo ha ido bien deberías ver en la terminal lo siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;Fetching: jekyll-3.4.0.gem &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;100%&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Successfully installed jekyll-3.4.0
+Parsing documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;jekyll-3.4.0
+Installing ri documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;jekyll-3.4.0
+Done installing documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;jekyll after 2 
+seconds
+1 gem installed&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;¡Bravo! Ya tenemos &lt;em&gt;Jekyll&lt;/em&gt; instalado en el sistema.&lt;/p&gt;
+
+&lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;Para instalar &lt;em&gt;Ruby&lt;/em&gt; en &lt;em&gt;Windows&lt;/em&gt; cómo lo hiciéramos en &lt;em&gt;MacOS&lt;/em&gt;, lo mejor será utilizar un gestor de paquetes cómo es &lt;em&gt;Homebrew&lt;/em&gt;. La herramienta en cuestión se llama &lt;a href=&quot;https://chocolatey.org/&quot;&gt;chocolatey&lt;/a&gt;. O si lo prefieres puedes descargar un &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;instalador&lt;/a&gt; y saltar hasta la siguiente &lt;a href=&quot;#primer-contacto-con-jekyll&quot;&gt;sección&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para instalar chocolatey debes abrir una consola con acceso de administrador. Una vez abierta copia y ejecuta el siguiente comando.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;@powershell -NoProfile -ExecutionPolicy Bypass -Command &lt;span class=&quot;s2&quot;&gt;&quot;iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1 &amp;amp;&amp;amp; SET &quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%PATH%;%ALLUSERSPROFILE%&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;hocolatey&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si todo ha salido bien el resultado será parecido a la imagen inferior.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-1.png&quot; alt=&quot;Mensaje de instalación satisfactoria de chocolatey&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para poder continuar con el proceso de instalación de &lt;em&gt;Jekyll&lt;/em&gt;, debemos cerrar la consola y reabrirla cómo nos indica el primer &lt;em&gt;warning&lt;/em&gt; en el mensaje anterior. Una vez abierta instalaremos ruby con la siguiente sentencia.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;choco install ruby -y&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si tras ejecutar el comando apareciera un mensaje de error como el siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;Error deserializing response of &lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;chocolatey.infrastructure.app.configuration.ConfigFileSettings:
+ Root element is missing.
+Root element is missing.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Deberemos eliminar un archivo que se ha generado durante la instalación. Este problema es debido a que este archivo se crea vacío y durante su lectura se produce el error. Seguro que en un futuro lo solventarán pero de momento la única solución es eliminarlo. Para ello navegaremos hasta donde se halle al fichero y ejecutaremos el comando &lt;em&gt;del&lt;/em&gt; como se indica debajo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;ProgramData&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;hocolatey&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;onfig&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;del &lt;/span&gt;chocolatey.config&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Con esta solución deberíamos poder instalar &lt;em&gt;Ruby&lt;/em&gt; sin problemas. En la siguiente imagen se puede ver el mensaje en caso de que la instalación ha sido satisfactoria.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-2.png&quot; alt=&quot;Mensaje de instalación satisfactoria de ruby&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por lo visto para que tengan efectos los cambios realizados por &lt;em&gt;chocolatey&lt;/em&gt; debemos cerrar la ventana y reabrirla con permisos de administrador de nuevo.&lt;/p&gt;
+
+&lt;p&gt;El siguiente paso es instalar  &lt;em&gt;bundler&lt;/em&gt; y &lt;em&gt;Jekyll&lt;/em&gt; como hicieramos en &lt;em&gt;MacOS&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;gem install bundler
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si en este paso, otro error volviera a mostrarse con el siguiente mensaje.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;SSL_connect &lt;span class=&quot;nv&quot;&gt;returned&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nv&quot;&gt;errno&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;nv&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SSLv3 &lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;server certificate B: certificate verify failed&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Será necesario instalar manualmente el certificado ya que este ha expirado. En un futuro imagino que lo incluirán en el paquete pero mientras tanto navega a esta &lt;a href=&quot;http://guides.rubygems.org/ssl-certificate-update/&quot;&gt;página&lt;/a&gt; y sigue las instrucciones para solucionarlo. A mí con la sección &lt;em&gt;«Installing using update packages»&lt;/em&gt; me ha bastado para que funcionara.&lt;/p&gt;
+
+&lt;p&gt;Una vez hechos todos estos pasos deberías poder utilizar &lt;em&gt;Jekyll&lt;/em&gt; en &lt;em&gt;Windows&lt;/em&gt; cómo veremos en el resto del taller.&lt;/p&gt;
+
+&lt;h2 id=&quot;primer-contacto&quot;&gt;Primer contacto&lt;/h2&gt;
+&lt;p&gt;Cómo indicara anteriomente, Jekyll es un generador de páginas estáticas permitiendonos la creación contenido mediante archivos de texto basados en &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;. Estos archivos serán inyectados en la plantillas HTML previamente definidas. Para poder facilitar la generación de las página web definitiva &lt;em&gt;Jekyll&lt;/em&gt; ofrece una herremienta llamada &lt;em&gt;&lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt;&lt;/em&gt; para poder cargar contenido de manera dinámica o utilizar ciertas estructuras de control. Pero antes de profundizar en todas las caraterísticas de &lt;em&gt;Jekyll&lt;/em&gt;, veamos como funciona.&lt;/p&gt;
+
+&lt;p&gt;Ya habíamos instalado las herramientas necesarias para que &lt;em&gt;Jekyll&lt;/em&gt; funcionase. Si todavía tienes el terminal abierto, elige el directorio donde quieras instalar la página web que vamos a crear. Una vez estés en el directorio seleccionado ejecuta el siguiente comando.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new jekyll-tut&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Al proyecto lo he llamado &lt;em&gt;jekyll-tut&lt;/em&gt; por motivos didácticos pero tú puedes nombrarlo como quieras.&lt;/p&gt;
+
+&lt;p&gt;Cuando el comando haya finalizado, veremos un mensaje indicando que el proyecto se ha instalado correctamente. Tras acceder al nuevo directorio, observaremos una estructura similar a la siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;.
+├── Gemfile 
+├── Gemfile.lock
+├── _config.yml
+├── _posts
+├── about.md
+└── index.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Luego explicaré cada uno de los archivos presentes, y no presentes, en la carpeta. Por ahora mejor arranquemos &lt;em&gt;Jekyll&lt;/em&gt; y veamos que se ha generado. Para ello usaremos el siguiente comando (siempre en el mismo directorio).&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Tras la ejecución del anterior comando han aparecido unos mesajes en la consola. Si nos fijamos en las dos últimas líneas, podremos ver una dirección &lt;em&gt;URL&lt;/em&gt; y una acción de comando.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;Server address: http://127.0.0.1:4000/
+Server running... press ctrl-c to stop.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La primera indica la dirección web donde podemos acceder para visitar el sitio web generado. La segunda señala como detener el servidor. Si accedemos al siguiente &lt;a href=&quot;127.0.0.1:4000&quot;&gt;enlace&lt;/a&gt; podremos observar lo que Jekyll ha generado por defecto. La página en concreto será como la siguiente imagen.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-3.png&quot; alt=&quot;Página de incio generada automáticamente por Jekyll&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Voilà!&lt;/em&gt; Esta es la página que &lt;em&gt;Jekyll&lt;/em&gt; ha creado utilizando el tema por defecto llamado &lt;em&gt;&lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt;&lt;/em&gt;. Estos temas son configurables a través el archivo &lt;em&gt;_config.yml&lt;/em&gt; desde la versión &lt;a href=&quot;https://github.com/jekyll/jekyll/pull/4595&quot;&gt;3.2.0&lt;/a&gt;. Más adelante veremos cómo se puede configurar un tema predefinido y/o modificarlo.&lt;/p&gt;
+
+&lt;p&gt;Todos los enlaces que hay en la página son navegables, por ejemplo si pulsamos sobre el artículo (&lt;em&gt;post&lt;/em&gt;) &lt;em&gt;«Welcome to Jekyll»&lt;/em&gt; nos dirigirá a una página nueva con el contenido del artículo. También hay una suscripción vía &lt;a href=&quot;https://es.wikipedia.org/wiki/RSS&quot;&gt;RSS&lt;/a&gt; y una página &lt;em&gt;about&lt;/em&gt;. Adelante échales un vistazo.&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-funciona-jekyll&quot;&gt;Cómo funciona &lt;em&gt;Jekyll&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Jekyll está diseñado para que focalicemos nuestra atención en la creación de contenido. De hecho desde su concepción primigenia está orientado para facilitar la creación y mantenimiento de un blog, separando el contenido de la presentación. Para ello hace uso de &lt;em&gt;layouts&lt;/em&gt; (presentación) que definen la disposicón de los elementos. También se pueden crear componentes reutilizables (&lt;em&gt;includes&lt;/em&gt;) cómo pueden ser la cabecera (&lt;em&gt;header&lt;/em&gt;) y el pie de página (&lt;em&gt;footer&lt;/em&gt;). Estos &lt;em&gt;layouts&lt;/em&gt; e &lt;em&gt;includes&lt;/em&gt; están almacenados por convención en los directorios &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_layouts&lt;/code&gt; e &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_includes&lt;/code&gt; respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Puede que ahora te estés preguntando donde están esas carpetas en el proyecto. Haces bien en preguntártelo. Pues bien, si recuerdas el tema &lt;em&gt;minima&lt;/em&gt; es instalado por defecto la primera vez que se crea un proyecto &lt;em&gt;Jekyll&lt;/em&gt;. Este tema provee todos los archivos necesarios para crear un blog. Entre esos archivos se incluyen los directorios &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_layouts&lt;/code&gt; e &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_includes&lt;/code&gt;. Por lo tanto, no hay necesidad de que las carpetas sean incluidas en el proyecto. También cabe la posibilida de crear un proyecto vacío incluyendo la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;--blank&lt;/code&gt; cuando se crea un proyecto nuevo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;ls-bundle-show&quot;&gt;&lt;/a&gt;Para ver que archivos contiene el tema &lt;em&gt;minima&lt;/em&gt;, podemos ejecutar uno de los siguientes comandos en consola indicados a continuación.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ls -l &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;bundle show minima&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Muestra en consola el contenido del directorio&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a name=&quot;open-bundle-show&quot;&gt;&lt;/a&gt;Aunque, si lo prefieres, puedes abrirlo en una ventana de sistema con una de las siguentes instrucciones dependiendo del sistema operativo.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;MacOS&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;open &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;bundle show minima&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Abre una ventana de sistema en MacOS&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Linux&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;xdg-open &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;bundle show minima&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# La variante open en Linux&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Windows&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;bundle show minima
+/usr/local/lib/ruby/gems/2.3.0/gems/minima-2.1.0
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;explorer /usr/local/lib/ruby/gems/2.3.0/gems/minima-2.1.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a name=&quot;minima-content&quot;&gt;&lt;/a&gt;Una vez ejecutado el comando, encontraremos los siguientes archivos.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;.
+├── LICENSE.txt 
+├── README.md
+├── _includes &lt;span class=&quot;c&quot;&gt;# componentes&lt;/span&gt;
+├── _layouts &lt;span class=&quot;c&quot;&gt;# plantillas&lt;/span&gt;
+├── _sass &lt;span class=&quot;c&quot;&gt;# estilos&lt;/span&gt;
+└── assets &lt;span class=&quot;c&quot;&gt;# resto de elementos usados en la página cómo imágenes, archivos pdf, etcétera.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cómo podemos comprobar, dentro de las carpetas &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_layouts&lt;/code&gt; e &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_includes&lt;/code&gt; hay una serie de archivos &lt;em&gt;HTML&lt;/em&gt;. Los primeros definen la estructura general del sitio web y los segundos son elementos parciales que pueden reutilizarse tanto en los &lt;em&gt;layouts&lt;/em&gt; como desde cualquier otro archivo. No te preocupes de momento por el resto de carpetas y archivos. Profundizaremos en ellos conforme avance el taller.&lt;/p&gt;
+
+&lt;p&gt;Para poder entender mejor como funcionan en conjunto &lt;em&gt;layouts&lt;/em&gt; e &lt;em&gt;includes&lt;/em&gt;, lo mejor es ver como se utilizan, para ello tomaremos como ejemplo el único artículo creado del blog.&lt;/p&gt;
+
+&lt;h3 id=&quot;composición-de-un-post&quot;&gt;Composición de un &lt;em&gt;Post&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;En la siguiente imagen podemos el artículo que &lt;em&gt;Jekyll&lt;/em&gt; genera como ejemplo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-4.png&quot; alt=&quot;Diferentes secciones de un post&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Rodeado en verde vemos la sección correspondiente al contenido de la página, el &lt;em&gt;post&lt;/em&gt; en sí mismo. En naranja apreciamos las elementos parciales, &lt;em&gt;includes&lt;/em&gt;. Y por último, en amarillo se indica el contenedor o &lt;em&gt;layout&lt;/em&gt;. Podemos ver que este último contiene al resto de componentes, estableciendo la disposición del conjunto formado por &lt;em&gt;post&lt;/em&gt; e &lt;em&gt;includes&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ahora que ya sabemos qué es qué en un &lt;em&gt;post&lt;/em&gt;, veamos cómo es el archivo. Para abrirlo, dirijámonos a la siguiente ruta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_post/2017-02-28-welcome-to-jekyll.markdown&lt;/code&gt;. ¿Lo tienes delante? Bien, veamos como se compone.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;yaml-front-matter&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;yaml-front-matter&quot;&gt;&lt;em&gt;YAML Front Matter&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Esta sección se la puede consideradar como una cabecera donde se especifican las preferencias particulares e información adicional que Jekyll utilizará para procesar el archivo. Siguiendo como referencia con el &lt;em&gt;post&lt;/em&gt; de ejemplo, la cabecera es la siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Welcome&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll!&quot;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;2017-02-28 01:01:13 +0100&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll update&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En la figura anterior se puede ver la parte superior del &lt;em&gt;post&lt;/em&gt;. Este fragmento corresponde a la sección llamada &lt;em&gt;YAML Front Matter&lt;/em&gt; y que como su nombre señala, utiliza la sintaxis &lt;a href=&quot;http://yaml.org/&quot;&gt;&lt;em&gt;YAML&lt;/em&gt;&lt;/a&gt;. Cómo más adelante veremos, el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;, donde se deinen las opciones globgenrealesales, hace uso de este mismo formato. Por contra, en el &lt;em&gt;Front Matter&lt;/em&gt; de un &lt;em&gt;post&lt;/em&gt; se establecen las opciones particulares al mismo, sobrescribiendo así lo preferencia definida en el archivo de configuraión global.&lt;/p&gt;
+
+&lt;p&gt;A continucación, en la lista se muestranla descripción de cada una de la opciones específicas de un &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlight language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;/code&gt;: indica cual es la layout (plantilla) a usar.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlight language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;/code&gt;: título del artículo y de la página.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlight language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;/code&gt;: fecha de publicación.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlight language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;categories&lt;/span&gt;&lt;/code&gt;: categorías a las que pertenece el artículo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Exceptuando &lt;code class=&quot;highlight language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;/code&gt;, el resto de las preferencias son sólo específicas del archivo. Es decir, no se definirían en el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es importante recalcar qué para que &lt;em&gt;Jekyll&lt;/em&gt; interprete la sección &lt;em&gt;Front Matter&lt;/em&gt;, esta debe &lt;em&gt;situar al inicio de cada archivo&lt;/em&gt;. Otra peculiaridad, es que todas esta opciones deben ir &lt;em&gt;envueltas entre dos línes de tres guiones (&lt;code class=&quot;highlight language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;&lt;/code&gt;)&lt;/em&gt;. Todo las variables que se encuentren dentro estas dos «líneas» serán utilizadas como opciones particulares.&lt;/p&gt;
+
+&lt;p&gt;El resto del archivo es el contenido como se muestra en la imagen del &lt;em&gt;post&lt;/em&gt;. El formato que se ha utiliza se llama &lt;em&gt;markdown&lt;/em&gt; y al igual que HTML es un lenguaje de marcado ligero pero mucho más legible. No te preocupes si no sabes &lt;em&gt;Markdown&lt;/em&gt;, hay muchos conversores que te facilitarán la tarea de transcribirlos desde un archivo &lt;em&gt;word&lt;/em&gt; o &lt;em&gt;google docs&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por último, cade señalar que cualquier archivo que contenga esta sección al inicio del mismo será procesado al igual que un &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;templating-liquid&quot;&gt;&lt;em&gt;Templating (Liquid)&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Si &lt;em&gt;YAML Front Matter&lt;/em&gt; es la cabecera, como es obvio, el resto del archivo será el cuerpo. En esta sección, a parte de redactar el artículo con &lt;em&gt;markdown&lt;/em&gt;, también se pueden incluir sentencias condicionales y funciones aportando un mayor dinamismo al resultado. Estas sentencias son procesadas mediante un motor de plantillas llamado &lt;em&gt;&lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;highlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;ruby&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt; 
+def print_hi(name)
+  puts &quot;Hi, #{name}&quot;
+end
+print_hi('Tom')
+#=&amp;gt; prints 'Hi, Tom' to STDOUT.
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endhighlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En el fragmento superior, las sentencias {% highlight ruby %} y {% endhighlight %} delimitan el contenido del texto que será procesado por &lt;em&gt;Liquid&lt;/em&gt;. En este caso concreto, el resultado generado es el siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;highlight&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;code&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;language-ruby&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ruby&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;k&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;def&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nf&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;print_hi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;(&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nb&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;name&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;)&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nb&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;puts&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;s2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&quot;Hi, &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;si&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;#{&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nb&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;name&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;si&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;s2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;k&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;end&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;n&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;print_hi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;(&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;s1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;'Tom'&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;)&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;#=&lt;span class=&quot;ni&quot;&gt;&amp;amp;gt;&lt;/span&gt; prints 'Hi, Tom' to STDOUT.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Como vemos el texto inicial es transformado a una serie de etiquetas &lt;em&gt;HTML&lt;/em&gt; para poder ser decorado mediante estilos. Al final, esto es lo que veríamos en el navegador.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Otros ejemplos de sentencias &lt;em&gt;Liquid&lt;/em&gt; serían los siguientes.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;relative_url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cómo bien habremos observado, las etiquetas están envueltas entre los símbolos &lt;strong&gt;{% %}&lt;/strong&gt; y &lt;strong&gt;{{ }}&lt;/strong&gt;. Esto no es sólo por una cuestión estética, los corchetes y porcentajes (&lt;strong&gt;{% %}&lt;/strong&gt;) permiten ejecutar condiciones o funciones, como por ejemplo &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt; o recorrer una lista &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;product&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;collection.products&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;. Por contra &lt;strong&gt;{{ }}&lt;/strong&gt; devuelve el valor que contenga la propiedad de un objeto o el valor de una variable.&lt;/p&gt;
+
+&lt;p&gt;Hay también un tercer llamado filtro y está representado por &lt;strong&gt;&lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;|&lt;/code&gt;&lt;/strong&gt;. Se utiliza para modificar el valor devuelto por el objeto o variable contenido. En la figura anterior, &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;| relative_url&lt;/code&gt; prefija el valor de &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;post.url&lt;/code&gt; la ruta relativa del sitio web, especificada en el archivo de configuración global, &lt;code class=&quot;highlight language-bash&quot; data-lang=&quot;bash&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para profundizar en liquid puedes leer la &lt;a href=&quot;https://shopify.github.io/liquid/basics/introduction/&quot;&gt;documentación oficial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A continuación vamos a ver cómo es el &lt;em&gt;layout&lt;/em&gt; que se utilizó en el &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;layout&quot;&gt;&lt;em&gt;Layout&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Cómo ya se introdujo antes, el &lt;em&gt;layout&lt;/em&gt; contiene la estructura donde se incluirá el contenido procesado del &lt;em&gt;post&lt;/em&gt; que hemos visto en el apartado anterior. Por defecto, este archivo se hallará en la raíz del proyecto bajo la carpeta &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;_layouts&lt;/code&gt; pero como bien podemos ver dicho directorio no existe.&lt;/p&gt;
+
+&lt;p&gt;Ya sabemos que este directorio se encuentra en situado en el directorio donde está instalada la gema &lt;em&gt;minima&lt;/em&gt;, que incluye la estructura y estilo general del sitio web. ¿Pero cómo se importa el archivo? Tranquilos, no es magia, aunque lo desconocido se pueda considerar como tal. &lt;em&gt;Jekyll&lt;/em&gt; primero busca si existe el &lt;em&gt;layout&lt;/em&gt; bajo nuestro proyecto, si no lo encuentra irá a buscarlo bajo el directorio donde se encuentre el tema. Para poder ver el contenido del tema en una ventana de sistema, puedes consultarlo en la &lt;a href=&quot;#open-bundle-show&quot;&gt;sección anterior, dedicada a cómo funciona Jekyll&lt;/a&gt;. De ahora en adelante, me limitaré a usar la versión en terminal.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ls -l &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;bundle show minima&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;bundle show&lt;/code&gt; retorna la ruta donde se encuentra la gema indicada, en este caso &lt;em&gt;minima&lt;/em&gt; es el nombre de la misma. &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt; básicamente ejecuta el comando que se encuentre en su interior,devolviemdo el resultado para poder ser utilizado en otro contexto. En este caso la salida del comando es una ruta que usará la instrucción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;ls&lt;/code&gt; para listar el contenido de la ruta. El resultado lo puedes ver en la siguiente &lt;a href=&quot;#minima-content&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;El nombre del &lt;em&gt;layout&lt;/em&gt; utilizado es &lt;em&gt;post&lt;/em&gt;, por lo tanto buscaremos un archivo con el mismo nombre con la extensión &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.html&lt;/code&gt; dentro del directorio &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_layouts&lt;/code&gt;. En la siguiente figura se muestra el archivo reducido para focalizarnos en lo que ahora nos interesa.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;---
+layout: default
+---
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;article&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemscope&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemtype=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schema.org/BlogPosting&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  .
+  .
+  .
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-content&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemprop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;articleBody&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    {{ content }}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  .
+  .
+  .
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/article&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En este archivo encontramos dos peculiaridades. La primera es que la sección &lt;em&gt;Front Matter&lt;/em&gt; se hace referencia otro layout. Por lo tanto este archivo no es el contenedor principal sino una parte del conjunto. La segunda es la sentencia &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;. Aquí es donde se embeberá el contenido del archivo que utilice el &lt;em&gt;layout post&lt;/em&gt;. Cómo analogía, podríamos pensar que al igual que en un puzzle infantil que se fuera construyendo de dentro hacia afuera.&lt;/p&gt;
+
+&lt;p&gt;Ahora que sabemos que el otro &lt;em&gt;layout&lt;/em&gt; se llama &lt;em&gt;default&lt;/em&gt;, debemos encontrar un archivo nombrado &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;default.html&lt;/code&gt; dentro de &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_layouts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  {% include head.html %}
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+    {% include header.html %}
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;main&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;page-content&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;aria-label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        {{ content }}
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/main&amp;gt;&lt;/span&gt;
+
+    {% include footer.html %}
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;¡Al fin! Ya hemos completado el puzzle. Cómo podemos ver, tanto el &lt;code class=&quot;highlight language-html&quot; data-lang=&quot;html&quot;&gt;DOCTYPE&lt;/code&gt; cómo la etiqueta &lt;code class=&quot;highlight language-html&quot; data-lang=&quot;html&quot;&gt;html&lt;/code&gt; están presentes. Como ocurriera en el layout post, este también contiene la sentencia &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;. Aquí es donde se incluirá el &lt;em&gt;layout post&lt;/em&gt; junto con el contenido del &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;includes&quot;&gt;&lt;em&gt;Includes&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;La etiqueta &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;include&lt;/code&gt; como su significado indica, nos permite incluir el contenido de otro archivo. Al igual que vimos con los layouts &lt;em&gt;Jekyll&lt;/em&gt; buscará primero en el directorio &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_includes&lt;/code&gt; que se encuentre en el directorio de nuestro proyecto, en caso de no hallarlo buscará en el directorio del tema instalado que se esté utilizando.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo lo podemos encontrar en el &lt;em&gt;layout&lt;/em&gt; &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;default.html&lt;/code&gt;. Esta sentencia incluirá al archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;head.html&lt;/code&gt; en el mismo lugar donde se hallase.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Estos archivos no tiene mayor secreto que, normalmente, ser fragmentos &lt;em&gt;HTML&lt;/em&gt;. Si quieres ver más ejemplos puedes echar un vistazo en la carpeta donde está instaldo el tema &lt;em&gt;minima&lt;/em&gt;. Puedes ver como hacerlo &lt;a href=&quot;#ls-bundle-show&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;parámetros&quot;&gt;Parámetros&lt;/h4&gt;
+&lt;p&gt;Otra característica importante de los &lt;em&gt;includes&lt;/em&gt; es la posibilidad de pasarles parámetros. Esto permite crear componentes reutilizables agnósticos al contexto donde se utilicen. También facilita la edición en un contexto &lt;em&gt;Markdown&lt;/em&gt; pudiendo incluir estructuras complejas que en &lt;em&gt;HTML&lt;/em&gt; resultan sencillas (recuerda que un archivo &lt;em&gt;Markdown&lt;/em&gt; se transforma a &lt;em&gt;HTML&lt;/em&gt;).&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&amp;lt;figure&amp;gt;
+   &amp;lt;a href=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;&amp;gt;
+   &amp;lt;img src=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot; style=&quot;max-width: &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;;&quot;
+      alt=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot; /&amp;gt;
+   &amp;lt;figcaption&amp;gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;caption&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;El ejemplo superior (extraído de la documentación oficial de &lt;em&gt;Jekyll&lt;/em&gt;) contiene cinco parámetros: &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;url&lt;/code&gt;, &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;file&lt;/code&gt;, &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;max-width&lt;/code&gt;, &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;alt&lt;/code&gt; y &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;caption&lt;/code&gt;. Estos parámetros son automáticamente incluidos como propiedades del objecto &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;include&lt;/code&gt;, creado en el propio contexto del archivo &lt;em&gt;include&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Suponiendo que el ejemplo de la figura anterior pertenece a un archivo nombrado &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;image.html&lt;/code&gt;, los parámetros se pasarían de la siguiente manera.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://jekyllrb.com&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;200px&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;logo.png&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Jekyll logo&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;caption&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;This is the Jekyll logo.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;crear-un-post&quot;&gt;Crear un &lt;em&gt;post&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Cómo hemos visto, los &lt;em&gt;posts&lt;/em&gt; se encuentran bajo la carpeta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_posts&lt;/code&gt;. Así que el nuevo archivo será instalado en ese directorio. Pero antes de crearlo, veamos que requisitos debe cumplir el &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;El nombre del archivo debe tener el siguiente formato &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;YYYY-MM-DD-título.EXT&lt;/code&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;YYYY&lt;/code&gt; corresponde al año,&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;MM&lt;/code&gt; al mes,&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;DD&lt;/code&gt; al día,&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;EXT&lt;/code&gt; es la extensión del archivo (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.markdown&lt;/code&gt;, &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.md&lt;/code&gt; o &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.html&lt;/code&gt;).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Por último, todo post debe contener al inicio la sección &lt;em&gt;&lt;a href=&quot;#yaml-front-matter&quot;&gt;YAML Front Matter&lt;/a&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;¡Ya está! No nos hace falta nada más. Bueno sí, necesitaremos un tema sobre el cual escribir aunque para no perder mucho tiempo decidiendo qué y haciendo honor al pragmatismo, en detrimento de la originalidad, utilizaremos el texto &lt;em&gt;lorem ipsum&lt;/em&gt;. De hecho, también lo usaremos como título. Por lo tanto, el archivo tendrá el siguiente nombre.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;2017-03-04-lorem-ipsum.md &lt;span class=&quot;c&quot;&gt;# .md es un alias de .markdown&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cómo no creo que nadie conozca el texto &lt;em&gt;Lorem ipsum&lt;/em&gt; de memoria, mayormente porque es ininteligible. Para generar el texto utilizaremos el siguiente &lt;a href=&quot;http://es.lipsum.com/&quot;&gt;enlace&lt;/a&gt;. Abajo podemos ver un estracto del &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Lorem&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ipsum&quot;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2017-03-04 00:15:37 +0100&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lorem&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis molestie orci, a 
+convallis mi cursus ut. Curabitur sit amet enim dolor. Mauris accumsan, ipsum blandit 
+ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
+.
+.
+.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si el servidor &lt;em&gt;Jekyll&lt;/em&gt; esta corriendo, al guardar el &lt;em&gt;post&lt;/em&gt; se genera automáticamente la página web. Para ver el resultado, abriremos en el navegador la página de inicio de nuestro &lt;em&gt;blog&lt;/em&gt;. Deberíamos ver algo parecido a la imagen siguiente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-5.png&quot; alt=&quot;Página de inicio&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como podemos apreciar, hay una nueva entrada en el índice con la fecha correspondiente a la indicada en el &lt;em&gt;Front Matter&lt;/em&gt; del &lt;em&gt;post&lt;/em&gt; que acabamos de editar.&lt;/p&gt;
+
+&lt;p&gt;Por defecto, mientras &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;jekyll serve&lt;/code&gt; está ejecutándose, se está observando cualquier cambio realizado en el proyecto, regenerando el mismo archivo que haya sido modificado de manera automática. El resultado es almacenado en el directorio &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_site&lt;/code&gt;, lugar desde donde se sirve el sitio web. Este directorio es creado por primera vez cuando ejecutamos &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;jekyll serve&lt;/code&gt; o &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;jekyll build&lt;/code&gt;, siendo regenerado cada vez que uno de estos dos comandos se vuelvea ejecutar.&lt;/p&gt;
+
+&lt;p&gt;En caso que el nuevo &lt;em&gt;post&lt;/em&gt; no se mostrase en el índice, podría deberse a que la fecha introducida sea futura, lo que provocaría que &lt;em&gt;Jekyll&lt;/em&gt; lo omitiera hasta se cumpliese tal plazo de tiempo.&lt;/p&gt;
+
+&lt;p&gt;Vayamos a ver ese flamante nuevo artículo que hemos creado. Si pulsamos sobre el enlace del nuevo &lt;em&gt;post&lt;/em&gt; deberíamos ver en el navegador lo siguiente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-6.jpg&quot; alt=&quot;Nuevo post&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;¡Excelente! Ahora ya sabemos cómo crear un nuevo artículo. Cómo vemos no ha sido necesario demasiada configuración y gracias a un formato de archivo de marcado ligero como &lt;em&gt;Markdown&lt;/em&gt;, es más sencillo redactar los textos que en &lt;em&gt;HTML&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;En caso de no saber &lt;em&gt;Markdown&lt;/em&gt;, podemos leer este &lt;a href=&quot;https://markdown.es/&quot;&gt;tutorial es castellano&lt;/a&gt;. Si sabemos leer en inglés podemos seguir este otro &lt;a href=&quot;http://www.markdowntutorial.com/&quot;&gt;tutorial interactivo&lt;/a&gt;. Cuando estemos editando un archivo &lt;em&gt;Markdown&lt;/em&gt;, recomiendo tener una «chuleta» a mano como referencia. Un ejemplo de chuleta sería esta &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;página&lt;/a&gt;. Como alternativa podemos utilizar un editor &lt;em&gt;Markdown&lt;/em&gt;, lo cual facilitará la redacción. Hay una lista interesante en el siguiente &lt;a href=&quot;https://markdown.es/editores-markdown/&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ahora que ya hemos aprendido a escribir artículos, creo que es más fácil entender porque &lt;em&gt;Jekyll&lt;/em&gt; es una herramienta orientada a contenido, facilitando la tarea de edición al poner el foco en la redacción de los textos, mientras que por otro lado, también nos permite organizar y editar el contenedor de manera independiente. En definitiva, Jekyll separa ambos entornos de manera efectiva.&lt;/p&gt;
+
+&lt;p&gt;Para profundizar más sobre la edición de un &lt;em&gt;post&lt;/em&gt; puedes mirar en la &lt;a href=&quot;https://jekyllrb.com/docs/posts/&quot;&gt;documentación oficial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;borradores&quot;&gt;Borradores&lt;/h3&gt;
+&lt;p&gt;Como su propio nombre indica, son archivos en los que estamos trabajando actualmente y todavía no están listos para ser publicados. Un borrador (&lt;em&gt;draft&lt;/em&gt; en inglés) no se diferencia en absoluto de artículo (&lt;em&gt;post&lt;/em&gt;) excepto en los siguientes puntos.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Se hallan en la carpeta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_drafts&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;No es necesario nombrarlos con la fecha como haríamos con un &lt;em&gt;post&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;_dratfs/artículo-en-proceso.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cuando consideremos que el borrador ha sido finalizado, lo único que deberemos hacer con el archivo es cambiarlo desde &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_drafts&lt;/code&gt; a &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_posts&lt;/code&gt; y modificar el nombre del archivo para que incluya la fecha correspondiente.&lt;/p&gt;
+
+&lt;p&gt;Por último, si queremos visualizar como están quedando los borradores, ejecutaremos el comando &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;jekyll serve&lt;/code&gt; con la siguiente opción.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;jekyll serve --drafts&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;incluir-imágenes-u-otros-archivos-estáticos&quot;&gt;Incluir imágenes u otros archivos estáticos&lt;/h3&gt;
+&lt;p&gt;Cualquier blog que se precie no solo contiene texto. Alguna vez querrás incluir alguna imagen o querrás adjuntar enlaces a archivos &lt;em&gt;pdf&lt;/em&gt; o cualquier otro formato. A no ser estos archivos sean suministrados desde un &lt;a href=&quot;https://es.wikipedia.org/wiki/Red_de_entrega_de_contenidos&quot;&gt;CDN&lt;/a&gt;, los tendrás que almacenar en el propio sitio web.&lt;/p&gt;
+
+&lt;p&gt;Cualquier tipo de archivo que no contenga el Front Matter es considerado como un archivo estático. Por lo tanto, imágenes, archivos pdf u de otro tipo son considerados estáticos.&lt;/p&gt;
+
+&lt;p&gt;Para hacer más atractivo el artículo que hemos creado previamente añadiremos una imagen. Podemos descargar haz clic &lt;a href=&quot;https://pixabay.com/es/escalera-berl%C3%ADn-arquitectura-1601133/&quot;&gt;aquí&lt;/a&gt;. Normalmente todo el contenido estático me gusta que quede almacenado en un mismo lugar, facilitando la búsqueda y referenciación de los mismos. Por convención, todo este tipo de archivos suele situarse en una carpeta llamada &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;assets&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si ya hemos descargado la imagen, la colocaremos en &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;assets/img&lt;/code&gt; como puedes ver abajo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;assets/img/staircase-1601133_1920.jpg&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;He decidido mantener el mismo nombre del archivo descargado pero puede ser otro si lo prefieres.&lt;/p&gt;
+
+&lt;p&gt;Para poder insertar la imagen en el &lt;em&gt;post&lt;/em&gt; se debe hacer cómo se especifica en &lt;em&gt;&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images&quot;&gt;Markdown&lt;/a&gt;&lt;/em&gt;. El archivo queda como se muestra a continuación.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Lorem&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ipsum&quot;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2017-03-04 00:15:37 +0100&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lorem&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Staircase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/assets/img/staircase-1601133_1920.jpg&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Staircase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis molestie orci, 
+a convallis mi cursus ut. Curabitur sit amet enim dolor. Mauris accumsan, ipsum blandit 
+ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
+.
+.
+.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;El resultado es el siguiente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-7.jpg&quot; alt=&quot;Artículo con imagen&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Esto funcionará correctamente si la carpeta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;assets&lt;/code&gt; está situada en el mismo directorio al que apunta el servidor. En caso de econtrarse en un directorio inferior, no se mostrará la imagen puesto que la ruta suministrada el archivo no referenciará donde se halla realmente. Además, es importante saber que cualquier ruta que comience por &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;/&lt;/code&gt; significa que el archivo se buscará de manera absoluta, es decir desde la raíz del sistema. Tratándose de un servidor será el directorio marcado como contenido web.&lt;/p&gt;
+
+&lt;p&gt;Pongamos un ejemplo para entender esto más claramente. Si el blog se titula &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;http://mi-pagina.com&lt;/code&gt;, nuestro artículo mostrará la imagen correctamente ya que el proyecto colgará desde la misma ruta. Por tanto, la &lt;em&gt;URL&lt;/em&gt; completa sería &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;http://mi-pagina.com/assets/img/staircase-1601133_1920.jpg&lt;/code&gt;. Pero en el caso que el proyecto estivuese alojado en un directorio inferior llamado &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;blog&lt;/code&gt;, donde estarían todos los archivos pertenecientes a nuestro sitio web, la &lt;em&gt;URL&lt;/em&gt; de acceso sería &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;http://mi-pagina.com/blog&lt;/code&gt;. Esto provocaría que la ruta que señala la imagen (y el resto de archivos) no funcionase puesto que sería incorrecta. La nueva ruta debería contener el nombre del directorio donde se halla actualmente: &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;/blog/assets/img/staircase-1601133_1920.jpg&lt;/code&gt;. Conformando la &lt;em&gt;URL&lt;/em&gt; siguiente &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;http://mi-pagina.com/blog/assets/img/staircase-1601133_1920.jpg&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una solución sería actualizar manualmente todas las rutas que hagan referencia a todos los archivos estáticos, pero a parte de ser una tarea tediosa imagina que el volumen de artículos fuese mayor a 100 y al menos cada uno tuviese una imagen. Llevaría demasiado tiempo cambiarlo todo.&lt;/p&gt;
+
+&lt;p&gt;Para solucionar este problema, &lt;em&gt;Jekyll&lt;/em&gt; propone dos opciones. Los filtros &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;relative_url&lt;/code&gt; y &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;absolute_url&lt;/code&gt;. Estos se utilizarán de la siguiente manera.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Staircase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;{{“/assets/img/staircase-1601133_1920.jpg”&lt;/span&gt; | relative_url}} “Staircase”)
+
+&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Staircase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;{{“/assets/img/staircase-1601133_1920.jpg”&lt;/span&gt; | absolute_url}} “Staircase”)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Con &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;relative_url&lt;/code&gt;, suponiendo que la subruta fuese &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;/blog&lt;/code&gt;, tras ser procesado el archivo, quedaría de la siguiente manera: &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;/blog/assets/img/staircase-1601133_1920.jpg&lt;/code&gt;. La función principal de este filtro es prefijar la subruta delante de cualquier ruta suministrada. Esta subruta se especifica en el archivo &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;_config.yml&lt;/span&gt;&lt;/code&gt; con la opción &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;baseurl&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;absolute_url&lt;/code&gt; haría lo mismo pero con la ruta completa: &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;http://mi-pagina.com/blog/assets/img/staircase-1601133_1920.jpg&lt;/code&gt;. Al igual que relative_url también puede ser configurado desde &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;. La diferencia entre ambos métodos es que &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;absolute_url&lt;/code&gt; utiliza dos opciones: &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;url&lt;/span&gt;&lt;/code&gt; y &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;baseurl&lt;/span&gt;&lt;/code&gt;. Concatenando respectivamente los valores cada opción se conforma la &lt;em&gt;url&lt;/em&gt; absoluta.&lt;/p&gt;
+
+&lt;p&gt;Cualquiera de las dos opciones son válidas. Utiliza la que consideres más apropiada. Personalmente suelo utilizar &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;relative_url&lt;/code&gt; así no tengo que incluir el nombre del dominio en el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;, lo cual me proporciona un proyecto agnóstico del dominio que vaya a utilizar. Aunque realmente poco importa, puesto que cada vez que ejecutemos &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;jekyll build&lt;/code&gt; todas las ruta son contruidas mientras se utilice una de los dos métodos.&lt;/p&gt;
+
+&lt;h2 id=&quot;crear-una-página&quot;&gt;Crear una página&lt;/h2&gt;
+&lt;p&gt;Además de crear artículos también se puede crear páginas estáticas. A diferencia de los &lt;em&gt;posts&lt;/em&gt;, estas son independientes de la fecha de publicación y la categoría. Exceptuando estos dos requisitos, el resto de opciones de configuración son los mismas.&lt;/p&gt;
+
+&lt;p&gt;Podemos crear todas las páginas que deseemos y almacenarlas en cualquier lugar del proyecto. No importa si están en directorios inferiores puesto que la misma estructura de carpetas es replicada en el directorio de salida tras ser procesado por &lt;em&gt;Jekyll&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A continuación podemos ver la relación de páginas estáticas en el proyecto con su correspondiente &lt;em&gt;url&lt;/em&gt; asociada.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;.
+├── _config.yml
+├── _posts/
+├── _site/
+├── about.md      &lt;span class=&quot;c&quot;&gt;# =&amp;gt; http://mi-pagina.com/about.html&lt;/span&gt;
+├── index.md      &lt;span class=&quot;c&quot;&gt;# =&amp;gt; http://mi-pagina.com/&lt;/span&gt;
+└── lorem.html    &lt;span class=&quot;c&quot;&gt;# =&amp;gt; http://mi-pagina.com/lorem.html&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Como bien podemos comprobar, el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;lorem.html&lt;/code&gt; no existe todavía, así que  vamos a crearlo. Este archivo contendrá un listado con todos los &lt;em&gt;posts&lt;/em&gt; que pertenezcan a la categoría lorem, que definimos al crear el anterior artículo. Para ello, tomaremos prestada la estructura definida en la página de inicio (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;index.md&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Al abrir el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;index.md&lt;/code&gt; observaremos que está vacío. Si bien recordamos, los &lt;em&gt;layouts&lt;/em&gt; nos proveen de un marco contenedor, por lo tanto aunque el archivo no contenga nada, debemos suponer que el &lt;em&gt;layout&lt;/em&gt; indicado compone este listado automáticamente. En este caso el &lt;em&gt;layout&lt;/em&gt; es &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;home&lt;/span&gt;&lt;/code&gt;. Podemos ver que contiene con el siguiente comando.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;cat &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;bundle show minima&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/_layouts/home.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A continuación se muestra como queda el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;lorem.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;---
+layout: page
+title: Lorem
+permalink: /lorem/
+---
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-list&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+{% for post in site.categories.lorem %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-meta&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{post.date | date: &quot;%b %-d, %Y&quot;}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{post.title | escape}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+{% endfor %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La dos diferencias fundamentales con &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;index.md&lt;/span&gt;&lt;/code&gt; es la extensión del archivo y el &lt;em&gt;layout&lt;/em&gt; utilizado. En este caso hemos usado un archivo &lt;em&gt;HTML&lt;/em&gt; ya que nos permite ajustar mas al detalle que un &lt;em&gt;Markdown&lt;/em&gt;. Por otro el layout es &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;page&lt;/span&gt;&lt;/code&gt;. En caso de haber usado el &lt;em&gt;layout&lt;/em&gt; &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;home&lt;/span&gt;&lt;/code&gt;, se mostrarían dos listados: en primer lugar el que acabamos de crear y justo debajo el mismo que muestra la página de inicio. Para evitar este incoveniente usaremos el layout &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;page&lt;/span&gt;&lt;/code&gt; que es el mismo que se define en &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;about.md&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si todo ha sido salido correctamente, en la barra de navegación veremos un nuevo enlace con el nombre lorem.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-8.png&quot; alt=&quot;Cabecera y barra de navegación&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Y el resultado de la página es el siguiente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/jekyll-9.png&quot; alt=&quot;Imagen de la página mostrando las catageríos lorem&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;¡Genial! Ya tenemos una nueva página creada. Para ver que todo funciona correctamente, te invito a que crees una nueva página bajo la categoría lorem. Verás como automáticamente aparecerá listada aquí.&lt;/p&gt;
+
+&lt;h3 id=&quot;variables&quot;&gt;Variables&lt;/h3&gt;
+&lt;p&gt;Durante las secciones anteriores hemos estado usando una serie de variables. Estas variables son recopiladas desde el &lt;em&gt;Front Matter&lt;/em&gt; y el archivo de configuración global (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;) por &lt;em&gt;Jekyll&lt;/em&gt;, haciéndolas accesibles a través del sistema de plantillas &lt;em&gt;Liquid&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo de esto es la siguiente sentencia que devolverá todos los artículos pertenecientes a la categoría &lt;em&gt;lorem&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;post&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;in&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.categories.lorem&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En este otro ejemplo desde la variable &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;post&lt;/code&gt; se recupera la &lt;em&gt;URL&lt;/em&gt; y el título definido en el &lt;em&gt;post&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{post.url | relaative_url}}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{post.title | escape}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Podemos ver la relación completa de estas variables que &lt;em&gt;Jekyll&lt;/em&gt; provee en el siguiente &lt;a href=&quot;http://jekyllrb.com/docs/variables/&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;permalinks&quot;&gt;&lt;em&gt;Permalinks&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Los &lt;em&gt;permalinks&lt;/em&gt; hacen referencia a la &lt;em&gt;URL&lt;/em&gt; permenente de los &lt;em&gt;posts&lt;/em&gt; o páginas del blog. &lt;em&gt;Jekyll&lt;/em&gt; nos permite configurar cual será esta &lt;em&gt;URL&lt;/em&gt; a través de la opción &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;/code&gt; mediante el uso de plantillas &lt;em&gt;URL&lt;/em&gt; o utilizando un nombre acorde a la especificación &lt;em&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-2&quot;&gt;URI&lt;/a&gt;&lt;/em&gt; (sin espacios ni diacríticos). Para configurarlo se usaremos la siguiente opción.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;variable|estilo|título_que_desees&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cómo es de suponer, esta opción se puede incluir en el archivo de configuración global, &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;, o en el &lt;em&gt;Front Matter&lt;/em&gt; al archivo pertinente. Recordemos que la opción &lt;em&gt;Front Matter&lt;/em&gt; prevalece ante la configuración global. &lt;em&gt;Front Matter&lt;/em&gt; no acepta el uso de plantillas &lt;em&gt;URL&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por defecto, &lt;em&gt;Jekyll&lt;/em&gt; utiliza el siguiente la siguiente plantilla.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/:categories/:year/:month/:day/:title.html&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Todas los &lt;em&gt;posts&lt;/em&gt; del blog tendrán este formato. De hecho este estilo de &lt;em&gt;permalink&lt;/em&gt; puede ser modificado por una plantilla predefinida mediante la variable &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;/code&gt; como se muestra a continuación. Podemos consultar todos las variables &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/#template-variables&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;El valor de &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;/code&gt; equivale a &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;/:categories/:year/:month/:day/:title.html&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Personalmente no me gusta este formato de &lt;em&gt;permalink&lt;/em&gt;, así que lo vamos a cambiar por algo más corto y recordable. Abajo podemos ver un ejemplo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/artículos/:title&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si configuramos esta opción en el &lt;em&gt;Front Matter&lt;/em&gt; de artículo que hemos creado la &lt;em&gt;URL&lt;/em&gt; será la siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;127.0.0.1:4000/articulos/lorem-ipsum&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esto también modificará el lugar de salida del archivo, situándose bajo la carpeta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;articulos&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si esta opción es configurada en el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;, se atribuirá a todos los &lt;em&gt;posts&lt;/em&gt;. Abajo podemos ver el resultado del directorio de salida tras cambiar el &lt;em&gt;permalink&lt;/em&gt; global.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;_site
+├── about
+│   └── index.html
+├── articulos
+│   ├── lorem-ipsum-2.html
+│   ├── lorem-ipsum.html
+│   └── welcome-to-jekyll.html
+├── assets
+│   ├── img
+│   │   └── staircase-1601133_1920.jpg
+│   └── main.css
+├── feed.xml
+├── index.html
+├── lorem
+│   └── index.html
+└── res.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Para saber más, podemos consultar este &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;configuración&quot;&gt;Configuración&lt;/h2&gt;
+&lt;p&gt;Ahora que ya hemos visto cómo funciona jekyll y cómo crear nuevos artículos y páginas, es hora de saber como se configura. Como vimos antes, en cada uno de &lt;em&gt;post&lt;/em&gt; o página podemos especificar las opciones en el &lt;em&gt;YAML Front Matter&lt;/em&gt; de manera individual. ALgunas opciones como &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;title&lt;/code&gt; solo pueden ser declaradas en esta sección. Pero otras se pueden incluir en el archivo de configuración general, &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Este archivo se halla en la raíz del proyecto. Si no se ha modificado el contenido del archivo es el siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Your awesome title&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-email@domain.com&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# this means to ignore newlines until &quot;baseurl:&quot;&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Write an awesome description for your new site here. You can edit this&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;line in _config.yml. It will appear in your document head meta (for&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Google search results) and in your feed.xml site description.&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# the subpath of your site, e.g. /blog&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# the base hostname &amp;amp; protocol for your site, e.g. http://example.com&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;twitter_username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyllrb&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;github_username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;jekyll&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Build settings&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;kramdown&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;minima&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-feed&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Gemfile&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Gemfile.lock&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Principalmente las opciones se dividen en dos grupos: las relativas al &lt;em&gt;Front Matter&lt;/em&gt; y las que &lt;em&gt;Jekyll&lt;/em&gt; utilizará para configurar y construir la página web.&lt;/p&gt;
+
+&lt;p&gt;En el primer grupo se encontrarían las opciones como que &lt;em&gt;layouts&lt;/em&gt; deben utilizarse en todos los &lt;em&gt;posts&lt;/em&gt; o el &lt;em&gt;permalink&lt;/em&gt; global. Esto evitará que tengamos que incluir estas preferencias en el &lt;em&gt;Front Matter&lt;/em&gt; de cada archivo ya que &lt;em&gt;Jekyll&lt;/em&gt; lo incluirá por nosotros de manera automática.&lt;/p&gt;
+
+&lt;p&gt;Estas opciones se pueden incluir por tipos de archivo como se muestra en la siguiente figura.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;posts&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;post&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Con las opciones anteriores estaremos diciendo a &lt;em&gt;Jekyll&lt;/em&gt; que el &lt;em&gt;layout&lt;/em&gt; por defecto para todos lo artículos sea &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;post.html&lt;/code&gt;. Cada uno de los &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;/code&gt; definidos hace referencia al conjunto de archivos filtrados por su tipo (&lt;em&gt;posts&lt;/em&gt;, &lt;em&gt;pages&lt;/em&gt;, etcétera). &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;path&lt;/span&gt;&lt;/code&gt; aplicará las preferencias definidas por scope sólo a los archivos que se encuentren bajo la ruta especificada (relativa al proyecto). Si &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;path&lt;/span&gt;&lt;/code&gt; se deja vacío, las preferencias serán aplicadas en todo el proyecto.&lt;/p&gt;
+
+&lt;p&gt;Como alternativa, no hace falta escribir la opción y dejarla vacía, simplemente con no incluirla también funcionará. En el siguiente ejemplo podemos ver cómo queda las opciones eliminando las vacías. También se incorpora las páginas.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;posts&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/articulos/:title&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;types&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pages&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;page&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Una vez aplicados estos cambios, las opciones &lt;em&gt;layout&lt;/em&gt; pueden ser borradas de los respectivos archivos. Cómo vimos en la sección &lt;a href=&quot;#permalinks&quot;&gt;permalinks&lt;/a&gt;, la opción específica (&lt;em&gt;Front Matter&lt;/em&gt;) prevalece ante la global (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;) por tanto estas preferencias pueden ser sobreescritas en cada archivo.&lt;/p&gt;
+
+&lt;p&gt;En el ejemplo anterior también se puede ver la opción &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/articulos/:title&lt;/span&gt;&lt;/code&gt; conenido dentro del ámbito de los &lt;em&gt;posts&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Otra característica interesante de este archivo de configuración general es poder declarar tantas opciones como así deseemos. Unos ejemplos son las opciones &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;/code&gt;, &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;description&lt;/span&gt;&lt;/code&gt;, &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;twitter_username&lt;/span&gt;&lt;/code&gt; o &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;email&lt;/span&gt;&lt;/code&gt;. Así que si necesitas el uso de alguna variable global, no dudes en crearlas en &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;. Todas estas opciones están disponibles en la variable global &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;site&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Podemos ver un ejemplo de uso de la &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;site.variable&lt;/span&gt;&lt;/code&gt; title en el &lt;em&gt;include&lt;/em&gt; header.html del tema &lt;em&gt;minima&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”site-title”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”{{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“/”&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;relative_url&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}}”&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ site.title | escape }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;El resto de preferencias pertenecen a cómo &lt;em&gt;Jekyll&lt;/em&gt; procesa el proyecto. Entre estas se encuentran opciones como modificiar el directorio de entrada y salida del proyecto, añadir &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;plugins&lt;/a&gt; o cambiar las opciones del servidor local. Te recomiendo que les eches un vistazo en la &lt;a href=&quot;https://jekyllrb.com/docs/configuration/&quot;&gt;página oficial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota importante&lt;/strong&gt;. Debemos tener en cuenta que cualquier modificación realizada en  &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt; requiere que el servidor sea reiniciado para utilizar los nuevos cambios.&lt;/p&gt;
+
+&lt;h3 id=&quot;variables-de-entorno&quot;&gt;Variables de entorno&lt;/h3&gt;
+&lt;p&gt;En ocasiones hay ciertos contenidos que queremos que solo se muestren en un entorno de desarrollo como los &lt;em&gt;logs&lt;/em&gt;. También podemos querer incluir una librería analítica, como &lt;em&gt;google analytics&lt;/em&gt;, cuando la página esté en producción. Para conseguir esto, &lt;em&gt;Jekyll&lt;/em&gt; provee una variable de entorno llamada &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;JEKYLL_ENV&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por defecto esta variable se establece como el valor &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;development&lt;/code&gt; (desarrollo). La otra opción es &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;production&lt;/code&gt; (producción). Aunque jekyll utiliza estos dos valores por convención, podemos definir tantos como deseemos.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo de esto lo podemos encontrar dentro del tema &lt;em&gt;minima&lt;/em&gt;. Si abrimos el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_includes/head.html&lt;/code&gt; veremos las siguientes líneas al final del mismo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;if jekyll.environment == 'production' and site.google_analytics %&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;include google-analytics.html %&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;endif %&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En este caso, se comprueba si la variable de entorno es &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;production&lt;/code&gt;` y si en la configuración general ha sido establecida la opción &lt;code class=&quot;highlight language-liquid&quot; data-lang=&quot;liquid&quot;&gt;google_analytics&lt;/code&gt; con el id como valor. Si bien recordamos, cualquier opción puede ser declarada en &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;. Por lo tanto si queremos incluir esta librería, tendremos que declarar la variable y cambiar &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;JEKYLL_ENV&lt;/code&gt; a &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;production&lt;/code&gt;. Para poder modificarla podemos ejecutar el comando build de la siguiente manera.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;production jekyll build&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Otra característica importante en &lt;em&gt;Jekyll&lt;/em&gt; es poder definir varios archivos de configuración. Estos pueden ser usarlos individualmente o en conjunto. Para ello incluirá la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;--config&lt;/code&gt; seguida del archivo o archivos (separados por comas) que deseemos utilizar.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build --config&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;_config.yml,_config.prod.yml&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Es importante tener en cuenta el orden en que se insertan los archivos. Una misma opción establecida en los dos archivos del ejemplo anterior, tendrá el valor del último archivo concatenado.&lt;/p&gt;
+
+&lt;h2 id=&quot;temas-themes&quot;&gt;Temas (&lt;em&gt;Themes&lt;/em&gt;)&lt;/h2&gt;
+&lt;p&gt;Durante todo el taller hemos estado viendo referencias al tema &lt;em&gt;minima&lt;/em&gt;. Si has seguido el tutorial hasta aquí, sabrás de sobra que este tema se incluye por defecto cada vez que se crea un proyecto nuevo. Este tema se instala junto con el resto de gemas de &lt;em&gt;Ruby&lt;/em&gt;. Puedes ver como se accede al contenido de esta gema &lt;a href=&quot;#ls-bundle-show&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Puede que nos preguntemos ¿porqué incluir las plantillas y estilos en una librería externa? Y está bien que nos hagas esta pregunta sobre todo teniendo en cuenta que esta caraterística se incluye a partir de la versión &lt;a href=&quot;https://jekyllrb.com/news/2016/07/26/jekyll-3-2-0-released/&quot;&gt;3.2&lt;/a&gt;, pues anterior a esta versión el tema se incluía junto al resto de archivos en el proyecto.&lt;/p&gt;
+
+&lt;p&gt;La principal ventaja, en el caso que decidamos usar el tema &lt;em&gt;minima&lt;/em&gt; o unos de los disponibles, es que estas gemas son mantenidas por una comunidad de desarrolladores. Por lo tanto, cada vez que haya una actualización donde se añaden nuevas características o mejoras, estas se instalarán automáticamente cada vez que ejecutemos el comando &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;bundle update&lt;/code&gt;. También se pueden actualizar individualmente incluyendo el nombre de la gema al final del mismo comando: &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;bundle update minima&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;instalar-un-tema&quot;&gt;Instalar un tema&lt;/h3&gt;
+&lt;p&gt;A parte de &lt;em&gt;minima&lt;/em&gt; podemos instalar otros temas. Por convención todos los temas tienen el siguiente formato: &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;jekyll-theme-nombre&lt;/code&gt;. Podemos encontrar todos los disponibles en la de &lt;em&gt;&lt;a href=&quot;https://rubygems.org/search?utf8=%E2%9C%93&amp;amp;query=jekyll-theme&quot;&gt;RubyGems&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para exponer como se instala un tema he elegido &lt;a href=&quot;https://github.com/pages-themes/cayman&quot;&gt;cayman&lt;/a&gt;. Para instalarlo recomiendo crear un nuevo proyecto &lt;em&gt;Jekyll&lt;/em&gt; evitando que se ejecute &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;bundle install&lt;/code&gt;. Para ello incluiremos la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;--skip-bundle&lt;/code&gt;. Todas la librerías asociadas al proyecto no serán instaladas, entre ellas el propio tema &lt;em&gt;minima&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new --skip-bundle nuevo-proyecto&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Tras esto se deben modificar los archivos &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;Gemfile&lt;/code&gt; y &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;. En el primero, buscaremos la línea que contenga la sentencia &lt;code class=&quot;highlight language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;minima&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 2.0&quot;&lt;/span&gt;&lt;/code&gt; y se cambia por &lt;code class=&quot;highlight language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-theme-cayman&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 0.0.3&quot;&lt;/span&gt;&lt;/code&gt;. En el segundo, modificaremos la opción &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;minima&lt;/span&gt;&lt;/code&gt; por &lt;code class=&quot;highlight language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-theme-cayman&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tras estos pasos, ejecutaremos el comando &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;bundle install&lt;/code&gt; manualmente para instalar todas las dependecias del proyecto junto con el nuevo tema.&lt;/p&gt;
+
+&lt;p&gt;Para poder ver cómo luce el nuevo tema, ejecutaremos el servidor con la instrucción &lt;em&gt;Jekyll serve&lt;/em&gt;. Pero como veremos, ocurre un error. Esto es debido a que el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;about.md&lt;/code&gt; está incluyendo un archivo perteneciente al tema minima que ahora no existe. El error mostrado es el siguiente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;Liquid Exception: Could not locate the included file &lt;span class=&quot;s1&quot;&gt;'icon-github.html'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;any of
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/Users/enric/Workspace/jekyll-tut/cayman/_includes&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;. Ensure it exists &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;one of those 
+directories and, &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;it is a symlink, does not point outside your site source. &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;about.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Para solucionarlo, debemos editar el archivo en cuestión y borrar las líneas donde se incluya ese archivo. A continuación volvemos a ejecutar el servidor y el proyecto se compilará correctamente. Para verlo, accederemo al siguiente enlace: http://127.0.0.1:4000.&lt;/p&gt;
+
+&lt;p&gt;Pero veremos que algo extraño sigue sucediendo. El navegador muestra una página en blanco. La causa de esto es debido a que &lt;em&gt;minima&lt;/em&gt; incluía un &lt;em&gt;layout&lt;/em&gt; que proporcionaba todo el contenido de la página de inicio. Así que para que este nuevo tema funcione correctamente, se deben crear las plantillas necesarias.&lt;/p&gt;
+
+&lt;p&gt;A estas alturas del taller, considero que podrías crear los archivos tú mismo. De hecho te lo recomiendo encarecidamente, es la mejor forma de aprender. Aunque si tuvieses dudas o necesitas ver algunos ejemplos, puedes descargar los fuentes usados en este taller desde &lt;a href=&quot;https://github.com/emoriarty/jekyll-tut&quot;&gt;github&lt;/a&gt;. Dentro de la carpeta &lt;em&gt;cayman&lt;/em&gt; están los archivos usados en esta sección. Vuelvo a insistir que vale la pena que los escribas aunque sea copiándolo a que pegues el archivo directemente.&lt;/p&gt;
+
+&lt;p&gt;También podemos encontrar otros temas en diferentes páginas cómo los ejemplos que incluyo a continuación.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://themes.jekyllrc.org/&quot;&gt;themes.jekyllrc.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;jekyllthemes.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;jekyllthemes.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Es importante saber que estos no se instalarán como una gema al igual que hicieramos anteriormente. Normalmente se ofrecen cómo un archivo comprimido que incluirá todos los recursos necesarios para iniciar un proyecto desde cero. La principal diferencia con los temas basados en gemas es que se pierde la ventaja de actualización automática, aunque todos los archivos estarán disponibles en el mismo directorio del proyecto.&lt;/p&gt;
+
+&lt;h3 id=&quot;sobrescribir-el-tema&quot;&gt;Sobrescribir el tema&lt;/h3&gt;
+&lt;p&gt;Puede que el tema que hayamos elegido al principio nos sirva para la finalidad de nuestro sitio web, pero probablemente, en un momento determinado deseemos extenderlo agregando nuevos estilos o modificando los &lt;em&gt;layouts&lt;/em&gt; existentes. Esto es relativamente sencillo, para ello localizaremos cual es el archivo en cuestión para sobrescribir en la carpeta del tema. A continuación, crearemos un archivo con el mismo nombre y lo situaremos en el mismo lugar donde se halle el original en nuestro proyecto. Tras esto ya podremos editar el nuevo archivo.&lt;/p&gt;
+
+&lt;p&gt;Esto es debido a que &lt;em&gt;Jekyll&lt;/em&gt; busca primero los archivos en el directorio donde se situa el proyecto. En caso de no hallarlos los intenta localizar en la carpeta donde el tema está instalado.&lt;/p&gt;
+
+&lt;p&gt;Supongamos que queremos agregar una serie de estilos nuevos en nuestra página. Al abrir el directorio donde está instalado el tema, observamos que el estilo principal se encuentra en la siguiente ruta relativa al tema: &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;assets/css/style.scss&lt;/code&gt;. Sabiendo esto, debemos crear el mismo archivo bajo la misma ruta en nuestro proyecto. Cuando este se haya reconstruido, utilizará el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;style.scss&lt;/code&gt; ubicado en en el proyecto.&lt;/p&gt;
+
+&lt;p&gt;Aunque esto tiene un inconveniente: los estilos originales los habremos perdido. Para solucionar este problema deberemos editar este nuevo archivo y añadir la siguiente sentencia.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;{{&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;site.theme&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;}}&quot;;&lt;/span&gt;
+
+&lt;span class=&quot;nn&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Agrega&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;aqu&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;í&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;tus&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;nuevos&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;estilos&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Con la anterior línea, estaremos indicando a &lt;em&gt;Jekyll&lt;/em&gt; que incluya la ruta donde se encuentra el archivo original para que preprocesador de estilos lo pueda importar. Si te has fijado bien, las dos primera líneas son tres guiones consecutivos, esto permite a &lt;em&gt;Jekyll&lt;/em&gt; saber que archivo deben ser procesados.&lt;/p&gt;
+
+&lt;p&gt;Por defecto, &lt;em&gt;Jekyll&lt;/em&gt; soporta &lt;em&gt;&lt;a href=&quot;http://sass-lang.com/&quot;&gt;SASS&lt;/a&gt;&lt;/em&gt; como generador de estilos, aunque si lo preferimos siempre podemos usar &lt;em&gt;CSS&lt;/em&gt;. De hecho, incluso, podemos usar ambos formatos.&lt;/p&gt;
+
+&lt;p&gt;De la misma manera sobrescribiremos un &lt;em&gt;layout&lt;/em&gt; o &lt;em&gt;include&lt;/em&gt;. La única diferencia es que una vez sobrescrito no habrá manera de poder importarlo como hicimos con los estilos.&lt;/p&gt;
+
+&lt;p&gt;Cómo colofón a esta sección, sólo me queda mencionar que podemos crear nuestro propio tema y publicarlo para compartirlo con otros desarrolladores. Aunque por la finalidad del artículo este tema no puede ser tratado, si te interesa puedes saber más en el siguiente &lt;a href=&quot;https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;assets&quot;&gt;&lt;em&gt;Assets&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Durante todo el taller hemos visto que todos los archivos que &lt;em&gt;Jekyll&lt;/em&gt; encuentra en el proyecto son procesados si estos llevan al inicio del mismo dos líneas de guiones y son situados en el directorio de salida (por defecto &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_site&lt;/code&gt;, aunque esto se puede modicar en el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt;). También hemos visto que los archivos que empiecen por un guión bajo (_) son omitidos en el resultado de salida. ¿Pero qué pasa con el resto?&lt;/p&gt;
+
+&lt;p&gt;El resto de archivos se incluyen en el sitio web resultante. Por lo tanto, todos los recursos como imágenes, estilos y archivos &lt;em&gt;Javascript&lt;/em&gt; son importados intactos para su uso. Normalmente por convención estos archivos se situan en el directorio &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;assets&lt;/code&gt; aunque los podemos ubicar donde queramos.&lt;/p&gt;
+
+&lt;h3 id=&quot;sass&quot;&gt;Sass&lt;/h3&gt;
+&lt;p&gt;Cómo ya mencioné en el apartado anterior, &lt;em&gt;Jekyll&lt;/em&gt; incorpora soporte para &lt;em&gt;Sass&lt;/em&gt;. Como en todo archivo que &lt;em&gt;Jekyll&lt;/em&gt; debe procersar, se deben incluir las dos líneas de tres guiones reglamentarias. Aunque no es necesario incluir estas en el resto de archivos parciales que importan a través de &lt;em&gt;Sass&lt;/em&gt;. La extensión de estos archivos puede ser &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.scss&lt;/code&gt; o &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.sass&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Estos archivos parciales deberán estar situados, una vez más por convención, bajo una carpeta nombrada &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_sass&lt;/code&gt; y que colgará en la raíz del proyecto. &lt;em&gt;Jekyll&lt;/em&gt; utiliza esta carpeta para «decirle» a &lt;em&gt;Sass&lt;/em&gt; donde encontrar los archivos importados. Por supuesto, esta opción puede ser modificada en el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;_config.yml&lt;/code&gt; de la siguiente forma.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;sass_dir&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;_sass&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;compressed&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cómo podemos ver, también se puede especificar el estilo de salida de los nuevos archivos &lt;em&gt;CSS&lt;/em&gt;. En este caso los archivos serán comprimidos.&lt;/p&gt;
+
+&lt;p&gt;Para ilustrar mejor este proceso supongamos que tenmos la siguiente estructura de carpetas.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;├── _sass
+│   ├── _typography.scss
+│   ├── _colors.scss
+│   └── _welcome-to-jekyll.html
+└──css
+    ├── main.scss
+    └── print.scss&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Tras ser compilado, el contenido de los archivos parciales que hayan sido importados, es agregado en los archivos principales (los que contienen las dos líneas con tres guiones, en este caso &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;main.scss&lt;/code&gt;) y &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;print.scss&lt;/code&gt;). El resultado será tal y como se muestra abajo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;_site
+└── css
+    ├── main.css
+    └── print.css&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En el este &lt;a href=&quot;https://github.com/jekyll/jekyll-sass-converter/tree/master/example&quot;&gt;enlace&lt;/a&gt; podemos encontrar un ejemplo sobre este proceso.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;Llegados a este punto del taller y con el conocimiento adquirido, deberías poder utilizar &lt;em&gt;Jekyll&lt;/em&gt; con cierta soltura. Por supuesto, se me dejo mucho en el tintero como las &lt;a href=&quot;https://jekyllrb.com/docs/collections/&quot;&gt;colecciones&lt;/a&gt;, los &lt;a href=&quot;[jekyll-collections]&quot;&gt;archivos de datos&lt;/a&gt;, los &lt;em&gt;&lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;plugins&lt;/a&gt;&lt;/em&gt; o la &lt;a href=&quot;https://jekyllrb.com/docs/pagination/&quot;&gt;paginación&lt;/a&gt; pero he considerado este artículo como una introducción a &lt;em&gt;Jekyll&lt;/em&gt; y por tanto el contenido incluido en el taller es más que suficiente para empezar. De hecho, no he incluido esas y otras &lt;em&gt;features&lt;/em&gt; por no considerarlas necesarias para la construcción de un blog.&lt;/p&gt;
+
+&lt;p&gt;De todas formas, si deseas saber más sobre la herramienta tras estas líneas he incluido una serie de enlaces a los recursos utilizados para elaborar este texto y que puedes usar para ampliar conocimiento.&lt;/p&gt;
+
+&lt;p&gt;Te vuelvo a recordar que peudes descargar desde github el &lt;a href=&quot;https://github.com/emoriarty/jekyll-tut&quot;&gt;código fuente&lt;/a&gt; usado para elaborar este taller y que también puede servirte de ayuda.&lt;/p&gt;
+
+&lt;h2 id=&quot;fuentes&quot;&gt;Fuentes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyllrb.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jekyll.tips/&quot;&gt;jekyll.tips&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://css-tricks.com/building-a-jekyll-site-part-1-of-3/&quot;&gt;Building a jekyll site&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;pages.github.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/creating-project-pages-using-the-command-line/&quot;&gt;Creating project pages using the command line&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;Markdown cheatsheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sass-lang.com/guide&quot;&gt;Sass guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command* -prompt-entries-and-chocolatey/&quot;&gt;Jekyll on windows&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ben.balter.com/2015/02/20/jekyll-collections/&quot;&gt;Jekyll collections&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">En este artículo voy a explicar cómo puedes crear tu propio blog o página web. El mismo lo he concebido como un taller donde podrás ver paso a paso desde la instalación de las herramientas necesarias hasta la finalización del sitio web.</summary></entry><entry><title type="html">Pues le recé, pero no me ha hecho caso</title><link href="http://nocturnidades.blog/relatos/pues-le-rece-pero-no-me-ha-hecho-caso" rel="alternate" type="text/html" title="Pues le recé, pero no me ha hecho caso" /><published>2017-03-05T00:00:00+01:00</published><updated>2017-03-05T00:00:00+01:00</updated><id>http://nocturnidades.blog/relatos/pues-le-rece-pero-no-me-ha-hecho-caso</id><content type="html" xml:base="http://nocturnidades.blog/relatos/pues-le-rece-pero-no-me-ha-hecho-caso">&lt;p&gt;Microrrelato extraido a partir de una viñeta de no recuerdo que autor.&lt;/p&gt;</content><author><name></name></author><summary type="html">Microrrelato extraido a partir de una viñeta de no recuerdo que autor.</summary></entry><entry><title type="html">Anotaciones contemporáneas</title><link href="http://nocturnidades.blog/articulos/anotaciones-contemporaneas" rel="alternate" type="text/html" title="Anotaciones contemporáneas" /><published>2017-02-26T01:56:00+01:00</published><updated>2017-02-26T01:56:00+01:00</updated><id>http://nocturnidades.blog/articulos/anotaciones-contemporaneas</id><content type="html" xml:base="http://nocturnidades.blog/articulos/anotaciones-contemporaneas">&lt;p&gt;Mientras leía un compendio resumido sobre las ideas y reflexiones políticas de Maquiavelo, escrito por &lt;a href=&quot;https://es.wikipedia.org/wiki/Quentin_Skinner&quot;&gt;Quentin Skinner&lt;/a&gt; y de &lt;a href=&quot;http://www.alianzaeditorial.es/libro.php?id=1849294&amp;amp;id_col=100508&quot;&gt;título homónimo&lt;/a&gt;, hubo un pasaje que me llamó especialmente la atención. Dicho fragmento versaba sobre las secuelas que la corrupción deja en la sociedad, obstaculizando así, un proceso de mejora continuo. E Incluso, en ocasiones llegando a retrasar este proceso.&lt;/p&gt;
 
 &lt;p&gt;Mientras estaba leyéndolo no he podido evitar pensar en la semejanza de este razonamiento con la historia reciente de España.&lt;/p&gt;
 
