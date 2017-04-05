@@ -1,7 +1,6 @@
 ---
 title: Surcando caminos de hierro 
 date: 2017-02-19 00:00:01 +0100
-layout: tale
 ---
 Elia observaba fascinada la consola llena de indicadores, palancas y botones
 mientras el maquinista, vestido de uniforme, le mostraba la cabina de la

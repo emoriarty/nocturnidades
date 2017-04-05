@@ -1,9 +1,9 @@
 ---
-layout: post
 title:  "Anotaciones contemporáneas"
 date:   2017-02-26 01:56:00 +0100
-categories: [ensayo]
+categories: [ensayos]
 description: Modesta reflexión a partir de unos textos sobre la obra de Maquiavelo y lo poco que ha cambiado desde entonces.
+permalink: /articulos/anotaciones-contemporaneas
 ---
 
 Mientras leía un compendio resumido sobre las ideas y reflexiones políticas de Maquiavelo, escrito por [Quentin Skinner][quentin-skinner] y de [título homónimo][book], hubo un pasaje que me llamó especialmente la atención. Dicho fragmento versaba sobre las secuelas que la corrupción deja en la sociedad, obstaculizando así, un proceso de mejora continuo. E Incluso, en ocasiones llegando a retrasar este proceso.

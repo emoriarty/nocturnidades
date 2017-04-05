@@ -45,3 +45,15 @@ collections:
 
 # Server
 host: 0.0.0.0
+
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      type: relatos
+    values:
+      layout: tale

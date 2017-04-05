@@ -3,23 +3,15 @@ layout: default
 ---
 <div class="post">
   <header class="post__header">
-    <h2 class="post__header__heading">
+    <h1 class="post__header__heading">
       {{ page.title }}
-    </h2>
+    </h1>
     <p class="post__header__subheading">
-      {{ page.date | date: "%e %B %Y"
-        | replace:"January","Enero"
-        | replace:"February","Febrero"
-        | replace:"March","Marzo"
-        | replace:"May","Mayo"
-        | replace:"June","Junio"
-        | replace:"July","Julio"
-        | replace:"August","Agosto"
-        | replace:"September","Septiembre"
-        | replace:"October","octubre"
-        | replace:"November","noviembre"
-        | replace:"December","Diciembre" }}
+      {% include date.html date=page.date %}
     </p>
   </header>
+  {% if page.picture %}
+    <p><img src={{ page.picture }} {% if page.picture_class %}class="{{ page.picture_class }}"{% endif %} {% if page.picture_alt %}alt="{{ page.picture_alt }}"{% endif %}></p>
+  {% endif %}
   {{ content }}
 </div>

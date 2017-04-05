@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  "Motivaciones o explicaciones no pedidas"
-date:   2017-02-09 00:00:00 +0100
-categories: [publicacion]
+title: "Motivaciones o explicaciones no pedidas"
+date: 2017-02-09 00:00:00 +0100
+categories: [ensayos]
 description: Explicaciones de porqué he creado este espacio personal donde publicar y compartir relatos y demás escritos.
+permalink: /articulos/motivaciones
 ---
 
 Desde hace algún tiempo me venía rondando la cabeza la idea de hacer algo
@@ -80,16 +80,15 @@ profesión a través de manuales, guías o talleres. Me parece que serían de gr
 utilidad, no sólo por quien pueda sacarles provecho, si no como un ejercicio de
 síntesis y estructuración del conocimiento adquirido.
 
-Cómo no me gusta ser dogmático y ni fundamentalista, en consecuencia no voy a
+Cómo no pretendo ser dogmático ni fundamentalista, en consecuencia no voy a
 reducir los escritos a lo anteriormente citado. La finalidad del blog pretende
-ser una especie de cajón desastre organizado.
+ser un cajón desastre donde tendrán cabida ideas, opiniones, ensayos 
+y artículos relacionados con tecnología (principalmente programación).
 
-Si has conseguido llegar hasta aquí querido lector, al menos espero no haberte
-aburrido con recuerdos de abuelo cebolleta, no está la vida para perder el
-tiempo y cómo nunca está de más ser agradecido te agradezco el esfuerzo.
+Por lo tanto querido lector, si has conseguido llegar hasta aquí querido lector al menos espero no haberte
+aburrido con recuerdos de abuelo cebolleta. No está la vida como para perder el tiempo y como nunca está de más ser agradecido, te agradezco el interés prestado.
 
-Y hasta aquí las motivaciones, espero que encuentres entre los escritos algo que
-te guste. Sin más recibe saludo de su humilde servidor y se bienvenido.
+Y hasta aquí las motivaciones. Espero que encuentres entre los escritos algo que te guste. Sin más, recibe un cordial saludo de tu humilde servidor.
 
 [robots-monters]: https://es.wikipedia.org/wiki/Kaiju
 [dd]: https://es.wikipedia.org/wiki/Dungeons_%26_Dragons

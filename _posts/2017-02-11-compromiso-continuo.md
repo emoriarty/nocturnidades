@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Compromiso continuo"
 date:   2017-02-11 08:31:56 +0100
-categories: tale
+categories: [microrrelatos]
 permalink: /relatos/compromiso-continuo
 ---
 Este microrrelato es un ejercicio a modo de monólogo interior sobre la
