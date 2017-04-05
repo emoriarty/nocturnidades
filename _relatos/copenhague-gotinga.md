@@ -7,7 +7,8 @@ date: 2017-02-14 00:01:00 +0100
   thumbnail: /assets/copenhaguen-central-station_thumbnail.jpg
   src: /assets/copenhaguen-central-station.jpg
   height: 562
-  width: 800 %}
+  width: 800
+  alt: 'Estación de Copenhague' %}
 
 Esa mañana Niels se despertó agotado. Llevaba semanas que el maldito gato no le dejaba dormir en paz. Todavía era noche cerrada, ni tan siquiera se oían los pájaros. Tras una ducha caliente y un buen desayuno, que le había preparado su asistenta, se sintió más animado. Comprobó que todo el equipaje estuviera en orden antes de llamar al taxi que le llevaría a la estación central de Copenhague. Desde allí tomaría el tren hasta Gotinga, donde debía impartir un seminario de física en la universidad de la misma ciudad durante un mes. El viaje duraba más de quince horas así que preparó unos cuantos libros, periódicos, revistas, apuntes y una libreta de notas para tener a mano. Una hora después, con el equipaje cargado en el vagón de carga, estaba sentado en el vagón del tren que le llevaría a su destino.
 

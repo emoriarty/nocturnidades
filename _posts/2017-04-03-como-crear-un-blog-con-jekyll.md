@@ -112,7 +112,12 @@ Para instalar chocolatey debes abrir una consola con acceso de administrador. Un
 
 Si todo ha salido bien el resultado será parecido a la imagen inferior.
 
-![Mensaje de instalación satisfactoria de chocolatey](/assets/jekyll-1.png)
+{% progressive_picture
+  thumbnail: /assets/jekyll-1.thumb.jpg
+  src: /assets/jekyll-1.jpg
+  height: 622
+  width: 968
+  alt: 'Mensaje de instalación satisfactoria de chocolatey' %}
 
 Para poder continuar con el proceso de instalación de _Jekyll_, debemos cerrar la consola y reabrirla cómo nos indica el primer _warning_ en el mensaje anterior. Una vez abierta instalaremos ruby con la siguiente sentencia.
 
@@ -137,7 +142,12 @@ Deberemos eliminar un archivo que se ha generado durante la instalación. Este p
 
 Con esta solución deberíamos poder instalar _Ruby_ sin problemas. En la siguiente imagen se puede ver el mensaje en caso de que la instalación ha sido satisfactoria.
 
-![Mensaje de instalación satisfactoria de ruby](/assets/jekyll-2.png)
+{% progressive_picture
+  thumbnail: /assets/jekyll-2.thumb.jpg
+  src: /assets/jekyll-2.jpg
+  height: 242
+  width: 600
+  alt: 'Mensaje de instalación satisfactoria de ruby' %}
 
 Por lo visto para que tengan efectos los cambios realizados por _chocolatey_ debemos cerrar la ventana y reabrirla con permisos de administrador de nuevo.
 
@@ -196,7 +206,12 @@ Server running... press ctrl-c to stop.
 
 La primera indica la dirección web donde podemos acceder para visitar el sitio web generado. La segunda señala como detener el servidor. Si accedemos al siguiente [enlace](127.0.0.1:4000) podremos observar lo que Jekyll ha generado por defecto. La página en concreto será como la siguiente imagen.
 
-![Página de incio generada automáticamente por Jekyll](/assets/jekyll-3.png)
+{% progressive_picture
+  thumbnail: /assets/jekyll-3.thumb.jpg
+  src: /assets/jekyll-3.jpg
+  height: 431
+  width: 600
+  alt: 'Página de incio generada automáticamente por Jekyll' %}
 
 _Voilà!_ Esta es la página que _Jekyll_ ha creado utilizando el tema por defecto llamado _[minima][minima]_. Estos temas son configurables a través el archivo __config.yml_ desde la versión [3.2.0][3.2.0]. Más adelante veremos cómo se puede configurar un tema predefinido y/o modificarlo.
 
@@ -251,7 +266,12 @@ Para poder entender mejor como funcionan en conjunto _layouts_ e _includes_, lo 
 ### Composición de un _Post_
 En la siguiente imagen podemos el artículo que _Jekyll_ genera como ejemplo.
 
-![Diferentes secciones de un post](/assets/jekyll-4.png)
+{% progressive_picture
+  thumbnail: /assets/jekyll-4.thumb.jpg
+  src: /assets/jekyll-4.jpg
+  height: 1398
+  width: 1474
+  alt: 'Diferentes secciones de un post' %}
 
 Rodeado en verde vemos la sección correspondiente al contenido de la página, el _post_ en sí mismo. En naranja apreciamos las elementos parciales, _includes_. Y por último, en amarillo se indica el contenedor o _layout_. Podemos ver que este último contiene al resto de componentes, estableciendo la disposición del conjunto formado por _post_ e _includes_.
 
@@ -480,7 +500,12 @@ ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
 
 Si el servidor _Jekyll_ esta corriendo, al guardar el _post_ se genera automáticamente la página web. Para ver el resultado, abriremos en el navegador la página de inicio de nuestro _blog_. Deberíamos ver algo parecido a la imagen siguiente.
 
-![Página de inicio](/assets/jekyll-5.png)
+{% progressive_picture
+  thumbnail: /assets/jekyll-5.thumb.jpg
+  src: /assets/jekyll-5.jpg
+  height: 1208
+  width: 1548
+  alt: 'Página de inicio' %}
 
 Como podemos apreciar, hay una nueva entrada en el índice con la fecha correspondiente a la indicada en el _Front Matter_ del _post_ que acabamos de editar.
 
@@ -490,7 +515,12 @@ En caso que el nuevo _post_ no se mostrase en el índice, podría deberse a que 
 
 Vayamos a ver ese flamante nuevo artículo que hemos creado. Si pulsamos sobre el enlace del nuevo _post_ deberíamos ver en el navegador lo siguiente.
 
-![Nuevo post](/assets/jekyll-6.jpg)
+{% progressive_picture
+  thumbnail: /assets/jekyll-6.thumb.jpg
+  src: /assets/jekyll-6.jpg
+  height: 1398
+  width: 1268
+  alt: 'Nuevo post' %}
 
 ¡Excelente! Ahora ya sabemos cómo crear un nuevo artículo. Cómo vemos no ha sido necesario demasiada configuración y gracias a un formato de archivo de marcado ligero como _Markdown_, es más sencillo redactar los textos que en _HTML_.
 
@@ -554,7 +584,12 @@ ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
 
 El resultado es el siguiente.
 
-![Artículo con imagen](/assets/jekyll-7.jpg)
+{% progressive_picture
+  thumbnail: /assets/jekyll-7.thumb.jpg
+  src: /assets/jekyll-7.jpg
+  height: 823
+  width: 784
+  alt: 'Artículo con imagen' %}
 
 Esto funcionará correctamente si la carpeta {% ihighlight shell %}assets{% endihighlight %} está situada en el mismo directorio al que apunta el servidor. En caso de econtrarse en un directorio inferior, no se mostrará la imagen puesto que la ruta suministrada el archivo no referenciará donde se halla realmente. Además, es importante saber que cualquier ruta que comience por {% ihighlight shell %}/{% endihighlight %} significa que el archivo se buscará de manera absoluta, es decir desde la raíz del sistema. Tratándose de un servidor será el directorio marcado como contenido web.
 
@@ -625,11 +660,21 @@ La dos diferencias fundamentales con {% ihighlight yml %}index.md{% endihighligh
 
 Si todo ha sido salido correctamente, en la barra de navegación veremos un nuevo enlace con el nombre lorem.
 
-![Cabecera y barra de navegación](/assets/jekyll-8.png)
+{% progressive_picture
+  thumbnail: /assets/jekyll-8.thumb.jpg
+  src: /assets/jekyll-8.jpg
+  height: 119
+  width: 1600
+  alt: 'Cabecera y barra de navegación' %}
 
 Y el resultado de la página es el siguiente.
 
-![Imagen de la página mostrando las catageríos lorem](/assets/jekyll-9.png)
+{% progressive_picture
+  thumbnail: /assets/jekyll-9.thumb.jpg
+  src: /assets/jekyll-9.jpg
+  height: 344
+  width: 600
+  alt: 'Imagen de la página mostrando las catageríos lorem' %}
 
 ¡Genial! Ya tenemos una nueva página creada. Para ver que todo funciona correctamente, te invito a que crees una nueva página bajo la categoría lorem. Verás como automáticamente aparecerá listada aquí.
 

@@ -22,7 +22,7 @@ module Jekyll
       %Q{
 <figure>
   <div class="placeholder" data-large="#{@attributes[:src]}">
-    <img src="#{@attributes[:thumbnail]}" class="img-small">
+    <img src="#{@attributes[:thumbnail]}" class="img-small" alt="#{@attributes[:alt]}">
     <div style="padding-bottom: #{aspect_ratio_percentage}%;"></div>
   </div>
 </figure>
@@ -32,29 +32,8 @@ module Jekyll
 
   class ProgressiveLibTag < Liquid::Tag
     def render(context)
-      %q{
-        <script type="text/javascript">
-          window.addEventListener('load', function() {
-            var placeholder = document.querySelector('.placeholder'),
-                small = placeholder.querySelector('.img-small');
-    
-            // 1: load small image and show it
-            var img = new Image();
-            img.src = small.src;
-            img.onload = function () {
-              small.classList.add('loaded');
-            };
-    
-            // 2: load large image
-            var imgLarge = new Image();
-            imgLarge.src = placeholder.dataset.large; 
-            imgLarge.onload = function () {
-              imgLarge.classList.add('loaded');
-            };
-            placeholder.appendChild(imgLarge);
-          })
-        </script>
-      }
+      js_content = IO.read(File.join(File.dirname(__FILE__), 'progressive-image-loader.js'))
+      "<script type=\"text/javascript\">#{js_content}</script>"
     end
   end
 
