@@ -22,7 +22,7 @@ module Jekyll
       %Q{
 <figure>
   <div class="placeholder" data-large="#{@attributes[:src]}">
-    <img src="#{@attributes[:thumbnail]}" class="img-small" alt="#{@attributes[:alt]}">
+    <img src="#{@attributes[:thumbnail]}" class="img-small loaded" alt="#{@attributes[:alt]}">
     <div style="padding-bottom: #{aspect_ratio_percentage}%;"></div>
   </div>
 </figure>

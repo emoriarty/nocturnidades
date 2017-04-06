@@ -1,22 +1,21 @@
+/**
+ * TODO
+ * - Improve throttling performance: prevent once the loader image is executed
+ *   being called again.
+ */
 (function () {
-  var remove = (function () {
-    var slice = Array.prototype.slice;
+  var reduce = (function () {
+    var reduce = Array.prototype.reduce;
+    return function reduceFn (list, fn, acc) {
+      return reduce.call(list, fn, acc);
+    };
+  })();
+
+  var push = (function () {
     var concat = Array.prototype.concat;
-    return function removeFn (list, idx) {
-      return concat.call(slice.call(list, 0, idx), slice.call(list, idx + 1)); 
-    }
-  })();
-
-  var shift = (function () {
-    return function shiftFn (list) {
-      return remove(list, 0);
-    }
-  })();
-
-  var head = (function () {
-    return function headFn (list) {
-      return list[0];
-    }
+    return function pushFn (list, item) {
+      return concat.call(list, [item]);
+    };
   })();
 
   function getViewportBottomPosition () {
@@ -36,34 +35,78 @@
     };
   }
 
+  function curry (uncurried) {
+    var parameters = Array.prototype.slice.call(arguments, 1);
+    return function() {
+      return uncurried.apply(this, parameters.concat(
+        Array.prototype.slice.call(arguments, 0)
+      ));
+    };
+  }
+
+  function getCurrentThreshold () {
+    return {
+      top: window.scrollY,
+      bottom: getViewportBottomPosition()
+    }
+  }
+
+  function loadImage(placeholder) {
+    var small = placeholder.querySelector('.img-small');
+
+    // 1: load small image and show it
+    // var img = new Image();
+    // img.src = small.src;
+    // img.onload = function () {
+    //   small.classList.add('loaded');
+    // };
+
+    // 2: load large image
+    var imgLarge = new Image();
+    imgLarge.src = placeholder.dataset.large; 
+    imgLarge.alt = small.alt;
+    imgLarge.onload = function () {
+      imgLarge.classList.add('loaded');
+    };
+    placeholder.appendChild(imgLarge);
+  }
+
+  function isVisible (placeholder) {
+    var offsetTop = placeholder.offsetTop;
+    var offsetBottom = offsetTop + placeholder.offsetHeight;
+
+    return offsetTop < (window.scrollY + window.innerHeight) &&
+      offsetBottom > window.scrollY;
+  }
+
+  function checkCurrentThreshold (fn, acc, placeholder) {
+    if (isVisible(placeholder)) {
+      fn(placeholder);
+      return acc;
+    }
+    return push(acc, placeholder);
+  }
+
+  function loadImages (placeholders, endFn) {
+    var curriedCheckThreshold = curry(checkCurrentThreshold, loadImage);
+    var images = reduce(placeholders, curriedCheckThreshold, []);
+
+    return function loader () {
+      images = reduce(images, curriedCheckThreshold, []);
+      images.length === 0 &&  endFn();
+    }
+  }
+
   window.addEventListener('load', function() {
     var placeholders = document.querySelectorAll('.placeholder');
-    function checkImages () {
-      return function checker () {
-        var placeholder = head(placeholders);
-        if (placeholder && placeholder.offsetTop <= getViewportBottomPosition()) {
-          var small = placeholder.querySelector('.img-small');
-    
-          // 1: load small image and show it
-          var img = new Image();
-          img.src = small.src;
-          img.onload = function () {
-            small.classList.add('loaded');
-          };
-  
-          // 2: load large image
-          var imgLarge = new Image();
-          imgLarge.src = placeholder.dataset.large; 
-          imgLarge.alt = small.alt;
-          imgLarge.onload = function () {
-            imgLarge.classList.add('loaded');
-          };
-          placeholder.appendChild(imgLarge);
-          placeholders = shift(placeholders);
-        }
-      }
-    }
 
-    document.addEventListener('scroll', throttle(checkImages(), 200));
+    var loader = loadImages(
+      placeholders,
+      function () {
+        document.removeEventListener('scroll', loader);
+        console.log('loader images listener removed');
+      }
+    );
+    document.addEventListener('scroll', throttle(loader, 200));
   });
-})()
+})();

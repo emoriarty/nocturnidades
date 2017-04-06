@@ -32,6 +32,149 @@
   <link
     rel="stylesheet"
     href="/css/syntax.css">
+  
+        <style>
+          .placeholder {
+            background-color: #f6f6f6;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .placeholder img {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity 1s linear;
+          }
+
+          .placeholder img.loaded {
+            opacity: 1;
+          }
+
+          .img-small {
+            filter: blur(50px);
+            /* this is needed so Safari keeps sharp edges */
+            transform: scale(1);
+          }
+        </style>
+      
+  <script type="text/javascript">/**
+ * TODO
+ * - Improve throttling performance: prevent once the loader image is executed
+ *   being called again.
+ */
+(function () {
+  var reduce = (function () {
+    var reduce = Array.prototype.reduce;
+    return function reduceFn (list, fn, acc) {
+      return reduce.call(list, fn, acc);
+    };
+  })();
+
+  var push = (function () {
+    var concat = Array.prototype.concat;
+    return function pushFn (list, item) {
+      return concat.call(list, [item]);
+    };
+  })();
+
+  function getViewportBottomPosition () {
+    return window.scrollY + window.innerHeight;
+  }
+
+  function throttle (func, wait) {
+    var timeout;
+    return function () {
+      if (!timeout) {
+        var context = this, args = arguments;
+        timeout = setTimeout(function() {
+          func.apply(context, args);
+          timeout = null;
+        }, wait);
+      }
+    };
+  }
+
+  function curry (uncurried) {
+    var parameters = Array.prototype.slice.call(arguments, 1);
+    return function() {
+      return uncurried.apply(this, parameters.concat(
+        Array.prototype.slice.call(arguments, 0)
+      ));
+    };
+  }
+
+  function getCurrentThreshold () {
+    return {
+      top: window.scrollY,
+      bottom: getViewportBottomPosition()
+    }
+  }
+
+  function loadImage(placeholder) {
+    var small = placeholder.querySelector('.img-small');
+
+    // 1: load small image and show it
+    // var img = new Image();
+    // img.src = small.src;
+    // img.onload = function () {
+    //   small.classList.add('loaded');
+    // };
+
+    // 2: load large image
+    var imgLarge = new Image();
+    imgLarge.src = placeholder.dataset.large; 
+    imgLarge.alt = small.alt;
+    imgLarge.onload = function () {
+      imgLarge.classList.add('loaded');
+    };
+    placeholder.appendChild(imgLarge);
+  }
+
+  function isVisible (placeholder) {
+    var offsetTop = placeholder.offsetTop;
+    var offsetBottom = offsetTop + placeholder.offsetHeight;
+
+    return offsetTop < (window.scrollY + window.innerHeight) &&
+      offsetBottom > window.scrollY;
+  }
+
+  function checkCurrentThreshold (fn, acc, placeholder) {
+    if (isVisible(placeholder)) {
+      fn(placeholder);
+      return acc;
+    }
+    return push(acc, placeholder);
+  }
+
+  function loadImages (placeholders, endFn) {
+    var curriedCheckThreshold = curry(checkCurrentThreshold, loadImage);
+    var images = reduce(placeholders, curriedCheckThreshold, []);
+
+    return function loader () {
+      images = reduce(images, curriedCheckThreshold, []);
+      images.length === 0 &&  endFn();
+    }
+  }
+
+  window.addEventListener('load', function() {
+    var placeholders = document.querySelectorAll('.placeholder');
+
+    var loader = loadImages(
+      placeholders,
+      function () {
+        document.removeEventListener('scroll', loader);
+        console.log('loader images listener removed');
+      }
+    );
+    document.addEventListener('scroll', throttle(loader, 200));
+  });
+})();
+</script>
 </head>
 
 
@@ -190,7 +333,12 @@ seconds
 
 <p>Si todo ha salido bien el resultado será parecido a la imagen inferior.</p>
 
-<p><img src="/assets/jekyll-1.png" alt="Mensaje de instalación satisfactoria de chocolatey" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-1.jpg">
+    <img src="/assets/jekyll-1.thumb.jpg" class="img-small loaded" alt="Mensaje de instalación satisfactoria de chocolatey" />
+    <div style="padding-bottom: 62.32464929859719%;"></div>
+  </div>
+</figure>
 
 <p>Para poder continuar con el proceso de instalación de <em>Jekyll</em>, debemos cerrar la consola y reabrirla cómo nos indica el primer <em>warning</em> en el mensaje anterior. Una vez abierta instalaremos ruby con la siguiente sentencia.</p>
 
@@ -209,7 +357,12 @@ Root element is missing.</code></pre></figure>
 
 <p>Con esta solución deberíamos poder instalar <em>Ruby</em> sin problemas. En la siguiente imagen se puede ver el mensaje en caso de que la instalación ha sido satisfactoria.</p>
 
-<p><img src="/assets/jekyll-2.png" alt="Mensaje de instalación satisfactoria de ruby" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-2.jpg">
+    <img src="/assets/jekyll-2.thumb.jpg" class="img-small loaded" alt="Mensaje de instalación satisfactoria de ruby" />
+    <div style="padding-bottom: 40.33333333333333%;"></div>
+  </div>
+</figure>
 
 <p>Por lo visto para que tengan efectos los cambios realizados por <em>chocolatey</em> debemos cerrar la ventana y reabrirla con permisos de administrador de nuevo.</p>
 
@@ -256,7 +409,12 @@ Server running... press ctrl-c to stop.</code></pre></figure>
 
 <p>La primera indica la dirección web donde podemos acceder para visitar el sitio web generado. La segunda señala como detener el servidor. Si accedemos al siguiente <a href="127.0.0.1:4000">enlace</a> podremos observar lo que Jekyll ha generado por defecto. La página en concreto será como la siguiente imagen.</p>
 
-<p><img src="/assets/jekyll-3.png" alt="Página de incio generada automáticamente por Jekyll" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-3.jpg">
+    <img src="/assets/jekyll-3.thumb.jpg" class="img-small loaded" alt="Página de incio generada automáticamente por Jekyll" />
+    <div style="padding-bottom: 71.83333333333334%;"></div>
+  </div>
+</figure>
 
 <p><em>Voilà!</em> Esta es la página que <em>Jekyll</em> ha creado utilizando el tema por defecto llamado <em><a href="https://github.com/jekyll/minima">minima</a></em>. Estos temas son configurables a través el archivo <em>_config.yml</em> desde la versión <a href="https://github.com/jekyll/jekyll/pull/4595">3.2.0</a>. Más adelante veremos cómo se puede configurar un tema predefinido y/o modificarlo.</p>
 
@@ -304,7 +462,12 @@ Server running... press ctrl-c to stop.</code></pre></figure>
 <h3 id="composición-de-un-post">Composición de un <em>Post</em></h3>
 <p>En la siguiente imagen podemos el artículo que <em>Jekyll</em> genera como ejemplo.</p>
 
-<p><img src="/assets/jekyll-4.png" alt="Diferentes secciones de un post" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-4.jpg">
+    <img src="/assets/jekyll-4.thumb.jpg" class="img-small loaded" alt="Diferentes secciones de un post" />
+    <div style="padding-bottom: 94.84396200814112%;"></div>
+  </div>
+</figure>
 
 <p>Rodeado en verde vemos la sección correspondiente al contenido de la página, el <em>post</em> en sí mismo. En naranja apreciamos las elementos parciales, <em>includes</em>. Y por último, en amarillo se indica el contenedor o <em>layout</em>. Podemos ver que este último contiene al resto de componentes, estableciendo la disposición del conjunto formado por <em>post</em> e <em>includes</em>.</p>
 
@@ -514,7 +677,12 @@ ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
 
 <p>Si el servidor <em>Jekyll</em> esta corriendo, al guardar el <em>post</em> se genera automáticamente la página web. Para ver el resultado, abriremos en el navegador la página de inicio de nuestro <em>blog</em>. Deberíamos ver algo parecido a la imagen siguiente.</p>
 
-<p><img src="/assets/jekyll-5.png" alt="Página de inicio" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-5.jpg">
+    <img src="/assets/jekyll-5.thumb.jpg" class="img-small loaded" alt="Página de inicio" />
+    <div style="padding-bottom: 78.0361757105943%;"></div>
+  </div>
+</figure>
 
 <p>Como podemos apreciar, hay una nueva entrada en el índice con la fecha correspondiente a la indicada en el <em>Front Matter</em> del <em>post</em> que acabamos de editar.</p>
 
@@ -524,7 +692,12 @@ ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
 
 <p>Vayamos a ver ese flamante nuevo artículo que hemos creado. Si pulsamos sobre el enlace del nuevo <em>post</em> deberíamos ver en el navegador lo siguiente.</p>
 
-<p><img src="/assets/jekyll-6.jpg" alt="Nuevo post" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-6.jpg">
+    <img src="/assets/jekyll-6.thumb.jpg" class="img-small loaded" alt="Nuevo post" />
+    <div style="padding-bottom: 110.25236593059937%;"></div>
+  </div>
+</figure>
 
 <p>¡Excelente! Ahora ya sabemos cómo crear un nuevo artículo. Cómo vemos no ha sido necesario demasiada configuración y gracias a un formato de archivo de marcado ligero como <em>Markdown</em>, es más sencillo redactar los textos que en <em>HTML</em>.</p>
 
@@ -582,7 +755,12 @@ ultricies pellentesque, arcu sem viverra est, vitae placerat quam enim a ante.
 
 <p>El resultado es el siguiente.</p>
 
-<p><img src="/assets/jekyll-7.jpg" alt="Artículo con imagen" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-7.jpg">
+    <img src="/assets/jekyll-7.thumb.jpg" class="img-small loaded" alt="Artículo con imagen" />
+    <div style="padding-bottom: 104.97448979591837%;"></div>
+  </div>
+</figure>
 
 <p>Esto funcionará correctamente si la carpeta <code class="highlight language-shell" data-lang="shell">assets</code> está situada en el mismo directorio al que apunta el servidor. En caso de econtrarse en un directorio inferior, no se mostrará la imagen puesto que la ruta suministrada el archivo no referenciará donde se halla realmente. Además, es importante saber que cualquier ruta que comience por <code class="highlight language-shell" data-lang="shell">/</code> significa que el archivo se buscará de manera absoluta, es decir desde la raíz del sistema. Tratándose de un servidor será el directorio marcado como contenido web.</p>
 
@@ -645,11 +823,21 @@ permalink: /lorem/
 
 <p>Si todo ha sido salido correctamente, en la barra de navegación veremos un nuevo enlace con el nombre lorem.</p>
 
-<p><img src="/assets/jekyll-8.png" alt="Cabecera y barra de navegación" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-8.jpg">
+    <img src="/assets/jekyll-8.thumb.jpg" class="img-small loaded" alt="Cabecera y barra de navegación" />
+    <div style="padding-bottom: 7.4375%;"></div>
+  </div>
+</figure>
 
 <p>Y el resultado de la página es el siguiente.</p>
 
-<p><img src="/assets/jekyll-9.png" alt="Imagen de la página mostrando las catageríos lorem" /></p>
+<figure>
+  <div class="placeholder" data-large="/assets/jekyll-9.jpg">
+    <img src="/assets/jekyll-9.thumb.jpg" class="img-small loaded" alt="Imagen de la página mostrando las catageríos lorem" />
+    <div style="padding-bottom: 57.333333333333336%;"></div>
+  </div>
+</figure>
 
 <p>¡Genial! Ya tenemos una nueva página creada. Para ver que todo funciona correctamente, te invito a que crees una nueva página bajo la categoría lorem. Verás como automáticamente aparecerá listada aquí.</p>
 

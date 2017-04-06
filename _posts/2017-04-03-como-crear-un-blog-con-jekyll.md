@@ -116,7 +116,7 @@ Si todo ha salido bien el resultado será parecido a la imagen inferior.
   thumbnail: /assets/jekyll-1.thumb.jpg
   src: /assets/jekyll-1.jpg
   height: 622
-  width: 968
+  width: 998
   alt: 'Mensaje de instalación satisfactoria de chocolatey' %}
 
 Para poder continuar con el proceso de instalación de _Jekyll_, debemos cerrar la consola y reabrirla cómo nos indica el primer _warning_ en el mensaje anterior. Una vez abierta instalaremos ruby con la siguiente sentencia.
