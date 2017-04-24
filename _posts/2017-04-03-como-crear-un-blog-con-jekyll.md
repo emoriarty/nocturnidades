@@ -2,7 +2,7 @@
 title: "Cómo crear un blog o sitio web con Jekyll"
 date: 2017-04-03 00:00:00 +0100
 categories: [tecnología, jekyll]
-description: Taller sobre como poder crear un blog o sitio web mediante Jekyll. Es necesario tener unos conocimientos mínimos de programación.
+description: Tutorial sobre como poder crear un blog o sitio web mediante Jekyll. Es necesario tener unos conocimientos mínimos en programación.
 permalink: /articulos/como-crear-un-blog-con-jekyll
 ---
 
@@ -509,7 +509,7 @@ Si el servidor _Jekyll_ esta corriendo, al guardar el _post_ se genera automáti
 
 Como podemos apreciar, hay una nueva entrada en el índice con la fecha correspondiente a la indicada en el _Front Matter_ del _post_ que acabamos de editar.
 
-Por defecto, mientras {% ihighlight shell %}jekyll serve{% endihighlight %} está ejecutándose, se está observando cualquier cambio realizado en el proyecto, regenerando el mismo archivo que haya sido modificado de manera automática. El resultado es almacenado en el directorio {% ihighlight shell %}_site{% endihighlight %}, lugar desde donde se sirve el sitio web. Este directorio es creado por primera vez cuando ejecutamos {% ihighlight shell %}jekyll serve{% endihighlight %} o {% ihighlight shell %}jekyll build{% endihighlight %}, siendo regenerado cada vez que uno de estos dos comandos se vuelvea ejecutar.
+Por defecto, mientras {% ihighlight shell %}jekyll serve{% endihighlight %} está ejecutándose, cualquier cambio realizado en el proyecto, regenera el mismo archivo que haya sido modificado de manera automática. El resultado es almacenado en el directorio {% ihighlight shell %}_site{% endihighlight %}, lugar desde donde se sirve el sitio web. Este directorio es creado por primera vez cuando ejecutamos {% ihighlight shell %}jekyll serve{% endihighlight %} o {% ihighlight shell %}jekyll build{% endihighlight %}, siendo regenerado cada vez que uno de estos dos comandos se vuelva ejecutar.
 
 En caso que el nuevo _post_ no se mostrase en el índice, podría deberse a que la fecha introducida sea futura, lo que provocaría que _Jekyll_ lo omitiera hasta se cumpliese tal plazo de tiempo.
 

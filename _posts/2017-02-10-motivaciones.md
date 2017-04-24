@@ -70,22 +70,23 @@ durante el día y una niña pequeña en casa, terminé por agobiarme y abandonar
 Es una lástima pero espero algún día volver a retomarlo.
 
 Al final probé por escribir ficción. De momento me parece más asequible que
-tocar piano, puedo hacerlo en el sofá lo cual me parece una gran ventaja. Además
-encuentro muy gratificante la creación de tramas y personajes, otra cosa es que
-el desarrollo y la historia sean los mejores o los más oportunos, eso lo dejo a
-la valoración del lector. Si bien es cierto que de momento tampoco pretendo
-ganar el planeta.
+tocar el piano. Puedo hacerlo en el sofá, lo cual me parece una gran ventaja a 
+medianoche un día laboral. Además encuentro muy gratificante la creación de tramas 
+y personajes, otra cosa es que el desarrollo y la historia sean los mejores o 
+los más oportunos, eso lo dejo a la valoración del lector. Si bien es cierto 
+que de momento tampoco pretendo ganar el planeta.
 Por otro lado, también me gustaría compartir todo el saber acumulado en mi
 profesión a través de manuales, guías o talleres. Me parece que serían de gran
 utilidad, no sólo por quien pueda sacarles provecho, si no como un ejercicio de
-síntesis y estructuración del conocimiento adquirido.
+síntesis y estructuración del conocimiento adquirido. Y por último, puede que 
+incluya algunos artículos de opinión o ensayos (aunque debería decir ensayitos).
 
 Cómo no pretendo ser dogmático ni fundamentalista, en consecuencia no voy a
 reducir los escritos a lo anteriormente citado. La finalidad del blog pretende
 ser un cajón desastre donde tendrán cabida ideas, opiniones, ensayos 
 y artículos relacionados con tecnología (principalmente programación).
 
-Por lo tanto querido lector, si has conseguido llegar hasta aquí querido lector al menos espero no haberte
+Por lo tanto, si has conseguido llegar hasta aquí querido lector, espero al menos no haberte
 aburrido con recuerdos de abuelo cebolleta. No está la vida como para perder el tiempo y como nunca está de más ser agradecido, te agradezco el interés prestado.
 
 Y hasta aquí las motivaciones. Espero que encuentres entre los escritos algo que te guste. Sin más, recibe un cordial saludo de tu humilde servidor.
