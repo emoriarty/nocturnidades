@@ -62,9 +62,12 @@
   function isVisible (placeholder) {
     var offsetTop = placeholder.offsetTop;
     var offsetBottom = offsetTop + placeholder.offsetHeight;
+    var supportPageOffset = window.pageXOffset !== undefined;
+    var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+    var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 
-    return offsetTop < (window.scrollY + window.innerHeight) &&
-      offsetBottom > window.scrollY;
+    return offsetTop < (y + window.innerHeight) &&
+      offsetBottom > y;
   }
 
   function checkCurrentThreshold (fn, acc, placeholder) {
