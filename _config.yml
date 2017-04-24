@@ -28,6 +28,7 @@ twitter_username: emoriarty81
 github_username:  emoriarty
 permalink: /:title
 # Build settings
+destination: docs
 markdown: kramdown
 gems:
   - jekyll-feed
@@ -39,6 +40,7 @@ exclude:
   - serve.sh
 keep_files:
   - CNAME
+  - assets
 collections:
   relatos:
     output: true
