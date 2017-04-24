@@ -1,22 +1,17 @@
-/**
- * TODO
- * - Improve throttling performance: prevent once the loader image is executed
- *   being called again.
- */
 (function () {
-  var reduce = (function () {
-    var reduce = Array.prototype.reduce;
-    return function reduceFn (list, fn, acc) {
-      return reduce.call(list, fn, acc);
-    };
-  })();
+  // var reduce = (function () {
+  //   var reduce = Array.prototype.reduce;
+  //   return function reduceFn (fn, list, acc) {
+  //     return reduce.call(list, fn, acc);
+  //   };
+  // })();
 
-  var push = (function () {
-    var concat = Array.prototype.concat;
-    return function pushFn (list, item) {
-      return concat.call(list, [item]);
-    };
-  })();
+  // var push = (function () {
+  //   var concat = Array.prototype.concat;
+  //   return function pushFn (list, item) {
+  //     return concat.call(list, [item]);
+  //   };
+  // })();
 
   function getViewportBottomPosition () {
     return window.scrollY + window.innerHeight;
@@ -42,13 +37,6 @@
         Array.prototype.slice.call(arguments, 0)
       ));
     };
-  }
-
-  function getCurrentThreshold () {
-    return {
-      top: window.scrollY,
-      bottom: getViewportBottomPosition()
-    }
   }
 
   function loadImage(placeholder) {
@@ -84,29 +72,29 @@
       fn(placeholder);
       return acc;
     }
-    return push(acc, placeholder);
+    return acc.concat([placeholder]);
   }
 
   function loadImages (placeholders, endFn) {
     var curriedCheckThreshold = curry(checkCurrentThreshold, loadImage);
-    var images = reduce(placeholders, curriedCheckThreshold, []);
+    // First execution to check if there are images on current viewport
+    var images = Array.prototype.reduce.call(placeholders, curriedCheckThreshold, []);
 
     return function loader () {
-      images = reduce(images, curriedCheckThreshold, []);
-      images.length === 0 &&  endFn();
+      images = Array.prototype.reduce.call(images, curriedCheckThreshold, []);
+      images.length === 0 && endFn();
     }
   }
 
   window.addEventListener('load', function() {
     var placeholders = document.querySelectorAll('.placeholder');
-
+    var listener;
     var loader = loadImages(
       placeholders,
       function () {
-        document.removeEventListener('scroll', loader);
-        console.log('loader images listener removed');
+        document.removeEventListener('scroll', listener);
       }
     );
-    document.addEventListener('scroll', throttle(loader, 200));
+    document.addEventListener('scroll', listener = throttle(loader, 250, true));
   });
 })();

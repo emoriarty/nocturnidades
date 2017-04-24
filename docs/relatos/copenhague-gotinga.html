@@ -32,149 +32,9 @@
   <link
     rel="stylesheet"
     href="/css/syntax.css">
-  
-        <style>
-          .placeholder {
-            background-color: #f6f6f6;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: relative;
-            overflow: hidden;
-          }
-
-          .placeholder img {
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            left: 0;
-            width: 100%;
-            transition: opacity 1s linear;
-          }
-
-          .placeholder img.loaded {
-            opacity: 1;
-          }
-
-          .img-small {
-            filter: blur(50px);
-            /* this is needed so Safari keeps sharp edges */
-            transform: scale(1);
-          }
-        </style>
-      
-  <script type="text/javascript">/**
- * TODO
- * - Improve throttling performance: prevent once the loader image is executed
- *   being called again.
- */
-(function () {
-  var reduce = (function () {
-    var reduce = Array.prototype.reduce;
-    return function reduceFn (list, fn, acc) {
-      return reduce.call(list, fn, acc);
-    };
-  })();
-
-  var push = (function () {
-    var concat = Array.prototype.concat;
-    return function pushFn (list, item) {
-      return concat.call(list, [item]);
-    };
-  })();
-
-  function getViewportBottomPosition () {
-    return window.scrollY + window.innerHeight;
-  }
-
-  function throttle (func, wait) {
-    var timeout;
-    return function () {
-      if (!timeout) {
-        var context = this, args = arguments;
-        timeout = setTimeout(function() {
-          func.apply(context, args);
-          timeout = null;
-        }, wait);
-      }
-    };
-  }
-
-  function curry (uncurried) {
-    var parameters = Array.prototype.slice.call(arguments, 1);
-    return function() {
-      return uncurried.apply(this, parameters.concat(
-        Array.prototype.slice.call(arguments, 0)
-      ));
-    };
-  }
-
-  function getCurrentThreshold () {
-    return {
-      top: window.scrollY,
-      bottom: getViewportBottomPosition()
-    }
-  }
-
-  function loadImage(placeholder) {
-    var small = placeholder.querySelector('.img-small');
-
-    // 1: load small image and show it
-    // var img = new Image();
-    // img.src = small.src;
-    // img.onload = function () {
-    //   small.classList.add('loaded');
-    // };
-
-    // 2: load large image
-    var imgLarge = new Image();
-    imgLarge.src = placeholder.dataset.large; 
-    imgLarge.alt = small.alt;
-    imgLarge.onload = function () {
-      imgLarge.classList.add('loaded');
-    };
-    placeholder.appendChild(imgLarge);
-  }
-
-  function isVisible (placeholder) {
-    var offsetTop = placeholder.offsetTop;
-    var offsetBottom = offsetTop + placeholder.offsetHeight;
-
-    return offsetTop < (window.scrollY + window.innerHeight) &&
-      offsetBottom > window.scrollY;
-  }
-
-  function checkCurrentThreshold (fn, acc, placeholder) {
-    if (isVisible(placeholder)) {
-      fn(placeholder);
-      return acc;
-    }
-    return push(acc, placeholder);
-  }
-
-  function loadImages (placeholders, endFn) {
-    var curriedCheckThreshold = curry(checkCurrentThreshold, loadImage);
-    var images = reduce(placeholders, curriedCheckThreshold, []);
-
-    return function loader () {
-      images = reduce(images, curriedCheckThreshold, []);
-      images.length === 0 &&  endFn();
-    }
-  }
-
-  window.addEventListener('load', function() {
-    var placeholders = document.querySelectorAll('.placeholder');
-
-    var loader = loadImages(
-      placeholders,
-      function () {
-        document.removeEventListener('scroll', loader);
-        console.log('loader images listener removed');
-      }
-    );
-    document.addEventListener('scroll', throttle(loader, 200));
-  });
-})();
-</script>
+<style>
+  .placeholder{background-color:#f6f6f6;background-size:cover;background-repeat:no-repeat;position:relative;overflow:hidden}.placeholder img{position:absolute;opacity:0;top:0;left:0;width:100%;transition:opacity 1s linear}.placeholder img.loaded{opacity:1}.img-small{filter:blur(50px);transform:scale(1)}
+</style>
 </head>
 
 
@@ -314,5 +174,8 @@
 
     
 
-  </body>
+    <script type='text/javascript'>
+    !function(){function b(a,b){var c;return function(){if(!c){var d=this,e=arguments;c=setTimeout(function(){a.apply(d,e),c=null},b)}}}function c(a){var b=Array.prototype.slice.call(arguments,1);return function(){return a.apply(this,b.concat(Array.prototype.slice.call(arguments,0)))}}function d(a){var b=a.querySelector(".img-small"),c=new Image;c.src=a.dataset.large,c.alt=b.alt,c.onload=function(){c.classList.add("loaded")},a.appendChild(c)}function e(a){var b=a.offsetTop,c=b+a.offsetHeight;return b<window.scrollY+window.innerHeight&&c>window.scrollY}function f(a,b,c){return e(c)?(a(c),b):b.concat([c])}function g(a,b){var e=c(f,d),g=Array.prototype.reduce.call(a,e,[]);return function(){g=Array.prototype.reduce.call(g,e,[]),0===g.length&&b()}}window.addEventListener("load",function(){var c,a=document.querySelectorAll(".placeholder"),d=g(a,function(){document.removeEventListener("scroll",c)});document.addEventListener("scroll",c=b(d,250,!0))})}();
+  </script>
+</body>
 </html>
