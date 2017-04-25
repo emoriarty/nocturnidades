@@ -7,7 +7,7 @@ date: 2017-04-25 01:14:00 +0100
   src: /assets/father-and-daugther.jpg
   height: 430
   width: 768
-  alt: 'Padre e hija antes de la tragedia.' %}
+  alt: 'Padre e hija antes de la tragedia. Foto extraída de el siguiente artículo http://ktla.com/2016/07/19/bay-area-father-drowns-in-failed-attempt-to-save-6-year-old-daughter-swept-away-by-wave-in-hawaii/' %}
 
 Helena nunca tuvo una vida fácil en lo que respecta a su relación con los hombres. Cuando era pequeña tuvo la desgracia de ser la primera —y única— niña aceptada en un colegio originalmente sólo para varones. Su padre la ingresó en él por cercanía al hogar para que pudiese regresar sola cuando las clases terminasen. El trabajo de su padre apenas le dejaba tiempo para estar con ella, pues debía realizar horas extra para poder mantenerlos.
 
@@ -27,4 +27,4 @@ Aquello la sumió en una pasajera depresión. Aunque no tanto era por el amor qu
 
 Desde aquel momento Layo se convirtió en un padre para Electra. El tiempo pasó y la pequeña fue creciendo. Cuando la jubilación llegó, éste dispuso de mayor tiempo para estar a la pequeña. Él la llevaba al colegio y la recogía, también le hacía la comida e incluso la acostaba cuando su madre no podía. El amor entre ambos dos fue en aumento. A Helena de alguna manera le incomodaba no poder dedicar más tiempo a su hija.
 
-Pasado el tiempo, la niña se transformó en una pequeña mujercita. El parecido físico entre ambas era sorprendente, remarcó Layo en cierta ocasión. Si a Helena, ya de por si inquieta con que su padre le dedicase tanto tiempo a su hija, la cuestión de dicha semejanza todavía la perturbó más. Un sentimiento de recelo, desconocido hasta ese momento, la invadió. Una noche, desde el vano de la puerta, observó a ambos juntos en la cama mientras su padre le contaba alguna anécdota histórica a Electra. Cuando las uñas hubieron atravesado la carne, se percató que estaba apretando el puño con demasiada intensidad. Al ver la pequeñas gotas de sangre recorrer la palma de su mano, fue consciente que su hija que no iba a tener un padre como ella lo tuvo.
+Pasado el tiempo, la niña se transformó en una pequeña mujercita. El parecido físico entre ambas era sorprendente, remarcó Layo en cierta ocasión. Si a Helena, ya de por si inquieta con que su padre le dedicase tanto tiempo a su hija, la cuestión de dicha semejanza todavía la perturbó más. Un sentimiento de recelo, desconocido hasta ese momento, la invadió. Una noche, desde el vano de la puerta, observó a ambos juntos en la cama mientras su padre le contaba alguna anécdota histórica a Electra. Cuando las uñas hubieron atravesado la carne, se percató que estaba apretando el puño con demasiada intensidad. Al ver la pequeñas gotas de sangre recorrer la palma de su mano, fue consciente que su hija no iba a tener un padre como ella lo tuvo.
