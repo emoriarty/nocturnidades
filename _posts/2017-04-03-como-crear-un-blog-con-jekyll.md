@@ -969,7 +969,7 @@ _site
 En el este [enlace][sass-example] podemos encontrar un ejemplo sobre este proceso.
 
 ## Conclusión
-Llegados a este punto del taller y con el conocimiento adquirido, deberías poder utilizar _Jekyll_ con cierta soltura. Por supuesto, se me dejo mucho en el tintero como las [colecciones][jekyll-collections], los [archivos de datos][jekyll-data], los _[plugins][jekyll-plugins]_ o la [paginación][jekyll-pagination] pero he considerado este artículo como una introducción a _Jekyll_ y por tanto el contenido incluido en el taller es más que suficiente para empezar. De hecho, no he incluido esas y otras _features_ por no considerarlas necesarias para la construcción de un blog.
+Llegados a este punto del taller y con el conocimiento adquirido, deberías poder utilizar _Jekyll_ con cierta soltura. Por supuesto, se que me dejo mucho en el tintero como las [colecciones][jekyll-collections], los [archivos de datos][jekyll-data], los _[plugins][jekyll-plugins]_ o la [paginación][jekyll-pagination] pero he considerado este artículo como una introducción a _Jekyll_ y por tanto el contenido incluido en el taller es más que suficiente para empezar. De hecho, no he incluido esas y otras _features_ por no considerarlas necesarias para la construcción de un blog.
 
 De todas formas, si deseas saber más sobre la herramienta tras estas líneas he incluido una serie de enlaces a los recursos utilizados para elaborar este texto y que puedes usar para ampliar conocimiento.
 
