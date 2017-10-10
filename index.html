@@ -1,7 +1,10 @@
 ---
 layout: default
+home: true
+pagination: 
+  enabled: true
 ---
-{% for post in site.posts limit:10 %}
+{% for post in paginator.posts limit:10 %}
   <article class="post-preview">
     <a href="
       {% if post.permalink %}

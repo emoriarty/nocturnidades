@@ -80,21 +80,24 @@ a.img
 .main
   h1, h2, h3, h4, h5, h6
     font-family: Inconsolata, Consolas, "Liberation Mono", Menlo, Courier, monospace
+
   .site-header
     +margin(1rem null 3rem)
+
     &__title
-      +display(flex)
-      +flex-direction(column)
-      +justify-content(center)
-      // +transition(font 0.3s ease)
+      display: block
       +margin(0)
-      +flex(1 1 100%)
-      font-family: 'Roboto Condensed', helvetica, sans-serif
+
+      h1, h2
+        font-family: 'Roboto Condensed', helvetica, sans-serif
+        margin: 0
+      
+      h2
+        color: #aaa
+
     &__nav
-      ul
-        float: inherit
-    .wrapper
-      height: $header-main-height
+      display: block
+
   .main__hidden
     display: none
 
@@ -109,25 +112,16 @@ a.img
   font-family: 'Roboto Condensed', helvetica, sans-serif
   +margin(1rem null)
 
-  .wrapper
-    height: $header-height
-    +display(flex)
-    +flex-direction(column)
-    +justify-content(space-around)
-
   &__title
     +display(none)
 
     i
       font-style: inherit
 
-    // &:hover
-    //   font-size: 34px
-
   &__nav
     color: #aaa
     ul
-      float: right
+      +justify-content(end)
     li
       display: inline
       list-style: none
@@ -147,7 +141,6 @@ a.img
       background: none
 
 .page-content
-  min-height: calc(100vh - 206px)
 
   .wrapper
     +margin(0 null 3em)
@@ -219,18 +212,61 @@ a.img
       color: #aaa
       font-size: 14px
 
+/* pagination */
+.paginator
+  text-align: center
+  list-style: none
+
+  &-prev,
+  &-next,
+  &-selected
+    font-size: 1.3rem
+
+  li
+    display: inline-block
+    text-align: center
+
+    .paginator-item
+      padding: 5px 10px
+      vertical-align: middle
+  
+    a.paginator-item
+      background: none
+
+      &:hover
+        background: #000
+        color: #fff
+        text-shadow: none
+
+/* Collection */
+.collection
+  font-size: 1.1rem
+  list-style: none
+
+  .collection-item
+    display: block
+    margin: 0 0 .5rem
+
+    &__date
+      color: #aaa
+
 @media only screen and (min-device-width: 568px)
   .main
     .site-header
+      &__title
+        display: inline-block
+
       &__nav
-        display: flex
-        justify-content: center
-        align-items: center
+        display: inline-block 
+        float: right
+
+  .page-content
+    min-height: calc(100vh - 206px)
+
   .site-header
     +margin(1rem null)
     &__nav
       ul
-        float: inherit
         +align-items(stretch)
         +display(flex)
         +flex(1)
@@ -247,10 +283,9 @@ a.img
           a[href]
             margin-right: 0
 
-    .wrapper
-      +flex-direction(row)
-      +justify-content(flex-end)
-
   .picture-shrink
     +margin(null auto)
     width: 50%
+
+  .collection
+    margin: 0 3rem

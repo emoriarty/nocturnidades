@@ -24,6 +24,7 @@ gem "bourbon", "~> 4.2.7"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll_inline_highlight", "~> 3.0"
+   gem "jekyll-paginate-v2", "~> 1.9.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

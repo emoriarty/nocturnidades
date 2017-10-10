@@ -1,7 +1,7 @@
 ---
 layout: about
-title: About
-permalink: /about/
+title: Sobre mi
+permalink: /sobre-mi/
 ---
 
 ## Algunos recursos técnicos

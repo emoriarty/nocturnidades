@@ -3,22 +3,19 @@ layout: default
 title: Relatos
 permalink: /relatos/
 ---
-{% for relato in site.relatos limit:10 %}
-  <article class="tale-preview">
+<ul class="collection">
+{% for relato in site.relatos reversed %}
+  <li class="collection-item">
+    <span class="collection-item__date">{% include date.html date=relato.date %}</span>
     <a href="
       {% if relato.permalink %}
       {{ relato.permalink | relative_url }}
       {% else %}
       {{ relato.url | relative_url }}
-      {% endif %}">
-        <header class="tale-preview__header">
-          <h3 class="tale-preview__heading">
-            {{ relato.title }}
-          </h3>
-          <span class="tale-preview__subheading">
-            {% include date.html date=relato.date %}
-          </span>
-        </header>
+      {% endif %}"
+    >
+      {{ relato.title }}
     </a>
-  </article>
+  </li>
 {% endfor %}
+</ul>

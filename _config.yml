@@ -17,6 +17,7 @@ destination: docs
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-paginate-v2
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -29,6 +30,15 @@ keep_files:
 collections:
   relatos:
     output: true
+# paging
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/:num/'
+  sort_reverse: true
+  trail: 
+    before: 2
+    after: 2
 
 # Server
 host: 0.0.0.0
