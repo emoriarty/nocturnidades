@@ -8,7 +8,6 @@ $footer-height: 70px
   width: device-width
 
 *
-  font-family: inherit
   margin: 0
   padding: 0
 
@@ -78,9 +77,6 @@ a.img
   background: transparent !important 
 
 .main
-  h1, h2, h3, h4, h5, h6
-    font-family: Inconsolata, Consolas, "Liberation Mono", Menlo, Courier, monospace
-
   .site-header
     +margin(1rem null 3rem)
 
@@ -105,7 +101,7 @@ a.img
   display: inherit
 
 .wrapper
-  +margin(0 2rem)
+  +margin(0 1rem)
 
 .site-header
   color: #040404
@@ -120,8 +116,6 @@ a.img
 
   &__nav
     color: #aaa
-    ul
-      +justify-content(end)
     li
       display: inline
       list-style: none
@@ -141,7 +135,6 @@ a.img
       background: none
 
 .page-content
-
   .wrapper
     +margin(0 null 3em)
 
@@ -211,6 +204,8 @@ a.img
     &__subheading
       color: #aaa
       font-size: 14px
+  > p
+    font-size: 18px
 
 /* pagination */
 .paginator
@@ -251,6 +246,9 @@ a.img
       color: #aaa
 
 @media only screen and (min-device-width: 568px)
+  .wrapper
+    +margin(0 2rem)
+
   .main
     .site-header
       &__title
@@ -270,6 +268,7 @@ a.img
         +align-items(stretch)
         +display(flex)
         +flex(1)
+        +justify-content(flex-end)
         height: auto
       li
         list-style: none
