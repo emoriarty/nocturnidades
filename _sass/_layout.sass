@@ -1,0 +1,32 @@
+@viewport
+  width: device-width
+
+.main
+  .main__hidden
+    display: none
+
+.main__hidden
+  display: inherit
+
+.wrapper
+  +margin(0 1rem)
+
+.page-content
+  .wrapper
+    +margin(0 null 3em)
+
+  img
+    display: block
+
+  li
+    +margin(null null .2em 2em)
+  
+  p
+    +margin(null null 1rem)
+
+@media only screen and (min-device-width: 568px)
+  .wrapper
+    +margin(0 2rem)
+
+  .page-content
+    min-height: calc(100vh - 206px)

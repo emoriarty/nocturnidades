@@ -1,0 +1,43 @@
+.post-preview,
+.tale-preview
+  +margin(0 0 2em)
+
+  &> a 
+    background: none
+    color: inherit
+    display: block
+    text-shadow: none
+
+    &:hover
+      background: none
+
+  &__heading
+    display: inline-block
+    +margin(null null 0)
+
+  &__subheading
+    color: #aaa
+    display: block
+    font-size: 14px
+    +margin(null null .5rem)
+
+  &__body
+    p
+      +margin(null null 0)
+
+  &:hover 
+    .post-preview__heading
+      background-color: black
+      color: white
+
+/* post */
+.post, .tale
+  &__header
+    &__heading
+      font-weight: 300
+      +margin(0)
+    &__subheading
+      color: #aaa
+      font-size: 14px
+  > p
+    font-size: 18px

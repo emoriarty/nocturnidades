@@ -1,0 +1,40 @@
+*
+  margin: 0
+  padding: 0
+
+body
+  background: #fff
+  color: #222
+  font-family: Inconsolata, Consolas, "Liberation Mono", Menlo, Courier, monospace
+  font-size: 16px
+  line-height: 1.5
+  font-smoothing: subpixel-antialiased
+  scroll-behavior: smooth
+  text-rendering: optimizeLegibility
+  text-rendering: geometricPrecision
+  font-feature-settings: "kern" 1, "liga" 1
+  max-width: 720px
+  +margin(0 auto)
+
+h1, h2, h3, h4, h5, h6
+  +margin(0 0 .5em)
+  font-family: 'Roboto Condensed', helvetica, sans-serif
+
+  &> a
+    background-color: transition !important
+    color: inherit !important
+
+    &:hover
+      background-color: transition !important
+      color: inherit !important
+
+p, ul, ol, pre, blockquote, hr, object
+  +margin(1em 0)
+
+img
+  border: none
+  max-width: 100%
+p,
+img,
+figure
+  +margin(null null 1em)
