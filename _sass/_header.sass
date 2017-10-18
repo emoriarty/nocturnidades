@@ -1,7 +1,9 @@
 .site-header
-  color: #040404
   font-family: 'Roboto Condensed', helvetica, sans-serif
   +margin(1rem null)
+
+  .wrapper:first-child
+    border-bottom: 1px solid $divider-color
 
   &__title
     +display(none)
@@ -10,16 +12,28 @@
       font-style: inherit
 
   &__nav
-    color: #aaa
+    color: $secondary-text-color
+
+    ul
+      margin: 0
+
     li
       display: inline
       list-style: none
       &:last-child
         a[href]
           margin-right: 0
+
     a[href]
       +margin(0 .8em 0 0)
       text-rendering: geometricPrecision
+
+  &__headline
+    color: $secondary-text-color
+
+    h2
+      line-height: 2
+      margin: 0
 
   a[href]
     background: none
@@ -42,7 +56,7 @@
         margin: 0
       
       h2
-        color: #aaa
+        color: $secondary-text-color
 
     &__nav
       display: block
@@ -50,12 +64,12 @@
 @media only screen and (min-device-width: 568px)
   .main
     .site-header
+      .wrapper
+        display: table
+        width: calc(100% - 4rem)
       &__title
-        display: inline-block
-
       &__nav
-        display: inline-block 
-        float: right
+        display: table-cell
 
   .site-header
     +margin(1rem null)

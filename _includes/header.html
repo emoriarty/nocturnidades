@@ -1,18 +1,12 @@
 <header class="site-header" role="banner">
-
   <div class="wrapper">
-
     <div class="site-header__title">
       <h1>
         <a href="{{ "/" | relative_url }}">
           {{ site.html_title }}
         </a>
       </h1>
-      {% if page.autogen == nil  and page.home != true %}
-        <h2><span>{{ page.title }}</span></h2>
-      {% endif %}
     </div>
-
     <nav class="site-header__nav">
       {% if site.pages %}
         <ul>
@@ -33,7 +27,12 @@
         </ul>
       {% endif %}
     </nav>
-
   </div>
-
+  <div class="wrapper">
+    <div class="site-header__headline">
+        {% if page.autogen == nil  and page.home != true %}
+          <h2><span>{{ page.title }}</span></h2>
+        {% endif %}
+    </div>
+  </div>
 </header>
