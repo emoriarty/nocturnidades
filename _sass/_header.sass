@@ -15,6 +15,7 @@
     color: $secondary-text-color
 
     ul
+      line-height: 3
       margin: 0
 
     li
@@ -29,7 +30,7 @@
       text-rendering: geometricPrecision
 
   &__headline
-    color: $secondary-text-color
+    display: none
 
     h2
       line-height: 2
@@ -60,14 +61,19 @@
 
     &__nav
       display: block
+    
+    &__headline
+      color: $secondary-text-color
+      display: block
 
 @media only screen and (min-device-width: 568px)
   .main
     .site-header
-      .wrapper
+      .wrapper:first-child
         display: table
         width: calc(100% - 4rem)
-      &__title
+
+      &__title,
       &__nav
         display: table-cell
 
