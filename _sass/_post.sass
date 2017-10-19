@@ -41,3 +41,21 @@
       font-size: 14px
   > p
     font-size: 18px
+
+.night-mode
+  .post-preview,
+  .tale-preview
+    &> a 
+      background: none
+      text-shadow: none
+      
+      &:hover
+        background: none
+
+    &:hover 
+      .post-preview__heading
+        background-color: $ternary-text-color
+        color: $primary-text-color
+
+    &__subheading
+      color: $ternary-text-color

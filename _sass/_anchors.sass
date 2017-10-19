@@ -8,7 +8,7 @@ a[href]
   background-repeat: repeat-x
   background-size: 2px .1em
   background-position: 0 1.025em
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff
+  text-shadow: -1px -1px 0 $primary-color-text, 1px -1px 0 $primary-color-text, -1px 1px 0 $primary-color-text, 1px 1px 0 $primary-color-text
 
 a[href^="#"] 
   background: inherit
@@ -25,3 +25,12 @@ a[href^="#"]:hover
 a.img
   border: none
   background: transparent !important 
+
+.night-mode
+  a[href] 
+    background-image: linear-gradient(to bottom, rgba(255,255,255,.5) 50%, rgba(255,255,255,0) 50%)
+    text-shadow: -1px -1px 0 $primary-text-color, 1px -1px 0 $primary-text-color, -1px 1px 0 $primary-text-color, 1px 1px 0 $primary-text-color
+
+  a[href]:hover 
+    color: $primary-color-text
+    background-image: linear-gradient(to bottom, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 50%)

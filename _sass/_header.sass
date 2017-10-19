@@ -21,6 +21,7 @@
     li
       display: inline
       list-style: none
+
       &:last-child
         a[href]
           margin-right: 0
@@ -48,16 +49,13 @@
   .site-header
     +margin(1rem null 3rem)
 
+    h1, h2
+      font-family: 'Roboto Condensed', helvetica, sans-serif
+      margin: 0
+
     &__title
       display: block
       +margin(0)
-
-      h1, h2
-        font-family: 'Roboto Condensed', helvetica, sans-serif
-        margin: 0
-      
-      h2
-        color: $secondary-text-color
 
     &__nav
       display: block
@@ -65,6 +63,14 @@
     &__headline
       color: $secondary-text-color
       display: block
+
+.night-mode
+  .site-header
+    &__headline
+      color: $ternary-text-color
+
+    &__nav
+      color: $ternary-text-color
 
 @media only screen and (min-device-width: 568px)
   .main

@@ -1,9 +1,14 @@
+{% if page.date %}
+  {% assign classname = "night-mode" %}
+{% else %}
+  {% assign classname = "night-mode main" %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "es" }}">
 
   {% include head.html %}
 
-  <body{% unless page.date %} class="main"{% endunless %}>
+  <body class="{{classname}}">
 
     {% include header.html %}
 
