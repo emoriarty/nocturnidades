@@ -25,3 +25,4 @@ permalink: /sobre-mi/
 * [Traceur](https://github.com/google/traceur-compiler/)
 * [Ramda](http://ramdajs.com/)
 * [Lodash](https://lodash.com/)
+* [Vue](https://vuejs.org/)

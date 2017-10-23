@@ -2,8 +2,11 @@
   font-family: 'Roboto Condensed', helvetica, sans-serif
   +margin(1rem null)
 
-  .wrapper:first-child
+  .wrapper
     border-bottom: 1px solid $divider-color
+
+    &:last-child
+      border-bottom: none
 
   &__title
     +display(none)
