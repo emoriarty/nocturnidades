@@ -3,7 +3,6 @@ layout: about
 title: Sobre mí
 permalink: /sobre-mi/
 ---
-
 ## Algunos recursos técnicos
 ### Conceptos
 * [Diferencia entre throttling y debouncing](https://css-tricks.com/the-difference-between-throttling-and-debouncing/)

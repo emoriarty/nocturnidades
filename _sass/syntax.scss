@@ -7,6 +7,12 @@
   border-radius: 3px;
 }
 
+.night-mode {
+  .highlight {
+    color: $primary-text-color;
+  }
+}
+
 code.highlight {
   background-color: #f6f8fa;
   border-radius: 1px;

@@ -27,6 +27,7 @@ exclude:
 keep_files:
   - CNAME
   - assets
+  - noche
 collections:
   relatos:
     output: true
