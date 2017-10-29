@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://nocturnidades.blog/</loc>
-    <lastmod>2017-10-19T12:56:24+02:00</lastmod>
+    <lastmod>2017-10-30T00:11:30+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://nocturnidades.blog/about/</loc>
-    <lastmod>2017-10-19T12:56:24+02:00</lastmod>
+    <lastmod>2017-10-30T00:11:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://nocturnidades.blog/relatos/</loc>
-    <lastmod>2017-10-19T12:56:24+02:00</lastmod>
+    <lastmod>2017-10-30T00:11:30+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>http://nocturnidades.blog/articulos/vim-intro</loc>
+    <lastmod>2017-10-29T00:30:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+   </url>
+   
   <url>
     <loc>http://nocturnidades.blog/articulos/hay-pocas-cosas-que-me-quiten-el-sueno</loc>
     <lastmod>2017-10-03T05:30:00+02:00</lastmod>
