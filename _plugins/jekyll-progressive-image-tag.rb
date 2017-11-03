@@ -19,9 +19,13 @@ module Jekyll
 
     def render(context)
       aspect_ratio_percentage = (@attributes[:height].to_f / @attributes[:width].to_f) * 100
+      className = ["placeholder"]
+        .concat([@attributes[:class].to_s])
+        .join(' ')
+        .strip
       %Q{
 <figure>
-  <div class="placeholder" data-large="#{@attributes[:src]}">
+  <div class="#{className}" data-large="#{@attributes[:src]}">
     <img src="#{@attributes[:thumbnail]}" class="img-small loaded" alt="#{@attributes[:alt]}">
     <div style="padding-bottom: #{aspect_ratio_percentage}%;"></div>
   </div>

@@ -37,7 +37,7 @@ HTML
   end
 
   Jekyll::Hooks.register [:pages, :documents], :post_render do |doc|
-    if doc.output =~ %r!class="placeholder"!
+    if doc.output =~ %r!class="placeholder.*"!
       Jekyll::ProgressiveImageLib.append_snippet(doc)
     end
   end
