@@ -7,27 +7,8 @@
         </a>
       </h1>
     </div>
-    <nav class="site-header__nav">
-      {% if site.pages %}
-        <ul>
-          <li class="main__hidden">
-            <a href="/">Hogar</a>
-          </li>
-          {% for m_page in site.pages reversed %}
-            {% if m_page.title and
-              m_page.autogen == nil and
-              m_page.home != true and
-              m_page.title != page.title %}
-              <li>
-                <a href="{{ m_page.url | relative_url }}">{{ m_page.title
-                  }}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </nav>
   </div>
+  {% include nav.html %}
   <div class="wrapper">
     <div class="site-header__headline">
         {% if page.autogen == nil  and page.home != true %}

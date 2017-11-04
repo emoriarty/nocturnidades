@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "es" }}">
-
-  {% include head.html %}
-
-  <body{% unless page.date %} class="main"{% endunless %}>
-
-    {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {% include paginator.html %}
-    {% include footer.html %}
-    {% if jekyll.environment == 'production' %}
-      {% include analytics.html %}
-    {% endif %}
-
-  </body>
+{% include head.html %}
+<body class="{% unless page.date %} main{% endunless %}">
+{% include content.html %}
+</body>
 </html>

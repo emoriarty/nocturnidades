@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +8,7 @@
   <title>Cómo crear un blog o sitio web con Jekyll</title>
   <meta name="description" content="En este artículo voy a explicar cómo puedes crear tu propio blog o página web. El mismo lo he concebido como un taller donde podrás ver paso a paso desde la ...">
 
+  <base href="http://nocturnidades.blog/">
   <link
     rel="canonical"
     href="http://nocturnidades.blog/articulos/como-crear-un-blog-con-jekyll">
@@ -17,9 +17,6 @@
     type="application/rss+xml"
     title="Nocturnidades"
     href="/feed.xml">
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext">
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
@@ -34,10 +31,8 @@
 </style>
 </head>
 
-
-  <body>
-
-    <header class="site-header" role="banner">
+<body class="">
+<header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header__title">
       <h1>
@@ -46,41 +41,44 @@
         </a>
       </h1>
     </div>
-    <nav class="site-header__nav">
-      
-        <ul>
-          <li class="main__hidden">
-            <a href="/">Hogar</a>
-          </li>
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              <li>
-                <a href="/relatos/">Relatos</a>
-              </li>
-            
-          
-            
-          
-            
-              <li>
-                <a href="/sobre-mi/">Sobre mí</a>
-              </li>
-            
-          
-        </ul>
-      
-    </nav>
   </div>
+  <div class="wrapper">
+  <nav class="site-nav">
+    
+      <ul>
+        <li class="main__hidden">
+          <a href="/">Inicio</a>
+        </li>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li>
+              <a href="/relatos/">Relatos</a>
+            </li>
+          
+        
+          
+        
+          
+            <li>
+              <a href="/sobre-mi/">Sobre mí</a>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</div>
+
   <div class="wrapper">
     <div class="site-header__headline">
         
@@ -91,9 +89,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="post">
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <div class="post">
   <header class="post__header">
     <h1 class="post__header__heading">
       Cómo crear un blog o sitio web con Jekyll
@@ -979,20 +977,20 @@ directories and, <span class="k">if </span>it is a symlink, does not point outsi
 
 </div>
 
-      </div>
-    </main>
+  </div>
+</main>
 
-    
 
-    <footer class="site-footer">
+
+<footer class="site-footer">
   <div class="wrapper">
     <p>El contenido de esta página está bajo licencia <a
       href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY 4.0</a>
   </div>
 </footer>
 
-    
-      <script>
+
+  <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
         Date();a=s.createElement(o),
@@ -1004,9 +1002,9 @@ directories and, <span class="k">if </span>it is a symlink, does not point outsi
 
 </script>
 
-    
 
-    <script type='text/javascript'>
+
+  <script type='text/javascript'>
     !function(){function b(a,b){var c;return function(){if(!c){var d=this,e=arguments;c=setTimeout(function(){a.apply(d,e),c=null},b)}}}function c(a){var b=Array.prototype.slice.call(arguments,1);return function(){return a.apply(this,b.concat(Array.prototype.slice.call(arguments,0)))}}function d(a){var b=a.querySelector(".img-small"),c=new Image;c.src=a.dataset.large,c.alt=b.alt,c.onload=function(){c.classList.add("loaded")},a.appendChild(c)}function e(a){var b=a.offsetTop,c=b+a.offsetHeight,d=void 0!==window.pageXOffset,e="CSS1Compat"===(document.compatMode||""),f=d?window.pageYOffset:e?document.documentElement.scrollTop:document.body.scrollTop;return b<f+window.innerHeight&&c>f}function f(a,b,c){return e(c)?(a(c),b):b.concat([c])}function g(a,b){var e=c(f,d),g=Array.prototype.reduce.call(a,e,[]);return function(){g=Array.prototype.reduce.call(g,e,[]),0===g.length&&b()}}window.addEventListener("load",function(){var c,a=document.querySelectorAll(".placeholder"),d=g(a,function(){document.removeEventListener("scroll",c)});document.addEventListener("scroll",c=b(d,250,!0))})}();
   </script>
 </body>
