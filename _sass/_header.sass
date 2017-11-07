@@ -1,19 +1,12 @@
 .site-header
   font-family: 'Roboto Condensed', helvetica, sans-serif
-  +margin(2rem null)
+  +margin(2rem null 1rem)
 
   &__title
     +display(none)
 
     i
       font-style: inherit
-
-  &__headline
-    display: none
-
-    h2
-      line-height: 2
-      margin: 0
 
   a[href]
     background: none
@@ -25,7 +18,7 @@
 
 .main
   .site-header
-    +margin(1rem null 2rem)
+    +margin(1rem null 1rem)
 
     h1, h2
       font-family: 'Roboto Condensed', helvetica, sans-serif
@@ -37,16 +30,9 @@
 
     &__nav
       display: block
-    
-    &__headline
-      color: $secondary-text-color
-      display: block
 
 .night-mode
   .site-header
-    &__headline
-      color: $ternary-text-color
-
     &__nav
       color: $ternary-text-color
 
