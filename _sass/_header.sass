@@ -25,7 +25,9 @@
       margin: 0
 
     &__title
-      display: block
+      +display(flex)
+      +justify-content(space-between)
+      +align-items(baseline)
       margin-bottom: 1rem
 
     &__nav
@@ -42,3 +44,5 @@
       .wrapper:first-child
         display: table
         width: calc(100% - 4rem)
+
+      &__title
