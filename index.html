@@ -22,11 +22,7 @@ pagination:
         </header>
         <section class="post-preview__body">
           <p>
-            {% if post.description %}
-              {{ post.description | markdownify | strip_html }}
-            {% else %}
-              {{ post.excerpt | strip_html }}
-            {% endif %}
+            {{ post.excerpt | strip_html }}
           </p>
         </section>
     </a>

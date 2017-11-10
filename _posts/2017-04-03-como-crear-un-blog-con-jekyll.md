@@ -2,7 +2,7 @@
 title: "Cómo crear un blog o sitio web con Jekyll"
 date: 2017-04-03 00:00:00 +0100
 categories: [tecnología, jekyll]
-description: Tutorial sobre como poder crear un blog o sitio web mediante Jekyll. Es necesario tener unos conocimientos mínimos en programación.
+excerpt: Tutorial sobre como poder crear un blog o sitio web mediante Jekyll. Es necesario tener unos conocimientos mínimos en programación.
 permalink: /articulos/como-crear-un-blog-con-jekyll
 ---
 
@@ -763,7 +763,7 @@ Este archivo se halla en la raíz del proyecto. Si no se ha modificado el conten
 {% highlight yml %}
 title: Your awesome title
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
+excerpt: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.

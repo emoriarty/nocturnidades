@@ -2,10 +2,9 @@
 title: "Motivaciones o explicaciones no pedidas"
 date: 2017-02-09 00:00:00 +0100
 categories: [ensayos]
-description: Explicaciones de porqué he creado este espacio personal donde publicar y compartir relatos y demás escritos.
+excerpt: Explicaciones de porqué he creado este espacio personal donde publicar y compartir relatos y demás escritos.
 permalink: /articulos/motivaciones
 ---
-
 Desde hace algún tiempo me venía rondando la cabeza la idea de hacer algo
 creativo, aunque el origen empezase mucho tiempo atrás. Prácticamente desde que
 tengo uso de razón siempre quise dedicarme a la creatividad, bien fuera de

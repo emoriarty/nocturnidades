@@ -2,7 +2,7 @@
 title: "Nostalgia y cambio"
 date: 2017-05-20 00:30:00 +0200
 categories: [ensayos]
-description: Reflexión sobre la nostalgia desbocada debido a mi regreso al lugar de origen tras una larga ausencia.
+excerpt: Reflexión sobre la nostalgia desbocada debido a mi regreso al lugar de origen tras una larga ausencia.
 permalink: /articulos/notalgia-y-cambio
 ---
 
