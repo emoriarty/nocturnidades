@@ -1,12 +1,15 @@
 .site-header
   font-family: 'Roboto Condensed', helvetica, sans-serif
-  +margin(2rem null 1rem)
+  +margin(1rem null 2rem)
 
   &__title
-    +display(none)
+    +display(flex)
+    +justify-content(space-between)
+    +align-items(baseline)
+    margin-bottom: 1rem
 
-    i
-      font-style: inherit
+  &__nav
+    display: block
 
   a[href]
     background: none
@@ -16,22 +19,10 @@
     &:hover
       background: none
 
-.main
-  .site-header
-    +margin(1rem null 1rem)
+  h1, h2
+    font-family: 'Roboto Condensed', helvetica, sans-serif
+    margin: 0
 
-    h1, h2
-      font-family: 'Roboto Condensed', helvetica, sans-serif
-      margin: 0
-
-    &__title
-      +display(flex)
-      +justify-content(space-between)
-      +align-items(baseline)
-      margin-bottom: 1rem
-
-    &__nav
-      display: block
 
 .night-mode
   .site-header
@@ -39,10 +30,7 @@
       color: $ternary-text-color
 
 @media only screen and (min-device-width: 568px)
-  .main
-    .site-header
-      .wrapper:first-child
-        display: table
-        width: calc(100% - 4rem)
-
-      &__title
+  .site-header
+    .wrapper:first-child
+      display: table
+      width: calc(100% - 4rem)
