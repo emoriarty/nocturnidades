@@ -16,3 +16,12 @@
     td:first-child
       vertical-align: top 
       width: 10%
+
+.dashed-table
+  border-collapse: collapse
+  tr
+    border-bottom: 1px dashed $primary-color-dark
+    &:last-child
+      border-bottom: 0
+  td
+    padding: .5rem
