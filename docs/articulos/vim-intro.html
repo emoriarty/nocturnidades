@@ -114,11 +114,11 @@
   </div>
 </figure>
 
-<p>Entiendo que si has llegado hasta aquí es porque tienes cierto interés en saber vim y quieres aprender a manejarlo, o que ni tan siquiera sepas lo que es (aunque lo dudo) y hayas abierto este artículo por azar. Sea cual sea el caso, antes de empezar me gustaría que supieras que este artículo lo he enfocado para que puedas hacerte una idea generalizada sobre el editor. Por lo tanto no es esperes encontrar un tutorial al uso o una manual de referencia.</p>
+<p>Entiendo que si has llegado hasta aquí es porque tienes cierto interés en saber <em>vim</em> y quieres aprender a manejarlo, o que ni tan siquiera sepas lo que es (aunque lo dudo) y hayas abierto este artículo por azar. Sea cual sea el caso, antes de empezar me gustaría que supieras que este artículo lo he enfocado para que puedas hacerte una idea generalizada sobre el editor. Por lo tanto no es esperes encontrar un tutorial al uso o una manual de referencia.</p>
 
-<p>En la primera parte se explican las características de vim y su diferencia con el resto de editores. En el apartado de instalación y configuración se introducen una serie de comandos útiles para que puedas al menos comenzar a trastear con <em>vim</em> sin que te frustres (créeme que si no conoces los cuatro comandos básicos te puedes volver loco). Por último verás cuales son los diferentes modos de edición.</p>
+<p>En la primera parte se explican las características de <em>vim</em> y su diferencia con el resto de editores. En el apartado de instalación y configuración se introducen una serie de comandos útiles para que puedas al menos comenzar a trastear con <em>vim</em> sin que te frustres (créeme que si no conoces los cuatro comandos básicos te puedes volver loco). Por último verás cuales son los diferentes modos de edición.</p>
 
-<p>Sería interesante que pudieras leer esto mientras tienes abierto un terminal donde ir probando vim.</p>
+<p>Sería interesante que pudieras leer esto mientras tienes abierto un terminal donde ir probando <em>vim</em>.</p>
 
 <p>Si deseas saber más puedes usar como referencia los enlaces al final del artículo.</p>
 
@@ -129,7 +129,7 @@
 
 <p>A diferencia de la mayoría de editores está <em>vim</em>. Básicamente este programa funciona sobre una consola de comandos (no corre sobre un entorno gráfico). Todas sus acciones se basan en comandos de teclado (ausencia de ratón). Y sus diferentes modos de edición (<em>normal</em>, <em>input</em>, <em>visual</em>) que más adelante verás. Solo estas tres características pueden ahuyentar al profano.</p>
 
-<p>La pregunta que te puedes estar haciendo es ¿por qué usar <em>vim</em> si voy a tener que aprender desde cero para manejarlo? Pues bien, reconozco que al principio cuesta adaptarse a un editor como vim donde nada está donde uno espera. Es más, no hay nada que esté donde uno espera. Para que te hagas una idea de cuán distinto es puedes mirar la imagen a continuación. Observa que interfaz tan minimalista.</p>
+<p>La pregunta que te puedes estar haciendo es ¿por qué usar <em>vim</em> si voy a tener que aprender desde cero para manejarlo? Pues bien, reconozco que al principio cuesta adaptarse a un editor como <em>vim</em> donde nada está donde uno espera. Es más, no hay nada que esté donde uno espera. Para que te hagas una idea de cuán distinto es puedes mirar la imagen a continuación. Observa que interfaz tan minimalista.</p>
 
 <figure>
   <div class="placeholder" data-large="/assets/vim-intro-1.jpg">
@@ -140,7 +140,7 @@
 
 <p>Si tras ver una pantalla completamente en negro sigues con ganas de darle un oportunidad, lo primero que deberías saber es que tiene una curva de aprendizaje de semanas (incluso meses) para empezar a tener cierta soltura en su manejo. Una vez haya pasado este tiempo y tras un uso regular encontrarás todo su potencial. Para que te hagas a una idea, comprobarás lo rápido que es tener todas las acciones posibles a un golpe de teclado (<em>keystroke</em>) o combinaciones de ellos.</p>
 
-<p>Otros de los beneficios de vim es que puedes usarlo en entornos en remoto a través de conexiones <em>SSH</em> que no ofrecen una interfaz gráfica. Si por algún motivo la conexión fuese lenta, vim encadenaría las acciones tecleadas y las ejecutaría cuando pudiese en el mismo orden sin que se perdieran ¿No es genial esto? De hecho al funcionar sobre un terminal evita un consumo de recursos de sistema mayor, como lo haría cualquier otro editor en un entorno gráfico. Por supuesto, existen variantes de <em>vim</em> que se pueden usar en un entorno gráfico, aunque entonces perdería la gracia.</p>
+<p>Otros de los beneficios de <em>vim</em> es que puedes usarlo en entornos en remoto a través de conexiones <em>SSH</em> que no ofrecen una interfaz gráfica. Si por algún motivo la conexión fuese lenta, <em>vim</em> encadenaría las acciones tecleadas y las ejecutaría cuando pudiese en el mismo orden sin que se perdieran ¿No es genial esto? De hecho al funcionar sobre un terminal evita un consumo de recursos de sistema mayor, como lo haría cualquier otro editor en un entorno gráfico. Por supuesto, existen variantes de <em>vim</em> que se pueden usar en un entorno gráfico, aunque entonces perdería la gracia.</p>
 
 <p>Si te asusta lo de no poder usar el ratón no debes preocuparte. <em>vim</em> ofrece la posibilidad de habilitarlo añadiendo un parámetro en su configuración. Tras reiniciarlo podrás usar el ratón al igual que en cualquier entorno gráfico. Como comprobarás <em>vim</em> es altamente configurable.</p>
 
@@ -164,7 +164,7 @@
 
 <p>Por otro lado también incorpora un explorador de carpetas. Algo rudimentario pero funcional al fin y al cabo. Aunque esta opción la acabarás sustituyendo por un plugin como <a href="https://github.com/scrooloose/nerdtree"><em>NERDTree</em></a>. Una solución mucho más completa que el navegador por defecto.</p>
 
-<p>Otra particularidad de vim es la amplia gama de <em>plugins</em> y librerías adicionales que existen. La mayoría de estas son mantenidas por una comunidad muy activa, garantizando su usabilidad a largo plazo. Si quieres ver algunos ejemplos entra en <a href="https://vimawesome.com/"><em>vimawesome.com</em></a>.</p>
+<p>Otra particularidad de <em>vim</em> es la amplia gama de <em>plugins</em> y librerías adicionales que existen. La mayoría de estas son mantenidas por una comunidad muy activa, garantizando su usabilidad a largo plazo. Si quieres ver algunos ejemplos entra en <a href="https://vimawesome.com/"><em>vimawesome.com</em></a>.</p>
 
 <p>Como puedes ver, <em>vim</em> es un editor que ofrece las mismas posibilidades sino más que otros. Su gran dificultad es su curva de aprendizaje pero si has llegado hasta aquí imagino que sigues teniendo cierto interés en aprender a manejarlo. Si es así entonces el siguiente paso es instalarlo y configurarlo.</p>
 
@@ -186,7 +186,7 @@
   </div>
 </figure>
 
-<p>Como antes dije, el ratón no funciona aunque se puede activar. Además también habrás comprobado que no puedes escribir. Esto se debe a que vim por defecto arranca con el modo <em>normal</em> activado. Más adelante veremos que es eso de los modos.</p>
+<p>Como antes dije, el ratón no funciona aunque se puede activar. Además también habrás comprobado que no puedes escribir. Esto se debe a que <em>vim</em> por defecto arranca con el modo <em>normal</em> activado. Más adelante veremos que es eso de los modos.</p>
 
 <p>Para poder escribir todo lo que tienes que hacer es pulsar la tecla <kbd>i</kbd>. A continuación puedes ver que el cursor ha cambiado y en la parte inferior de la pantalla pegado a la izquierda ha aparecido el texto <code class="highlight language-shell" data-lang="shell">-- INSERT --</code>. Esto indica que ha cambiado de modo y ya puedes escribir como lo harías en un editor común.</p>
 
@@ -209,7 +209,7 @@
 
 <p>Para hallar el nombre del archivo de configuración debes buscar el texto <em>user vimrc file</em>. Lo más común es que el texto a la derecha de los dos puntos sea <code class="highlight language-shell" data-lang="shell"><span class="nv">$HOME</span>/.vimrc</code>. Si no fuese así al menos ya sabrías cómo nombrar archivo de configuración.</p>
 
-<p>Lo normal es que no exista este archivo así que tendrás que crearlo. Si queremos que todos los cambios sean permanentes en cualquier ruta donde se ejecute vim este archivo se deberá instalar donde apunte la variable de sistema <code class="highlight language-shell" data-lang="shell"><span class="nv">$HOME</span></code>. Un aspecto interesante sobre la configuración de vim es que estas propiedades pueden ser sobreescritas si en el directorio donde se ejecuta el programa existe otro <code class="highlight language-shell" data-lang="shell">.vimrc</code>. Por lo tanto prevalecen los parámetros en este último archivo de configuración.</p>
+<p>Lo normal es que no exista este archivo así que tendrás que crearlo. Si queremos que todos los cambios sean permanentes en cualquier ruta donde se ejecute <em>vim</em> este archivo se deberá instalar donde apunte la variable de sistema <code class="highlight language-shell" data-lang="shell"><span class="nv">$HOME</span></code>. Un aspecto interesante sobre la configuración de <em>vim</em> es que estas propiedades pueden ser sobreescritas si en el directorio donde se ejecuta el programa existe otro <code class="highlight language-shell" data-lang="shell">.vimrc</code>. Por lo tanto prevalecen los parámetros en este último archivo de configuración.</p>
 
 <p>Dicho esto, teclea desde <em>vim</em> el siguiente comando.</p>
 
@@ -233,7 +233,7 @@
 <p>Vim ofrece la posibilidad de trabajar con el texto de tres maneras diferentes: <em>normal</em>, <em>insert</em> y <em>visual</em>.</p>
 
 <h3 id="normal"><em>normal</em></h3>
-<p>Este es el modo por defecto nada más abrir vim. Cómo podrás observar si lo tienes abierto no permite la edición del texto, al menos cómo lo harías en cualquier editor. Aunque no es cierto que no se pueda editar. Todos las acciones de edición son ejecutadas a través de un comando asociado a un botón del teclado. Por ejemplo, borrar un carácter se haría con la letra <kbd>x</kbd>.</p>
+<p>Este es el modo por defecto nada más abrir <em>vim</em>. Cómo podrás observar si lo tienes abierto no permite la edición del texto, al menos cómo lo harías en cualquier editor. Aunque no es cierto que no se pueda editar. Todos las acciones de edición son ejecutadas a través de un comando asociado a un botón del teclado. Por ejemplo, borrar un carácter se haría con la letra <kbd>x</kbd>.</p>
 
 <p>Muchas de estas acciones pueden ser usadas en combinación con comandos de movimiento y repetición. Un ejemplo sería al pulsar la tecla <kbd>3</kbd> le estaríamos indicando a <em>vim</em> que ejecute la siguiente acción tres veces. Por lo tanto usado en combinación con <kbd>x</kbd> —<kbd>3</kbd><kbd>x</kbd>— se borrarán los tres siguientes caracteres hacia la derecha.</p>
 
@@ -332,13 +332,13 @@ Abajo puedes ver los diferentes movimientos.</p>
 </figure>
 
 <h2 id="conclusión">Conclusión</h2>
-<p>Hasta aquí la introducción a vim. Espero que el artículo te haya servido para hacerte una idea de las posibilidades que ofrece este editor. Personalmente hace años que lo utilizo y estoy encantado con su rendimiento. Además de no usar el ratón lo cual es muy <em>cool</em>. Como un hacker de película (que no falte el esnobismo).</p>
+<p>Hasta aquí la introducción a <em>vim</em>. Espero que el artículo te haya servido para hacerte una idea de las posibilidades que ofrece este editor. Personalmente hace años que lo utilizo y estoy encantado con su rendimiento. Además de no usar el ratón lo cual es muy <em>cool</em>. Como un hacker de película (que no falte el esnobismo).</p>
 
 <p>Bromas aparte, si que es cierto que una vez habituado, la ejecución de los comandos más comunes se realizan de forma casi automática y en lo que tardas en pulsar unas teclas.</p>
 
 <p>Para finalizar y como buen punto de partida te recomiendo que hagas el tutorial instalado conjuntamente con <em>vim</em>, <em>vimtutor</em>. Para saber más sobre éste tan solo debes teclear <a href="http://vimdoc.sourceforge.net/htmldoc/usr_01.html#01.3"><code class="highlight language-shell" data-lang="shell">:help vimtutor</code></a> desde <em>vim</em>. También puedes consultar toda la documentación oficial en el propio editor teclando <code class="highlight language-shell" data-lang="shell">:help</code>. Aunque probablemente al principio te parezca más cómodo leer el mismo contenido en una <a href="http://vimdoc.sourceforge.net/htmldoc/usr_toc.html">página web</a>. Otro recurso interesante es tener una chuleta al lado para poder consultar rápidamente que comando necesitas. Si buscas <a href="https://www.google.es/search?q=vim+cheat+sheet&amp;oq=vim+cheat+sheet&amp;aqs=chrome.0.69i59j69i65j69i60l2j0l2.3214j0j4&amp;sourceid=chrome&amp;ie=UTF-8"><em>vim cheat sheet</em> en google</a> encontrarás decenas de ellas.</p>
 
-<p><a href="https://vim-adventures.com/"><em>Vim Adventures</em></a> es otra opción interesate y divertida donde aprender vim jugando. Si prefieres algo más austero también puedes probar con otros tutoriales interactivos como <a href="http://www.openvim.com/"><em>openvim</em></a> o <a href="http://vimgenius.com/"><em>vimgenius</em></a>.</p>
+<p><a href="https://vim-adventures.com/"><em>Vim Adventures</em></a> es otra opción interesate y divertida donde aprender <em>vim</em> jugando. Si prefieres algo más austero también puedes probar con otros tutoriales interactivos como <a href="http://www.openvim.com/"><em>openvim</em></a> o <a href="http://vimgenius.com/"><em>vimgenius</em></a>.</p>
 
 <h2 id="fuentes">Fuentes</h2>
 <ul>
