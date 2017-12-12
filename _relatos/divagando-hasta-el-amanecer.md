@@ -1,16 +1,16 @@
 ---
-title: Noche en vela
+title: Divagando hasta el amanecer
 date: 2017-12-10 00:01:00 +0100
 ---
-—Había una guerra, una excusa como cualquier otra para no ir a trabajar el lunes —dijo Pascual tras dar un largo trago a su vaso—. La mayoría eran unos bandarras aunque buenos muchachos al fin y al cabo… tan jóvenes. Algunos ni tan siquiera se sabían atar los cordones —saboreó sus recuerdos unos instantes, más amargos que el vino barato—. ¡Por vosotros! Seguro que allí estáis mucho mejor que aquí. —En un arrebato de solemnidad levantó el vaso para brindar con tanto ímpetu que terminó por derramar el líquido al suelo.
+—Había una guerra, una excusa como cualquier otra para no ir a trabajar el lunes —dijo Pascual tras dar un largo trago a su vaso—. La mayoría eran unos bandarras. Ni tan siquiera sabían qué hacían allí. Sin embargo siempre encontraban algo con lo que divertirse. Eran unos buenos muchachos… tan jóvenes. —volvió a beber aquel vino barato en un intento inútil de limpiar el sabor amargo que le habían dejado sus palabras. Tras servirse de nuevo, en un arrebato de solemnidad, levantó el vaso para brindar—. ¡Por vosotros! Allí estáis mucho mejor. —Lo hizo con tanto ímpetu que terminó por derramar el líquido al suelo.
 
 —¡Joder! Siempre haces lo mismo cada vez que hablas del tema —protestó Pedro mientras se levantaba para ir a buscar la fregona—. ¡Que manía con los brindis, macho! —No es que le fastidiara que vinieran a hacerle compañía pero a esas horas lo único que le apetecía era estar recostado sobre la butaca.
 
 Pedro salió de la garita para coger la fregona y el cubo del trastero. De vuelta a la casilla encontró a Pascual durmiendo en la silla. Pobre diablo, pensó tras dejar el cubo en el suelo. Cuando terminó de fregar volvió a salir para guardar los utensilios. Antes de volver a entrar se fumó un cigarrillo junto a la garita. Todavía era noche cerrada pero ya debía quedar poco para que amaneciera. Mientras contemplaba el lugar pudo observar una pequeña luz oscilante entre los cipreses. Parecía estar danzando una melodía inaudible. Cerró los ojos para escuchar mejor aquel silencio. Le gustaba así. No en vano aceptó el puesto por la tranquilidad que ofrecía un trabajo nocturno. Unos segundos después al volver a abrirlos no quedaba rastro de la titilante llama.
 
-Terminado el cigarrillo entró con sigilo para evitar despertar a su acompañante. Parece un cadáver, pensó Pedro a verle todavía recostado sobre la mesa. A lo mejor esta noche consigo dormir un rato.
+Terminado el cigarrillo entró con sigilo para evitar despertar a su acompañante. Parece un cadáver, se dijo Pedro a verle todavía recostado sobre la mesa. A lo mejor esta noche consigo dormir un rato.
 
-Al sentarse, el sillón emitió un chirrido extraño que despertó sobresaltado a Pascual. —La pava collons!— exclamó éste buscando algo que no encontraba. No tardó más de unos segundos en recomponerse. Tomó la botella y volvió a servirse vino. También sirvió a Pedro aunque su vaso todavía seguía lleno. Mientras el guarda observaba todo esto sin inmutarse, tuvo la absoluta certeza que iba a ver amanecer de nuevo.
+Al sentarse, el sillón emitió un chirrido extraño que despertó sobresaltado a Pascual. —¡La pava collons!— exclamó éste buscando algo que no encontraba. No tardó más de unos segundos en recomponerse. Tomó la botella y volvió a servirse vino. También sirvió a Pedro aunque su vaso todavía seguía lleno. Mientras el guarda observaba todo esto sin inmutarse, tuvo la absoluta certeza que iba a ver amanecer de nuevo.
 
 —Oye Tinieblo ¿por qué aceptaste este trabajo de vigilante del cementerio? ¿No había otro tipo de trabajo menos fúnebre? —preguntó Pascual malicioso.
 
@@ -46,7 +46,7 @@ Tras salir por la puerta se giró de nuevo y añadió con seriedad. —Espero qu
 
 Con la manos en los bolsillos Pedro observaba los primeros rayos de sol esclareciendo el horizonte mientras Pascual se adentraba en el cementerio. Entonces le asaltó una duda que hacía tiempo quería preguntarle.
 
-—¡Eh, Pascual! ¿Como es que tú no te fuiste? Siempre hablas de lo bien que están todos en el otro lado pero sin embargo regresas cada noche ¿Por qué?. —Sin girarse del todo, el muerto miró a un punto indeterminado en el suelo. Luego alzó vista para mirar a Tinieblo. Sus ojos estaban completamente negros. También se había dibujado una vena enorme en su frente. Instintivamente Pedro apretó la navaja que tenía en el bolsillo. Nunca había sentido miedo en aquel cementerio hasta ese mismo momento.
+—¡Eh, Pascual! ¿Como es que tú no te fuiste? Siempre hablas de lo bien que están todos en el otro lado pero sin embargo regresas cada noche ¿Por qué?. —Sin girarse del todo, el muerto miró a un punto indeterminado en el suelo. Luego alzó vista para mirar a Tinieblo. Sus ojos estaban completamente negros. También se había dibujado una vena enorme en su frente. Instintivamente Pedro apretó la navaja que siempre llevaba en el bolsillo. Nunca había sentido miedo en aquel cementerio hasta ese mismo momento.
 
 La visión tan solo duró un instante. El rostro de Pascual recuperó la normalidad. Todo rastro de agresividad había desaparecido de su rostro. Y con su sonrisa habitual le contestó. —Porque a todos esos chavales los envié yo allí.
 
