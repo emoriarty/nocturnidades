@@ -1,6 +1,7 @@
 ---
 title: Divagando hasta el amanecer
 date: 2017-12-10 00:01:00 +0100
+excerpt: Como de costumbre Pascual acompaña a Pedro durante la vigilia. Pasan las horas muertas charlando hasta que amanece pero esa madrugada algo diferente ocurre.
 ---
 —Había una guerra, una excusa como cualquier otra para no ir a trabajar el lunes —dijo Pascual tras dar un largo trago a su vaso—. La mayoría eran unos bandarras. Ni tan siquiera sabían qué hacían allí. Sin embargo siempre encontraban algo con lo que divertirse. Eran unos buenos muchachos… tan jóvenes. —volvió a beber aquel vino barato en un intento inútil de limpiar el sabor amargo que le habían dejado sus palabras. Tras servirse de nuevo, en un arrebato de solemnidad, levantó el vaso para brindar—. ¡Por vosotros! Allí estáis mucho mejor. —Lo hizo con tanto ímpetu que terminó por derramar el líquido al suelo.
 

@@ -1,6 +1,7 @@
 ---
 title: Pues le recé, pero no me ha hecho caso
 date: 2017-03-05 00:00:00 +0100
+excerpt: Microrrelato extraido a partir de una viñeta de no recuerdo que autor.
 ---
 
 {% progressive_picture

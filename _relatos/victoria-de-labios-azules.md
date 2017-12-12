@@ -1,6 +1,7 @@
 ---
 title: Victoria de labios azules 
 date: 2017-09-19 22:59:00 +0100
+excerpt: Hacía meses que no publicaba nada pero al final saqué tiempo para escribir este relato, basado muy libremente en una experiencia personal.
 ---
 Estaba ya de vuelta a casa cuando lo que parecía que iba a ser otro día más me ocurrió algo de lo más inusual, no solo por lo inesperado y absurdo del asunto sino que también me alegró el resto de la tarde. Y es que desde hacía mucho tiempo consideraba que mi vida había sido escrita por algún autor mediocre y sin pretensión, y como en un inmenso spoiler motivado por la rutina y el aburrimiento ya supiera cómo transcurriría el resto de la historia y que nada de lo que hiciese me alejaría del único final posible. Levantarse temprano, ir a trabajar, findes y vacaciones demasiado breves, comer sano, pagar la hipoteca, cepillarse los dientes, pagar impuestos, sacar al perro, tener hijos… ¡En fin! Un largo etcétera de tareas que se repiten a lo largo del cuento. Y todo esto ¿para qué? ¿Para morir y llevarnos tan solo los cuatro buenos recuerdos? Eso si no has pillado alzheimer o cualquier demencia senil que te deje totalmente en blanco ¡Pues menuda estafa!
 

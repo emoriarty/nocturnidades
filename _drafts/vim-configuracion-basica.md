@@ -94,13 +94,23 @@ Para poder saber más sobre cada comando siempre puedes teclear {% ihighlight sh
 
 A continuación puedes ver las opciones con la cuáles completar un {% ihighlight shell %}vimrc{% endihighlight %} inicial junto a una explicación para cada una.
 
-## Opciones
-### Globales
+## Global
 
-{% highlight shell %}
-set nocompatible
-{% endhighlight %}
-Compatibilidad con vi desactivada. Al incluir esta opción evita efectos inesperados debido a diferentes comportamientos entre vi y vim.
+### [{% ihighlight shell %}set nocompatible{% endihighlight %}][nocompatible]
+
+Compatibilidad con _vi_ desactivada. Al incluir esta opción evita efectos inesperados debido a diferentes comportamientos entre _vi_ y _vim_.
+
+Esta opción se desactiva por defecto cuando _vim_ se topa con un archivo {% ihighlight shell %}.vimrc{% endihighlight %} al inicio. El hecho de forzar su uso es para evitar la sobrescritura de las opciones por defecto como en el caso de usar el argumento {% ihighlight shell %}-C{% endihighlight %} al arrancar _vim_. Este forzaría el modo compatible aunque encuentre un {% ihighlight shell %}.vimrc{% endihighlight %}. Para evitar esta situación solo basta con incluir la opción {% ihighlight shell %}nocompatible{% endihighlight %}.
+
+Piensa en esta opción como una salvaguarda para evitar posibles conflictos.
+
+### [{% ihighlight shell %}set encoding=utf-8{% endihighlight %}][encoding]
+
+Establece la codificación de caracteres a {% ihighlight shell %}UTF-8{% endihighlight %}.  Básicamente es la codificación de salida que veremos en el terminal. También lo utiliza internamente para escribir en archivos como [{% ihighlight shell %}viminfo{% endihighlight %}][viminfo], donde se almacena información que de otra manera se perdería tales como marcas, patrones de búsqueda, historial de comandos, etc.
+
+Los archivos editados no sufrirán ningún cambio en su codificación al ser guardados. Si por el contrario deseas cambiar este comportamiento deberías usar la opción [{% ihighlight shell %}set fileencoding=utf-8{% endihighlight %}][fileencoding]. Esta instrucción indica a vim modificar la codificación del archivo cuando se guarda.
+
+La elección del formato {% ihighlight shell %}UTF-8{% endihighlight %} es debido a que es el más común entre sistemas, así que para qué cambiarlo.
 
 
 
@@ -108,3 +118,6 @@ Compatibilidad con vi desactivada. Al incluir esta opción evita efectos inesper
 [help-option-list]: http://vimdoc.sourceforge.net/htmldoc/quickref.html#option-list
 [exrc]: https://unix.stackexchange.com/questions/198898/what-is-the-difference-between-exrc-and-vimrc
 [nocompatible]: http://vimdoc.sourceforge.net/htmldoc/options.html#'nocompatible'
+[encoding]: http://vimdoc.sourceforge.net/htmldoc/options.html#'encoding'
+[viminfo]: http://vimdoc.sourceforge.net/htmldoc/usr_21.html#21.3
+[fileencoding]: http://vimdoc.sourceforge.net/htmldoc/options.html#'fileencoding'

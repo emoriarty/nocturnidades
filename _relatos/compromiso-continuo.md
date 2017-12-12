@@ -1,6 +1,7 @@
 ---
 title: Compromiso continuo
 date: 2017-02-07 20:01:00 +0100
+excerpt: Este microrrelato es un ejercicio a modo de monólogo interior sobre la aflicción. La composición debía hacerse en diez minutos.
 ---
 ¡Maldita sea! No consigo acabar el nuevo requerimiento funcional. Llevo horas con
 este problema y no veo como solucionarlo. Para colmo he quedado esta tarde y ya
