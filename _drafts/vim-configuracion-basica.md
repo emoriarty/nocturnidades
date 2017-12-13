@@ -94,7 +94,7 @@ Para poder saber más sobre cada comando siempre puedes teclear {% ihighlight sh
 
 A continuación puedes ver las opciones con la cuáles completar un {% ihighlight shell %}vimrc{% endihighlight %} inicial junto a una explicación para cada una.
 
-## Global
+## General
 
 ### [{% ihighlight shell %}set nocompatible{% endihighlight %}][nocompatible]
 
@@ -150,7 +150,97 @@ Por convención se suele establecer la coma ({% ihighlight shell %},{% endihighl
 
 Estas combinaciones se consiguen mediante el [mapeo de claves][keymapping] (key mapping) para crear nuevos comandos pero eso lo veremos más adelante. De momento recuerda que que hemos definido el {% ihighlight shell %}mapleader{% endihighlight %} como un espacio.
 
+## Interfaz
+
+### [{% ihighlight shell %}set ruler{% endihighlight %}][ruler]
+Muestra la posición del cursor y si hay espacio también la posición relativa de la página expresada en porcentaje. Puedes configurar cómo el formato mediante la opción [{% ihighlight shell %}rulerformat{% endihighlight %}][rulerformat].
+
+### [{% ihighlight shell %}set relativenumber{% endihighlight %}][relativenumber]
+Activa los números de línea relativos a la posición actual del cursor. Esto es de gran utilidad cuando se utilizan comandos de movimiento verticales.
+
+Imagina que quieres seleccionar hasta una línea de texto superior. En vez de tener que contarlas tan sólo mirando el número indicado a la izquierda de la línea en cuestión ya sabrás que distancia se encuentra. Por ejemplo, si fuesen doce líneas introducirías lo siguiente: <kbd>V</kbd><kbd>1</kbd><kbd>2</kbd><kbd>k</kbd>.
+
+Pero si por el contrario solamente quieres ver la posición absoluta debes utilizar la opción [{% ihighlight shell %}number{% endihighlight %}][number].
+
+### [{% ihighlight shell %}set numberwidth=2{% endihighlight %}][numberwidth]
+Establece el número de columnas destinado para mostrar los números de líneas de texto. Normalmente no es necesario más de dos si se ha usado la opción {% ihighlight shell %}relativenumber{% endihighlight %}.
+
+### [{% ihighlight shell %}set cursorline{% endihighlight %}][cursorline]
+Resalta la línea donde se halla actualmente el cursor. Dependiendo del tema usado puede resaltar la misma cambiando el color de fondo o subrayándola.
+
+### [{% ihighlight shell %}set nowrap{% endihighlight %}][nowrap]
+Permite que las líneas de texto sobresalgan más allá del ancho de la ventana.
+
+### [{% ihighlight shell %}set lazyredraw{% endihighlight %}][lazyredraw]
+Mejora el rendimiento del programa al evitar redibujar la pantalla durante la ejecución de macros, registros u cualquier otro comando que no tenga efecto sobre el texto. Se puede forzar el refresco usando la instrucción [{% ihighlight shell %}:redraw{% endihighlight %}][redraw].
+
+## Scrolling
+
+### [{% ihighlight shell %}set scrolloff=8{% endihighlight %}][scrolloff]
+### [{% ihighlight shell %}set sidescrolloff=16{% endihighlight %}][sidescrolloff]
+### [{% ihighlight shell %}set sidescroll=1{% endihighlight %}][sidescroll]
+
+## Sangría (_Indetación_)
+
+### [{% ihighlight shell %}set expandtab{% endihighlight %}][expandtab]
+### [{% ihighlight shell %}set smarttab{% endihighlight %}][smarttab]
+### [{% ihighlight shell %}set autoindent{% endihighlight %}][autoindent]
+### [{% ihighlight shell %}set smartindent{% endihighlight %}][smartindent]
+### [{% ihighlight shell %}set tabstop=2{% endihighlight %}][tabstop]
+### [{% ihighlight shell %}set shiftwidth=2{% endihighlight %}][shiftwidth]
+### [{% ihighlight shell %}set softtabstop=2{% endihighlight %}][softtabstop]
+### [{% ihighlight shell %}filetype plugin on{% endihighlight %}][ftpluginon]
+### [{% ihighlight shell %}filetype indent on{% endihighlight %}][ftindenton]
+
+## Completado
+
+### [{% ihighlight shell %}set wildmode=full{% endihighlight %}][wildmode]
+### [{% ihighlight shell %}set wildmenu{% endihighlight %}][wildmenu]
+
+## Búsqueda
+
+### [{% ihighlight shell %}set ignorecase{% endihighlight %}][ignorecase]
+### [{% ihighlight shell %}set smartcase{% endihighlight %}][smartcase]
+### [{% ihighlight shell %}set hlsearch{% endihighlight %}][hlsearch]
+### [{% ihighlight shell %}set incsearch{% endihighlight %}][incsearch]
+
+## Colores
+
+### [{% ihighlight shell %}syntax enable{% endihighlight %}][syntax]
+### [{% ihighlight shell %}colorscheme default{% endihighlight %}][colorscheme]
+
+## _Backups_
+
+### [{% ihighlight shell %}{% endihighlight %}][]
+### [{% ihighlight shell %}{% endihighlight %}][]
+### [{% ihighlight shell %}{% endihighlight %}][]
+### [{% ihighlight shell %}{% endihighlight %}][]
+### [{% ihighlight shell %}{% endihighlight %}][]
+
+## _Folding_
+
+### [{% ihighlight shell %}set foldmethod=indent{% endihighlight %}][foldmethod]
+### [{% ihighlight shell %}set foldnestmax{% endihighlight %}][foldnestmax]
+### [{% ihighlight shell %}set nofoldenable{% endihighlight %}][nofoldenable]
+
+## Bola extra
+### [{% ihighlight shell %}set exrc{% endihighlight %}][exrc]
+
+## Conclusión
+
 <script src="https://gist.github.com/emoriarty/0241dc249fb5605f32ee66345165edfd.js"></script>
+
+## Fuentes
+* https://dockyard.com/blog/categories/vim
+* http://learnvimscriptthehardway.stevelosh.com
+* https://mislav.net/2011/12/vim-revisited/
+* http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/#
+* http://yannesposito.com/Scratch/en/blog/Vim-as-IDE/
+* https://dougblack.io/words/a-good-vimrc.html
+* http://items.sjbach.com/319/configuring-vim-right
+* https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+* https://gist.github.com/simonista/8703722
+* https://yanpritzker.com/the-cleanest-vimrc-youll-ever-see-20f6158f1f1f
 
 [vim-intro]: /articulos/vim-intro 
 [help-option-list]: http://vimdoc.sourceforge.net/htmldoc/quickref.html#option-list
@@ -168,3 +258,37 @@ Estas combinaciones se consiguen mediante el [mapeo de claves][keymapping] (key 
 [hidden]: http://vimdoc.sourceforge.net/htmldoc/options.html#'hidden'
 [mapleader]: http://vimdoc.sourceforge.net/htmldoc/map.html#mapleader
 [keymapping]: http://vimdoc.sourceforge.net/htmldoc/map.html#mapping
+[ruler]: http://vimdoc.sourceforge.net/htmldoc/options.html#'ruler'
+[relativenumber]: http://vimdoc.sourceforge.net/htmldoc/options.html#'relativenumber'
+[numberwidth]: http://vimdoc.sourceforge.net/htmldoc/options.html#'numberwidth'
+[cursorline]: http://vimdoc.sourceforge.net/htmldoc/options.html#'cursorline'
+[nowrap]: http://vimdoc.sourceforge.net/htmldoc/options.html#'nowrap'
+[lazyredraw]: http://vimdoc.sourceforge.net/htmldoc/options.html#'lazyredraw'
+[rulerformat]: http://vimdoc.sourceforge.net/htmldoc/options.html#'rulerformat'
+[number]: http://vimdoc.sourceforge.net/htmldoc/options.html#'number'
+[redraw]: http://vimdoc.sourceforge.net/htmldoc/various.html#:redraw
+[scrolloff]: http://vimdoc.sourceforge.net/htmldoc/options.html#'scrolloff'
+[sidescrolloff]: http://vimdoc.sourceforge.net/htmldoc/options.html#'sidescrolloff'
+[sidescroll]: http://vimdoc.sourceforge.net/htmldoc/options.html#'sidescroll'
+[expandtab]: http://vimdoc.sourceforge.net/htmldoc/options.html#'expandtab'
+[tabstop]: http://vimdoc.sourceforge.net/htmldoc/options.html#'tabstop'
+[shiftwidth]: http://vimdoc.sourceforge.net/htmldoc/options.html#'shiftwidth'
+[smarttab]: http://vimdoc.sourceforge.net/htmldoc/options.html#'smarttab'
+[autoindent]: http://vimdoc.sourceforge.net/htmldoc/options.html#'autoindent'
+[smartindent]: http://vimdoc.sourceforge.net/htmldoc/options.html#'smartindent'
+[softtabstop]: http://vimdoc.sourceforge.net/htmldoc/options.html#'softtabstop' 
+[ftpluginon]: http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-plugin-on
+[ftindenton]: http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-indent-on
+[wildmenu]: http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmenu' 
+[wildmode]: http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmode'
+[wildcharm]: http://vimdoc.sourceforge.net/htmldoc/options.html#'wildcharm'
+[emenu]: http://vimdoc.sourceforge.net/htmldoc/gui.html#:emenu
+[ignorecase]: http://vimdoc.sourceforge.net/htmldoc/options.html#'ignorecase'
+[smartcase]: http://vimdoc.sourceforge.net/htmldoc/options.html#'smartcase'
+[hlsearch]: http://vimdoc.sourceforge.net/htmldoc/options.html#'hlsearch'
+[incsearch]: http://vimdoc.sourceforge.net/htmldoc/options.html#'incsearch'
+[syntax]: http://vimdoc.sourceforge.net/htmldoc/options.html#'syntax'
+[colorscheme]: http://vimdoc.sourceforge.net/htmldoc/syntax.html#:colorscheme
+[foldmethod]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldmethod'
+[foldnestmax]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldnestmax'   
+[nofoldenable]: http://vimdoc.sourceforge.net/htmldoc/options.html#'nofoldenable'
