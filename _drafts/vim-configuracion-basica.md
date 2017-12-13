@@ -112,7 +112,45 @@ Los archivos editados no sufrirán ningún cambio en su codificación al ser gua
 
 La elección del formato {% ihighlight shell %}UTF-8{% endihighlight %} es debido a que es el más común entre sistemas, así que para qué cambiarlo.
 
+### [{% ihighlight shell %}set showcmd{% endihighlight %}][showcmd]
 
+Muestra parcialmente el comando que se está usando actualmente. Aparece en la esquina inferior derecha como se muestra en la siguiente imagen.
+
+{% progressive_picture
+  thumbnail: /assets/vim-config-1.thumb.jpg
+  src: /assets/vim-config-1.jpg
+  height: 383
+  width: 600
+  alt: 'showcmd en acción.' %}
+  
+En este caso se ha introducido el verbo —_**d**elete_—, el modificador —_**a**_— y queda en espera del sustantivo (objeto) que podría ser una palabra —_**w**ord_—. Tras introducir este último desaparece la ayuda visual.
+
+### [{% ihighlight shell %}set showmode{% endihighlight %}][showmode]
+Indica en el modo actual en la línea de comando excepto en modo _normal_.
+
+### [{% ihighlight shell %}set visualbell{% endihighlight %}][visualbell]
+Cambia la alerta sonora por una visual. En algunas ocasiones esta alerta puede estar sujeta a la configuración del terminal donde se ejecute por lo tanto deberías modificar los ajustes del terminal.
+
+### [{% ihighlight shell %}set history=50{% endihighlight %}][history]
+Número de comandos que _vim_ almacena. Por defecto es 20. He preferido dejarlo en 50 aunque puedes poner el que quieras.
+
+### [{% ihighlight shell %}set autoread{% endihighlight %}][autoread]
+Actualiza automáticamente los archivos que estén abiertos y hayan sido modificados fuera de _vim_. Aunque esta solución no funciona a no ser que un comando externo se ejecute como {% ihighlight shell %}:ls!{% endihighlight %} o cualquier otro.
+
+### [{% ihighlight shell %}set backspace=eol,start,indent{% endihighlight %}][backspace]
+El botón de retroceso (backspace) se comporta como en cualquier editor
+
+### [{% ihighlight shell %}set hidden{% endihighlight %}][hidden]
+Oculta los _buffers_ (un _buffer_ no es más que una copia del archivo en memoria) automáticamente al abandonarlos. También permite ocultar un _buffer_ incluso habiendo sido modificado sin guardar los cambios en disco.
+
+### [{% ihighlight shell %}let mapleader=" "{% endihighlight %}][mapleader]
+Permite definir una cadena de texto para poder ejecutar comandos sin pasar por la consola de _vim_. Un ejemplo podría ser usando el carácter espacio ({% ihighlight shell %}“ ”{% endihighlight %}) que en combinación con {% ihighlight shell %}w{% endihighlight %} ({% ihighlight shell %}<leader>w{% endihighlight %}) sería el equivalente a escribir {% ihighlight shell %}:w{% endihighlight %} en la consola.
+
+Por convención se suele establecer la coma ({% ihighlight shell %},{% endihighlight %}) como carácter _leading_ pero yo me siento más cómodo con el espacio. Tú puedes elegir uno de los dos o el que prefieras, no en vano la característica más importante de vim es que su alta personalización.
+
+Estas combinaciones se consiguen mediante el [mapeo de claves][keymapping] (key mapping) para crear nuevos comandos pero eso lo veremos más adelante. De momento recuerda que que hemos definido el {% ihighlight shell %}mapleader{% endihighlight %} como un espacio.
+
+<script src="https://gist.github.com/emoriarty/0241dc249fb5605f32ee66345165edfd.js"></script>
 
 [vim-intro]: /articulos/vim-intro 
 [help-option-list]: http://vimdoc.sourceforge.net/htmldoc/quickref.html#option-list
@@ -121,3 +159,12 @@ La elección del formato {% ihighlight shell %}UTF-8{% endihighlight %} es debid
 [encoding]: http://vimdoc.sourceforge.net/htmldoc/options.html#'encoding'
 [viminfo]: http://vimdoc.sourceforge.net/htmldoc/usr_21.html#21.3
 [fileencoding]: http://vimdoc.sourceforge.net/htmldoc/options.html#'fileencoding'
+[showcmd]: http://vimdoc.sourceforge.net/htmldoc/options.html#'showcmd'
+[showmode]: http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'
+[visualbell]: http://vimdoc.sourceforge.net/htmldoc/options.html#'visualbell'
+[history]: http://vimdoc.sourceforge.net/htmldoc/options.html#'history'
+[autoread]: http://vimdoc.sourceforge.net/htmldoc/options.html#'autoread'
+[backspace]: http://vimdoc.sourceforge.net/htmldoc/options.html#'backspace'
+[hidden]: http://vimdoc.sourceforge.net/htmldoc/options.html#'hidden'
+[mapleader]: http://vimdoc.sourceforge.net/htmldoc/map.html#mapleader
+[keymapping]: http://vimdoc.sourceforge.net/htmldoc/map.html#mapping
