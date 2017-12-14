@@ -1,9 +1,9 @@
 ---
-title: "vim: configuración básica"
+title: "vim: configuración inicial"
 date: 2017-12-03 00:30:00 +0100
 categories: [artículos, vim, tutorial]
 excerpt: Configuración inicial para principiantes (y no tanto) de vim.
-permalink: /articulos/vim-configuracion-basica
+permalink: /articulos/vim-configuracion-inicial
 ---
 En un [artículo anterior][vim-intro], donde se introducía _vim_, se creó un archivo llamado {% ihighlight shell %}.vimrc{% endihighlight %}. En él se incluía la opción {% ihighlight shell %}set mouse=a{% endihighlight %} para habilitar el ratón. Si no se hubiera insertado esta línea, te verías obligado a introducirla cada vez que arrancaras el programa.
 
@@ -169,16 +169,27 @@ Establece el número de columnas destinado para mostrar los números de líneas 
 Resalta la línea donde se halla actualmente el cursor. Dependiendo del tema usado puede resaltar la misma cambiando el color de fondo o subrayándola.
 
 ### [{% ihighlight shell %}set nowrap{% endihighlight %}][nowrap]
-Permite que las líneas de texto sobresalgan más allá del ancho de la ventana.
+Permite que las líneas de texto sobresalgan más allá del ancho de la ventana. En su versión por defecto —{% ihighlight shell %}wrap{% endihighlight %}— la parte que estuviera oculta de la línea saltaría un posición.
 
 ### [{% ihighlight shell %}set lazyredraw{% endihighlight %}][lazyredraw]
 Mejora el rendimiento del programa al evitar redibujar la pantalla durante la ejecución de macros, registros u cualquier otro comando que no tenga efecto sobre el texto. Se puede forzar el refresco usando la instrucción [{% ihighlight shell %}:redraw{% endihighlight %}][redraw].
 
-## Scrolling
+## _Scrolling_
 
 ### [{% ihighlight shell %}set scrolloff=8{% endihighlight %}][scrolloff]
+
+El desplazamiento (_scrolling_) comienza ocho líneas antes que el cursor alcance el borde superior o inferior de la ventana. Permite revelar el contenido que rodea la posición actual, que de otra manera quedaría oculto por los límites de la ventana.
+
 ### [{% ihighlight shell %}set sidescrolloff=16{% endihighlight %}][sidescrolloff]
+
+Al igual que {% ihighlight shell %}scrolloff{% endihighlight %} pero en el plano horizontal. En este caso lo he ajustado al doble que el desplazamiento vertical.
+
 ### [{% ihighlight shell %}set sidescroll=1{% endihighlight %}][sidescroll]
+
+Ajusta el desplazamiento horizontal a una columna. Esto tiene un impacto directo en el rendimiento por lo tanto si trabajas en un entorno limitado se puede ajustar a {% ihighlight shell %}0{% endihighlight %} (o no ajustar puesto que su valor por defecto es {% ihighlight shell %}0{% endihighlight %}), desplazando la mitad de la ventana para mantener el cursor en el centro.
+
+Puedes saber más sobre esta sección en [{% ihighlight shell %}:help slow-terminal{% endihighlight %}][slow-terminal].
+
 
 ## Sangría (_Indetación_)
 
@@ -292,3 +303,4 @@ Mejora el rendimiento del programa al evitar redibujar la pantalla durante la ej
 [foldmethod]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldmethod'
 [foldnestmax]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldnestmax'   
 [nofoldenable]: http://vimdoc.sourceforge.net/htmldoc/options.html#'nofoldenable'
+[slow-terminal]: http://vimdoc.sourceforge.net/htmldoc/term.html#slow-terminal
