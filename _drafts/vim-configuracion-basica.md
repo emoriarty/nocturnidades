@@ -188,51 +188,79 @@ Al igual que {% ihighlight shell %}scrolloff{% endihighlight %} pero en el plano
 
 Ajusta el desplazamiento horizontal a una columna. Esto tiene un impacto directo en el rendimiento por lo tanto si trabajas en un entorno limitado se puede ajustar a {% ihighlight shell %}0{% endihighlight %} (o no ajustar puesto que su valor por defecto es {% ihighlight shell %}0{% endihighlight %}), desplazando la mitad de la ventana para mantener el cursor en el centro.
 
-Puedes saber más sobre esta sección en [{% ihighlight shell %}:help slow-terminal{% endihighlight %}][slow-terminal].
-
+Si quieres saber más sobre scrolling puedes leer en el manual de usuario los siguientes artículos, [{% ihighlight shell %}:help scrolling{% endihighlight %}][scrolling] y [{% ihighlight shell %}:help slow-terminal{% endihighlight %}][slow-terminal].
 
 ## Sangría (_Indetación_)
 
-### [{% ihighlight shell %}set expandtab{% endihighlight %}][expandtab]
-### [{% ihighlight shell %}set smarttab{% endihighlight %}][smarttab]
-### [{% ihighlight shell %}set autoindent{% endihighlight %}][autoindent]
-### [{% ihighlight shell %}set smartindent{% endihighlight %}][smartindent]
 ### [{% ihighlight shell %}set tabstop=2{% endihighlight %}][tabstop]
+
+Número de espacios que se insertan al tabular, en este caso 2. Otra opción es mantener la configuración inicial de _vim_ (por defecto son 8) y usar la propiedad[{% ihighlight shell %} softtabstop{% endihighlight %}][softtabstop] a 2, lo que mostraría cualquier tabulación a 2 pero internamente seguiría siendo 8.
+
 ### [{% ihighlight shell %}set shiftwidth=2{% endihighlight %}][shiftwidth]
-### [{% ihighlight shell %}set softtabstop=2{% endihighlight %}][softtabstop]
-### [{% ihighlight shell %}filetype plugin on{% endihighlight %}][ftpluginon]
-### [{% ihighlight shell %}filetype indent on{% endihighlight %}][ftindenton]
+
+Número de espacios usados en la sangría (y no, no tiene nada que ver con la bebida). Al igual que tabstop, por defecto su valor es 8.
+
+### [{% ihighlight shell %}set expandtab{% endihighlight %}][expandtab]
+
+Fuerza el uso de espacios en el carácter para tabular. Se puede forzar la tabulación usando <kbd>CTRL</kbd><kbd>V</kbd><kbd>Tab</kbd>.
+
+### [{% ihighlight shell %}set smarttab{% endihighlight %}][smarttab]
+
+Utiliza el valor especificado en la opción {% ihighlight shell %}shiftwidth{% endihighlight %} para tabular el inicio de una línea de texto, para el resto se usa la propiedad {% ihighlight shell %}tabstop{% endihighlight %}.
+
+### [{% ihighlight shell %}set autoindent{% endihighlight %}][autoindent]
+
+Aplica la sangría automáticamente cuando al inicio de una nueva línea, copiando la sangría de la línea anterior.
+
+### [{% ihighlight shell %}set smartindent{% endihighlight %}][smartindent]
+
+La sangría automática se hace en función al estilo/sintaxis del tipo de archivo que se edita(especialmente para C). Se usa en combinación con autoindent.
+
+Puedes encontrar información más detallada leyendo la sección [{% ihighlight shell %}:help ins-expandtab{% endihighlight %}][insexpandtab] en el manual de usuario.
 
 ## Completado
 
-### [{% ihighlight shell %}set wildmode=full{% endihighlight %}][wildmode]
 ### [{% ihighlight shell %}set wildmenu{% endihighlight %}][wildmenu]
+
+Mejora el completado de la línea de comandos, mostrando un menú con las opciones disponibles justo encima. El comando para mostrar las posibles opciones se ajusta mediante la propiedad [{% ihighlight shell %}wildchar{% endihighlight %}][wildchar], por defecto es <kbd>tab</kbd>. Se puede navegar entre los resultados bien usando <kbd>tab</kbd>, las flechas o <kbd>Ctrl</kbd><kbd>P</kbd> <kbd>Ctrl</kbd><kbd>N</kbd>.
+
+Si la propiedad [{% ihighlight shell %}wildmode{% endihighlight %}][wildmode] se modifica y no contiene la opción {% ihighlight shell %}full{% endihighlight %}, {% ihighlight shell %}wildmenu{% endihighlight %} no se mostrará. Por defecto su valor es {% ihighlight shell %}full{% endihighlight %}, lo que permite navegar por los resultados secuencialmente.
 
 ## Búsqueda
 
 ### [{% ihighlight shell %}set ignorecase{% endihighlight %}][ignorecase]
+
+Permite realizar búsquedas de palabras sin tener en cuenta mayúsculas y minúsculas (_case-sensitive_).
+
 ### [{% ihighlight shell %}set smartcase{% endihighlight %}][smartcase]
+
+Cuando el patrón de búsqueda contiene alguna mayúscula su comportamiento es estricto, distinguiendo entre mayúsculas de minúsculas.
+
 ### [{% ihighlight shell %}set hlsearch{% endihighlight %}][hlsearch]
+
+Destaca todas las coincidencias del patrón de búsqueda en cuestión.
+
 ### [{% ihighlight shell %}set incsearch{% endihighlight %}][incsearch]
+
+La búsqueda se realiza incrementalmente a medida que se define el patrón, destacando la primera coincidencia desde donde se halle el cursor.
 
 ## Colores
 
 ### [{% ihighlight shell %}syntax enable{% endihighlight %}][syntax]
-### [{% ihighlight shell %}colorscheme default{% endihighlight %}][colorscheme]
 
-## _Backups_
+Activa el [resaltado (o colerado) de sintaxis][wikisyntax]. Puedes hacerte una idea de los lenguajes que soporta vim mirando el contenido de la carpeta {% ihighlight shell %}$VIMRUNTIME/syntax{% endihighlight %}.
 
-### [{% ihighlight shell %}{% endihighlight %}][]
-### [{% ihighlight shell %}{% endihighlight %}][]
-### [{% ihighlight shell %}{% endihighlight %}][]
-### [{% ihighlight shell %}{% endihighlight %}][]
-### [{% ihighlight shell %}{% endihighlight %}][]
+También se puede usar el valor on pero esto anularía configuraciones personalizadas mientras que enable las mantendría.
 
-## _Folding_
+Las combinaciones de colores se pueden cambiar usando la propiedad [{% ihighlight shell %}colorscheme{% endihighlight %}][colorscheme]. Para ver los esquemas que _vim_ ofrece por defecto visita la ruta {% ihighlight shell %}$VIMRUNTIME/colors{% endihighlight %}. También puedes descargarlos o crear los tuyos propios, ajustando el valor de la propiedad al nombre del archivo en cuestión.
 
-### [{% ihighlight shell %}set foldmethod=indent{% endihighlight %}][foldmethod]
-### [{% ihighlight shell %}set foldnestmax{% endihighlight %}][foldnestmax]
-### [{% ihighlight shell %}set nofoldenable{% endihighlight %}][nofoldenable]
+## Tipos de archivo
+
+### [{% ihighlight shell %}filetype on{% endihighlight %}][filetype]
+
+En esta propiedad incluye ajustes específicos basados por el tipo de archivo. Es decir, si estás editando un archivo en C, _vim_ cargará automáticamente ajustes particulares para ese tipo de archivo como nuevos ajustes, resaltado de sintaxis, sangrías y tabulaciones, etc… También sobrescribirá cualquier ajuste definido de manera global, puesto que los ajustes locales tienen preferencia sobre los globales.
+
+Si solo pretendes activar la opción de sangría y tabulación, obviando el resto de ajustes concretos, deberás usar el siguiente comando: [{% ihighlight shell %}filetype indent on{% endihighlight %}][filetypeindenton]. También puedes ajustarlo al contrario: [{% ihighlight shell %}filetype plugin on{% endihighlight %}][filetypepluginon].
 
 ## Bola extra
 ### [{% ihighlight shell %}set exrc{% endihighlight %}][exrc]
@@ -293,6 +321,7 @@ Puedes saber más sobre esta sección en [{% ihighlight shell %}:help slow-termi
 [wildmenu]: http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmenu' 
 [wildmode]: http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmode'
 [wildcharm]: http://vimdoc.sourceforge.net/htmldoc/options.html#'wildcharm'
+[wildchar]: http://vimdoc.sourceforge.net/htmldoc/options.html#'wildchar'
 [emenu]: http://vimdoc.sourceforge.net/htmldoc/gui.html#:emenu
 [ignorecase]: http://vimdoc.sourceforge.net/htmldoc/options.html#'ignorecase'
 [smartcase]: http://vimdoc.sourceforge.net/htmldoc/options.html#'smartcase'
@@ -304,3 +333,12 @@ Puedes saber más sobre esta sección en [{% ihighlight shell %}:help slow-termi
 [foldnestmax]: http://vimdoc.sourceforge.net/htmldoc/options.html#'foldnestmax'   
 [nofoldenable]: http://vimdoc.sourceforge.net/htmldoc/options.html#'nofoldenable'
 [slow-terminal]: http://vimdoc.sourceforge.net/htmldoc/term.html#slow-terminal
+[scrolling]: http://vimdoc.sourceforge.net/htmldoc/scroll.html#scrolling
+[tabstop]: http://vimdoc.sourceforge.net/htmldoc/options.html#'tabstop'
+[softtabstop]: http://vimdoc.sourceforge.net/htmldoc/options.html#'softtabstop'
+[shiftwidth]: http://vimdoc.sourceforge.net/htmldoc/options.html#'shiftwidth'
+[insexpandtab]: http://vimdoc.sourceforge.net/htmldoc/insert.html#ins-expandtab 
+[filetype]: http://vimdoc.sourceforge.net/htmldoc/filetype.html
+[filetypeindenton]: http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-indent-on
+[filetypepluginon]: http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-plugin-on
+[wikisyntax]: https://www.wikiwand.com/es/Coloreado_de_sintaxis
