@@ -1,8 +1,8 @@
 ---
 title: "vim: configuración inicial"
-date: 2017-12-03 00:30:00 +0100
+date: 2017-12-19 18:30:00 +0100
 categories: [artículos, vim, tutorial]
-excerpt: Configuración inicial para principiantes (y no tanto) de vim.
+excerpt: Opciones básicas para configurar vim y que todo el mundo debería tener en su vimrc.
 permalink: /articulos/vim-configuracion-inicial
 ---
 En un [artículo anterior][vim-intro], donde se introducía _vim_, se creó un archivo llamado {% ihighlight shell %}.vimrc{% endihighlight %}. En él se incluía la opción {% ihighlight shell %}set mouse=a{% endihighlight %} para habilitar el ratón. Si no se hubiera insertado esta línea, te verías obligado a introducirla cada vez que arrancaras el programa.
@@ -20,11 +20,18 @@ Por último, se incluye el archivo de configuración completo para que puedas ve
 Ahora sí, sin más dilación procedamos a estudiar las diferentes opciones.
 
 ## Antes de empezar
+
 Tras todo este tiempo usando vim he descubierto que la mejor forma para configurarlo es haciéndolo uno mismo. Hay muchos usuarios que comparten su {% ihighlight shell %}.vimrc{% endihighlight %} por internet y aunque es muy tentador usarlo es recomendable no hacerlo. Al final te encontrarás con una maraña de líneas de comandos que no entenderás porque están ahí. También ocurre lo mismo con los _plugins_, por no haber leído un poco sobre las características de _vim_ al final se acaban instalando _plugins_ que ya existen como funcionalidades integradas, pero este es otro tema. En definitiva, quédate con que las configuraciones de otros usuarios debes usarlas como referencia para crear el tuyo propio.
 
 Aparte de leer que hace cada comando en la documentación, la mejor manera para probarlo es incluir una a una cada opción y ver el resultado. Para ello lo primero es localizar el archivo {% ihighlight shell %}.vimrc{% endihighlight %}. Dependiendo del sistemo operativo el archivo se puede encontrar en diferentes ubicaciones o con diferente nombre. En la siguiente tabla puede verse las diferentes rutas y nombres.
 
-<table class="dashed-table table-full">
+<table class="solid-table table-full">
+  <thead>
+    <tr>
+      <td><b>Sistema operativo</b></td>
+      <td><b>Ruta</b></td>
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <td>Unix / Linux<br />Mac OS X</td>
@@ -84,6 +91,14 @@ Antes de empezar a editar el archivo de configuración, sería bueno recordar un
 <td>Pegar el contenido del portapapeles.</td>
 </tr>
 <tr>
+<td><kbd>u</kbd></td>
+<td>Deshacer.</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd><kbd>R</kbd></td>
+<td>Rehacer.</td>
+</tr>
+<tr>
 <td><kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd></td>
 <td>Comandos de movimiento. En el mismo orden son ←↓↑→.</td>
 </tr>
@@ -119,8 +134,8 @@ Muestra parcialmente el comando que se está usando actualmente. Aparece en la e
 {% progressive_picture
   thumbnail: /assets/vim-config-1.thumb.jpg
   src: /assets/vim-config-1.jpg
-  height: 383
-  width: 600
+  height: 784
+  width: 1364
   alt: 'showcmd en acción.' %}
   
 En este caso se ha introducido el verbo —_**d**elete_—, el modificador —_**a**_— y queda en espera del sustantivo (objeto) que podría ser una palabra —_**w**ord_—. Tras introducir este último desaparece la ayuda visual.
@@ -258,28 +273,138 @@ Las combinaciones de colores se pueden cambiar usando la propiedad [{% ihighligh
 
 ### [{% ihighlight shell %}filetype on{% endihighlight %}][filetype]
 
-En esta propiedad incluye ajustes específicos basados por el tipo de archivo. Es decir, si estás editando un archivo en C, _vim_ cargará automáticamente ajustes particulares para ese tipo de archivo como nuevos ajustes, resaltado de sintaxis, sangrías y tabulaciones, etc… También sobrescribirá cualquier ajuste definido de manera global, puesto que los ajustes locales tienen preferencia sobre los globales.
+En esta propiedad incluye ajustes específicos basados en el tipo de archivo. Es decir, si estás editando un archivo en C, _vim_ cargará automáticamente propiedades exclusivas como comportamiento, resaltado de sintaxis, sangrías y tabulaciones, etc… También sobrescribirá cualquier ajuste definido de manera global, puesto que los ajustes locales tienen preferencia sobre los globales.
 
-Si solo pretendes activar la opción de sangría y tabulación, obviando el resto de ajustes concretos, deberás usar el siguiente comando: [{% ihighlight shell %}filetype indent on{% endihighlight %}][filetypeindenton]. También puedes ajustarlo al contrario: [{% ihighlight shell %}filetype plugin on{% endihighlight %}][filetypepluginon].
+Si solo pretendes activar la opción de sangría y tabulación, ignorando el resto de ajustes particulares, deberás usar el siguiente comando: [{% ihighlight shell %}filetype indent on{% endihighlight %}][filetypeindenton]. También puedes ajustarlo al contrario: [{% ihighlight shell %}filetype plugin on{% endihighlight %}][filetypepluginon].
+
+## Backups
+
+### [{% ihighlight shell %}set directory^=~/.vim/swp//{% endihighlight %}][directory]
+
+Cada vez que se abre un archivo en _vim_, automáticamente se crea un archivo de intercambio. Este archivo se almacena en el mismo lugar donde se halla el archivo en cuestión con la extensión {% ihighlight shell %}.swp{% endihighlight %}. Fundamentalmente, este archivo se utiliza para restringir el acceso al archivo editado, mientras esté abierto, por otros usuarios o procesos.
+
+Para evitar «contaminar» el directorio actual con estos archivos extra, podemos especificar una ruta donde queramos que se almacenen. Asegúrate que exista el directorio elegido, en caso contrario fallará.
+
+Dos características no vista hasta ahora son la dos barras ({% ihighlight shell %}//{% endihighlight %}) que nombran el archivo de intercambio con la ruta absoluta, evitando así posibles conflictos. La otra, el acento circunflejo junto al igual ([{% ihighlight shell %}^={% endihighlight %}][^=]), permite que en una propiedad que acepta una lista de valores, como {% ihighlight shell %}directory{% endihighlight %}, pueda establecer el valor indicado de manera precedente al resto de opciones previas.
+
+Para evitar que _vim_ genere estos archivos tan solo debes incluir la opción [{% ihighlight shell %}set noswapfile{% endihighlight %}][noswapfile].
+
+### [{% ihighlight shell %}set backup{% endihighlight %}][backup]
+
+A diferencia de los archivos _swap_ están las copias de seguridad _per se_. Su extensión es una tilde ({% ihighlight shell %}~{% endihighlight %}). Los primeros almacenan exáctamente el contenido del _buffer_, por tanto todo lo relativo al propio programa como marcas, variables locales, históricos, etc. Los segundos solamente crean una copia exacta del mismo archivo editado.
+
+Como ya vimos en la propiedad anterior, por defecto _vim_ guarda cualquier fichero extra en el mismo directorio donde se halla el archivo que está siendo editado. Con la propiedad [{% ihighlight shell %}set backupdir^=$HOME/.vim/cache/backup//{% endihighlight %}][backupdir] indicamos dónde queremos que se guarden estas copias de seguridad.
+
+En la siguiente tabla puedes ver que opciones de respaldo ofrece _vim_.
+
+<table class="solid-table table-full">
+  <thead>
+    <tr>
+      <td><b>{% ihighlight shell %}backup{% endihighlight %}</b></td>
+      <td><b>{% ihighlight shell %}writebackup{% endihighlight %}</b></td>
+      <td><b>Resultado</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>off</td>
+      <td>off</td>
+      <td>Sin copia de seguridad</td>
+    </tr>
+    <tr>
+      <td>off</td>
+      <td>on</td>
+      <td>Copia de seguridad antes de abrir el archivo. Cuando se cierra la copia es borrada (<b>por defecto</b>).</td>
+    </tr>
+    <tr>
+      <td>on</td>
+      <td>off</td>
+      <td>Crea una copia nueva al abrir el archivo, borrando la anterior. La copia se mantiene tras cerrar el programa.</td>
+    </tr>
+    <tr>
+      <td>on</td>
+      <td>on</td>
+      <td>Igual que la anterior.</td>
+    </tr>
+  </tbody>
+</table>
+
+Ahora ya sabes que para que las copias persistan tan sólo debes añadir la opción {% ihighlight shell %}set backup{% endihighlight %} en el {% ihighlight shell %}vimrc{% endihighlight %}.
+
+Por último, si eres de los que no quieren hacer copias de seguridad porque al fin y al cabo no hay proyecto que no esté respaldado por un [SCM][scm], entonces puedes desactivar esta opción con [{% ihighlight shell %}set nowritebackup{% endihighlight %}][writebackup]. Si incluiste la propiedad {% ihighlight shell %}backup{% endihighlight %}, bórrala o cámbiala por {% ihighlight shell %}set nobackup{% endihighlight %}.
+
+### [{% ihighlight shell %}set undofile{% endihighlight %}][undofile]
+
+_vim_ elimina el histórico de cambios cuando se cierra y con cada nueva sesión se genera de nuevo. {% ihighlight shell %}undofile{% endihighlight %} evita este comportamiento guardando una copia del arbol de cambios en un archivo con la extensión {% ihighlight shell %}.un~{% endihighlight %}.
+
+Como bien te habrás imaginado, también almacena este archivo en el mismo directorio que el archivo editado. Para cambiar esta propiedad usaremos [{% ihighlight shell %}set undodir^=$HOME/.vim/cache/undo//{% endihighlight %}][undodir]. Las opciones de la ruta son las mismas que para {% ihighlight shell %}directory{% endihighlight %}.
+
+El hecho de almacenar todos estos archivos bajo la carpeta {% ihighlight shell %}cache{% endihighlight %} es para poder localizarlos fácilmente. También es muy práctico el poder borrarlos, tan solo borras el contenido de la carpeta _et voilà_. Recuerda volver a crear las carpetas sino _vim_ se quejará cada vez que lo abras y fallará al guardar o cerrar el archivo con un mensaje parecido a este.
+
+{% highlight shell %}
+"~/.vim/cache/backup/any-file~" E510: Can't make backup file (add ! to override)
+{% endhighlight %}
+
+Para terminar con esta sección, también cabe mencionar que la opción de añadir dos barras al final de la ruta suministrada a {% ihighlight shell %}backupdir{% endihighlight %} [no funciona como se espera][backupdirissue]. De todas formas no está de más dejarlo como tal por si un día lo arreglan.
 
 ## Bola extra
+
+### [{% ihighlight shell %}set modeline{% endihighlight %}][modeline]
+
+Esta opción permite a _vim_ ejecutar comandos relativos al mismo documento mediante una línea de comentario. Por defecto suele estar activado aunque puede que en algunas versiones de esté desactivado por razones de seguridad. De hecho si el usuario es _root_ también está desactivado. Entre estas vulnerabilidades pueden estar el ejecutar ficheros maliciosos al abrir un archivo. Para saber más puedes buscar en google las siguiente palabras: [vim modeline vulnerability][modelinevulnerability].
+
+Consideraciones de seguridad aparte, la verdad es que la opción de ejecutar comandos al abrir un archivo abre una abanico de posibilidades muy interesantes. Como por ejemplo la que se presenta debajo.
+
+{% highlight shell %}
+" vim:foldmethod=marker:foldlevel=0
+{% endhighlight %}
+
+Este comentario se puede incluir al inicio o al final del archivo. Por defecto deberá ser dentro de las primeras o últimas 5 líneas. Esto viene establecido por la propiedad [{% ihighlight shell %}modelines{% endihighlight %}][modelines]. En concreto esta instrucción «pliega» (_[folding][folding]_) el contenido del archivo que se halle entre las siguientes marcas de comentario.
+
+{% highlight shell %}
+" {{ "{{{ "}}
+" {{ "}}}}}
+{% endhighlight %}
+
+Podemos usar esta propiedad para dividir por secciones nuestro {% ihighlight shell %}vimrc{% endihighlight %}, lo que facilitaría su lectura. Puedes ver cómo queda en la imagen inferior.
+
+{% progressive_picture
+  thumbnail: /assets/vim-config-2.thumb.jpg
+  src: /assets/vim-config-2.jpg
+  height: 920
+  width: 1364
+  alt: 'Plegado por secciones.' %}
+
+Ahora el archivo no ocupa más de 9 líneas por las que puedes navegar sin tener que paginar. Para poder abrir cada sección plegada, tan sólo debes situar el cursor sobre la línea deseada y pulsar <kbd>z</kbd><kbd>o</kbd>. Se cierra con el comando <kbd>z</kbd><kbd>c</kbd>. También se pueden abrir todos ejecutando <kbd>z</kbd><kbd>R</kbd>> y cerrarlos con <kbd>z</kbd><kbd>M</kbd>.
+
 ### [{% ihighlight shell %}set exrc{% endihighlight %}][exrc]
 
+Permite cargar configuraciones locales que se hallen en el mismo directorio donde se ejecuta _vim_. Un uso podría ser tener diferentes {% ihighlight shell %}vimrc{% endihighlight %} por proyecto. Lo más interesante de esta propiedad la sobrescritura es acumulativa, teniendo preferencia el archivo local. Esto permite modificar tabulaciones para un proyecto y mantener el resto con las opciones globales.
+
+Se recomienda el uso en conjunto con la propiedad [{% ihighlight shell %}secure{% endihighlight %}][secure], para evitar código malicioso en entornos multiusuario. Puedes averiguar más sobre esto [aquí][trojanhorse].
+
+De todas formas si lo que se pretende es modificar opciones visuales por proyecto, tal vez quieras dejar está opción desactivada y usar una menos sensible como _[editorconfig][editorconfig]_.
+
 ## Conclusión
+
+No están todas las opciones ni mucho menos pero con esta configuración inicial es un primer paso para personalizar _vim_. De hecho se pueden añadir nuevas combinaciones de comandos mediante el [mapeo de claves][mapping] lo que todavía lo tunearía aún más. Pero esto lo iremos viendo en posteriores artículos que cubran diferentes características de _vim_.
+
+Tras este artículo te recomiendo las lectura del [capítulo 5][usr5] del manual de usuario y la sección perteneciente a la [inicialización][initialization] de _vim_. En el primero se explica con que opciones básicas de configuración y en el segundo los pasos realizados para arrancar _vim_. Si deseas leer esta documentación en castellano/español puedes descargarla [aquí][vimes].
+
+Por último, puedes encontrar el archivo completo con la configuración de _vim_ en el siguiente _gist_.
 
 <script src="https://gist.github.com/emoriarty/0241dc249fb5605f32ee66345165edfd.js"></script>
 
 ## Fuentes
-* https://dockyard.com/blog/categories/vim
-* http://learnvimscriptthehardway.stevelosh.com
-* https://mislav.net/2011/12/vim-revisited/
-* http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/#
-* http://yannesposito.com/Scratch/en/blog/Vim-as-IDE/
-* https://dougblack.io/words/a-good-vimrc.html
-* http://items.sjbach.com/319/configuring-vim-right
-* https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
-* https://gist.github.com/simonista/8703722
-* https://yanpritzker.com/the-cleanest-vimrc-youll-ever-see-20f6158f1f1f
+* [dockyard.com/blog/categories/vim](http://dockyard.com/blog/categories/vim)
+* [learnvimscriptthehardway.stevelosh.com](http://learnvimscriptthehardway.stevelosh.com)
+* [mislav.net/2011/12/vim-revisited](https://mislav.net/2011/12/vim-revisited)
+* [yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively)
+* [dougblack.io/words/a-good-vimrc.html](https://dougblack.io/words/a-good-vimrc.html)
+* [items.sjbach.com/319/configuring-vim-right](http://items.sjbach.com/319/configuring-vim-right)
+* [github.com/amix/vimrc/blob/master/vimrcs/basic.vim](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)
+* [gist.github.com/simonista/8703722](https://gist.github.com/simonista/8703722)
+* [yanpritzker.com/the-cleanest-vimrc-youll-ever-see-20f6158f1f1f](https://yanpritzker.com/the-cleanest-vimrc-youll-ever-see-20f6158f1f1f)
 
 [vim-intro]: /articulos/vim-intro 
 [help-option-list]: http://vimdoc.sourceforge.net/htmldoc/quickref.html#option-list
@@ -342,3 +467,24 @@ Si solo pretendes activar la opción de sangría y tabulación, obviando el rest
 [filetypeindenton]: http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-indent-on
 [filetypepluginon]: http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-plugin-on
 [wikisyntax]: https://www.wikiwand.com/es/Coloreado_de_sintaxis
+[directory]: http://vimdoc.sourceforge.net/htmldoc/options.html#'directory'
+[^=]: http://vimdoc.sourceforge.net/htmldoc/options.html#:set^=
+[noswapfile]: http://vimdoc.sourceforge.net/htmldoc/options.html#'noswapfile'
+[backup]: http://vimdoc.sourceforge.net/htmldoc/options.html#'backup'
+[backupdir]: http://vimdoc.sourceforge.net/htmldoc/options.html#'backupdir'
+[scm]: https://www.wikiwand.com/es/Control_de_versiones
+[writebackup]: http://vimdoc.sourceforge.net/htmldoc/options.html#'writebackup'
+[undofile]: http://vimdoc.sourceforge.net/htmldoc/options.html#'undofile'
+[undodir]: http://vimdoc.sourceforge.net/htmldoc/options.html#'undodir'
+[backupdirissue]: https://stackoverflow.com/a/26779916/455237
+[modeline]: http://vimdoc.sourceforge.net/htmldoc/options.html#modeline
+[modelinevulnerability]: https://www.google.com/search?q=vim+modeline+vulnerability
+[modelines]: http://vimdoc.sourceforge.net/htmldoc/options.html#'modelines'
+[folding]: http://vimdoc.sourceforge.net/htmldoc/fold.html#folding
+[trojanhorse]: http://vimdoc.sourceforge.net/htmldoc/starting.html#trojan-horse
+[secure]: http://vimdoc.sourceforge.net/htmldoc/options.html#'secure'
+[editorconfig]: http://editorconfig.org/
+[mapping]: http://vimdoc.sourceforge.net/htmldoc/map.html
+[usr5]: http://vimdoc.sourceforge.net/htmldoc/usr_05.html
+[initialization]: http://vimdoc.sourceforge.net/htmldoc/starting.html#initialization
+[vimes]: https://app.assembla.com/wiki/show/vim-doc-es

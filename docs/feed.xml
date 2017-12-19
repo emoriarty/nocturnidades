@@ -1,5 +1,398 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://nocturnidad.es/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidad.es/" rel="alternate" type="text/html" /><updated>2017-12-17T08:41:40+01:00</updated><id>http://nocturnidad.es/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que los artículos son perpetrados.
-</subtitle><entry><title type="html">vim: introducción</title><link href="http://nocturnidad.es/articulos/vim-intro" rel="alternate" type="text/html" title="vim: introducción" /><published>2017-11-03T00:30:00+01:00</published><updated>2017-11-03T00:30:00+01:00</updated><id>http://nocturnidad.es/articulos/vim-intro</id><content type="html" xml:base="http://nocturnidad.es/articulos/vim-intro">&lt;figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://nocturnidad.es/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidad.es/" rel="alternate" type="text/html" /><updated>2017-12-19T18:59:58+01:00</updated><id>http://nocturnidad.es/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que los artículos son perpetrados.
+</subtitle><entry><title type="html">vim: configuración inicial</title><link href="http://nocturnidad.es/articulos/vim-configuracion-inicial" rel="alternate" type="text/html" title="vim: configuración inicial" /><published>2017-12-19T18:30:00+01:00</published><updated>2017-12-19T18:30:00+01:00</updated><id>http://nocturnidad.es/articulos/vim-configuracion-inicial</id><content type="html" xml:base="http://nocturnidad.es/articulos/vim-configuracion-inicial">&lt;p&gt;En un &lt;a href=&quot;/articulos/vim-intro&quot;&gt;artículo anterior&lt;/a&gt;, donde se introducía &lt;em&gt;vim&lt;/em&gt;, se creó un archivo llamado &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.vimrc&lt;/code&gt;. En él se incluía la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;mouse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;a&lt;/code&gt; para habilitar el ratón. Si no se hubiera insertado esta línea, te verías obligado a introducirla cada vez que arrancaras el programa.&lt;/p&gt;
+
+&lt;p&gt;Esto no sería muy engorroso de tratarse de una única opción, pero ¿qué pasaría si introdujeras más ajustes? ¿querrías escribirlos en cada nueva sesión? ¿te acordarías de todos? Obviamente no.&lt;/p&gt;
+
+&lt;p&gt;Mediante el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.vimrc&lt;/code&gt; en cada nueva instancia &lt;em&gt;vim&lt;/em&gt; lee y ejecuta los comandos incluidos en el mismo secuencialmente, asegurando la persistencia de los ajustes entre sesiones. Además también facilita su legilibilidad al mantener cada opción por línea de texto.&lt;/p&gt;
+
+&lt;p&gt;Para poder poblar el archivo de configuración es necesario saber que opciones ofrece &lt;em&gt;vim&lt;/em&gt;. Así que en el presente artículo se exponen una serie de ajustes para tunearlo. No va a ser una guía exhaustiva con todas las posibilidades de configuración pero si aquellas que he considerado que facilitan el aterrizaje a vim. Por cada una de las opciones se incluye una descripción de su cometido. Algunas explicaciones son más extensas que otras puesto que su dificultad entraña una mayor explicación.&lt;/p&gt;
+
+&lt;p&gt;Si quieres hacerte a una idea de cuántas opciones se ofrecen (y no estarían todas) puedes ejecutar el comando &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/quickref.html#option-list&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:help option-list&lt;/code&gt;&lt;/a&gt;. Esto abrirá una ventana con un lista de instrucciones junto a una escueta descripción.&lt;/p&gt;
+
+&lt;p&gt;Por último, se incluye el archivo de configuración completo para que puedas ver como queda en conjunto. También lo puedes descargar pero &lt;strong&gt;no recomiendo que lo hagas&lt;/strong&gt;. Es mejor que vayas incluyendo uno a uno cada ajuste y compruebes por ti mismo que ha cambiado en &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ahora sí, sin más dilación procedamos a estudiar las diferentes opciones.&lt;/p&gt;
+
+&lt;h2 id=&quot;antes-de-empezar&quot;&gt;Antes de empezar&lt;/h2&gt;
+
+&lt;p&gt;Tras todo este tiempo usando vim he descubierto que la mejor forma para configurarlo es haciéndolo uno mismo. Hay muchos usuarios que comparten su &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.vimrc&lt;/code&gt; por internet y aunque es muy tentador usarlo es recomendable no hacerlo. Al final te encontrarás con una maraña de líneas de comandos que no entenderás porque están ahí. También ocurre lo mismo con los &lt;em&gt;plugins&lt;/em&gt;, por no haber leído un poco sobre las características de &lt;em&gt;vim&lt;/em&gt; al final se acaban instalando &lt;em&gt;plugins&lt;/em&gt; que ya existen como funcionalidades integradas, pero este es otro tema. En definitiva, quédate con que las configuraciones de otros usuarios debes usarlas como referencia para crear el tuyo propio.&lt;/p&gt;
+
+&lt;p&gt;Aparte de leer que hace cada comando en la documentación, la mejor manera para probarlo es incluir una a una cada opción y ver el resultado. Para ello lo primero es localizar el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.vimrc&lt;/code&gt;. Dependiendo del sistemo operativo el archivo se puede encontrar en diferentes ubicaciones o con diferente nombre. En la siguiente tabla puede verse las diferentes rutas y nombres.&lt;/p&gt;
+
+&lt;table class=&quot;solid-table table-full&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Sistema operativo&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Ruta&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Unix / Linux&lt;br /&gt;Mac OS X&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.vimrc&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt;
+        &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/_vimrc&lt;/code&gt;
+        &lt;br /&gt;
+        &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$VIM&lt;/span&gt;/_vimrc&lt;/code&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;En ocasiones puedes encontrar que también nombran el archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;exrc&lt;/code&gt;. Este archivo pertenece al antiguo &lt;em&gt;vi&lt;/em&gt; así que no le prestes mucha atención. Puedes saber más sobre esto pinchando &lt;a href=&quot;https://unix.stackexchange.com/questions/198898/what-is-the-difference-between-exrc-and-vimrc&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si nunca has usado &lt;em&gt;vim&lt;/em&gt;, lo normal es que no exista &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;vimrc&lt;/code&gt; por lo tanto se debe crear. El mejor método para editar este archivo es accediendo a &lt;em&gt;vim&lt;/em&gt; y desde allí ejecutar el siguiente comando.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;:e &lt;span class=&quot;nv&quot;&gt;$MYVIMRC&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Tras ejecutar este comando se abrirá el archivo que se encuentre en la ruta indicada por &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$MYVIMRC&lt;/span&gt;&lt;/code&gt; (la puedes visualizar ejecutando &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:echo &lt;span class=&quot;nv&quot;&gt;$MYVIMRC&lt;/span&gt;&lt;/code&gt;). Si este no existe será almacenado en la misma ruta cuando sea guardado.&lt;/p&gt;
+
+&lt;p&gt;Antes de empezar a editar el archivo de configuración, sería bueno recordar unos cuantos comandos básicos para poder moverse en el modo normal de &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
+
+&lt;table class=&quot;commands-table-description table-full&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;i&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Entrar en el modo insert.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;ESC&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Volver al modo normal.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;x&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Borrar el carácter justo debajo del cursor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;:wq&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Guardar (x) y salir de vim (q).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;dd&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Borrar la línea actual donde se halla el cursor. También almacena la linea borrada en el portapapeles.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;yy&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Copia la línea actual en el portapapeles.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;p&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Pegar el contenido del portapapeles.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;u&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Deshacer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;&lt;kbd&gt;R&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Rehacer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;h&lt;/kbd&gt;&lt;kbd&gt;j&lt;/kbd&gt;&lt;kbd&gt;k&lt;/kbd&gt;&lt;kbd&gt;l&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;Comandos de movimiento. En el mismo orden son ←↓↑→.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Para poder saber más sobre cada comando siempre puedes teclear &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:help &amp;lt;comando&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A continuación puedes ver las opciones con la cuáles completar un &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;vimrc&lt;/code&gt; inicial junto a una explicación para cada una.&lt;/p&gt;
+
+&lt;h2 id=&quot;general&quot;&gt;General&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-nocompatible&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'nocompatible'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;nocompatible&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Compatibilidad con &lt;em&gt;vi&lt;/em&gt; desactivada. Al incluir esta opción evita efectos inesperados debido a diferentes comportamientos entre &lt;em&gt;vi&lt;/em&gt; y &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esta opción se desactiva por defecto cuando &lt;em&gt;vim&lt;/em&gt; se topa con un archivo &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.vimrc&lt;/code&gt; al inicio. El hecho de forzar su uso es para evitar la sobrescritura de las opciones por defecto como en el caso de usar el argumento &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;-C&lt;/code&gt; al arrancar &lt;em&gt;vim&lt;/em&gt;. Este forzaría el modo compatible aunque encuentre un &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.vimrc&lt;/code&gt;. Para evitar esta situación solo basta con incluir la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;nocompatible&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Piensa en esta opción como una salvaguarda para evitar posibles conflictos.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-encodingutf-8&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'encoding'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Establece la codificación de caracteres a &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;UTF-8&lt;/code&gt;.  Básicamente es la codificación de salida que veremos en el terminal. También lo utiliza internamente para escribir en archivos como &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/usr_21.html#21.3&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;viminfo&lt;/code&gt;&lt;/a&gt;, donde se almacena información que de otra manera se perdería tales como marcas, patrones de búsqueda, historial de comandos, etc.&lt;/p&gt;
+
+&lt;p&gt;Los archivos editados no sufrirán ningún cambio en su codificación al ser guardados. Si por el contrario deseas cambiar este comportamiento deberías usar la opción &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'fileencoding'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fileencoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/a&gt;. Esta instrucción indica a vim modificar la codificación del archivo cuando se guarda.&lt;/p&gt;
+
+&lt;p&gt;La elección del formato &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;UTF-8&lt;/code&gt; es debido a que es el más común entre sistemas, así que para qué cambiarlo.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-showcmd&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'showcmd'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;showcmd&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Muestra parcialmente el comando que se está usando actualmente. Aparece en la esquina inferior derecha como se muestra en la siguiente imagen.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;div class=&quot;placeholder&quot; data-large=&quot;/assets/vim-config-1.jpg&quot;&gt;
+    &lt;img src=&quot;/assets/vim-config-1.thumb.jpg&quot; class=&quot;img-small loaded&quot; alt=&quot;showcmd en acción.&quot; /&gt;
+    &lt;div style=&quot;padding-bottom: 57.478005865102645%;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En este caso se ha introducido el verbo —&lt;em&gt;&lt;strong&gt;d&lt;/strong&gt;elete&lt;/em&gt;—, el modificador —&lt;em&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/em&gt;— y queda en espera del sustantivo (objeto) que podría ser una palabra —&lt;em&gt;&lt;strong&gt;w&lt;/strong&gt;ord&lt;/em&gt;—. Tras introducir este último desaparece la ayuda visual.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-showmode&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;showmode&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Indica en el modo actual en la línea de comando excepto en modo &lt;em&gt;normal&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-visualbell&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'visualbell'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;visualbell&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Cambia la alerta sonora por una visual. En algunas ocasiones esta alerta puede estar sujeta a la configuración del terminal donde se ejecute por lo tanto deberías modificar los ajustes del terminal.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-history50&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'history'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set history&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;50&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Número de comandos que &lt;em&gt;vim&lt;/em&gt; almacena. Por defecto es 20. He preferido dejarlo en 50 aunque puedes poner el que quieras.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-autoread&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'autoread'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;autoread&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Actualiza automáticamente los archivos que estén abiertos y hayan sido modificados fuera de &lt;em&gt;vim&lt;/em&gt;. Aunque esta solución no funciona a no ser que un comando externo se ejecute como &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:ls!&lt;/code&gt; o cualquier otro.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-backspaceeolstartindent&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'backspace'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;backspace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;eol,start,indent&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;El botón de retroceso (backspace) se comporta como en cualquier editor&lt;/p&gt;
+
+&lt;h3 id=&quot;set-hidden&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'hidden'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;hidden&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Oculta los &lt;em&gt;buffers&lt;/em&gt; (un &lt;em&gt;buffer&lt;/em&gt; no es más que una copia del archivo en memoria) automáticamente al abandonarlos. También permite ocultar un &lt;em&gt;buffer&lt;/em&gt; incluso habiendo sido modificado sin guardar los cambios en disco.&lt;/p&gt;
+
+&lt;h3 id=&quot;let-mapleader-&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/map.html#mapleader&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;mapleader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Permite definir una cadena de texto para poder ejecutar comandos sin pasar por la consola de &lt;em&gt;vim&lt;/em&gt;. Un ejemplo podría ser usando el carácter espacio (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;“ ”&lt;/code&gt;) que en combinación con &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;w&lt;/code&gt; (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&amp;lt;leader&amp;gt;w&lt;/code&gt;) sería el equivalente a escribir &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:w&lt;/code&gt; en la consola.&lt;/p&gt;
+
+&lt;p&gt;Por convención se suele establecer la coma (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;,&lt;/code&gt;) como carácter &lt;em&gt;leading&lt;/em&gt; pero yo me siento más cómodo con el espacio. Tú puedes elegir uno de los dos o el que prefieras, no en vano la característica más importante de vim es que su alta personalización.&lt;/p&gt;
+
+&lt;p&gt;Estas combinaciones se consiguen mediante el &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/map.html#mapping&quot;&gt;mapeo de claves&lt;/a&gt; (key mapping) para crear nuevos comandos pero eso lo veremos más adelante. De momento recuerda que que hemos definido el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;mapleader&lt;/code&gt; como un espacio.&lt;/p&gt;
+
+&lt;h2 id=&quot;interfaz&quot;&gt;Interfaz&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-ruler&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'ruler'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;ruler&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Muestra la posición del cursor y si hay espacio también la posición relativa de la página expresada en porcentaje. Puedes configurar cómo el formato mediante la opción &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'rulerformat'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;rulerformat&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-relativenumber&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'relativenumber'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;relativenumber&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Activa los números de línea relativos a la posición actual del cursor. Esto es de gran utilidad cuando se utilizan comandos de movimiento verticales.&lt;/p&gt;
+
+&lt;p&gt;Imagina que quieres seleccionar hasta una línea de texto superior. En vez de tener que contarlas tan sólo mirando el número indicado a la izquierda de la línea en cuestión ya sabrás que distancia se encuentra. Por ejemplo, si fuesen doce líneas introducirías lo siguiente: &lt;kbd&gt;V&lt;/kbd&gt;&lt;kbd&gt;1&lt;/kbd&gt;&lt;kbd&gt;2&lt;/kbd&gt;&lt;kbd&gt;k&lt;/kbd&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pero si por el contrario solamente quieres ver la posición absoluta debes utilizar la opción &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'number'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;number&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-numberwidth2&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'numberwidth'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;numberwidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Establece el número de columnas destinado para mostrar los números de líneas de texto. Normalmente no es necesario más de dos si se ha usado la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;relativenumber&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-cursorline&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'cursorline'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;cursorline&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Resalta la línea donde se halla actualmente el cursor. Dependiendo del tema usado puede resaltar la misma cambiando el color de fondo o subrayándola.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-nowrap&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'nowrap'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;nowrap&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Permite que las líneas de texto sobresalgan más allá del ancho de la ventana. En su versión por defecto —&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;wrap&lt;/code&gt;— la parte que estuviera oculta de la línea saltaría un posición.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-lazyredraw&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'lazyredraw'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;lazyredraw&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Mejora el rendimiento del programa al evitar redibujar la pantalla durante la ejecución de macros, registros u cualquier otro comando que no tenga efecto sobre el texto. Se puede forzar el refresco usando la instrucción &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/various.html#:redraw&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:redraw&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;scrolling&quot;&gt;&lt;em&gt;Scrolling&lt;/em&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-scrolloff8&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'scrolloff'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;scrolloff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;El desplazamiento (&lt;em&gt;scrolling&lt;/em&gt;) comienza ocho líneas antes que el cursor alcance el borde superior o inferior de la ventana. Permite revelar el contenido que rodea la posición actual, que de otra manera quedaría oculto por los límites de la ventana.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-sidescrolloff16&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'sidescrolloff'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sidescrolloff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;16&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Al igual que &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;scrolloff&lt;/code&gt; pero en el plano horizontal. En este caso lo he ajustado al doble que el desplazamiento vertical.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-sidescroll1&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'sidescroll'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sidescroll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Ajusta el desplazamiento horizontal a una columna. Esto tiene un impacto directo en el rendimiento por lo tanto si trabajas en un entorno limitado se puede ajustar a &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;0&lt;/code&gt; (o no ajustar puesto que su valor por defecto es &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;0&lt;/code&gt;), desplazando la mitad de la ventana para mantener el cursor en el centro.&lt;/p&gt;
+
+&lt;p&gt;Si quieres saber más sobre scrolling puedes leer en el manual de usuario los siguientes artículos, &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/scroll.html#scrolling&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:help scrolling&lt;/code&gt;&lt;/a&gt; y &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/term.html#slow-terminal&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:help slow-terminal&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;sangría-indetación&quot;&gt;Sangría (&lt;em&gt;Indetación&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-tabstop2&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'tabstop'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tabstop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Número de espacios que se insertan al tabular, en este caso 2. Otra opción es mantener la configuración inicial de &lt;em&gt;vim&lt;/em&gt; (por defecto son 8) y usar la propiedad&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'softtabstop'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;softtabstop&lt;/code&gt;&lt;/a&gt; a 2, lo que mostraría cualquier tabulación a 2 pero internamente seguiría siendo 8.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-shiftwidth2&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'shiftwidth'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;shiftwidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Número de espacios usados en la sangría (y no, no tiene nada que ver con la bebida). Al igual que tabstop, por defecto su valor es 8.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-expandtab&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'expandtab'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;expandtab&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Fuerza el uso de espacios en el carácter para tabular. Se puede forzar la tabulación usando &lt;kbd&gt;CTRL&lt;/kbd&gt;&lt;kbd&gt;V&lt;/kbd&gt;&lt;kbd&gt;Tab&lt;/kbd&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-smarttab&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'smarttab'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;smarttab&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Utiliza el valor especificado en la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;shiftwidth&lt;/code&gt; para tabular el inicio de una línea de texto, para el resto se usa la propiedad &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;tabstop&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-autoindent&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'autoindent'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;autoindent&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Aplica la sangría automáticamente cuando al inicio de una nueva línea, copiando la sangría de la línea anterior.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-smartindent&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'smartindent'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;smartindent&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;La sangría automática se hace en función al estilo/sintaxis del tipo de archivo que se edita(especialmente para C). Se usa en combinación con autoindent.&lt;/p&gt;
+
+&lt;p&gt;Puedes encontrar información más detallada leyendo la sección &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/insert.html#ins-expandtab&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:help ins-expandtab&lt;/code&gt;&lt;/a&gt; en el manual de usuario.&lt;/p&gt;
+
+&lt;h2 id=&quot;completado&quot;&gt;Completado&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-wildmenu&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmenu'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;wildmenu&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Mejora el completado de la línea de comandos, mostrando un menú con las opciones disponibles justo encima. El comando para mostrar las posibles opciones se ajusta mediante la propiedad &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'wildchar'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;wildchar&lt;/code&gt;&lt;/a&gt;, por defecto es &lt;kbd&gt;tab&lt;/kbd&gt;. Se puede navegar entre los resultados bien usando &lt;kbd&gt;tab&lt;/kbd&gt;, las flechas o &lt;kbd&gt;Ctrl&lt;/kbd&gt;&lt;kbd&gt;P&lt;/kbd&gt; &lt;kbd&gt;Ctrl&lt;/kbd&gt;&lt;kbd&gt;N&lt;/kbd&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si la propiedad &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmode'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;wildmode&lt;/code&gt;&lt;/a&gt; se modifica y no contiene la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;full&lt;/code&gt;, &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;wildmenu&lt;/code&gt; no se mostrará. Por defecto su valor es &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;full&lt;/code&gt;, lo que permite navegar por los resultados secuencialmente.&lt;/p&gt;
+
+&lt;h2 id=&quot;búsqueda&quot;&gt;Búsqueda&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-ignorecase&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'ignorecase'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;ignorecase&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Permite realizar búsquedas de palabras sin tener en cuenta mayúsculas y minúsculas (&lt;em&gt;case-sensitive&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;set-smartcase&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'smartcase'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;smartcase&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Cuando el patrón de búsqueda contiene alguna mayúscula su comportamiento es estricto, distinguiendo entre mayúsculas de minúsculas.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-hlsearch&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'hlsearch'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;hlsearch&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Destaca todas las coincidencias del patrón de búsqueda en cuestión.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-incsearch&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'incsearch'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;incsearch&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;La búsqueda se realiza incrementalmente a medida que se define el patrón, destacando la primera coincidencia desde donde se halle el cursor.&lt;/p&gt;
+
+&lt;h2 id=&quot;colores&quot;&gt;Colores&lt;/h2&gt;
+
+&lt;h3 id=&quot;syntax-enable&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'syntax'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;syntax &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Activa el &lt;a href=&quot;https://www.wikiwand.com/es/Coloreado_de_sintaxis&quot;&gt;resaltado (o colerado) de sintaxis&lt;/a&gt;. Puedes hacerte una idea de los lenguajes que soporta vim mirando el contenido de la carpeta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$VIMRUNTIME&lt;/span&gt;/syntax&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;También se puede usar el valor on pero esto anularía configuraciones personalizadas mientras que enable las mantendría.&lt;/p&gt;
+
+&lt;p&gt;Las combinaciones de colores se pueden cambiar usando la propiedad &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/syntax.html#:colorscheme&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;colorscheme&lt;/code&gt;&lt;/a&gt;. Para ver los esquemas que &lt;em&gt;vim&lt;/em&gt; ofrece por defecto visita la ruta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$VIMRUNTIME&lt;/span&gt;/colors&lt;/code&gt;. También puedes descargarlos o crear los tuyos propios, ajustando el valor de la propiedad al nombre del archivo en cuestión.&lt;/p&gt;
+
+&lt;h2 id=&quot;tipos-de-archivo&quot;&gt;Tipos de archivo&lt;/h2&gt;
+
+&lt;h3 id=&quot;filetype-on&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/filetype.html&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;filetype on&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;En esta propiedad incluye ajustes específicos basados en el tipo de archivo. Es decir, si estás editando un archivo en C, &lt;em&gt;vim&lt;/em&gt; cargará automáticamente propiedades exclusivas como comportamiento, resaltado de sintaxis, sangrías y tabulaciones, etc… También sobrescribirá cualquier ajuste definido de manera global, puesto que los ajustes locales tienen preferencia sobre los globales.&lt;/p&gt;
+
+&lt;p&gt;Si solo pretendes activar la opción de sangría y tabulación, ignorando el resto de ajustes particulares, deberás usar el siguiente comando: &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-indent-on&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;filetype indent on&lt;/code&gt;&lt;/a&gt;. También puedes ajustarlo al contrario: &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-plugin-on&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;filetype plugin on&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;backups&quot;&gt;Backups&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-directoryvimswp&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'directory'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;directory^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.vim/swp//&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Cada vez que se abre un archivo en &lt;em&gt;vim&lt;/em&gt;, automáticamente se crea un archivo de intercambio. Este archivo se almacena en el mismo lugar donde se halla el archivo en cuestión con la extensión &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.swp&lt;/code&gt;. Fundamentalmente, este archivo se utiliza para restringir el acceso al archivo editado, mientras esté abierto, por otros usuarios o procesos.&lt;/p&gt;
+
+&lt;p&gt;Para evitar «contaminar» el directorio actual con estos archivos extra, podemos especificar una ruta donde queramos que se almacenen. Asegúrate que exista el directorio elegido, en caso contrario fallará.&lt;/p&gt;
+
+&lt;p&gt;Dos características no vista hasta ahora son la dos barras (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;//&lt;/code&gt;) que nombran el archivo de intercambio con la ruta absoluta, evitando así posibles conflictos. La otra, el acento circunflejo junto al igual (&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#:set^=&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;), permite que en una propiedad que acepta una lista de valores, como &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;directory&lt;/code&gt;, pueda establecer el valor indicado de manera precedente al resto de opciones previas.&lt;/p&gt;
+
+&lt;p&gt;Para evitar que &lt;em&gt;vim&lt;/em&gt; genere estos archivos tan solo debes incluir la opción &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'noswapfile'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;noswapfile&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-backup&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'backup'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;backup&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;A diferencia de los archivos &lt;em&gt;swap&lt;/em&gt; están las copias de seguridad &lt;em&gt;per se&lt;/em&gt;. Su extensión es una tilde (&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;~&lt;/code&gt;). Los primeros almacenan exáctamente el contenido del &lt;em&gt;buffer&lt;/em&gt;, por tanto todo lo relativo al propio programa como marcas, variables locales, históricos, etc. Los segundos solamente crean una copia exacta del mismo archivo editado.&lt;/p&gt;
+
+&lt;p&gt;Como ya vimos en la propiedad anterior, por defecto &lt;em&gt;vim&lt;/em&gt; guarda cualquier fichero extra en el mismo directorio donde se halla el archivo que está siendo editado. Con la propiedad &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'backupdir'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;backupdir^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.vim/cache/backup//&lt;/code&gt;&lt;/a&gt; indicamos dónde queremos que se guarden estas copias de seguridad.&lt;/p&gt;
+
+&lt;p&gt;En la siguiente tabla puedes ver que opciones de respaldo ofrece &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
+
+&lt;table class=&quot;solid-table table-full&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;backup&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;writebackup&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Resultado&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;off&lt;/td&gt;
+      &lt;td&gt;off&lt;/td&gt;
+      &lt;td&gt;Sin copia de seguridad&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;off&lt;/td&gt;
+      &lt;td&gt;on&lt;/td&gt;
+      &lt;td&gt;Copia de seguridad antes de abrir el archivo. Cuando se cierra la copia es borrada (&lt;b&gt;por defecto&lt;/b&gt;).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;on&lt;/td&gt;
+      &lt;td&gt;off&lt;/td&gt;
+      &lt;td&gt;Crea una copia nueva al abrir el archivo, borrando la anterior. La copia se mantiene tras cerrar el programa.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;on&lt;/td&gt;
+      &lt;td&gt;on&lt;/td&gt;
+      &lt;td&gt;Igual que la anterior.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Ahora ya sabes que para que las copias persistan tan sólo debes añadir la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;backup&lt;/code&gt; en el &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;vimrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por último, si eres de los que no quieren hacer copias de seguridad porque al fin y al cabo no hay proyecto que no esté respaldado por un &lt;a href=&quot;https://www.wikiwand.com/es/Control_de_versiones&quot;&gt;SCM&lt;/a&gt;, entonces puedes desactivar esta opción con &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'writebackup'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;nowritebackup&lt;/code&gt;&lt;/a&gt;. Si incluiste la propiedad &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;backup&lt;/code&gt;, bórrala o cámbiala por &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;nobackup&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-undofile&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'undofile'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;undofile&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;vim&lt;/em&gt; elimina el histórico de cambios cuando se cierra y con cada nueva sesión se genera de nuevo. &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;undofile&lt;/code&gt; evita este comportamiento guardando una copia del arbol de cambios en un archivo con la extensión &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.un~&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Como bien te habrás imaginado, también almacena este archivo en el mismo directorio que el archivo editado. Para cambiar esta propiedad usaremos &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'undodir'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;undodir^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.vim/cache/undo//&lt;/code&gt;&lt;/a&gt;. Las opciones de la ruta son las mismas que para &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;directory&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;El hecho de almacenar todos estos archivos bajo la carpeta &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;cache&lt;/code&gt; es para poder localizarlos fácilmente. También es muy práctico el poder borrarlos, tan solo borras el contenido de la carpeta &lt;em&gt;et voilà&lt;/em&gt;. Recuerda volver a crear las carpetas sino &lt;em&gt;vim&lt;/em&gt; se quejará cada vez que lo abras y fallará al guardar o cerrar el archivo con un mensaje parecido a este.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;~/.vim/cache/backup/any-file~&quot;&lt;/span&gt; E510: Can&lt;span class=&quot;s1&quot;&gt;'t make backup file (add ! to override)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Para terminar con esta sección, también cabe mencionar que la opción de añadir dos barras al final de la ruta suministrada a &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;backupdir&lt;/code&gt; &lt;a href=&quot;https://stackoverflow.com/a/26779916/455237&quot;&gt;no funciona como se espera&lt;/a&gt;. De todas formas no está de más dejarlo como tal por si un día lo arreglan.&lt;/p&gt;
+
+&lt;h2 id=&quot;bola-extra&quot;&gt;Bola extra&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-modeline&quot;&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#modeline&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;modeline&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Esta opción permite a &lt;em&gt;vim&lt;/em&gt; ejecutar comandos relativos al mismo documento mediante una línea de comentario. Por defecto suele estar activado aunque puede que en algunas versiones de esté desactivado por razones de seguridad. De hecho si el usuario es &lt;em&gt;root&lt;/em&gt; también está desactivado. Entre estas vulnerabilidades pueden estar el ejecutar ficheros maliciosos al abrir un archivo. Para saber más puedes buscar en google las siguiente palabras: &lt;a href=&quot;https://www.google.com/search?q=vim+modeline+vulnerability&quot;&gt;vim modeline vulnerability&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Consideraciones de seguridad aparte, la verdad es que la opción de ejecutar comandos al abrir un archivo abre una abanico de posibilidades muy interesantes. Como por ejemplo la que se presenta debajo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot; vim:foldmethod=marker:foldlevel=0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Este comentario se puede incluir al inicio o al final del archivo. Por defecto deberá ser dentro de las primeras o últimas 5 líneas. Esto viene establecido por la propiedad &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'modelines'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;modelines&lt;/code&gt;&lt;/a&gt;. En concreto esta instrucción «pliega» (&lt;em&gt;&lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/fold.html#folding&quot;&gt;folding&lt;/a&gt;&lt;/em&gt;) el contenido del archivo que se halle entre las siguientes marcas de comentario.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot; {{{ 
+&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Podemos usar esta propiedad para dividir por secciones nuestro &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;vimrc&lt;/code&gt;, lo que facilitaría su lectura. Puedes ver cómo queda en la imagen inferior.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;div class=&quot;placeholder&quot; data-large=&quot;/assets/vim-config-2.jpg&quot;&gt;
+    &lt;img src=&quot;/assets/vim-config-2.thumb.jpg&quot; class=&quot;img-small loaded&quot; alt=&quot;Plegado por secciones.&quot; /&gt;
+    &lt;div style=&quot;padding-bottom: 67.44868035190615%;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Ahora el archivo no ocupa más de 9 líneas por las que puedes navegar sin tener que paginar. Para poder abrir cada sección plegada, tan sólo debes situar el cursor sobre la línea deseada y pulsar &lt;kbd&gt;z&lt;/kbd&gt;&lt;kbd&gt;o&lt;/kbd&gt;. Se cierra con el comando &lt;kbd&gt;z&lt;/kbd&gt;&lt;kbd&gt;c&lt;/kbd&gt;. También se pueden abrir todos ejecutando &lt;kbd&gt;z&lt;/kbd&gt;&lt;kbd&gt;R&lt;/kbd&gt;&amp;gt; y cerrarlos con &lt;kbd&gt;z&lt;/kbd&gt;&lt;kbd&gt;M&lt;/kbd&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-exrc&quot;&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/198898/what-is-the-difference-between-exrc-and-vimrc&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;exrc&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Permite cargar configuraciones locales que se hallen en el mismo directorio donde se ejecuta &lt;em&gt;vim&lt;/em&gt;. Un uso podría ser tener diferentes &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;vimrc&lt;/code&gt; por proyecto. Lo más interesante de esta propiedad la sobrescritura es acumulativa, teniendo preferencia el archivo local. Esto permite modificar tabulaciones para un proyecto y mantener el resto con las opciones globales.&lt;/p&gt;
+
+&lt;p&gt;Se recomienda el uso en conjunto con la propiedad &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'secure'&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;secure&lt;/code&gt;&lt;/a&gt;, para evitar código malicioso en entornos multiusuario. Puedes averiguar más sobre esto &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/starting.html#trojan-horse&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;De todas formas si lo que se pretende es modificar opciones visuales por proyecto, tal vez quieras dejar está opción desactivada y usar una menos sensible como &lt;em&gt;&lt;a href=&quot;http://editorconfig.org/&quot;&gt;editorconfig&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;No están todas las opciones ni mucho menos pero con esta configuración inicial es un primer paso para personalizar &lt;em&gt;vim&lt;/em&gt;. De hecho se pueden añadir nuevas combinaciones de comandos mediante el &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/map.html&quot;&gt;mapeo de claves&lt;/a&gt; lo que todavía lo tunearía aún más. Pero esto lo iremos viendo en posteriores artículos que cubran diferentes características de &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tras este artículo te recomiendo las lectura del &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/usr_05.html&quot;&gt;capítulo 5&lt;/a&gt; del manual de usuario y la sección perteneciente a la &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/starting.html#initialization&quot;&gt;inicialización&lt;/a&gt; de &lt;em&gt;vim&lt;/em&gt;. En el primero se explica con que opciones básicas de configuración y en el segundo los pasos realizados para arrancar &lt;em&gt;vim&lt;/em&gt;. Si deseas leer esta documentación en castellano/español puedes descargarla &lt;a href=&quot;https://app.assembla.com/wiki/show/vim-doc-es&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por último, puedes encontrar el archivo completo con la configuración de &lt;em&gt;vim&lt;/em&gt; en el siguiente &lt;em&gt;gist&lt;/em&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/emoriarty/0241dc249fb5605f32ee66345165edfd.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;fuentes&quot;&gt;Fuentes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://dockyard.com/blog/categories/vim&quot;&gt;dockyard.com/blog/categories/vim&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://learnvimscriptthehardway.stevelosh.com&quot;&gt;learnvimscriptthehardway.stevelosh.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mislav.net/2011/12/vim-revisited&quot;&gt;mislav.net/2011/12/vim-revisited&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively&quot;&gt;yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dougblack.io/words/a-good-vimrc.html&quot;&gt;dougblack.io/words/a-good-vimrc.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://items.sjbach.com/319/configuring-vim-right&quot;&gt;items.sjbach.com/319/configuring-vim-right&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim&quot;&gt;github.com/amix/vimrc/blob/master/vimrcs/basic.vim&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/simonista/8703722&quot;&gt;gist.github.com/simonista/8703722&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yanpritzker.com/the-cleanest-vimrc-youll-ever-see-20f6158f1f1f&quot;&gt;yanpritzker.com/the-cleanest-vimrc-youll-ever-see-20f6158f1f1f&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Opciones básicas para configurar vim y que todo el mundo debería tener en su vimrc.</summary></entry><entry><title type="html">vim: introducción</title><link href="http://nocturnidad.es/articulos/vim-intro" rel="alternate" type="text/html" title="vim: introducción" /><published>2017-11-03T00:30:00+01:00</published><updated>2017-11-03T00:30:00+01:00</updated><id>http://nocturnidad.es/articulos/vim-intro</id><content type="html" xml:base="http://nocturnidad.es/articulos/vim-intro">&lt;figure&gt;
   &lt;div class=&quot;placeholder picture-shrink&quot; data-large=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/1022px-Vimlogo.svg.png&quot;&gt;
     &lt;img src=&quot;&quot; class=&quot;img-small loaded&quot; alt=&quot;Logo de vim.&quot; /&gt;
     &lt;div style=&quot;padding-bottom: 100.19569471624266%;&quot;&gt;&lt;/div&gt;

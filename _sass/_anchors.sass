@@ -33,3 +33,12 @@ a.img
   a[href]:hover 
     color: $primary-color-text
     background-image: linear-gradient(to bottom, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 50%)
+
+a.header-link
+  background: none
+  font-weight: 100
+  +transition(text-shadow .3s)
+
+  &:hover
+    background: none
+    text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333
