@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://nocturnidad.es/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidad.es/" rel="alternate" type="text/html" /><updated>2017-12-20T00:02:57+01:00</updated><id>http://nocturnidad.es/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que los artículos son perpetrados.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://nocturnidad.es/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidad.es/" rel="alternate" type="text/html" /><updated>2017-12-20T00:29:28+01:00</updated><id>http://nocturnidad.es/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que los artículos son perpetrados.
 </subtitle><entry><title type="html">vim: configuración inicial</title><link href="http://nocturnidad.es/articulos/vim-configuracion-inicial" rel="alternate" type="text/html" title="vim: configuración inicial" /><published>2017-12-19T18:30:00+01:00</published><updated>2017-12-19T18:30:00+01:00</updated><id>http://nocturnidad.es/articulos/vim-configuracion-inicial</id><content type="html" xml:base="http://nocturnidad.es/articulos/vim-configuracion-inicial">&lt;p&gt;En un &lt;a href=&quot;/articulos/vim-intro&quot;&gt;artículo anterior&lt;/a&gt;, donde se introducía &lt;em&gt;vim&lt;/em&gt;, se creó un archivo llamado &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;.vimrc&lt;/code&gt;. En él se incluía la opción &lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;mouse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;a&lt;/code&gt; para habilitar el ratón. Si no se hubiera insertado esta línea, te verías obligado a introducirla cada vez que arrancaras el programa.&lt;/p&gt;
 
 &lt;p&gt;Esto no sería muy engorroso de tratarse de una única opción, pero ¿qué pasaría si introdujeras más ajustes? ¿querrías escribirlos en cada nueva sesión? ¿te acordarías de todos? Obviamente no.&lt;/p&gt;
@@ -7,7 +7,7 @@
 
 &lt;p&gt;Para poder poblar el archivo de configuración es necesario saber que opciones ofrece &lt;em&gt;vim&lt;/em&gt;. Así que en el presente artículo se exponen una serie de ajustes para tunearlo. No va a ser una guía exhaustiva con todas las posibilidades de configuración pero si aquellas que he considerado que facilitan el aterrizaje a vim. Por cada una de las opciones se incluye una descripción de su cometido. Algunas explicaciones son más extensas que otras puesto que su dificultad entraña una mayor explicación.&lt;/p&gt;
 
-&lt;p&gt;Si quieres hacerte una idea de cuántas opciones se ofrecen (y no estarían todas) puedes ejecutar el comando &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/quickref.html#option-list&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:help option-list&lt;/code&gt;&lt;/a&gt;. Esto abrirá una ventana con un lista de instrucciones junto a una escueta descripción.&lt;/p&gt;
+&lt;p&gt;Si quieres hacerte una idea de cuántas opciones presenta (y no estarían todas) puedes ejecutar el comando &lt;a href=&quot;http://vimdoc.sourceforge.net/htmldoc/quickref.html#option-list&quot;&gt;&lt;code class=&quot;highlight language-shell&quot; data-lang=&quot;shell&quot;&gt;:help option-list&lt;/code&gt;&lt;/a&gt;. Esto abrirá una ventana con un lista de instrucciones junto a una escueta descripción.&lt;/p&gt;
 
 &lt;p&gt;Por último, se incluye el archivo de configuración completo para que puedas ver como queda en conjunto. También lo puedes descargar pero &lt;strong&gt;no recomiendo que lo hagas&lt;/strong&gt;. Es mejor que vayas incluyendo uno a uno cada ajuste y compruebes por ti mismo que ha cambiado en &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
 
@@ -52,7 +52,13 @@
 
 &lt;p&gt;Antes de empezar a editar el archivo de configuración, sería bueno recordar unos cuantos comandos básicos para poder moverse en el modo normal de &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
 
-&lt;table class=&quot;commands-table-description table-full&quot;&gt;
+&lt;table class=&quot;commands-table solid-table table-full&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Acciones&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Descripción&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;kbd&gt;i&lt;/kbd&gt;&lt;/td&gt;
@@ -526,7 +532,8 @@
 
 &lt;p&gt;Los comandos de movimiento originales son &lt;kbd&gt;h&lt;/kbd&gt;&lt;kbd&gt;j&lt;/kbd&gt;&lt;kbd&gt;k&lt;/kbd&gt;&lt;kbd&gt;l&lt;/kbd&gt;. Esto es así debido a que el creador de &lt;a href=&quot;https://es.wikipedia.org/wiki/Vi&quot;&gt;&lt;em&gt;vi&lt;/em&gt;&lt;/a&gt; (&lt;em&gt;vim&lt;/em&gt; es una versión mejorada de &lt;em&gt;vi&lt;/em&gt; como especifican sus siglas, Vi IMproved) lo hizo con &lt;a href=&quot;http://www.catonmat.net/blog/why-vim-uses-hjkl-as-arrow-keys/&quot;&gt;terminal ADM-3A&lt;/a&gt; a mediados de los 70 y desde entonces se ha mantenido.
 Abajo puedes ver los diferentes movimientos.&lt;/p&gt;
-&lt;table class=&quot;commands-table table-half&quot;&gt;
+
+&lt;table class=&quot;arrows-table table-half&quot;&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td colspan=&quot;2&quot;&gt;&amp;#8593;k&lt;/td&gt;
@@ -550,7 +557,13 @@ Abajo puedes ver los diferentes movimientos.&lt;/p&gt;
 &lt;h3 id=&quot;insert&quot;&gt;&lt;em&gt;insert&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;Este es el modo de edición que la mayoría de editores ofrecen. Se accede desde el modo mediante alguno de los siguientes comandos.&lt;/p&gt;
 
-&lt;table class=&quot;commands-table-description table-full&quot;&gt;
+&lt;table class=&quot;commands-table solid-table table-full&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Acciones&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Descripción&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;kbd&gt;a&lt;/kbd&gt;&lt;/td&gt;
