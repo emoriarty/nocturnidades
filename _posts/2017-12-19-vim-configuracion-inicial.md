@@ -13,7 +13,7 @@ Mediante el archivo {% ihighlight shell %}.vimrc{% endihighlight %} en cada nuev
 
 Para poder poblar el archivo de configuración es necesario saber que opciones ofrece _vim_. Así que en el presente artículo se exponen una serie de ajustes para tunearlo. No va a ser una guía exhaustiva con todas las posibilidades de configuración pero si aquellas que he considerado que facilitan el aterrizaje a vim. Por cada una de las opciones se incluye una descripción de su cometido. Algunas explicaciones son más extensas que otras puesto que su dificultad entraña una mayor explicación.
 
-Si quieres hacerte a una idea de cuántas opciones se ofrecen (y no estarían todas) puedes ejecutar el comando [{% ihighlight shell %}:help option-list{% endihighlight %}][help-option-list]. Esto abrirá una ventana con un lista de instrucciones junto a una escueta descripción.
+Si quieres hacerte una idea de cuántas opciones se ofrecen (y no estarían todas) puedes ejecutar el comando [{% ihighlight shell %}:help option-list{% endihighlight %}][help-option-list]. Esto abrirá una ventana con un lista de instrucciones junto a una escueta descripción.
 
 Por último, se incluye el archivo de configuración completo para que puedas ver como queda en conjunto. También lo puedes descargar pero **no recomiendo que lo hagas**. Es mejor que vayas incluyendo uno a uno cada ajuste y compruebes por ti mismo que ha cambiado en _vim_.
 
