@@ -399,7 +399,7 @@ Tras este artículo te recomiendo las lectura del [capítulo 5][usr5] del manual
 
 Por último, puedes encontrar el archivo completo con la configuración de _vim_ en el siguiente _gist_.
 
-<script src="https://gist.github.com/emoriarty/0241dc249fb5605f32ee66345165edfd.js"></script>
+{% gist 0241dc249fb5605f32ee66345165edfd %}
 
 ## Fuentes
 * [dockyard.com/blog/categories/vim](http://dockyard.com/blog/categories/vim)
