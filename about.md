@@ -17,6 +17,9 @@ permalink: /sobre-mi/
 ### Git
 * [Consejos avanzados](https://www.atlassian.com/git/tutorials/advanced-overview)
 
+### Lenguajes
+* [Elm](http://elm-lang.org/)
+
 ### Librerías interesantes
 * [Mithril](http://mithril.js.org/)
 * [React](https://facebook.github.io/react/)
