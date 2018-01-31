@@ -112,8 +112,6 @@ Como puedes apreciar hemos generado dos funciones a partir de otras tres. De no 
 
 ¡Y esto es todo por ahora! Más adelante iré compartiendo otros artículos sobre términología en programación.
 
-Muchas gracias por leerme.
-
 ## Fuentes
 * [en.wikipedia.org/wiki/First-class_function](https://en.wikipedia.org/wiki/First-class_function)
 * [stackoverflow.com/questions/10141124/any-difference-between-first-class-function-and-high-order-function](https://stackoverflow.com/questions/10141124/any-difference-between-first-class-function-and-high-order-function)
