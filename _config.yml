@@ -14,7 +14,7 @@ permalink: /:title
 # Build settings
 destination: docs
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-gist
