@@ -1,0 +1,27 @@
+---
+layout: page 
+---
+{% for post in paginator.posts %}
+  <article class="post-preview">
+    <a href="
+      {% if post.permalink %}
+      {{ post.permalink | relative_url }}
+      {% else %}
+      {{ post.url | relative_url }}
+      {% endif %}">
+      <header class="post-preview__header">
+        <h3 class="post-preview__heading">
+          {{ post.title }}
+        </h3>
+        <span class="post-preview__subheading">
+          {% include date.html date=post.date %}
+        </span>
+      </header>
+      <section class="post-preview__body">
+        <p>
+          {{ post.excerpt | strip_html }}
+        </p>
+      </section>
+    </a>
+  </article>
+{% endfor %}

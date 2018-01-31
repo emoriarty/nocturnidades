@@ -40,6 +40,20 @@ pagination:
   trail: 
     before: 2
     after: 2
+autopages:
+  enabled: true
+  collections:
+    enabled: false
+  categories: 
+    layouts: 
+      - 'autopages.html'
+    title: 'Artículos por categoría :cat'
+    permalink: '/categoria/:cat'
+  tags:
+    layouts: 
+      - 'autopages.html'
+    title: 'Artículos por tag :cat'
+    permalink: '/tag/:tag'
 
 # Server
 host: 0.0.0.0

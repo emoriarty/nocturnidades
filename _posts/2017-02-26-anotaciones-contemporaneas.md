@@ -1,7 +1,7 @@
 ---
-title:  "Anotaciones contemporáneas"
+title:  "Anotaciones maquiavélicas"
 date:   2017-02-26 01:56:00 +0100
-categories: [ensayos]
+category: ensayo
 excerpt: Modesta reflexión a partir de unos textos sobre la obra de Maquiavelo y lo poco que ha cambiado desde entonces.
 permalink: /articulos/anotaciones-contemporaneas
 ---

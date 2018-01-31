@@ -1,7 +1,7 @@
 ---
 title: "Hay pocas cosas que me quiten el sueño"
 date: 2017-10-03 05:30:00 +0200
-categories: [artículos, ensayos]
+category: opinión
 excerpt: Reflexión sobre la actualidad política y social tras el referéndum del 1-O y el mensaje del rey.
 permalink: /articulos/hay-pocas-cosas-que-me-quiten-el-sueno
 ---
