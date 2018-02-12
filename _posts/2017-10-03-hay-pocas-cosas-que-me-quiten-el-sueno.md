@@ -23,4 +23,4 @@ Me hubiese gustado haber visto a un rey con un talante más pacífico tras los h
 
 Ojalá que la situación no vaya a mayores y al final todo el mundo se siente en la mesa. Aunque no parece que este sea el futuro cercano más probable, sobre todo tras el mensaje de marras del rey. De hecho, me gustaría pensar lo contrario pero parece que nuestros dirigentes se han empeñado en obsequiarnos con más problemas y de mayor envergadura a los ya de por sí molestos problemas cotidianos. Lo cual me lleva a pensar que no están haciendo nada bien su trabajo.
 
-Espero tras éstas letras que no vuelva a quitarme el sueño las noticias sobre actualidad política. Mucho me temo que acabaré no leyendo más prensa si esto continúa así. La salud es lo más importante.
+Espero que tras éstas palabras nada más vuelva a quitarme el sueño y menos relacionado con la actualidad política. Aunque mucho me temo que no será así.
