@@ -1,9 +1,9 @@
 ---
 title: "Motivaciones o explicaciones no pedidas"
 date: 2017-02-09 00:00:00 +0100
-category: opinión
 excerpt: Explicaciones de porqué he creado este espacio personal donde publicar y compartir relatos y demás escritos.
 permalink: /articulos/motivaciones
+category: paranoias
 ---
 Desde hace algún tiempo me venía rondando la cabeza la idea de hacer algo
 creativo, aunque el origen empezase mucho tiempo atrás. Prácticamente desde que

@@ -1,9 +1,10 @@
 ---
 title: "Hay pocas cosas que me quiten el sueño"
 date: 2017-10-03 05:30:00 +0200
-category: opinión
 excerpt: Reflexión sobre la actualidad política y social tras el referéndum del 1-O y el mensaje del rey.
 permalink: /articulos/hay-pocas-cosas-que-me-quiten-el-sueno
+category: paranoias
+tags: [1-o, catalunya, rey, sociedad, corrupción]
 ---
 Hay pocas cosas que me quiten el sueño. Ya puede pasar una banda de música bajo la ventana de mi habitación que alterará ligeramente mí sueño. Pero el mensaje de ayer noche del rey me pareció cualquier cosa menos pacificador o de entendimiento. De alguna manera, tengo la impresión de que lo único que hizo ayer con su misiva es echar más leña al fuego, caldeando de por sí un ambiente de crispación construido sobre una base de prejuicios y verdades a medias que desde hace mucho tiempo vienen achacándose unos a otros.
 
@@ -23,4 +24,4 @@ Me hubiese gustado haber visto a un rey con un talante más pacífico tras los h
 
 Ojalá que la situación no vaya a mayores y al final todo el mundo se siente en la mesa. Aunque no parece que este sea el futuro cercano más probable, sobre todo tras el mensaje de marras del rey. De hecho, me gustaría pensar lo contrario pero parece que nuestros dirigentes se han empeñado en obsequiarnos con más problemas y de mayor envergadura a los ya de por sí molestos problemas cotidianos. Lo cual me lleva a pensar que no están haciendo nada bien su trabajo.
 
-Espero tras éstas letras que no vuelva a quitarme el sueño las noticias sobre actualidad política. Mucho me temo que acabaré no leyendo más prensa si esto continúa así. La salud es lo más importante.
+Espero que tras éstas palabras nada más vuelva a quitarme el sueño y menos relacionado con la actualidad política. Aunque mucho me temo que no será así.

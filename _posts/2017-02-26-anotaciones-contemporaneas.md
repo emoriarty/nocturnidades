@@ -1,9 +1,10 @@
 ---
 title:  "Anotaciones maquiavélicas"
 date:   2017-02-26 01:56:00 +0100
-category: ensayo
 excerpt: Modesta reflexión a partir de unos textos sobre la obra de Maquiavelo y lo poco que ha cambiado desde entonces.
 permalink: /articulos/anotaciones-contemporaneas
+category: paranoias
+tags: [maquiavelo, sociedad, corrupción]
 ---
 
 Mientras leía un compendio resumido sobre las ideas y reflexiones políticas de Maquiavelo, escrito por [Quentin Skinner][quentin-skinner] y de [título homónimo][book], hubo un pasaje que me llamó especialmente la atención. Dicho fragmento versaba sobre las secuelas que la corrupción deja en la sociedad, obstaculizando así, un proceso de mejora continuo. E Incluso, en ocasiones llegando a retrasar este proceso.

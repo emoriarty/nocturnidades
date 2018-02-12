@@ -1,10 +1,10 @@
 ---
 title: "Cómo crear un blog o sitio web con Jekyll"
 date: 2017-04-03 00:00:00 +0100
-category: tutorial
 excerpt: Tutorial sobre como poder crear un blog o sitio web mediante Jekyll. Es necesario tener unos conocimientos mínimos en programación.
 permalink: /articulos/como-crear-un-blog-con-jekyll
-tags: [jekyll, web]
+category: IT
+tags: [jekyll, web, tutorial, blog]
 ---
 
 En este artículo voy a explicar cómo puedes crear tu propio blog o página web. El mismo lo he concebido como un taller donde podrás ver paso a paso desde la instalación de las herramientas necesarias hasta la finalización del sitio web. 

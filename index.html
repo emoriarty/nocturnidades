@@ -5,7 +5,8 @@ pagination:
   enabled: true
 ---
 {% for post in paginator.posts limit:10 %}
-  <article class="post-preview">
+  <a href="/categoria/{{post.category}}">{{ post.category }}</a>
+  <article class="post-preview">  
     <a href="
       {% if post.permalink %}
       {{ post.permalink | relative_url }}
@@ -26,10 +27,10 @@ pagination:
           </p>
         </section>
     </a>
-    <ul>
-    {% for tag in post.tags %}
-      <li>{{ tag }}</li>
-    {% endfor %}
-    </ul>
   </article>
+  <ul>
+  {% for tag in post.tags %}
+    <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+  {% endfor %}
+  </ul>
 {% endfor %}
