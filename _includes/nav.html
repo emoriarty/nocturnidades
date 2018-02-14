@@ -8,6 +8,7 @@
         {% for m_page in site.pages reversed %}
           {% if m_page.title and
             m_page.autogen == nil and
+            m_page.autopages == nil and
             m_page.home != true and
             m_page.title != page.title %}
             <li>

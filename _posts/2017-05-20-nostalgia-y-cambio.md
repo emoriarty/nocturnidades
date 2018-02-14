@@ -1,9 +1,10 @@
 ---
 title: "Nostalgia y cambio"
 date: 2017-05-20 00:30:00 +0200
-categories: [ensayos]
 excerpt: Reflexión sobre la nostalgia desbocada debido a mi regreso al lugar de origen tras una larga ausencia.
 permalink: /articulos/notalgia-y-cambio
+category: reflexión
+tags: [nostalgia, cambio]
 ---
 
 Leyendo un [artículo](http://www.unpapaenpracticas.com/echar-de-menos/) que el otro día me compartió mi pareja, no pude por menos que sentirme identificado con el mismo, amén de compartir lugar de origen y destierro con el autor. El texto trata sobre la nostalgia y el cambio. La lectura del mismo me ha marcado no solo por lo profundo de su contenido sino porque precisamente ahora voy a regresar al lugar donde me crié tras once años de ausencia.

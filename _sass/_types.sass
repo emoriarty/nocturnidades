@@ -12,8 +12,40 @@ kbd
   h2
     color: $secondary-text-color
     display: block
-    line-height: 2
+    margin-bottom: 1rem
+    font-weight: 400
 
 .night-mode
   .headline
     color: $ternary-text-color
+
+.category,
+.tag
+  &-title
+    color: $secondary-text-color
+
+.category-title
+  text-transform: uppercase
+
+.category
+  font-size: .8em
+  text-transform: uppercase
+
+.tags
+  font-size: .7em
+  
+  li
+    display: inline-block
+    list-style: none
+    +margin(0 .5rem 0 0)
+    &> a
+      background: none
+      border: 1px solid $secondary-text-color
+      color: $secondary-text-color
+      padding: .1rem .2rem
+      text-shadow: none
+      &:hover
+        background: none
+        
+    &:last-child
+      margin-right: 0

@@ -3,19 +3,25 @@ layout: page
 title: Relatos
 permalink: /relatos/
 ---
-<ul class="collection">
-{% for relato in site.relatos reversed %}
-  <li class="collection-item">
-    <span class="collection-item__date">{% include date.html date=relato.date %}</span>
-    <a href="
-      {% if relato.permalink %}
-      {{ relato.permalink | relative_url }}
-      {% else %}
-      {{ relato.url | relative_url }}
-      {% endif %}"
-    >
-      {{ relato.title }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
+<table class="collection">
+  <tbody>
+    {% for relato in site.relatos reversed %}
+    <tr>
+      <td>
+        <span class="collection-date">{% include date.html date=relato.date %}</span>
+      </td>
+      <td>
+        <a href="
+          {% if relato.permalink %}
+          {{ relato.permalink | relative_url }}
+          {% else %}
+          {{ relato.url | relative_url }}
+          {% endif %}"
+        >
+          {{ relato.title }}
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

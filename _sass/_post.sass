@@ -10,25 +10,29 @@
 
     &:hover
       background: none
+      .post-preview,
+      .tale-preview
+        &__date
+          color: $accent-color
 
   &__heading
-    display: inline-block
     +margin(null null 0)
 
-  &__subheading
+  &__date
     color: $secondary-text-color
     display: block
-    font-size: 14px
-    +margin(null null .5rem)
+    font-size: .8rem
+    +margin(null 2px .5rem null)
 
   &__body
     p
-      +margin(null null 0)
+      +margin(.3rem null 0)
 
-  &:hover 
-    .post-preview__heading
-      background-color: $primary-text-color
-      color: $primary-color-text
+  &__link
+    &:hover 
+      .post-preview__heading
+        background-color: $primary-text-color
+        color: $primary-color-text
 
 /* post */
 .post, .tale
@@ -65,3 +69,9 @@
 
     &__subheading
       color: $ternary-text-color
+
+@media only screen and (min-device-width: 568px)
+  .post-preview,
+  .tale-preview
+    &__date
+      float: right

@@ -1,14 +1,17 @@
 .collection
-  font-size: 1.1rem
-  list-style: none
-
-  .collection-item
-    display: block
-    margin: 0 0 .5rem
-
-    &__date
-      color: $secondary-text-color
+  margin: 0 auto
+  td
+    vertical-align: top
+    padding: .5rem
+    &:nth-child(1)
+      font-size: .9rem
+      text-align: right
+    &:nth-child(2)
+      font-size: 1.2rem
+  &-date
+    color: $secondary-text-color
 
 @media only screen and (min-device-width: 568px)
   .collection
-    margin: 0 3rem
+    td
+      vertical-align: bottom
