@@ -1,7 +1,7 @@
 ---
-title: "vim: configuración inicial"
+title: "vim: configuración básica"
 date: 2017-12-19 18:30:00 +0100
-excerpt: Opciones básicas para configurar vim y que todo el mundo debería tener en su vimrc.
+excerpt: Opciones básicas de configuración que todo todo el mundo debería tener en su vimrc.
 permalink: /articulos/vim-configuracion-inicial
 category: IT
 tags: [vim, tutorial]

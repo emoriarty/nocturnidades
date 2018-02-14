@@ -1,7 +1,7 @@
 ---
 title:  "Anotaciones maquiavélicas"
 date:   2017-02-26 01:56:00 +0100
-excerpt: Modesta reflexión a partir de unos textos sobre la obra de Maquiavelo y lo poco que ha cambiado desde entonces.
+excerpt: Modesta reflexión a partir de unos textos sobre la obra de Maquiavelo y lo poco que ha cambiado desde entonces sociedad y política.
 permalink: /articulos/anotaciones-contemporaneas
 category: paranoias
 tags: [maquiavelo, sociedad, corrupción]
