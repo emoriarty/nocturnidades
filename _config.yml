@@ -47,12 +47,12 @@ autopages:
   categories: 
     layouts: 
       - 'autopages.html'
-    title: 'Artículos por categoría :cat'
+    title: 'Artículos por categoría: <span class="category-title">:cat</span>'
     permalink: '/categoria/:cat'
   tags:
     layouts: 
       - 'autopages.html'
-    title: 'Artículos por tag :tag'
+    title: 'Artículos por tag: <span class="tag-title">:tag</span>'
     permalink: '/tag/:tag'
 
 # Server

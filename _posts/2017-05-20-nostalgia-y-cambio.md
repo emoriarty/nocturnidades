@@ -3,7 +3,7 @@ title: "Nostalgia y cambio"
 date: 2017-05-20 00:30:00 +0200
 excerpt: Reflexión sobre la nostalgia desbocada debido a mi regreso al lugar de origen tras una larga ausencia.
 permalink: /articulos/notalgia-y-cambio
-category: paranioas
+category: reflexión
 tags: [nostalgia, cambio]
 ---
 
