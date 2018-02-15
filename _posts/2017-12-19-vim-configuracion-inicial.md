@@ -3,8 +3,8 @@ title: "vim: configuración básica"
 date: 2017-12-19 18:30:00 +0100
 excerpt: Opciones básicas de configuración que todo todo el mundo debería tener en su vimrc.
 permalink: /articulos/vim-configuracion-inicial
-category: IT
-tags: [vim, tutorial]
+category: it
+tags: [vim, tutorial, configuración]
 ---
 En un [artículo anterior][vim-intro], donde se introducía _vim_, se creó un archivo llamado {% ihighlight shell %}.vimrc{% endihighlight %}. En él se incluía la opción {% ihighlight shell %}set mouse=a{% endihighlight %} para habilitar el ratón. Si no se hubiera insertado esta línea, te verías obligado a introducirla cada vez que arrancaras el programa.
 
