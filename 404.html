@@ -5,8 +5,9 @@ nav: false
 permalink: 404.html
 ---
 <p class="subheadline not-found">
-    A continuación puedes encontrar cualquier contenido en la página.
+    A continuación puedes encontrar cualquier contenido en la página. También lo puedes filtrar utilizando el siguiente campo de búsqueda.
 </p>
+<input id="filter-input" class="not-found-search-input" tabindex="1" type="search" placeholder="Introduce el texto..."></input>
 <div id="filter-content">
   <h3>Artículos</h3>
   {% include paragraph-list-pages.html pages=site.posts%}
@@ -17,3 +18,47 @@ permalink: 404.html
   <h3><i>Tags</i></h3>
 {% include paragraph-list-tags.html %}
 </div>
+
+<script>
+  window.addEventListener('load', function () {
+    function removeAccents(str) {
+      var accents    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+      var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
+      str = str.split('');
+      var strLen = str.length;
+      var i, x;
+      for (i = 0; i < strLen; i++) {
+        if ((x = accents.indexOf(str[i])) != -1) {
+          str[i] = accentsOut[x];
+        }
+      }
+      return str.join('');
+    }
+
+    function startWith (pattern, word) {
+      return removeAccents(word).startsWith(pattern);
+    }
+
+    var input = document.getElementById('filter-input');
+    var content = document.querySelectorAll('#filter-content > p > a')
+
+    input.addEventListener('change', function (ev) {
+      content.forEach(function (item) {
+        var pattern = ev.target.value.toLowerCase();
+
+        item
+          .innerText
+          .toLowerCase()
+          .split(' ')
+          .reduce(
+            function (found, word) { found.push(startWith(pattern, word)); return found; },
+            []
+          ).some(
+            function (item) { return item; }
+          )
+            ? item.style.display = "inline"
+            : item.style.display = "none";
+      });
+    });
+  });
+</script>
