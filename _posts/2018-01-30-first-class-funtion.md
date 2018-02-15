@@ -3,8 +3,8 @@ title: "First class function"
 date: 2018-01-30 22:00:00 +0100
 excerpt: Que significa First-class function y para que sirve.
 permalink: /articulos/first-class-function
-category: IT
-tags: [programacion-funcional, terminologia]
+category: it
+tags: [programacion-funcional, diseno, patrones, terminos-informaticos]
 ---
 _First-class function_ es la cualidad que tiene un lenguaje de programación para poder tratar las funciones como si fueran cualquier otro tipo de objeto, entendiéndose por objeto cualquier valor que puede asignarse a una variable, almacenarse en un _array_, utilizar como argumento e incluso ser el valor devuelto por otra función.
 

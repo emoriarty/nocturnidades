@@ -1,0 +1,19 @@
+---
+layout: not-found
+title: 404 / Página no encontrada
+nav: false
+permalink: 404.html
+---
+<p class="subheadline not-found">
+    A continuación puedes encontrar cualquier contenido en la página.
+</p>
+<div id="filter-content">
+  <h3>Artículos</h3>
+  {% include paragraph-list-pages.html pages=site.posts%}
+  <h3>Relatos</h3>
+  {% include paragraph-list-pages.html pages=site.relatos %}
+  <h3>Categorías</h3>
+  {% include paragraph-list-categories.html %}
+  <h3><i>Tags</i></h3>
+{% include paragraph-list-tags.html %}
+</div>
