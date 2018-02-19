@@ -44,6 +44,6 @@
   {% for script in arrayScripts %}
     <script
       async
-      src="{{ script | prepend: '/js/' | append: '.js' | relative_url }}"></script>
+      src="{{ script | prepend: '/js/' | append: '.min.js' | relative_url }}"></script>
   {% endfor %}
 </head>

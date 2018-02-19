@@ -3,9 +3,8 @@
     ? factory(exports)
     : typeof define === 'function' && define.amd
       ? define(['exports'], factory)
-      : (factory((global)));
-}(this, (function (global) { 'use strict';
-  var exports = global.App || {}
+      : (factory((global.App = global.App || {})));
+}(this, (function (exports) { 'use strict';
   function performAnimation (duration, fn) {
     var start = null;
     var animationId = 0;
@@ -15,16 +14,16 @@
       var progress = timestamp - start;
       fn(progress);
       if (progress < duration) {
-        animationId = global.requestAnimationFrame(animateStep);
+        animationId = requestAnimationFrame(animateStep);
       }
     }
 
     function cancelAnimation () {
-      global.cancelAnimationFrame(animationId);
+      cancelAnimationFrame(animationId);
     }
 
     return function () {
-      animationId = global.requestAnimationFrame(animateStep);
+      animationId = requestAnimationFrame(animateStep);
       return cancelAnimation;
     }
   }
