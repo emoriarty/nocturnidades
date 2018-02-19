@@ -8,8 +8,6 @@ tags: [programacion-funcional, diseno, patrones, terminos-informaticos]
 ---
 _First-class function_ es la cualidad que tiene un lenguaje de programación para poder tratar las funciones como si fueran cualquier otro tipo de objeto, entendiéndose por objeto cualquier valor que puede asignarse a una variable, almacenarse en un _array_, utilizar como argumento e incluso ser el valor devuelto por otra función.
 
-> No he querido traducir el palabro puesto que prácticamente toda terminología relacionada suele estar en inglés y lo contrario podría llevar a confusión. Además que esta es de las fáciles.
-
 El término proviene de otro concepto llamado _[first-class citizen][fcc]_. Que viene a decir que cualquier entidad soporta cualquier tipo de operación común disponible en otras entidades.
 
 Un ejemplo de esto podría ser almacenar en una variable una función. El código mostrado es _Javascript_ pero lo mismo aplica para otros lenguajes que soporten esta característica.

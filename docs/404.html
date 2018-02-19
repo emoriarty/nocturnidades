@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,125 +39,48 @@
   <link
     rel="stylesheet"
     href="/css/main.css">
+  
+  
+    <script
+      async
+      src="/js/easing.js"></script>
+  
+    <script
+      async
+      src="/js/animation.js"></script>
+  
 </head>
 
-<body>
-<header class="site-header" role="banner">
+<body class="not-found">
   <div class="wrapper">
-    <div class="site-header__title">
-      <h1>
-        <a href="/">
-          Nocturnidades
-        </a>
-      </h1>
-      <ul class="social">
-        <li><a href="/feed.xml"><img src="/assets/feed-icon-14x14.png" title="feed" /></a></li>
-      </ul>
+    <div id="filter-header" class="not-found-header"> 
+      <div class="headline">
+          <h2>404</h2>
+          <div class="headline-subtitle">Página no encontrada</div>
+      </div>
+      <p class="subheadline">
+        ¡Uy! El contenido que buscas está roto o no existe.
+        <br />
+        Si lo deseas puedes mirar en los listados que se muestran más abajo. Quizá encuentres lo que buscabas.
+        <br />
+        O también puedes ir a la <a href="/">página de inicio</a>.
+      </p>
+      <div>
+        <div class="scroll-button">
+          <div id="scroll-action" class="scroll-button__outer-trigger">
+            <div class="scroll-button__inner-trigger"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="wrapper">
-  <nav class="site-nav">
-    
-      <ul>
-        <li>
-          <a href="/">Inicio</a>
-        </li>
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            <li>
-              <a href="/relatos/">Relatos</a>
-            </li>
-          
-        
-          
-        
-          
-            <li>
-              <a href="/sobre-mi/">Sobre mí</a>
-            </li>
-          
-        
-          
-        
-      </ul>
-    
-  </nav>
+    <div id="filter-content" class="not-found-content">
+    <div class="headline">
+  <h2>Nocturnidades</h2>
 </div>
-
-</header>
-
-
-<main class="page-content" aria-label="Content">
-  <div class="wrapper">
-    <div class="headline not-found">
-  <h2><span>404 / Página no encontrada</span></h2>
-</div>
-<p class="subheadline not-found">
-    A continuación puedes encontrar cualquier contenido en la página.
-</p>
-<div id="filter-content">
-  <h3>Artículos</h3>
-  <p>
+<h3>Artículos</h3>
+<p>
 
 
   <a class="not-found-item" href="/articulos/anotaciones-contemporaneas">Anotaciones maquiavélicas</a>
@@ -178,8 +102,8 @@
   <a class="not-found-item" href="/articulos/vim-intro">vim: introducción</a>
 
 </p>
-  <h3>Relatos</h3>
-  <p>
+<h3>Relatos</h3>
+<p>
 
 
   <a class="not-found-item" href="/relatos/compromiso-continuo">Compromiso continuo</a>
@@ -199,8 +123,8 @@
   <a class="not-found-item" href="/relatos/victoria-de-labios-azules">Victoria de labios azules</a>
 
 </p>
-  <h3>Categorías</h3>
-  <p>
+<h3>Categorías</h3>
+<p>
 
 
   
@@ -216,7 +140,7 @@
   <a class="category-title not-found-item" href="/categoria/reflexi%C3%B3n">reflexión</a>
 
 </p>
-  <h3><i>Tags</i></h3>
+<h3>Tags</h3>
 <p>
 
 
@@ -290,34 +214,31 @@
   <a class="not-found-item" href="/tag/web">web</a>
 
 </p>
-</div>
-  
-    
-
+    </div>
   </div>
-</main>
-
-<footer class="site-footer">
-  <div class="wrapper">
-    <p>El contenido de esta página está bajo licencia <a
-      href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY 4.0</a>
-  </div>
-</footer>
-
-
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
-        Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    window.addEventListener('DOMContentLoaded', function () {
+      var scrollButton = document.getElementById('scroll-action');
+      var targetValue = document.getElementById('filter-content').offsetTop;
+      var duration = 1000;
+      var cancelAnimation;
 
-  ga('create', 'UA-92163525-1', 'auto');
-  ga('send', 'pageview');
+      scrollButton.addEventListener('click', function () {
+        var startValue = window.scrollY || document.getElementById('filter-header').offsetTop;
+        
+        cancelAnimation = App.performAnimation(duration, function (progress) {
+          var factor = App.easing.outQuart(progress, duration);
+          var newPositionY = startValue + (targetValue - startValue) * factor;
+          window.scrollTo(0, newPositionY > targetValue ? targetValue : newPositionY);
+        })();
 
-</script>
-
-
-
+        window.addEventListener('wheel', function checkWheel() {
+          cancelAnimation && cancelAnimation();
+          window.removeEventListener('wheel', checkWheel);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+  

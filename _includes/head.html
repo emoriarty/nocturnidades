@@ -40,4 +40,10 @@
   <link
     rel="stylesheet"
     href="{{ "/css/main.css" | relative_url }}">
+  {% assign arrayScripts = include.scripts | split: " " %}
+  {% for script in arrayScripts %}
+    <script
+      async
+      src="{{ script | prepend: '/js/' | append: '.js' | relative_url }}"></script>
+  {% endfor %}
 </head>
