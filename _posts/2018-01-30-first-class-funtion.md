@@ -34,11 +34,8 @@ Puesto que es una variable, también podemos utilizarla como argumento en otras 
 const sayHelloWorld = (fn)  =>  fn() + " World"
 const sayHelloElia = (fn) => fn() + " Elia"
 
-sayHelloWorld(sayHello)
-// => "Hello World"
-
-sayHelloElia(sayHello)
-// => "Hello Elia"
+sayHelloWorld(sayHello) // "Hello World"
+sayHelloElia(sayHello) // "Hello Elia"
 {% endhighlight %}
 
 Obviamente el ejemplo anterior está diseñado solamente para mostrar la transferencia de funciones como argumentos. Lo óptimo hubiese sido que {% ihighlight javascript %}sayHello{% endihighlight %} aceptase un parámetro y concatenase su valor con el cuerpo del resultado.
@@ -64,7 +61,7 @@ ajax.get("/user/1", function (data, error) {
 Como véis es tontería. Hemos añadido una función que contiene a otra función que recibe el mismo número de argumentos. Por lo tanto debemos eliminar este tipo de funciones _proxy_ que solo añaden complejidad al código además de retrasar la evaluación del mismo. El resultado correcto sería el siguiente.
 
 {% highlight javascript %}
-ajax.get(‘/user/1’, showData)
+ajax.get("/user/1", showData)
 {% endhighlight %}
 
 Y así queda mucho más legible, sucinto y elegante.
@@ -87,17 +84,15 @@ Entre los lenguajes que lo soportan a parte del mencionado _Javascript_ estaría
 Otro asunto que aun no he mencionado y es por el que me he decidido a hacer este artículo (y otros que vendrán), es que la noción de que las funciones puedan ser tratadas como cualquier otro tipo de dato es la base de la programación funcional. Sin este recurso dificilmente podrían darse técnicas como _partial-application/currying_ o _closures_, fundamentales para la composición de funciones. Un ejemplo podría ser el siguiente _snippet_.
 
 {% highlight javascript %}
-const sayHello = (name) => ‘Hello ’ + name
-const sayWorld = () => ‘World’
-const sayElia = () => ‘Elia’
+const sayHello = (name) => "Hello " + name
+const sayWorld = () => "World"
+const sayElia = () => "Elia"
 
 const sayHelloWorld = compose(sayHello, sayWorld)
 const sayHelloElia = compose(sayHello, sayElia)
 
-sayHelloWorld()
-// => ‘Hello World’
-sayHelloElia()
-// => ‘Hello Elia’
+sayHelloWorld() // "Hello World"
+sayHelloElia() // "Hello Elia"
 {% endhighlight %}
 
 {% ihighlight javascript %}compose{% endihighlight %} es un tipo especial de función que puede conseguirse a través de librerías cómo _[ramda][ramda]_ o _[lodash][lodash]_. El propósito de esta función es generar nuevas funciones complejas a partir de otras más sencillas que cumplen un único cometido (principio de responsabilidad única o _SRP_). Pero esto es otro concepto que veremos en un futuro. 
