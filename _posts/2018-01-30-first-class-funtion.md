@@ -6,33 +6,29 @@ permalink: /articulos/first-class-function
 category: it
 tags: [programacion-funcional, diseno, patrones, terminos-informaticos]
 ---
-_First-class function_ es la cualidad que tiene un lenguaje de programación para poder tratar las funciones como si fueran cualquier otro tipo de objeto, entendiéndose por objeto cualquier valor que puede asignarse a una variable, almacenarse en un _array_, utilizar como argumento e incluso ser el valor devuelto por otra función.
+_First-class function_ es la cualidad por la que un lenguaje de programación puede tratar las funciones como si fueran cualquier otro tipo de objeto. Se entiende por objeto cualquier tipo de entidad que pueda asignarse a una variable, almacenarse en un _array_, transferir como argumento e incluso ser devuelto como resultado de otra función.
 
-El término proviene de otro concepto llamado _[first-class citizen][fcc]_. Que viene a decir que cualquier entidad soporta cualquier tipo de operación común disponible en otras entidades.
+La idea en si proviene de otro concepto llamado_[first-class citizen][fcc]_. Este viene a decir que una entidad pueda soportar cualquier tipo de operación común disponible en otras entidades.
 
-Un ejemplo de esto podría ser almacenar en una variable una función. El código mostrado es _Javascript_ pero lo mismo aplica para otros lenguajes que soporten esta característica.
+En el ejemplo siguiente se muestra una función anónimo siendo asiganada a una variable llamada {% ihighlight javascript %}sayHello{% endihighlight %}. El código mostrado es _Javascript_ pero lo mismo aplica para otros lenguajes que soporten esta característica.
 
 {% highlight javascript %}
 const sayHello = () => "Hello"
 {% endhighlight %}
 
-En el ejemplo anterior se ha almacenado una función anónima en una variable llamada {% ihighlight javascript %}sayHello{% endihighlight %}.
-
-Si se expone la variable se verá el contenido de la misma. El siguiente resultado es lo que la consola de _Chrome_ devuelve.
+Si exponemos la variable podremos ver que el contenido es la función previamente definida.
 
 {% highlight javascript %}
-sayHello
-// => () => "Hello"
+sayHello // () => "Hello"
 {% endhighlight %}
 
-Al añadir los dos paréntesis al final de la variable la función contenida es ejecutada, devolviendo la expresión que acompaña a la cláusula _return_ implícita en las _arrow functions_.
+Al añadir los dos paréntesis al final de la variable la función es ejecutada, devolviendo el resultado que acompaña a la cláusula _return_ (cuando la función _arrow_ está contenida en una sola línea, el comando _return_ es implícito no siendo necesario incluirlo).
 
 {% highlight javascript %}
-sayHello()
-// => "Hello"
+sayHello() // "Hello"
 {% endhighlight %}
 
-Y ya que es una variable también podemos utilizarla como argumento en otras funciones.
+Puesto que es una variable, también podemos utilizarla como argumento en otras funciones.
 
 {% highlight javascript %}
 const sayHelloWorld = (fn)  =>  fn() + " World"
