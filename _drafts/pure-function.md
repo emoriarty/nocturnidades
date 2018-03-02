@@ -28,24 +28,37 @@ Según estas dos explicaciones, si una determinada función recibe como valor de
 
 Si atendemos a la primera descripción, veremos que una función también se puede llamar aplicación o mapeo. Este último nombre dado ofrece una imagen clara de lo que debería ser una función tanto en matemáticas como en programación. Por mapeo entendemos una relación unívoca entre distintos elementos.
 
-<table class="table-half">
+<table class="table-half arrows-table">
 <tr>
-<td>1</td>
-<td>2</td>
+<td>1 => 2</td>
 </tr>
 <tr>
-<td>2</td>
-<td>4</td>
+<td>2 => 4</td>
 </tr>
 <tr>
-<td>3</td>
-<td>6</td>
+<td>3 => 6</td>
 </tr>
 <tr>
-<td>4</td>
-<td>8</td>
+<td>4 => 8</td>
 </tr>
 </table>
+
+Como puede observarse en la tabla, cada elemento de la columna izquierda tiene su único equivalente en la columna derecha. Esta relación también se puede expresar mediante la siguiente función matemática.
+
+{% highlight shell %}
+f(x) = x·2
+{% endhighlight %}
+
+A todos nos sonará la expresión anterior de cuando estudiábamos en el instituto. Pues bien, en programación se definiría de una manera no mucho más diferente.
+
+{% highlight javascript %}
+const f = x => x * 2;
+{% endhighlight %}
+
+La función de este ejemplo está escrita en Javascript. En lo referente a funciones no importa el lenguaje utilizado, si bien alguna pequeña particularidad pueda haber entre ellos, a todos los efectos aplica el mismo concepto.
+
+Siguiendo con los ejemplos anteriores, en ambos casos si el valor utilizado de la columna izquierda se pasa como argumento a la función, el resultado será el valor adyacente a la derecha. Cualquier otro valor devuelto no cumpliría con la descripción de una función para esa tabla.
+
 ## Referencias
 
 <ul>
