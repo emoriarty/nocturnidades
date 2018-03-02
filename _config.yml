@@ -56,14 +56,14 @@ autopages:
     title: '<span class="tag-title">:tag</span>'
     permalink: '/tag/:tag'
 compress_html:
-  clippings: all
+  clippings: []
   comments: ["<!-- ", " -->"]
   endings: all
   ignore:
     envs: [local]
   blanklines: false
   profile: true
-  startings: [html, head, body]
+  startings: []
 
 # Server
 host: 0.0.0.0

@@ -1,1 +1,276 @@
-<!DOCTYPE html><html lang="es"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title> programacion-funcional</title><meta name="description" content="La intención inicial de este blog es publicar y compartir relatos, ideas y tribulaciones varias. También tienen cabida documentos técnicos relacionados con l..."><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><meta name="theme-color" content="#473333"><base href="http://0.0.0.0:4000/"><link rel="canonical" href="http://0.0.0.0:4000/tag/programacion-funcional/"><link rel="alternate" type="application/rss+xml" title="Nocturnidades" href="/feed.xml"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"><link rel="stylesheet" href="/css/main.css"><header class="site-header" role="banner"><div class="wrapper"><div class="site-header__title"><h1> <a href="/"> Nocturnidades </a></h1><ul class="social"><li><a href="/feed.xml"><img src="/assets/feed-icon-14x14.png" title="feed" /></a></ul></div></div><div class="wrapper"><nav class="site-nav"><ul><li> <a href="/">Inicio</a><li> <a href="/relatos/">Relatos</a><li> <a href="/sobre-mi/">Sobre mí</a></ul></nav></div></header><main class="page-content" aria-label="Content"><div class="wrapper"><div class="headline"><h2><span><span class="tag-title">programacion-funcional</span></span></h2></div><article class="post-preview"><header class="category"> <a href="/categoria/it">it</a></header><a class="post-preview__link" href=" /articulos/pure-function "><header class="post-preview__header"><h3 class="post-preview__heading"> Pure Function <span class="post-preview__date"> 01 Marzo 2018 </span></h3></header><section class="post-preview__body"><p> Las funciones puras permiten construir aplicaciones más robustas gracias a su carácter inmutable. También ofrecen una gran reusabiliad.</section></a><ul class="tags"><li><a href="/tag/diseño">diseño</a><li><a href="/tag/patrones">patrones</a><li><a href="/tag/terminos-informaticos">terminos-informaticos</a></ul></article><article class="post-preview"><header class="category"> <a href="/categoria/it">it</a></header><a class="post-preview__link" href=" /articulos/first-class-function "><header class="post-preview__header"><h3 class="post-preview__heading"> First class function <span class="post-preview__date"> 30 Enero 2018 </span></h3></header><section class="post-preview__body"><p> Que significa First-class function y para que sirve.</section></a><ul class="tags"><li><a href="/tag/diseno">diseno</a><li><a href="/tag/patrones">patrones</a><li><a href="/tag/terminos-informaticos">terminos-informaticos</a></ul></article></div></main><footer class="site-footer"><div class="wrapper"><p>El contenido de esta página está bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY 4.0</a></div></footer> <table id="compress_html_profile_20180302" class="compress_html_profile"> <thead> <tr> <td>Step <td>Bytes <tbody> <tr> <td>raw <td>4998 <tr> <td>endings <td>4920 <tr> <td>startings <td>4908 <tr> <td>comments <td>4890 <tr> <td>collapse <td>3365 <tr> <td>clippings <td>3278 </table>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      programacion-funcional
+    
+  </title>
+  <meta name="description" content="La intención inicial de este blog es publicar y compartir relatos, ideas y tribulaciones varias. También tienen cabida documentos técnicos relacionados con l...">
+
+  <!-- Fav icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#473333">
+
+  <base href="http://0.0.0.0:4000/">
+  <link
+    rel="canonical"
+    href="http://0.0.0.0:4000/tag/programacion-funcional/">
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Nocturnidades"
+    href="/feed.xml">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto">
+  <link
+    rel="stylesheet"
+    href="/css/main.css">
+  
+  
+</head>
+
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header__title">
+      <h1>
+        <a href="/">
+          Nocturnidades
+        </a>
+      </h1>
+      <ul class="social">
+        <li><a href="/feed.xml"><img src="/assets/feed-icon-14x14.png" title="feed" /></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrapper">
+  <nav class="site-nav">
+    
+      <ul>
+        <li>
+          <a href="/">Inicio</a>
+        </li>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li>
+              <a href="/relatos/">Relatos</a>
+            </li>
+          
+        
+          
+        
+          
+            <li>
+              <a href="/sobre-mi/">Sobre mí</a>
+            </li>
+          
+        
+          
+        
+      </ul>
+    
+  </nav>
+</div>
+
+</header>
+
+
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <div class="headline">
+  <h2><span><span class="tag-title">programacion-funcional</span></span></h2>
+</div>
+
+  
+
+
+<article class="post-preview">
+  
+    <header class="category">
+      <a href="/categoria/it">it</a>
+    </header>
+  
+  <a class="post-preview__link" href="
+    
+    /articulos/pure-function
+    ">
+      <header class="post-preview__header">
+        <h3 class="post-preview__heading">
+          Pure Function
+          <span class="post-preview__date">
+              01 Marzo 2018
+
+          </span>
+        </h3>
+      </header>
+      <section class="post-preview__body">
+        <p>
+          Las funciones puras permiten construir aplicaciones más robustas gracias a su carácter inmutable. También ofrecen una gran reusabiliad.
+        </p>
+      </section>
+  </a>
+  
+<ul class="tags">
+
+  
+
+  
+    <li><a href="/tag/diseño">diseño</a></li>
+  
+
+  
+    <li><a href="/tag/patrones">patrones</a></li>
+  
+
+  
+    <li><a href="/tag/terminos-informaticos">terminos-informaticos</a></li>
+  
+
+</ul>
+</article>
+
+  
+
+
+<article class="post-preview">
+  
+    <header class="category">
+      <a href="/categoria/it">it</a>
+    </header>
+  
+  <a class="post-preview__link" href="
+    
+    /articulos/first-class-function
+    ">
+      <header class="post-preview__header">
+        <h3 class="post-preview__heading">
+          First class function
+          <span class="post-preview__date">
+              30 Enero 2018
+
+          </span>
+        </h3>
+      </header>
+      <section class="post-preview__body">
+        <p>
+          Que significa First-class function y para que sirve.
+        </p>
+      </section>
+  </a>
+  
+<ul class="tags">
+
+  
+
+  
+    <li><a href="/tag/diseno">diseno</a></li>
+  
+
+  
+    <li><a href="/tag/patrones">patrones</a></li>
+  
+
+  
+    <li><a href="/tag/terminos-informaticos">terminos-informaticos</a></li>
+  
+
+</ul>
+</article>
+
+
+
+    
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>El contenido de esta página está bajo licencia <a
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY 4.0</a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
