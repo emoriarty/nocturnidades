@@ -80,8 +80,42 @@ Para ello se acuñó el término función pura, que no es más que el uso espec�
 ¿Y qué beneficio aporta una función pura ante una convencional? Podrías estar preguntándote. Para responder a esta pregunta, se expone más abajo una serie de características que muestran porqué favorecer el uso este tipo de funciones.
 
 ## Cacheable
-Puesto que el resultado de una función es siempre el mismo en base a un valor de entrada único, este se puede almacenar en memoria con el parámetro como identificador. Esto se llama en inglés memoization.
 
+Ahora sabemos que en base a un valor de entrada, una función pura siempre devuelve el mismo resultado. Podemos aprovechar esta cualidad para almacenar en memoria el resultado, utilizando el argumento como identificador. Cada vez que se invoque la misma función, con un parámetro previamente utilizado, devolverá el resultado almacenado. De esta forma se mejora el rendimiento de una función, evitando repetir el mismo cálculo cuando se conoce de antemano el resultado para un dato de entrada.
+
+A esta técnica de optimización se la conoce en programación como _[memoization][memoization]_ (o _memoisation_ en inglés de las islas).
+
+{% highlight javascript %}
+const memoize = f => {
+  const cache = {}
+  return (...args) => {
+    const cacheId = JSON.stringify(args);
+    cache[cacheId] = cache[cacheId] || f(...args);
+    return cache[cacheId];
+  };
+};
+{% endhighlight %}
+
+La función anterior espera recibir una función {% ihighlight javascript %}f{% endihighlight %} como argumento. Una vez ejecutada devuelve una función anónima que contiene la operación de cacheo. Esta nueva función, a partir del conjunto de argumentos recibido, crea el identificador de almacenamiento en la variable {% ihighlight javascript %}cacheId{% endihighlight %}. Si el contenido de esta variable tiene asociado un valor en el objeto {% ihighlight javascript %}cache{% endihighlight %}, devuelve el resultado anteriormente calculado. En caso contrario, ejecuta la función original y se guarda el producto obtenido junto al nuevo identificador en el objeto {% ihighlight javascript %}cache{% endihighlight %}.
+
+{% highlight javascript %}
+const by2 = x => x*2
+const cachedBy2 = memoize(by2)
+cachedBy2(2) // 4
+cachedBy2(2) // 4 returned from cache object
+cachedBy2(4) // 8
+cachedBy2(4) // 8 returned from cache object
+{% endhighlight %}
+
+No solamente se puede almacenar resultados de tipo primitivo. También tienen cabida objetos, _arrays_ incluso otras funciones (realmente éstas no dejan de ser un tipo de objeto específico).
+
+{% highlight javascript %}
+const fetchBooksByGenre = url => () => fetch(url, { genre: genre }) 
+const fetchThrillerBooks = memoize(fetchBooksByGenre(‘/api/books/by/thriller’))
+const fetchBioBooks = memoize(fetchBooksByGenre(‘/api/books/by/bio’))
+{% endhighlight %}
+
+Las funciones anteriores no es que sean la mar de útiles. En cierto modo cada vez que se vaya a conformar una función por género ya almacenada, será devuelta desde cache.
 
 ## Referencias
 
@@ -89,3 +123,4 @@ Puesto que el resultado de una función es siempre el mismo en base a un valor d
 <li id="quote-1"><a href="https://es.wikipedia.org/wiki/Función_matemática">Extraído del artículo función matemática de la wikipedia.</a></li>
 </ul>
 [identity]: https://es.wikipedia.org/wiki/M%C3%B3nada_(programaci%C3%B3n_funcional)?oldformat=true#M%C3%B3nada_identidad
+[memoization]: https://www.interviewcake.com/concept/java/memoization
