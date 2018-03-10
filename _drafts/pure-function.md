@@ -117,6 +117,49 @@ const fetchBioBooks = memoize(fetchBooksByGenre(‘/api/books/by/bio’))
 
 Las funciones anteriores no es que sean la mar de útiles. En cierto modo cada vez que se vaya a conformar una función por género ya almacenada, será devuelta desde cache.
 
+## Portabilidad
+
+Se considera que una función es portable cuando su contexto queda totalmente aislado. Ninguna referencia externa es necesaria para su funcionamiento, a excepción de las suministradas mediante argumentos. La ventaja que ofrece este tipo de función autocontenida es que se puede transportar de un proyecto a otro sin necesidad de modificación.
+
+{% highlight javascript %}
+// forma impura
+const newBook = (args)  =>{
+  try {
+    const book = saveBook(args);
+    notifySuccess(book);
+  } catch (error) {
+    notifyError(error);
+  }
+};
+
+// forma pura
+const newBook = (db, email, bookAttrs)  =>{
+  try {
+    const book = saveBook(db, bookAttrs);
+    notifySuccess(email, book);
+  } catch (error) {
+    notifyError(email, error);
+  }
+};
+
+{% endhighlight %}
+
+En este ejemplo se puede ver la misma función en su variante pura e impura. Mientras que la versión impura sólo recibe un argumento con los valores para crear un nuevo libro, la segunda incluye también una conexión a base de datos y un email dónde notificar la acción llevada a cabo o el error ocurrido.
+
+Aunque en apariencia la diferencia es poca cosa, varias lecturas surgen con este pequeño cambio.
+
+En el caso de la función pura es mucho más informativa puesto que se revela su propósito desde la misma firma del contrato. Al contrario que la impura que dificulta si comprensión al ocultar estos detalles.
+
+Por otro lado, al haber parametrizado los clientes de base de datos y correo se ha creado una función mucho más flexible que la anterior. Si por algún motivo se debe cambiar la base de datos, pues se transfiere un nuevo cliente a la función y listo.
+
+También se puede utilizar en otros proyectos que requieran la misma funcionalidad, solo habría que copiar y pegar el código.
+
+Incluso si el tipo de lenguaje lo permite, como es el caso de Javascript, una función así podría ser serializada y enviarse a través de un socket para terminar siendo ejecutada remotamente.
+
+## Inmutabilidad
+
+Una de las condiciones indispensables para construir un sistema robusto, es evitar las alteraciones inesperadas de su estado global. Cuando una función recibe una variable, no recibe su valor sino su referencia. Cualquier acción llevada a cabo sobre esta variable, podría estar afectando a otra parte del sistema y por tanto llevaría a efectos secundarios inesperados. Para prevenir estas situaciones, se debe generar un nuevo valor a partir de las variables proporcionadas.
+
 ## Referencias
 
 <ul>

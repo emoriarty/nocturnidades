@@ -19,6 +19,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-gist
+  - jekyll_inline_highlight
 exclude:
   - Gemfile
   - Gemfile.lock
