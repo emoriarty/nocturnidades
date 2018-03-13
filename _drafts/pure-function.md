@@ -117,6 +117,22 @@ const fetchBioBooks = memoize(fetchBooksByGenre(‘/api/books/by/bio’))
 
 Las funciones anteriores no es que sean la mar de útiles. En cierto modo cada vez que se vaya a conformar una función por género ya almacenada, será devuelta desde cache.
 
+## Inmutabilidad
+
+Una de las condiciones indispensables para construir un sistema robusto, es evitar las alteraciones inesperadas de sistema. Todo programa mantiene un estado global compartido entre los diferentes objetos que lo componen. Las interacciones entre ellos, o con el exterior, modifican este estado que termina reflejándose entre las distintas partes del sistema. Estos cambios conforman el flujo esperado del programa y cualquier mutación no controlada puede convertirse en _bugs_ de difícil localización.
+
+Un caso muy concreto de este tipo de errores ocurre cuando se transfiere una variable a una función. No es su valor lo que recibe la función sino su referencia. Una dirección que apunta donde se encuentra el contenido de la misma. Cualquier acción llevada a cabo sobre esta variable que modifique su valor, se verá reflejado en otra parte del sistema que esté utilizando esa misma referencia.
+
+Este efecto secundario, en ocasiones esperado, suele ser fuente de problemas. Para prevenir estas situaciones es mejor generar una nuevo resultado a partir de la variable proporcionada.
+
+Un efecto secundario no es solo la modificación de una variable. También lo es lanzar excepciones, llamar a otras funciones desde una otra función, leer o escribir datos en disco,  acceso a base de datos, accesos a otras redes, datos introducidos por un usuario. Si pretendemos evitar todas estas acciones obtendremos el programa más robusto del mundo. Aunque en su contrapartida no sería más que una caja estanca que no sirve para nada.
+
+Puesto que restringir todos los efectos secundarios en la práctica es inviable, al menos podemos contenerlos evitando mutaciones innecesarias. De esta manera se minimizaría su impacto en el estado del sistema.
+
+Como ya se ha apuntado antes, la mejor forma de prevenir estas mutaciones en una función es no modificar los parámetros de entrada. Tan solo se deben utilizar para realizar la operación propuesta y devolver un nuevo valor.
+
+Incluso en sistemas que permiten la ejecución multihilo, esta condición de inmutabilidad posibilita la ejecución en paralelo de una misma función. De esta manera se evitan situaciones que podrían derivar condiciones de [secuencia (race condition)][race-condition] al haber alterado la memoria compartida.
+
 ## Referencias
 
 <ul>
@@ -124,3 +140,4 @@ Las funciones anteriores no es que sean la mar de útiles. En cierto modo cada v
 </ul>
 [identity]: https://es.wikipedia.org/wiki/M%C3%B3nada_(programaci%C3%B3n_funcional)?oldformat=true#M%C3%B3nada_identidad
 [memoization]: https://www.interviewcake.com/concept/java/memoization
+[race-condition]: https://www.wikiwand.com/es/Condici%C3%B3n_de_carrera
