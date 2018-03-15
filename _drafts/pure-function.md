@@ -111,8 +111,8 @@ No solamente se puede almacenar resultados de tipo primitivo. También tienen ca
 
 {% highlight javascript %}
 const fetchBooksByGenre = url => () => fetch(url, { genre: genre }) 
-const fetchThrillerBooks = memoize(fetchBooksByGenre(‘/api/books/by/thriller’))
-const fetchBioBooks = memoize(fetchBooksByGenre(‘/api/books/by/bio’))
+const fetchThrillerBooks = memoize(fetchBooksByGenre('/api/books/by/thriller'))
+const fetchBioBooks = memoize(fetchBooksByGenre('/api/books/by/bio'))
 {% endhighlight %}
 
 Las funciones anteriores no es que sean la mar de útiles. En cierto modo cada vez que se vaya a conformar una función por género ya almacenada, será devuelta desde cache.
@@ -171,6 +171,95 @@ Puesto que restringir todos los efectos secundarios en la práctica es inviable,
 Como ya se ha apuntado antes, la mejor forma de prevenir estas mutaciones en una función es no modificar los parámetros de entrada. Tan solo se deben utilizar para realizar la operación propuesta y devolver un nuevo valor.
 
 Incluso en sistemas que permiten la ejecución multihilo, esta condición de inmutabilidad posibilita la ejecución en paralelo de una misma función. De esta manera se evitan situaciones que podrían derivar condiciones de [secuencia (race condition)][race-condition] al haber alterado la memoria compartida.
+
+## Transparencia referencial
+
+Se llama transparencia referencial a la circunstancia que permite sustituir el nombre de la función (su llamada) por el cuerpo de la misma sin alterar el comportamiento del programa.
+
+Puesto que la condición indispensable de una función pura es que siempre devuelva el mismo valor de salida para un mismo dato de entrada, podemos considerar que se cumple esta propiedad si el intercambio de ambas partes no falla.
+
+Pongamos por ejemplo el siguiente fuente.
+
+{% highlight javascript %}
+const library = [];
+const book = { isbn: '9788433920638', title: 'Post Office', author: 'Charles Bukowski' };
+
+const rateBook = (book, stars) =>
+  Object.assign(book, { rate: stars });
+
+const finishBook = book =>
+  Object.assign(book, { finished: true });
+
+const findBookIndex = (library, isbn) =>
+  library.findIndex(bookItem => bookItem.isbn === isbn);
+
+const findBook = (library, isbn) =>
+  library[findBookIndex(library, book)];
+
+const isBookPresent = (library, book) =>
+  findBook(library, book.isbn) !== undefined;
+
+const addBookToShelve = (library, book) =>
+  !isBookPresent(library, book)
+    ? Array.prototype.concat.call(library, Object.assign(book))
+    : library;
+
+console.log(addBookToShelve(library, rateBook(finishBook(book), 5)));
+{% endhighlight %}
+
+Todas las funciones son supuestamente puras. Si no fuera así la sustitución de la llamada por el contenido no funcionará.
+
+Si observamos la última línea encontramos tres llamadas a función anidadas entre si. Para poder comprobar si son transparentemente referenciales (ojo al vocablo) sustituyamos la más interna (la primera en ejecutarse) en la secuencia: {% ihighlight javascript %}finishBook{% endihighlight %}. Pero antes estructuremos un poco más el código para ver mejor el cambio realizado.
+
+{% highlight javascript %}
+addBookToShelve(
+  library,
+  rateBook(
+    finishBook(book),
+    5
+  )
+);
+{% endhighlight %}
+
+Sustituyendo finishBook por su contenido quedaría como se muestra a continuación.
+
+{% highlight javascript %}
+addBookToShelve(
+  library,
+  rateBook(
+    Object.assign(book, { finished: true }),
+    5
+  )
+);
+{% endhighlight %}
+
+Si ejecutamos el código anterior deberá seguir funcionando como se espera. Ahora le toca el turno a la función {% ihighlight javascript %}rateBook{% endihighlight javascript %}.
+
+{% highlight javascript %}
+addBookToShelve(
+  library,
+  Object.assign(
+    Object.assign(book, { finished: true }),
+    { rate: 5 }
+  )
+);
+{% endhighlight %}
+
+Y así podríamos seguir hasta haber sustituido todas las funciones.
+
+Obviamente esta no es una práctica que vayamos a utilizar para comprobar todo el fuente en cualquier proyecto medianamente grande. El resultado final podría ser un galimatías muy serio. Por tanto, la transparencia referencial, no tiene mayor utilidad que durante el proceso de desarrollo. Nos permite poder comprobar el comportamiento, fiabilidad y pureza de una función en base al intercambio de su cuerpo por la llamada.
+
+Si quieres, no sería un mal ejercicio terminar por tu cuenta de completar el intercambio de llamadas a función por su contenido. Cuando lo tengas hecho comprueba que el resultado sea el mismo que cuando ejecutaste el fuente original.
+
+{% highlight javascript %}
+[{
+  isbn: "9788433920638",
+  title: "Post Office",
+  author: "Charles Bukowski",
+  finished: true,
+  rate: 5
+}]
+{% endhighlight %}
 
 ## Referencias
 
