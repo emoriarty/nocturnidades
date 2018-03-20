@@ -261,11 +261,62 @@ Si quieres, no sería un mal ejercicio terminar por tu cuenta de completar el in
 }]
 {% endhighlight %}
 
+## Testing
+
+Puesto que una función pura no depende de ningún tipo de recurso externo, facilita su ejecución en cualquier tipo de contexto. Este carácter independiente permite probar una función sin necesidad de simular el entorno ni el uso de terceros ni grandes configuraciones. Solamente deberemos proveer el valor (o valores) necesario de entrada y comprobar su resultado.
+
+Continuando con el ejemplo anterior, para comprobar que la función {% ihighlight javascript %}addBook{% endihighlight %} añade un libro correctamente, podemos crear un archivo similar al mostrado a continuación.
+
+{% highlight javascript %}
+import addBook from '../src/addBook';
+
+const mockedBook = { title: 'Mocked title', author: 'Mocked author' };
+const mockedLibrary = [];
+addBook(mockedLibrary, mockedBook).includes(mockedBook)
+  ? success('Adds book to library successfully')
+  : fail('Book is not being added');
+{% endhighlight %}
+
+Lógicamente lo más interesante es poder generar informes con todas las pruebas, así que lo suyo sería utilizar una librería que simplifique esta labor. Por ejemplo, podemos usar _[tape][tape]_ como solución sencilla u otra más completa como _[jest][jest]_.
+
+El auge de la programación funcional también está influyendo en campos como el _[testing][generative-testing]_. Una de las propuestas más prometedoras se llama generative testing. Este nuevo enfoque se basa en la generación automática de los argumentos de entrada. A diferencia del método tradicional, basado en suposiciones comunes, mediante esta técnica se pretende identificar los casos de uso no contemplados y así poder completar el alcance de una función.
+
+Recuerda que este tipo estrategia no son sustitutivas. Sin embargo usadas en combinación pueden aportar grandes beneficios.
+
+## Conclusión
+
+No he redactado todas la cualidades que ofrecen las funciones puras. He elegido aquellas que he considerado más oportunas en base a su uso más práctico durante el desarrollo diario. Espero que tras haber leído el artículo comprendas los beneficios que aporta el uso de funciones puras y cuándo utilizarlas.
+
+Es importante remarcar que este patrón se utiliza principalmente bajo un marco funcional. Esto no significa que no podamos utilizarlo en contextos más imperativos. De hecho la cualidad más importante, como se ha apuntado anteriormente, es la independencia ante cualquier tipo de paradigma.
+
+Así que a qué esperas, cada vez que tengas la oportunidad, sin importar el lenguaje que utilices, favorece este tipo de función. A la larga comprobarás que es más práctico.
+
 ## Referencias
 
 <ul>
-<li id="quote-1"><a href="https://es.wikipedia.org/wiki/Función_matemática">Extraído del artículo función matemática de la wikipedia.</a></li>
+  <li id="quote-1">
+    <a href="https://es.wikipedia.org/wiki/Función_matemática">
+      Extraído del artículo función matemática de la wikipedia.
+    </a>
+  </li>
 </ul>
+
+## Fuentes
+
+* [mathsisfun.com/sets/function.html](http://www.mathsisfun.com/sets/function.html)
+* [wikiwand.com/es/Funci%C3%B3n_matem%C3%A1tica](https://www.wikiwand.com/es/Funci%C3%B3n_matem%C3%A1tica)
+* [wikiwand.com/en/Functional_programming](https://www.wikiwand.com/en/Functional_programming)
+* [medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
+* [wikiwand.com/en/Pure_function](https://www.wikiwand.com/en/Pure_function)
+* [https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions](https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c)
+* [medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)
+* [drboolean.gitbooks.io/mostly-adequate-guide-old/content/ch3.html](https://drboolean.gitbooks.io/mostly-adequate-guide-old/content/ch3.html)
+* [github.com/getify/Functional-Light-JS/blob/master/manuscript/ch2.md/#chapter-2-the-nature-of-functions](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch2.md/#chapter-2-the-nature-of-functions)
+* [henrikeichenhardt.blogspot.com.es/2013/06/why-shared-mutable-state-is-root-of-all.html](http://henrikeichenhardt.blogspot.com.es/2013/06/why-shared-mutable-state-is-root-of-all.html)
+
 [identity]: https://es.wikipedia.org/wiki/M%C3%B3nada_(programaci%C3%B3n_funcional)?oldformat=true#M%C3%B3nada_identidad
 [memoization]: https://www.interviewcake.com/concept/java/memoization
 [race-condition]: https://www.wikiwand.com/es/Condici%C3%B3n_de_carrera
+[generative-testing]: https://medium.com/javascript-inside/generative-testing-in-javascript-f91432247c27
+[tape]: https://github.com/substack/tape
+[jest]: https://facebook.github.io/jest/

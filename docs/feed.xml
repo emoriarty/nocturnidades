@@ -1,5 +1,291 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://nocturnidad.es/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidad.es/" rel="alternate" type="text/html" /><updated>2018-03-08T11:06:04+01:00</updated><id>http://nocturnidad.es/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que los artículos son perpetrados.
-</subtitle><entry><title type="html">First class function</title><link href="http://nocturnidad.es/articulos/first-class-function" rel="alternate" type="text/html" title="First class function" /><published>2018-01-30T22:00:00+01:00</published><updated>2018-01-30T22:00:00+01:00</updated><id>http://nocturnidad.es/articulos/first-class-funtion</id><content type="html" xml:base="http://nocturnidad.es/articulos/first-class-function">&lt;p&gt;&lt;em&gt;First-class function&lt;/em&gt; es la cualidad por la que un lenguaje de programación puede tratar las funciones como si fueran cualquier otro tipo de objeto. Se entiende por objeto cualquier tipo de entidad que pueda asignarse a una variable, almacenarse en un &lt;em&gt;array&lt;/em&gt;, transferir como argumento e incluso ser devuelto como resultado de otra función.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://nocturnidad.es/feed.xml" rel="self" type="application/atom+xml" /><link href="http://nocturnidad.es/" rel="alternate" type="text/html" /><updated>2018-03-20T12:21:40+01:00</updated><id>http://nocturnidad.es/</id><title type="html">Nocturnidades</title><subtitle>La intención inicial de este blog es publicar y compartir relatos, ideas y  tribulaciones varias. También tienen cabida documentos técnicos relacionados  con la programación. El título del blog hace referencia al único momento del día (de la noche)  en que los artículos son perpetrados.
+</subtitle><entry><title type="html">Pure Function</title><link href="http://nocturnidad.es/articulos/pure-function" rel="alternate" type="text/html" title="Pure Function" /><published>2018-03-01T09:00:00+01:00</published><updated>2018-03-01T09:00:00+01:00</updated><id>http://nocturnidad.es/articulos/pure-function</id><content type="html" xml:base="http://nocturnidad.es/articulos/pure-function">&lt;p&gt;La programación funcional es un término que en los últimos años ha tomado cierta relevancia en el mundo de la programación. También otros paradigmas como concurrencia fiable o componentización están en boga. Todos estos conceptos tienen su base en una serie de patrones y cualidades del lenguaje que los hacen posibles. Entre estos pautas se encuentran las funciones puras.&lt;/p&gt;
+
+&lt;p&gt;Una &lt;strong&gt;función pura&lt;/strong&gt; no es más que una función que recibe un valor y devuelve siempre el mismo resultado en base a un cálculo. Hay un tipo de función basada en la &lt;a href=&quot;https://es.wikipedia.org/wiki/M%C3%B3nada_(programaci%C3%B3n_funcional)?oldformat=true#M%C3%B3nada_identidad&quot;&gt;mónada identidad&lt;/a&gt; donde este cálculo es inexistente, retornando el mismo valor de entrada, pero esto es otro tema.&lt;/p&gt;
+
+&lt;p&gt;Otro aspecto importante es que la ejecución de una función no tenga ningún tipo de efecto secundario sobre el estado global del programa. Esto evita comportamientos inesperados que podrían derivar en errores de difícil hallazgo.&lt;/p&gt;
+
+&lt;p&gt;Aunque antes de profundizar en las características que ofrece este tipo de funciones, valdría la pena saber exactamente de donde proceden. Para ello hay que volver a abrir esos polvorientos apuntes de matemáticas que siempre pensaste que no servirían de nada.&lt;/p&gt;
+
+&lt;h2 id=&quot;origen&quot;&gt;Origen&lt;/h2&gt;
+
+&lt;p&gt;Como antes mencioné, el origen de las funciones se encontra en las matemáticas. Principalmente en cálculo analítico y álgebra. La definición general propuesta es la siguiente.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;El concepto general de Función, aplicación o mapeo se refiere a una regla que asigna a cada elemento de un primer conjunto un único elemento de un segundo conjunto &lt;sup&gt;&lt;a href=&quot;/articulos/pure-function#quote-1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A continucación se muestra otra interpretación diferente.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Una función es una relación especial entre valores. Cada valor de entrada devuelve el mismo valor de salida.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Según estas dos explicaciones, si una determinada función recibe como valor de entrada 1 y devuelve 2, se espera que cada vez que reciba un valor 1 deberá retornar siempre el mismo valor de salida esperado: 2. Lo mismo ocurrirá con cualquier otro combinación.&lt;/p&gt;
+
+&lt;p&gt;Si atendemos a la primera descripción, veremos que una función también se puede llamar aplicación o mapeo. Este último nombre dado ofrece una imagen clara de lo que debería ser una función tanto en matemáticas como en programación. Por mapeo entendemos una relación unívoca entre distintos elementos.&lt;/p&gt;
+
+&lt;table class=&quot;table-half arrows-table&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;1 =&amp;gt; 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2 =&amp;gt; 4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3 =&amp;gt; 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4 =&amp;gt; 8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Como puede observarse en la tabla, cada elemento de la columna izquierda tiene su único equivalente en la columna derecha. Esta relación también se puede expresar mediante la siguiente función matemática.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;f&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; x·2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A todos nos sonará la expresión anterior de cuando estudiábamos en el instituto. Pues bien, en programación se definiría de una manera no mucho más diferente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La función de este ejemplo está escrita en Javascript. En lo referente a funciones no importa el lenguaje utilizado, si bien alguna pequeña particularidad pueda haber entre ellos, a todos los efectos aplica el mismo concepto.&lt;/p&gt;
+
+&lt;p&gt;Siguiendo con los ejemplos anteriores, en ambos casos si el valor utilizado de la columna izquierda se pasa como argumento a la función, el resultado será el valor adyacente a la derecha. Cualquier otro valor devuelto no cumpliría con la descripción de una función para esa tabla.&lt;/p&gt;
+
+&lt;p&gt;Otra de la características de las funciones en matemáticas es su representación cartesiana. El valor de entrada (x) suele corresponder a la horizontal del plano, mientras que el resultado (y) pertenece a su vertical. Una relación como en la tabla anterior genera una línea recta en el gráfico cartesiano (x, y). A esta función se la nombra función lineal.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;div class=&quot;placeholder picture-shrink&quot; data-large=&quot;/assets/pure-function-1.jpg&quot;&gt;
+    &lt;img src=&quot;/assets/pure-function-1.thumb.jpg&quot; class=&quot;img-small loaded&quot; alt=&quot;Función lineal sobre plano cartesiano.&quot; /&gt;
+    &lt;div style=&quot;padding-bottom: 100.48465266558966%;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Aunque en raras ocasiones generamos este tipo de gráficos, la capacidad de interpretar estos valores como componentes que conforman un gráfico permite conceptualizar estos resultados en otros ámbitos. En programación funcional a esta relación entre x e y también se le llama morfismo. Lo cual no es más que otra forma de describir como un conjunto de valores es mapeado a otro conjunto.&lt;/p&gt;
+
+&lt;p&gt;Que el origen de las funciones esté en las matemáticas, no significa que uno deba haber obtenido un doctorado para entenderlas. Si es cierto que es recomendable tener un conocimiento mínimo en la materia. En ciertas ocasiones podrías encontrarte con algún problema de solución matemática y no saber resolverlo por no tener el bagaje necesario.&lt;/p&gt;
+
+&lt;p&gt;La gran diferencia entre ambas disciplinas estriba en que las funciones en matemáticas sirven exclusivamente a un solo propósito. En programación pueden tener diferentes usos. En la mayoría de las ocasiones se utilizan para realizar procesos completos, que por su naturaleza arbitraria permite la ausencia o presencia múltiple de parámetros. También puede devolver diferentes resultados en base a un mismo argumento. Esta cualidad procedimental de las funciones es la que se pretende evitar mediante programación funcional.&lt;/p&gt;
+
+&lt;p&gt;Para ello se acuñó el término función pura, que no es más que el uso específico de la funciones sea el mismo que en matemáticas.&lt;/p&gt;
+
+&lt;p&gt;¿Y qué beneficio aporta una función pura ante una convencional? Podrías estar preguntándote. Para responder a esta pregunta, se expone más abajo una serie de características que muestran porqué favorecer el uso este tipo de funciones.&lt;/p&gt;
+
+&lt;h2 id=&quot;cacheable&quot;&gt;Cacheable&lt;/h2&gt;
+
+&lt;p&gt;Ahora sabemos que en base a un valor de entrada, una función pura siempre devuelve el mismo resultado. Podemos aprovechar esta cualidad para almacenar en memoria el resultado, utilizando el argumento como identificador. Cada vez que se invoque la misma función, con un parámetro previamente utilizado, devolverá el resultado almacenado. De esta forma se mejora el rendimiento de una función, evitando repetir el mismo cálculo cuando se conoce de antemano el resultado para un dato de entrada.&lt;/p&gt;
+
+&lt;p&gt;A esta técnica de optimización se la conoce en programación como &lt;em&gt;&lt;a href=&quot;https://www.interviewcake.com/concept/java/memoization&quot;&gt;memoization&lt;/a&gt;&lt;/em&gt; (o &lt;em&gt;memoisation&lt;/em&gt; en inglés de las islas).&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memoize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cacheId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cacheId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cacheId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cacheId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La función anterior espera recibir una función &lt;code class=&quot;highlight language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt;&lt;/code&gt; como argumento. Una vez ejecutada devuelve una función anónima que contiene la operación de cacheo. Esta nueva función, a partir del conjunto de argumentos recibido, crea el identificador de almacenamiento en la variable &lt;code class=&quot;highlight language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;cacheId&lt;/span&gt;&lt;/code&gt;. Si el contenido de esta variable tiene asociado un valor en el objeto &lt;code class=&quot;highlight language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt;&lt;/code&gt;, devuelve el resultado anteriormente calculado. En caso contrario, ejecuta la función original y se guarda el producto obtenido junto al nuevo identificador en el objeto &lt;code class=&quot;highlight language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;cache&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;by2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cachedBy2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memoize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;by2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;cachedBy2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 4&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;cachedBy2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 4 returned from cache object&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;cachedBy2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 8&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;cachedBy2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 8 returned from cache object&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;No solamente se puede almacenar resultados de tipo primitivo. También tienen cabida objetos, &lt;em&gt;arrays&lt;/em&gt; incluso otras funciones (realmente éstas no dejan de ser un tipo de objeto específico).&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fetchBooksByGenre&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;genre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;genre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; 
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fetchThrillerBooks&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memoize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fetchBooksByGenre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/api/books/by/thriller'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fetchBioBooks&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memoize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fetchBooksByGenre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/api/books/by/bio'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Las funciones anteriores no es que sean la mar de útiles. En cierto modo cada vez que se vaya a conformar una función por género ya almacenada, será devuelta desde cache.&lt;/p&gt;
+
+&lt;h2 id=&quot;portabilidad&quot;&gt;Portabilidad&lt;/h2&gt;
+
+&lt;p&gt;Se considera que una función es portable cuando su contexto queda totalmente aislado. Ninguna referencia externa es necesaria para su funcionamiento, a excepción de las suministradas mediante argumentos. La ventaja que ofrece este tipo de función autocontenida es que se puede transportar de un proyecto a otro sin necesidad de modificación.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// forma impura&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;saveBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;notifySuccess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;notifyError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// forma pura&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bookAttrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;saveBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bookAttrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;notifySuccess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;notifyError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En este ejemplo se puede ver la misma función en su variante pura e impura. Mientras que la versión impura sólo recibe un argumento con los valores para crear un nuevo libro, la segunda incluye también una conexión a base de datos y un email dónde notificar la acción llevada a cabo o el error ocurrido.&lt;/p&gt;
+
+&lt;p&gt;Aunque en apariencia la diferencia es poca cosa, varias lecturas surgen con este pequeño cambio.&lt;/p&gt;
+
+&lt;p&gt;En el caso de la función pura es mucho más informativa puesto que se revela su propósito desde la misma firma del contrato. Al contrario que la impura que dificulta si comprensión al ocultar estos detalles.&lt;/p&gt;
+
+&lt;p&gt;Por otro lado, al haber parametrizado los clientes de base de datos y correo se ha creado una función mucho más flexible que la anterior. Si por algún motivo se debe cambiar la base de datos, pues se transfiere un nuevo cliente a la función y listo.&lt;/p&gt;
+
+&lt;p&gt;También se puede utilizar en otros proyectos que requieran la misma funcionalidad, solo habría que copiar y pegar el código.&lt;/p&gt;
+
+&lt;p&gt;Incluso si el tipo de lenguaje lo permite, como es el caso de Javascript, una función así podría ser serializada y enviarse a través de un socket para terminar siendo ejecutada remotamente.&lt;/p&gt;
+
+&lt;h2 id=&quot;inmutabilidad&quot;&gt;Inmutabilidad&lt;/h2&gt;
+
+&lt;p&gt;Una de las condiciones indispensables para construir un sistema robusto, es evitar las alteraciones inesperadas de sistema. Todo programa mantiene un estado global compartido entre los diferentes objetos que lo componen. Las interacciones entre ellos, o con el exterior, modifican este estado que termina reflejándose entre las distintas partes del sistema. Estos cambios conforman el flujo esperado del programa y cualquier mutación no controlada puede convertirse en &lt;em&gt;bugs&lt;/em&gt; de difícil localización.&lt;/p&gt;
+
+&lt;p&gt;Un caso muy concreto de este tipo de errores ocurre cuando se transfiere una variable a una función. No es su valor lo que recibe la función sino su referencia. Una dirección que apunta donde se encuentra el contenido de la misma. Cualquier acción llevada a cabo sobre esta variable que modifique su valor, se verá reflejado en otra parte del sistema que esté utilizando esa misma referencia.&lt;/p&gt;
+
+&lt;p&gt;Este efecto secundario, en ocasiones esperado, suele ser fuente de problemas. Para prevenir estas situaciones es mejor generar una nuevo resultado a partir de la variable proporcionada.&lt;/p&gt;
+
+&lt;p&gt;Un efecto secundario no es solo la modificación de una variable. También lo es lanzar excepciones, llamar a otras funciones desde una otra función, leer o escribir datos en disco,  acceso a base de datos, accesos a otras redes, datos introducidos por un usuario. Si pretendemos evitar todas estas acciones obtendremos el programa más robusto del mundo. Aunque en su contrapartida no sería más que una caja estanca que no sirve para nada.&lt;/p&gt;
+
+&lt;p&gt;Puesto que restringir todos los efectos secundarios en la práctica es inviable, al menos podemos contenerlos evitando mutaciones innecesarias. De esta manera se minimizaría su impacto en el estado del sistema.&lt;/p&gt;
+
+&lt;p&gt;Como ya se ha apuntado antes, la mejor forma de prevenir estas mutaciones en una función es no modificar los parámetros de entrada. Tan solo se deben utilizar para realizar la operación propuesta y devolver un nuevo valor.&lt;/p&gt;
+
+&lt;p&gt;Incluso en sistemas que permiten la ejecución multihilo, esta condición de inmutabilidad posibilita la ejecución en paralelo de una misma función. De esta manera se evitan situaciones que podrían derivar condiciones de &lt;a href=&quot;https://www.wikiwand.com/es/Condici%C3%B3n_de_carrera&quot;&gt;secuencia (race condition)&lt;/a&gt; al haber alterado la memoria compartida.&lt;/p&gt;
+
+&lt;h2 id=&quot;transparencia-referencial&quot;&gt;Transparencia referencial&lt;/h2&gt;
+
+&lt;p&gt;Se llama transparencia referencial a la circunstancia que permite sustituir el nombre de la función (su llamada) por el cuerpo de la misma sin alterar el comportamiento del programa.&lt;/p&gt;
+
+&lt;p&gt;Puesto que la condición indispensable de una función pura es que siempre devuelva el mismo valor de salida para un mismo dato de entrada, podemos considerar que se cumple esta propiedad si el intercambio de ambas partes no falla.&lt;/p&gt;
+
+&lt;p&gt;Pongamos por ejemplo el siguiente fuente.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'9788433920638'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Post Office'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Charles Bukowski'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rateBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stars&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;finishBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;findBookIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bookItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bookItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;findBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findBookIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isBookPresent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;findBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;addBookToShelve&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isBookPresent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addBookToShelve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rateBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finishBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Todas las funciones son supuestamente puras. Si no fuera así la sustitución de la llamada por el contenido no funcionará.&lt;/p&gt;
+
+&lt;p&gt;Si observamos la última línea encontramos tres llamadas a función anidadas entre si. Para poder comprobar si son transparentemente referenciales (ojo al vocablo) sustituyamos la más interna (la primera en ejecutarse) en la secuencia: &lt;code class=&quot;highlight language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;finishBook&lt;/span&gt;&lt;/code&gt;. Pero antes estructuremos un poco más el código para ver mejor el cambio realizado.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;addBookToShelve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;rateBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;finishBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sustituyendo finishBook por su contenido quedaría como se muestra a continuación.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;addBookToShelve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;rateBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
+    &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si ejecutamos el código anterior deberá seguir funcionando como se espera. Ahora le toca el turno a la función &lt;code class=&quot;highlight language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;rateBook&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;addBookToShelve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y así podríamos seguir hasta haber sustituido todas las funciones.&lt;/p&gt;
+
+&lt;p&gt;Obviamente esta no es una práctica que vayamos a utilizar para comprobar todo el fuente en cualquier proyecto medianamente grande. El resultado final podría ser un galimatías muy serio. Por tanto, la transparencia referencial, no tiene mayor utilidad que durante el proceso de desarrollo. Nos permite poder comprobar el comportamiento, fiabilidad y pureza de una función en base al intercambio de su cuerpo por la llamada.&lt;/p&gt;
+
+&lt;p&gt;Si quieres, no sería un mal ejercicio terminar por tu cuenta de completar el intercambio de llamadas a función por su contenido. Cuando lo tengas hecho comprueba que el resultado sea el mismo que cuando ejecutaste el fuente original.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;9788433920638&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Post Office&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Charles Bukowski&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;p&gt;Puesto que una función pura no depende de ningún tipo de recurso externo, facilita su ejecución en cualquier tipo de contexto. Este carácter independiente permite probar una función sin necesidad de simular el entorno ni el uso de terceros ni grandes configuraciones. Solamente deberemos proveer el valor (o valores) necesario de entrada y comprobar su resultado.&lt;/p&gt;
+
+&lt;p&gt;Continuando con el ejemplo anterior, para comprobar que la función &lt;code class=&quot;highlight language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;addBook&lt;/span&gt;&lt;/code&gt; añade un libro correctamente, podemos crear un archivo similar al mostrado a continuación.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;addBook&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'../src/addBook'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mockedBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Mocked title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Mocked author'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mockedLibrary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;addBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mockedLibrary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mockedBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mockedBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Adds book to library successfully'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Book is not being added'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Lógicamente lo más interesante es poder generar informes con todas las pruebas, así que lo suyo sería utilizar una librería que simplifique esta labor. Por ejemplo, podemos usar &lt;em&gt;&lt;a href=&quot;https://github.com/substack/tape&quot;&gt;tape&lt;/a&gt;&lt;/em&gt; como solución sencilla u otra más completa como &lt;em&gt;&lt;a href=&quot;https://facebook.github.io/jest/&quot;&gt;jest&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;El auge de la programación funcional también está influyendo en campos como el &lt;em&gt;&lt;a href=&quot;https://medium.com/javascript-inside/generative-testing-in-javascript-f91432247c27&quot;&gt;testing&lt;/a&gt;&lt;/em&gt;. Una de las propuestas más prometedoras se llama generative testing. Este nuevo enfoque se basa en la generación automática de los argumentos de entrada. A diferencia del método tradicional, basado en suposiciones comunes, mediante esta técnica se pretende identificar los casos de uso no contemplados y así poder completar el alcance de una función.&lt;/p&gt;
+
+&lt;p&gt;Recuerda que este tipo estrategia no son sustitutivas. Sin embargo usadas en combinación pueden aportar grandes beneficios.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;No he redactado todas la cualidades que ofrecen las funciones puras. He elegido aquellas que he considerado más oportunas en base a su uso más práctico durante el desarrollo diario. Espero que tras haber leído el artículo comprendas los beneficios que aporta el uso de funciones puras y cuándo utilizarlas.&lt;/p&gt;
+
+&lt;p&gt;Es importante remarcar que este patrón se utiliza principalmente bajo un marco funcional. Esto no significa que no podamos utilizarlo en contextos más imperativos. De hecho la cualidad más importante, como se ha apuntado anteriormente, es la independencia ante cualquier tipo de paradigma.&lt;/p&gt;
+
+&lt;p&gt;Así que a qué esperas, cada vez que tengas la oportunidad, sin importar el lenguaje que utilices, favorece este tipo de función. A la larga comprobarás que es más práctico.&lt;/p&gt;
+
+&lt;h2 id=&quot;referencias&quot;&gt;Referencias&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li id=&quot;quote-1&quot;&gt;
+    &lt;a href=&quot;https://es.wikipedia.org/wiki/Función_matemática&quot;&gt;
+      Extraído del artículo función matemática de la wikipedia.
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fuentes&quot;&gt;Fuentes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mathsisfun.com/sets/function.html&quot;&gt;mathsisfun.com/sets/function.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wikiwand.com/es/Funci%C3%B3n_matem%C3%A1tica&quot;&gt;wikiwand.com/es/Funci%C3%B3n_matem%C3%A1tica&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wikiwand.com/en/Functional_programming&quot;&gt;wikiwand.com/en/Functional_programming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976&quot;&gt;medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wikiwand.com/en/Pure_function&quot;&gt;wikiwand.com/en/Pure_function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c&quot;&gt;https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536&quot;&gt;medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://drboolean.gitbooks.io/mostly-adequate-guide-old/content/ch3.html&quot;&gt;drboolean.gitbooks.io/mostly-adequate-guide-old/content/ch3.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch2.md/#chapter-2-the-nature-of-functions&quot;&gt;github.com/getify/Functional-Light-JS/blob/master/manuscript/ch2.md/#chapter-2-the-nature-of-functions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://henrikeichenhardt.blogspot.com.es/2013/06/why-shared-mutable-state-is-root-of-all.html&quot;&gt;henrikeichenhardt.blogspot.com.es/2013/06/why-shared-mutable-state-is-root-of-all.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="it" /><category term="programacion-funcional" /><category term="diseño" /><category term="patrones" /><category term="terminos-informaticos" /><summary type="html">Las funciones puras permiten construir aplicaciones más robustas gracias a su carácter inmutable. También ofrecen una gran reusabiliad.</summary></entry><entry><title type="html">First class function</title><link href="http://nocturnidad.es/articulos/first-class-function" rel="alternate" type="text/html" title="First class function" /><published>2018-01-30T22:00:00+01:00</published><updated>2018-01-30T22:00:00+01:00</updated><id>http://nocturnidad.es/articulos/first-class-funtion</id><content type="html" xml:base="http://nocturnidad.es/articulos/first-class-function">&lt;p&gt;&lt;em&gt;First-class function&lt;/em&gt; es la cualidad por la que un lenguaje de programación puede tratar las funciones como si fueran cualquier otro tipo de objeto. Se entiende por objeto cualquier tipo de entidad que pueda asignarse a una variable, almacenarse en un &lt;em&gt;array&lt;/em&gt;, transferir como argumento e incluso ser devuelto como resultado de otra función.&lt;/p&gt;
 
 &lt;p&gt;La idea en si proviene de otro concepto llamado_&lt;a href=&quot;https://en.wikipedia.org/wiki/First-class_citizen&quot;&gt;first-class citizen&lt;/a&gt;_. Este viene a decir que una entidad pueda soportar cualquier tipo de operación común disponible en otras entidades.&lt;/p&gt;
 
