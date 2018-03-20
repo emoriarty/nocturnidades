@@ -1,6 +1,6 @@
 ---
 title: "Pure Function"
-date: 2018-03-1 09:00:00 +0100
+date: 2018-03-20 01:00:00 +0100
 excerpt: Las funciones puras permiten construir aplicaciones más robustas gracias a su carácter inmutable. También ofrecen una gran reusabiliad.
 permalink: /articulos/pure-function
 category: it
