@@ -1,7 +1,7 @@
 ---
 title: "First class function"
 date: 2018-01-30 22:00:00 +0100
-excerpt: Que significa First-class function y para que sirve.
+excerpt: En un lenguaje de programación, se dice que cumple con la condición First-class function, si permite tratar las funciones como cualquier otro tipo de objeto.
 permalink: /articulos/first-class-function
 category: it
 tags: [programacion-funcional, diseno, patrones, terminos-informaticos]
