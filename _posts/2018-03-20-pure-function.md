@@ -20,7 +20,7 @@ Como antes mencioné, el origen de las funciones se encontra en las matemáticas
 
 > El concepto general de Función, aplicación o mapeo se refiere a una regla que asigna a cada elemento de un primer conjunto un único elemento de un segundo conjunto <sup><a href="{{ page.permalink | relative_url }}#quote-1">1</a></sup>.
 
-A continucación se muestra otra interpretación diferente.
+A continuación se muestra otra interpretación diferente.
 
 > Una función es una relación especial entre valores. Cada valor de entrada devuelve el mismo valor de salida.
 
