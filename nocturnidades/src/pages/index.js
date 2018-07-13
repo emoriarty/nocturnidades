@@ -1,6 +1,7 @@
 import React from 'react';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import Header from '../components/Header';
 import Posts from '../components/Posts';
 
 export default props => {
@@ -10,6 +11,9 @@ export default props => {
   return [
     <Helmet
       key="head"
+      title={siteTitle}
+    />,
+    <Header
       title={siteTitle}
     />,
     <Posts

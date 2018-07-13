@@ -1,7 +1,12 @@
 import Typography from 'typography';
 import kirkhamTheme from 'typography-theme-kirkham';
+import entries from './entries';
+import post from './post';
 
 const backgroundColor = '#fff';
+const secondaryColor = '#212121';
+const ternaryColor = '#757575';
+const quaternaryColor = '#BDBDBD';
 
 kirkhamTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   'a': {
@@ -13,23 +18,7 @@ kirkhamTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   'body': {
     backgroundColor,
   },
-  '.entry a': {
-    boxShadow: 'none',
-    display: 'block',
-    textDecoration: 'none',
-  },
-  '.entry .entry-title': {
-    transition: 'all .2s ease',
-  },
-  '.entry > a:hover .entry-title': {
-    color: backgroundColor,
-    backgroundColor: options.bodyColor,
-  },
-  '.entry .entry-title .entry-date': {
-    float: 'right',
-    fontFamily: options.bodyFontFamily.join(','),
-    fontWeight: 'normal',
-  },
+	...entries({ ...options, backgroundColor }),
 });
 
 const typography = new Typography(kirkhamTheme);
@@ -39,4 +28,10 @@ if (process.env.NODE_ENV !== 'production') {
   typography.injectStyles();
 }
 
-export default typography;
+export default {
+	...typography,
+	backgroundColor,
+	secondaryColor,
+	ternaryColor,
+	quaternaryColor,
+};

@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-
+import Menu from '../components/Menu';
 import { rhythm, scale } from '../utils/typography'
 
 class BlogPostTemplate extends React.Component {
@@ -12,19 +12,41 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pathContext
 
     return (
-      <div>
+      <div
+				style={{
+				}}
+			>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
+				<header
+					style={{
+						marginBottom: rhythm(1),
+					}}
+				>
+					<h1
+						style={{
+							...scale(1.2),
+							textAlign: 'center',
+							marginBottom: rhythm(1/2),
+						}}
+					>
+						{post.frontmatter.title}
+					</h1>
+					<Menu
+						style={{
+							marginBottom: rhythm(1),
+						}}
+					/>
+					<p
+						style={{
+							...scale(-1 / 5),
+							display: 'block',
+							marginBottom: rhythm(1/2),
+							textAlign: 'center',
+						}}
+					>
+						{post.frontmatter.date}
+					</p>
+				</header>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
