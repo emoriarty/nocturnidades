@@ -22,7 +22,7 @@ const styles = {
     fontFamily: headerFontFamily.join(','),
     padding: `${rhythm(1/8)} ${rhythm(3/8)}`,
     border: '1px solid',
-    transition: 'width .2s ease-out',
+    transition: 'width .2s ease-in .1s',
     overflow: 'hidden',
     display: 'inline-block',
     verticalAlign: 'middle',
@@ -30,7 +30,9 @@ const styles = {
     width: rhythm(1.25),
     '&:hover': {
       width: rhythm(4.75),
+      transition: 'width .2s ease-out',
       '& span': {
+        transition: 'opacity .2s ease-out .1s',
         opacity: 1,
       }
     },
