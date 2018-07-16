@@ -1,7 +1,5 @@
 import Typography from 'typography';
 import kirkhamTheme from 'typography-theme-kirkham';
-import entries from './entries';
-import post from './post';
 
 const backgroundColor = '#fff';
 const secondaryColor = '#212121';
@@ -18,7 +16,6 @@ kirkhamTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   'body': {
     backgroundColor,
   },
-	...entries({ ...options, backgroundColor }),
 });
 
 const typography = new Typography(kirkhamTheme);
@@ -28,8 +25,11 @@ if (process.env.NODE_ENV !== 'production') {
   typography.injectStyles();
 }
 
+console.log(typography);
+
 export default {
 	...typography,
+  ...typography.options,
 	backgroundColor,
 	secondaryColor,
 	ternaryColor,

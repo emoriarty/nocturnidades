@@ -1,91 +1,60 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-import get from 'lodash/get'
-import Menu from '../components/Menu';
-import { rhythm, scale } from '../utils/typography'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
+import get from 'lodash/get';
+import { rhythm, scale } from '../utils/typography';
+import PostHeader from '../components/PostHeader';
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const { previous, next } = this.props.pathContext
+export default props => {
+  const post = props.data.markdownRemark
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const { previous, next } = props.pathContext
 
-    return (
-      <div
-				style={{
-				}}
-			>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-				<header
-					style={{
-						marginBottom: rhythm(1),
-					}}
-				>
-					<h1
-						style={{
-							...scale(1.2),
-							textAlign: 'center',
-							marginBottom: rhythm(1/2),
-						}}
-					>
-						{post.frontmatter.title}
-					</h1>
-					<Menu
-						style={{
-							marginBottom: rhythm(1),
-						}}
-					/>
-					<p
-						style={{
-							...scale(-1 / 5),
-							display: 'block',
-							marginBottom: rhythm(1/2),
-							textAlign: 'center',
-						}}
-					>
-						{post.frontmatter.date}
-					</p>
-				</header>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
-          <li>
-            {
-              previous &&
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            }
-          </li>
-          <li>
-            {
-              next &&
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            }
-          </li>
-        </ul>
-      </div>
-    )
-  }
+  return (
+    <div
+      style={{
+      }}
+    >
+      <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+      <PostHeader
+        title={post.frontmatter.title}
+        date={post.frontmatter.date}
+      />
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr
+        style={{
+          marginBottom: rhythm(1),
+        }}
+      />
+      <ul
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-between',
+          listStyle: 'none',
+          padding: 0,
+        }}
+      >
+        <li>
+          {
+            previous &&
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          }
+        </li>
+        <li>
+          {
+            next &&
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          }
+        </li>
+      </ul>
+    </div>
+  );
 }
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
