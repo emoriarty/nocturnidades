@@ -67,13 +67,14 @@ const Menu = ({ classes, home }) => {
   return (
     <nav className={classes.nav}>
       {
-        document.location.pathname !== '/' &&
-          <Link to='/' className={classes.navHome}>
-            <span className={classes.navHomeTitle}>
-              N
-              <span className={classes.navHomeInnerTitle}>octurnidades</span>
-            </span>
-          </Link>
+        typeof document !== 'undefined' &&
+          document.location.pathname !== '/' &&
+            <Link to='/' className={classes.navHome}>
+              <span className={classes.navHomeTitle}>
+                N
+                <span className={classes.navHomeInnerTitle}>octurnidades</span>
+              </span>
+            </Link>
       }
       <ul className={classes.navList}>
         <li className={classes.navItem}>
