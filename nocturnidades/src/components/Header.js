@@ -23,9 +23,7 @@ export const styles = {
 const Header = ({ classes, title }) => (
   <header className={classes.header}>
     <h1 className={classes.title}>
-      <Link to='/'>
-        { title }
-      </Link>
+      { title }
     </h1>
   </header>
 );
