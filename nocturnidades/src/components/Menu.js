@@ -63,7 +63,6 @@ const styles = {
 };
 
 const Menu = ({ classes, home }) => {
-
   return (
     <nav className={classes.nav}>
       {

@@ -25,8 +25,6 @@ if (process.env.NODE_ENV !== 'production') {
   typography.injectStyles();
 }
 
-console.log(typography);
-
 export default {
 	...typography,
   ...typography.options,

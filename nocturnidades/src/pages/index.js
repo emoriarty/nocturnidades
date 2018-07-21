@@ -14,6 +14,7 @@ export default props => {
       title={siteTitle}
     />,
     <Header
+      key="header"
       title={siteTitle}
     />,
     <Posts
