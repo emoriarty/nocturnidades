@@ -1,0 +1,104 @@
+{
+  "assetsByChunkName": {
+    "path---articulos-hay-pocas-cosas-que-me-quiten-el-sueno": [
+      "path---articulos-hay-pocas-cosas-que-me-quiten-el-sueno-103c1287b000ce64e93b.js",
+      "path---articulos-hay-pocas-cosas-que-me-quiten-el-sueno-103c1287b000ce64e93b.js.map"
+    ],
+    "path---relatos-surcando-caminos-de-hierro": [
+      "path---relatos-surcando-caminos-de-hierro-0562f38516091f08dc88.js",
+      "path---relatos-surcando-caminos-de-hierro-0562f38516091f08dc88.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-72c6f16018966a7bb81d.js",
+      "component---src-pages-index-js-72c6f16018966a7bb81d.js.map"
+    ],
+    "path---": [
+      "path----230c8b72df715e4b3d8d.js",
+      "path----230c8b72df715e4b3d8d.js.map"
+    ],
+    "path---articulos-anotaciones-contemporaneas": [
+      "path---articulos-anotaciones-contemporaneas-8c2665ac4fe835abebce.js",
+      "path---articulos-anotaciones-contemporaneas-8c2665ac4fe835abebce.js.map"
+    ],
+    "path---articulos-motivaciones": [
+      "path---articulos-motivaciones-178b11aea6ec46f831ff.js",
+      "path---articulos-motivaciones-178b11aea6ec46f831ff.js.map"
+    ],
+    "path---relatos-huracan-purificador": [
+      "path---relatos-huracan-purificador-7414970a05ba54ccbce1.js",
+      "path---relatos-huracan-purificador-7414970a05ba54ccbce1.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-89f1c925f120850a0d66.js",
+      "component---src-templates-blog-post-js-89f1c925f120850a0d66.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-d80c84491072303c5051.js",
+      "component---src-layouts-index-js-d80c84491072303c5051.js.map"
+    ],
+    "path---relatos-pues-le-rece-pero-no-me-ha-hecho-caso": [
+      "path---relatos-pues-le-rece-pero-no-me-ha-hecho-caso-dd0f489e5d4eb17b79d8.js",
+      "path---relatos-pues-le-rece-pero-no-me-ha-hecho-caso-dd0f489e5d4eb17b79d8.js.map"
+    ],
+    "path---index": [
+      "path---index-f6312aeaa6dd5f770a2f.js",
+      "path---index-f6312aeaa6dd5f770a2f.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-358f3a7a15a6340a3594.js",
+      "component---src-pages-404-js-358f3a7a15a6340a3594.js.map"
+    ],
+    "commons": [
+      "commons-82d0980f7c1722fb56b4.js",
+      "commons-82d0980f7c1722fb56b4.js.map"
+    ],
+    "path---relatos-copenhague-gotinga": [
+      "path---relatos-copenhague-gotinga-14b559dc000678c90781.js",
+      "path---relatos-copenhague-gotinga-14b559dc000678c90781.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-ecd3f6d137cf43882aea.js",
+      "path---404-html-ecd3f6d137cf43882aea.js.map"
+    ],
+    "path---articulos-nostalgia-y-cambio": [
+      "path---articulos-nostalgia-y-cambio-8ddd6064cd5565af69ca.js",
+      "path---articulos-nostalgia-y-cambio-8ddd6064cd5565af69ca.js.map"
+    ],
+    "path---articulos-la-gratuidad-tecnologica": [
+      "path---articulos-la-gratuidad-tecnologica-1961a848b0052822c436.js",
+      "path---articulos-la-gratuidad-tecnologica-1961a848b0052822c436.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "app": [
+      "app-d7a9f9d78a9c5911e7d3.js",
+      "app-d7a9f9d78a9c5911e7d3.js.map"
+    ],
+    "path---relatos-divagando-hasta-el-amanecer": [
+      "path---relatos-divagando-hasta-el-amanecer-edf6485a5a11f49ceba5.js",
+      "path---relatos-divagando-hasta-el-amanecer-edf6485a5a11f49ceba5.js.map"
+    ],
+    "path---404": [
+      "path---404-ecd3f6d137cf43882aea.js",
+      "path---404-ecd3f6d137cf43882aea.js.map"
+    ],
+    "path---relatos-victoria-de-labios-azules": [
+      "path---relatos-victoria-de-labios-azules-c8c4d4332b7ab76578b6.js",
+      "path---relatos-victoria-de-labios-azules-c8c4d4332b7ab76578b6.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-b14c67d7424629f87802.js",
+      "component---src-pages-about-js-b14c67d7424629f87802.js.map"
+    ],
+    "path---about": [
+      "path---about-63d844ab0083126e80d7.js",
+      "path---about-63d844ab0083126e80d7.js.map"
+    ]
+  }
+}
