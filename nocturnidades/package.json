@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "nocturnidades",
+  "description": "Nocturnidad.es",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
+  "author": "Enrique Moriarty <emoriarty81@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.273",
     "gatsby-link": "^1.6.39",
@@ -15,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-sharp": "^1.6.48",
+    "gatsby-plugin-sitemap": "^1.2.25",
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-remark-copy-linked-files": "^1.5.31",
     "gatsby-remark-images": "^1.5.61",
@@ -34,15 +32,15 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.12.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/emoriarty/nocturnidades#readme",
   "keywords": [
-    "gatsby"
+    "nocturnidades"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/emoriarty/nocturnidades.git"
   },
   "scripts": {
     "start": "gatsby develop",
