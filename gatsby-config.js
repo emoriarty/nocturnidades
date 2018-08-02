@@ -1,3 +1,21 @@
+const fileSystemPlugin = [{
+  resolve: 'gatsby-source-filesystem',
+  options: {
+    path: `${__dirname}/src/pages`,
+    name: 'pages',
+  },
+}];
+
+if (process.env.NODE_ENV === 'development') {
+  fileSystemPlugin.push({
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      path: `${__dirname}/src/_drafts`,
+      name: 'pages',
+    },
+  });
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Nocturnidades',
@@ -6,13 +24,7 @@ module.exports = {
     siteUrl: 'http://nocturnidad.es/',
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
+    ...fileSystemPlugin,
     {
       resolve: 'gatsby-transformer-remark',
       options: {

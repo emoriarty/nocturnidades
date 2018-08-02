@@ -1,11 +1,8 @@
 ---
 title: "La eterna batalla"
 date: 2018-01-29 00:00:00 +0100
-excerpt: Reflexión contemporánea a partir de un suceso vaporoso.
-permalink: /articulos/la-eterna-batalla
-category: paranoias
-tags: [ascensor, sociedad]
 ---
+
 <iframe src="https://open.spotify.com/embed/user/119566895/playlist/1D2XMUW40tuknotPFcZuiX" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
 No hace mucho que mantuve una pequeña e insulsa charla con un vecino. Habíamos coincidido en el ascensor. Debían ser sobre las 20:30. Cada uno regresaba de su respectivo oficio. Durante el ascenso escuché estoicamente su relato.
