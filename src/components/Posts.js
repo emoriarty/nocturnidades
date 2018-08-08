@@ -1,88 +1,77 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import get from 'lodash/get';
-import { rhythm, scale, bodyFontFamily, backgroundColor, bodyColor } from '../utils/typography';
-import injectSheet from 'react-jss'
+import React from 'react'
+import Link from 'gatsby-link'
+import get from 'lodash/get'
+import {
+  rhythm,
+  scale,
+  bodyFontFamily,
+  backgroundColor,
+  bodyColor,
+} from '../utils/typography'
+import styled from 'styled-components'
 
-const styles = {
-  entry: {
-    marginBottom: rhythm(1.25),
-  },
-  entryLink: {
-    boxShadow: 'none',
-    display: 'block',
-    textDecoration: 'none',
-    '&:hover > *:first-child': {
-      color: backgroundColor,
-      backgroundColor: bodyColor,
-    },
-  },
-  entryTitle: {
-    transition: 'all .2s ease',
-    lineHeight: rhythm(1.5),
-    marginBottom: rhythm(1 / 4),
-  },
-  entryDate: {
-    float: 'right',
-    fontFamily: bodyFontFamily.join(','),
-    fontWeight: 'normal',
-    ...scale(-0.5),
-  },
-};
+const Entry = styled.li`
+  margin-bottom: ${rhythm(1.25)};
+`
 
-class Posts extends React.Component {
+const EntryLink = styled(Link)`
+  box-shadow: none;
+  display: block;
+  text-decoration: none;
+  &:hover > *:first-child {
+    color: ${backgroundColor};
+    background-color: ${bodyColor};
+  },
+`
+
+const EntryTitle = styled.h3`
+  transition: all 0.2s ease;
+  line-height: ${rhythm(1.5)};
+  margin-bottom: ${rhythm(1 / 4)};
+`
+
+const EntryData = styled.small`
+  float: right;
+  font-family: ${bodyFontFamily.join(',')};
+  font-weight: normal;
+  ${scale(-0.5)};
+`
+
+const EntryList = styled.ul`
+  list-style: none;
+  margin: 0;
+`
+
+export default class Posts extends React.Component {
   constructor() {
-    super();
-    this.renderEntry = this.renderEntry.bind(this);
+    super()
+    this.renderEntry = this.renderEntry.bind(this)
   }
 
   render() {
-    const { entries } = this.props;
-    const style = {
-      listStyle: 'none',
-      margin: '0',
-    };
-
-    return (
-      <ul style={style}>
-        { entries.map(this.renderEntry) }
-      </ul>
-    );
+    const { entries } = this.props
+    return <EntryList>{entries.map(this.renderEntry)}</EntryList>
   }
 
   renderEntry({ node }) {
-    const { classes } = this.props;
+    const { classes } = this.props
     const {
       fields: { slug },
       frontmatter: { date },
       excerpt,
-    } = node;
-    const title = get(node, 'frontmatter.title', slug);
+    } = node
+    const title = get(node, 'frontmatter.title', slug)
 
     return (
-      <li
-        key={slug}
-        className={classes.entry}
-      >
-        <Link
-          to={node.fields.slug}
-          className={classes.entryLink}
-        >
-          <h3
-            className={classes.entryTitle}
-          >
+      <Entry key={slug}>
+        <EntryLink to={node.fields.slug}>
+          <EntryTitle>
             {title}
-            <small
-              className={classes.entryDate}
-            >
-              {node.frontmatter.date}
-            </small>
-          </h3>
+            <EntryData>{node.frontmatter.date}</EntryData>
+          </EntryTitle>
           <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-        </Link>
-      </li>
-    );
+        </EntryLink>
+      </Entry>
+    )
   }
 }
-
-export default injectSheet(styles)(Posts);

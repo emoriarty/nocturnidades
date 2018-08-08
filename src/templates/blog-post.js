@@ -1,9 +1,18 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
-import get from 'lodash/get';
-import { rhythm, scale } from '../utils/typography';
-import PostHeader from '../components/PostHeader';
+import React from 'react'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
+import get from 'lodash/get'
+import { rhythm, scale } from '../utils/typography'
+import PostHeader from '../components/PostHeader'
+import styled from 'styled-components'
+
+const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+`
 
 export default props => {
   const post = props.data.markdownRemark
@@ -11,49 +20,33 @@ export default props => {
   const { previous, next } = props.pathContext
 
   return (
-    <div
-      style={{
-      }}
-    >
+    <div style={{}}>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-      <PostHeader
-        title={post.frontmatter.title}
-        date={post.frontmatter.date}
-      />
+      <PostHeader title={post.frontmatter.title} date={post.frontmatter.date} />
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{
           marginBottom: rhythm(1),
         }}
       />
-      <ul
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0,
-        }}
-      >
+      <List>
         <li>
-          {
-            previous &&
+          {previous && (
             <Link to={previous.fields.slug} rel="prev">
               ← {previous.frontmatter.title}
             </Link>
-          }
+          )}
         </li>
         <li>
-          {
-            next &&
+          {next && (
             <Link to={next.fields.slug} rel="next">
               {next.frontmatter.title} →
             </Link>
-          }
+          )}
         </li>
-      </ul>
+      </List>
     </div>
-  );
+  )
 }
 
 export const pageQuery = graphql`

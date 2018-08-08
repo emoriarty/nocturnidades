@@ -1,31 +1,24 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import Menu from '../components/Menu';
-import { rhythm, scale } from '../utils/typography';
-import injectSheet from 'react-jss';
+import React from 'react'
+import Link from 'gatsby-link'
+import Menu from '../components/Menu'
+import { rhythm, scale } from '../utils/typography'
+import styled from 'styled-components'
 
-export const styles = {
-  header: {
-    marginBottom: rhythm(2),
-  },
-  title: {
-    ...scale(1.2),
-    marginTop: 0,
-    marginBottom: rhythm(1),
-  },
-  '@media (min-width: 480px)': {
-    header: {
-      textAlign: 'center',
-    },
-  },
-};
+export const Header = styled.header`
+  margin-bottom: ${rhythm(2)};
+  @media (min-width: 480px) {
+    text-align: center;
+  }
+`
 
-const Header = ({ classes, title }) => (
-  <header className={classes.header}>
-    <h1 className={classes.title}>
-      { title }
-    </h1>
-  </header>
-);
+export const HeaderTitle = styled.h1`
+  ${scale(1.2)};
+  margin-top: 0;
+  margin-bottom: ${rhythm(1)};
+`
 
-export default injectSheet(styles)(Header);
+export default ({ classes, title }) => (
+  <Header>
+    <HeaderTitle>{title}</HeaderTitle>
+  </Header>
+)

@@ -1,27 +1,18 @@
-import React from 'react';
-import get from 'lodash/get';
-import Helmet from 'react-helmet';
-import Header from '../components/Header';
-import Posts from '../components/Posts';
+import React from 'react'
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
+import Header from '../components/Header'
+import Posts from '../components/Posts'
 
 export default props => {
-  const siteTitle = get(props, 'data.site.siteMetadata.title');
-  const posts = get(props, 'data.allMarkdownRemark.edges');
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const posts = get(props, 'data.allMarkdownRemark.edges')
 
   return [
-    <Helmet
-      key="head"
-      title={siteTitle}
-    />,
-    <Header
-      key="header"
-      title={siteTitle}
-    />,
-    <Posts
-      key="posts"
-      entries={posts}
-    />,
-  ];
+    <Helmet key="head" title={siteTitle} />,
+    <Header key="header" title={siteTitle} />,
+    <Posts key="posts" entries={posts} />,
+  ]
 }
 
 export const pageQuery = graphql`

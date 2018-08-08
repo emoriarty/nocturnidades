@@ -1,10 +1,12 @@
-const fileSystemPlugin = [{
-  resolve: 'gatsby-source-filesystem',
-  options: {
-    path: `${__dirname}/src/pages`,
-    name: 'pages',
+const fileSystemPlugin = [
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      path: `${__dirname}/src/pages`,
+      name: 'pages',
+    },
   },
-}];
+]
 
 if (process.env.NODE_ENV === 'development') {
   fileSystemPlugin.push({
@@ -13,7 +15,7 @@ if (process.env.NODE_ENV === 'development') {
       path: `${__dirname}/src/_drafts`,
       name: 'pages',
     },
-  });
+  })
 }
 
 module.exports = {
@@ -66,5 +68,6 @@ module.exports = {
     },
     'gatsby-plugin-react-next',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-styled-components',
   ],
 }
