@@ -3,6 +3,14 @@ import get from 'lodash/get'
 import { rhythm } from '../utils/typography'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import styled from 'styled-components'
+
+const Layout = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(24)};
+  padding: ${rhythm(3 / 4)};
+`
 
 export default class Template extends React.Component {
   render() {
@@ -10,18 +18,11 @@ export default class Template extends React.Component {
     const siteTitle = get(data, 'site.siteMetadata.title')
 
     return (
-      <div
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: rhythm(3 / 4),
-        }}
-      >
+      <Layout>
         <Menu />
         {children()}
         <Footer />
-      </div>
+      </Layout>
     )
   }
 }

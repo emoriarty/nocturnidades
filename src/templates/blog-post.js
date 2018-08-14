@@ -14,21 +14,36 @@ const List = styled.ul`
   padding: 0;
 `
 
+const Hr = styled.hr`
+  margin-bottom: ${rhythm(1)};
+`
+
+const Post = styled.div`
+  p {
+    text-indent: 1rem;
+    margin-bottom: .54rem;
+  }
+
+  p:first-child {
+    text-indent: 0;
+  }
+
+  br + p {
+    text-indent: 0;
+  }
+`
+
 export default props => {
   const post = props.data.markdownRemark
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const { previous, next } = props.pathContext
 
   return (
-    <div style={{}}>
+    <div>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
       <PostHeader title={post.frontmatter.title} date={post.frontmatter.date} />
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
+      <Post dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Hr />
       <List>
         <li>
           {previous && (
