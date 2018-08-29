@@ -3,48 +3,44 @@ title: Páginas blancas I
 date: 2018-08-03 01:14:00 +0100
 ---
 
-La prisión es dura. Muy dura. Sobre todo al principio. No conoces a nadie. Estás solo. Y no eres más que un chaval que no sabe nada de la vida en la frontera.
+Tenía dieciocho años cuando entré en prisión. El mismo día de mi cumpleaños. No tenía ninguna experiencia previa en reformatorio alguno. Ni tan siquiera había vivido en entornos marginales.
 
-Tenía dieciocho años cuando entré en prisión. El mismo día de mi cumpleaños. No tenía ninguna experiencia previa en reformatorio alguno. Ni tan siquiera había vivido en entornos marginales. Sin duda, no fue el mejor de los panoramas posibles. Tuve que lidiar con algunos reos. Entré tan asustado que hasta las ratas podían oler mi miedo. Intentaba evitar cualquier tipo de contacto, aislarme del resto. Más tarde me daría cuenta que esa no era la mejor manera de sobrevivir en la cárcel.
+O eso creía yo.
 
-Me violaron a las pocas semanas de entrar. Ocurrió en repetidas ocasiones. Un día se presentó la oportunidad de acabar con esa situación. La invisibilidad no es una característica humana. Durante la estancia en el patio solía sentarme en un rincón, aislado de todo el mundo, mientras tomaba notas en mi libreta. Normalmente no permiten conservar nada, y mucho menos cualquier objeto punzante, pero debieron de verme tan tierno, como un cordero en una jaula de los leones, que me permitieron tener libreta y lápiz.
+La prisión es dura. Muy dura. Estás solo. No conoces a nadie. Tan solo eres un chaval que no sabe nada de la vida entre rejas. Entré tan asustado que hasta las ratas podían oler mi miedo. Intentaba evitar cualquier tipo de contacto. Aislarme. Ser invisible.
 
-Fue así como conocí a uno de los reos más respetados. Se acercó hasta donde me encontraba. Yo no sabía quién era aquel tipo con la cara cortada. Llegó solo pero sus amigos, compinches, secuaces lo que fueran no me perdían ojo. Me preguntó —esto es un eufemismo— si podía escribirle una carta. Era para su madre. Hacía mucho que no la veía. Tuvo un accidente doméstico y ya no podía desplazarse hasta la cárcel para visitarlo. Así que quería enviarle noticias suyas. Detrás de él vino otro. Y otro. Y otro más. Todos analfabetos. En otro tipo de entorno se vería con desprecio ser analfabeto, no tendrían ningún tipo de oportunidad, sin embargo aquí dentro o de donde demonios vengan cuanto más cazurro mayor estatus social. Ninguno de aquellos individuos habían ido a la escuela y cuando lo hacían era para refugiarse de la lluvia o del calor, al menos eso me contaban orgullosos rememorando batallitas de juventud. La mayoría de ellos profesaban una devoción casi inmaculada hacia sus madres fuera de lo común. Y sin embargo eran capaces de matar a cualquiera por una mala mirada o un muestra de desprecio por insignificante que fuera.
+Pronto me daría cuenta que esa no era la mejor manera de sobrevivir en la cárcel.
 
-Poco más tarde, el tipo que me violó fue encontrado en las duchas gritando como un cerdo. Le habían fracturado el pene. Desde aquel instante nunca más volvió a molestarme. Ni a mi ni a nadie más.
+Me violaron a las pocas semanas de entrar. Ocurrió en repetidas ocasiones.
 
-Mirándolo por el buen lado, esas primeras experiencia me brindaron un buen material para unas cuantas historias. La relación con estos presos no se limitó a escribirles cartas. También les enseñé a leer y escribir.
+Ya hacía unos meses que había entrado. Seguía sin mantener contacto con nadie a excepción de los flirteos nocturnos. Mi compañero de celda no es que fuese un maricón en toda regla pero debía tener mucha tensión sexual acumulada. Y yo debí ser lo más femenino que la pasó por aquella cárcel.
 
-A diferencia de aquellos primeros años que los pasé rodeado de delincuentes analfabetos, hoy día los nuevos reclusos ya vienen enseñados. Al menos se debe reconocer la labor del estado en su lucha contra el analfabetismo. Cierto es que algún analfabeto sigue quedando como miembros del club de la nesciencia vitalicia. De todas formas ya hace tiempo que no necesito protección alguna. Que yo sepa soy el más veterano del lugar y todo el mundo me conoce y respeta.
+Para que veas lo poco que me relacionaba con nadie, no fui capaz ni de denunciar la situación a los alguaciles. Ni tan siquiera lo pensaba. En cierto modo en mi cabeza debía estar pensando que aquello no estaba pasando.
 
-<br />
+Un día se presentó la oportunidad de acabar con esta situación. Por azar. Como siempre me ocurren estas cosas.
 
-Libertad. Evocación ingenua. Tiranía de lo cotidiano. Hasta en dos ocasiones la lengua acaricia suavemente el paladar. A diferencia de Humbert nada arde en mi interior. Él lo hace tres veces completando así el paladeo que cierra el circuito extático. Quién sabe si escribiéndola más a menudo, en mayúsculas, incluso pintarla en el muro de mi celda, ayudaría a cerrar el círculo. Sin embargo, mucho me temo, seguiría teniendo el mismo significado ambiguo, resbaladizo. Li-ber-tad. Ya hace tiempo que el sueño se perdió, como tantas otras cosas.
+Cada vez que bajaba al patio solía sentarme en un rincón.
 
-Durante los últimos treinta y cinco años he tenido mucho tiempo para pensar en ella. En la libertad y su significado, claro. Termino siempre por llegar a la misma conclusión. Desde una perspectiva moderna, depende cómo a uno le interese entenderla. ¿Qué hay de libre en tener una préstamo hipotecario? De veinte a cuarenta años devolviendo lo prestado más intereses, siendo incluso hereditaria en algunos casos. Esta idea de crédito se acepta de manera unánime pero en el fondo no deja de ser un grillete más. ¿Entonces cual es la libertad? ¿La posibilidad de elegir a qué banco someterse? Lo mismo ocurre con los impuestos,  trabajo, pareja, hijos. Responsabilidad lo llaman. Esclavitud. Ahí radica lo hipócrita del asunto. ¿Libertad? Vete al campo. No, la libertad no es para todos. Pocos la podrían soportar. Mejor sometido ¡Vivan las caenas! Aunque sin pasarse. Autoritarismo en su justa medida.
+Mi rincón de pensar.
 
-<br />
+Tomaba notas.
 
-En realidad faltan dos meses para que se cumpla el aniversario de mi entrada en prisión. Tras tanto tiempo no creo que importe si lo celebro antes o después o durante todo el año, como un jubileo. Cada vez me cuesta más recordar como era la vida en el exterior. Entré en presidio el mismo día que cumplí dieciocho años. Pude haberme defendido. Tenía pruebas que demostraban que no era culpable. Pero estaba hasta los cojones. No había nada por lo que mereciera la pena esa «libertad» física. En aquel momento me pareció mucho más atractiva la idea de un futuro bajo techo seguro.
+Escribía ideas.
 
-Lo cierto es que no me he sentido más libre en toda mi vida que todo este tiempo entre rejas. La cárcel me ha permitido dedicarme en exclusiva a lo que de verdad me interesa: Escribir.
+Observaba a los presos.
 
-Otras de las ventajas aquí dentro es que no hay que preocuparse por la comida. No es que sea exquisita pero a mí me apaña. Tengo mi propia habitación y aunque lo habitual es que sea compartida —de hecho así lo fue durante muchos años—, me han permitido estar solo en los últimos tiempos. Hay una biblioteca de lo más completa. Tienen libros clásicos, educativos, algunas rarezas y hasta novedades. Muchas novedades. El hecho de que los estantes estén tan bien abastecidos se debe a que los funcionarios de prisiones son unos ávidos lectores y no tanto los presos como siempre se ha creído. La demanda de libros nuevos se hace en base a los caprichos de los funcionarios.
+Soñaba despierto.
 
-Una actividad muy común entre los reclusos es hacer deporte. Se tiran horas en el gimnasio o jugando a futbito. Otros tan solo se pasan el día sentados viendo jugar a los primeros. Como si no tuvieran otra cosa que hacer. Suelen impartirse talleres de manualidades al menos una vez al mes. También hay ayudas para estudiar una formación profesional o una carrera si uno se lo propone. En lo concerniente al ocio, a parte de la lectura, también se proyecta habitualmente alguna que otra película en la capilla, que ya hace tiempo que dejó de usarse para su objetivo original.
+Al menos no me quitaron lo único que me importaba. Por normal general está prohibido cualquier tipo de objeto punzante. Sin embargo me permitieron tener lápices. Debieron compadecerse de mí. Un cordero en la jaula de los leones.
 
-No hay necesidades tanto básicas, de ocio o culturales que no queden cubiertas. Ya es mucho decir en comparación con la vida en el exterior. Libertad. Educación gratuita. Renta básica. Derecho a una vivienda digna. Aquí dentro es una realidad.
+Así fue cómo conocí a uno de los capos de la cárcel. Era bajito y feo como un cangrejo. Aunque lo más característico era la cicatriz que tenía en la cara. Un especie de quemadura en la mejilla izquierda que arrastraba el rostro hacia abajo, endureciendo su expresión. No se que edad podría tener pero con aquella cara parecía rondar los cuarenta años.
 
-Pero no pretendo elogiar la vida en la prisión. Tampoco cambiar la imagen que se tiene de ellas. No imagino a una parte de la población acudiendo en masa a las cárceles más cercanas para disfrutar de una temporada de internamiento. Aunque no dejar de tener gracia la idea. Inquilinos del estado.
+Se llamaba Ángel. Aunque todo el mundo le llamaba angelito. Siempre a sus espaldas. No le gustaba ese nombre. El que se lo decía a la cara bien podía darse por muerto. Literal.
 
-<br />
+Yo estaba escribiendo, tomando notas, apuntando ideas o lo que fuera. No le vi llegar. Cuando me di cuenta había alguien sentado a mi lado. No le hice caso. Me sentía intimidado. Me mantuve fuerte. Tenía miedo. No existía ese tipo. Ya tenía suficiente con un amante involuntario.
 
-Me paso el día escribiendo. No hay día que no dedique al menos seis horas. Al principio lo hacía a mano. Me sentaba en el catre y escribía sobre mis rodillas. Podía tener lápices pero me tenían prohibido el sacapuntas. Según reglamento, un cortalápices era considerado un objeto cortante. Para poder continuar escribiendo debía tener unos cuantos lápices afilados de antemano. Cuando se agotaba la mina del que estaba usando tomaba otro y seguía escribiendo. Al día siguiente pedía a algún funcionario que afilaran los lápices. No solían tardar mucho en devolverlos.
+Y entonces habló.
 
-Años después conseguí tener mi propia máquina de escribir. Fue la época que recibieron los primeros ordenadores. Me enteré por uno de los celadores que habían traído dos de esas máquinas. Como nadie había visto nunca ninguno, todos los funcionarios que no tenían ninguna obligación se acercaron para verlos. Por lo que me contó la curiosidad duró solo cinco minutos, tiempo de arrancado, pantalla negra y cursor parpadeante. Le pregunté qué iban a hacer con las máquinas de escribir. Contestó que seguramente las tirasen. Antes de que eso ocurriera pedí si me podía hacerme con una.
+¿Qué haaace?
 
-Una semana después, de regreso del patio, encontré una caja de cartón sobre un escritorio portátil. Dentro había una máquina de escribir. Una olivetti lettera 32. La acompañaban unos rollos de tinta y un paquete de folios. En un principio pensé en aquel celador con el que hablé. Pero como se lo había preguntado a más gente podía haber sido cualquiera. Al final opté que tenía que haber sido cosa de todos. No sabía a quién agradecérselo exáctamente  así que hice lo único que podía hacer con aquella máquina. Estaba seguro que el repiqueteo sería recibido como muestra de gratitud. Sigo recordando aquel momento como si fuera ayer. Pasé el resto del día escribiendo. Ni se molestaron en decirme de bajar a comer. Fue uno de los días más felices que recuerdo.
-
-Los lectores habituales de mis relatos suelen ser compañeros de prisión y funcionarios. Cuando considero que un relato está los suficientemente terminado, lo transcribo a limpio y lo llevo a la biblioteca. Se lo entrego al encargado que siempre se lo queda él para leerlo primero. Luego lo sitúa justo en el estante de novedades junto a la entrada. Me gusta verlo allí expuesto aunque nunca lo volvería a releer. Unas irrefrenables ganas de corregirlo o cambiarlo no me permitirían disfrutar de su lectura. Los siguientes días los paso comentando sobre este u otro aspecto de la historia.
-
-Cada vez que me dicen que les ha gustado me siento como una señora orgullosa al escuchar hablar bien de su hijo.
+Tenía un marcado acento murciano. O almeriense. No sabría ni distinguirlo aún hoy día.
