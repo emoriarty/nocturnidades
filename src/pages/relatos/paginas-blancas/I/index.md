@@ -13,7 +13,7 @@ Pronto me di cuenta que esa no era la mejor manera de sobrevivir en la cárcel.
 
 Me violaron a las pocas semanas de entrar. En repetidas ocasiones.
 
-A excepción de los flirteos nocturnos seguía sin mantener contacto con nadie. Mi compañero de celda no es que fuese un maricón empedernido en toda regla pero debía demasiada tensión sexual acumulada. Yo debí ser lo más femenino que la pasó por aquel calabozo.
+A excepción de los flirteos nocturnos seguía sin mantener contacto con nadie. Mi compañero de celda no es que fuese un maricón empedernido en toda regla pero debía tener demasiada tensión sexual acumulada. Yo debí ser lo más femenino que la pasó por aquel calabozo.
 
 Para que veas lo poco que me relacionaba con nadie, no fui capaz ni de denunciar la situación. Ni tan siquiera lo pensé. De algún modo en debía estar creyendo que aquello no estaba pasando.
 
@@ -45,13 +45,13 @@ Cualquier cosa. Sentimientos. Necedades. Lo que veo. Lo que me imagino.
 
 Claro. No es muy diferente de lo otro.
 
-Sin añadir nada más se levantó. Se marchó al igual que había venido.
+Sin añadir nada más se levantó y marchó al igual que había venido.
 
 No volví a verle hasta un par de días más tarde. Entonces fue más directo. Me pidió si podría escribir una carta para él. Era para su madre. Solía venir una vez cada quince días o algo así. Pero hacía unas semanas que ya no la veía. La pobre había sufrido un accidente casero que no le permitía salir de casa. Tampoco tenía teléfono. Así que allí estaba yo. Como caído del cielo. Alguien que sabía escribir.
 
 No creo que quepa señalar que la mayoría de presos comunes eran analfabetos en aquellos años de transición.
 
-En cualquier otro tipo de entorno se vería con desprecio ser analfabeto. No aquí dentro. No con esta gente. Cuanto más cazurro mayor estatus social.
+En cualquier otro tipo de entorno se trataría con desprecio al analfabeto. No aquí dentro. No con esta gente. Cuanto más cazurro mayor estatus social.
 
 Ninguno de aquellos individuos habían ido a la escuela. Cuando lo hacían era para refugiarse de la lluvia o del calor. Al menos eso me contaban orgullosos rememorando batallitas de juventud.
 
@@ -81,13 +81,13 @@ Volví a tomar la carta y me puse a leer allí mismo como me había dicho.
 
 Que hace loco. Aquí delante de estos de estos borregos que no quieren a zu madre ni ze te ocurra. Vamo pal rincón.
 
-Le gustó mucho la carta. Dijo que era muy bonita aunque no la entendía mucho. Estaba seguro que a su madre también le iba a gustar. Y aunque ella supiera que no la había escrito él, lo importante era que su madre viera que no se olvidaba ella. Como agradecimiento a partir de ese instante me puso bajo su protección.
+Le gustó mucho la carta. Dijo que era muy bonita aunque no la entendía del todo. Estaba seguro que a su madre también le iba a gustar. Y aunque ella supiera que no la había escrito él, lo importante era que su madre supiera que no se olvidaba ella. Como agradecimiento a partir de ese instante me puso bajo su protección.
 
 Luego fueron viniendo el resto de compinches. En poco tiempo el resto de presos me pedía ayuda. No había día que no tuviera algo que escribir. Todos me pedían la misma cosa. Cartas para sus familiares. Quién más sabía tan solo era capaz de escribir su nombre y sin apellidos. Así fue como volví a retomar la escritura. Y también me convertí en el escriba oficial del pabellón C.
 
-Había decidido abandonarla del todo poco antes de entrar en prisión. Aunque la cabra tira al monte. También me juré no volver a comer en mi vida ni un solo aguacate. Lo probé una vez y me bastó. No sabía que ese fruto existía. Que yo recuerde no había en los supermercados. Imagino que en aquellos años solo las personas ricas sabían lo que era. La misma noche que lo probé lo aborrecí. Una mala experiencia. Un mal despertar sexual.
-
 Normalmente les pedía algunas pautas sobre qué querían contar. La mayoría no sabía qué decir. Debía sonsacarles la información. Al final me dieron un buen cúmulo de anécdotas y experiencias que me brindaron un buen material para futuros trabajos. Rellené más de una docena de libretas con testimonios de cada uno de los reos. Hoy día no conservo ni una. Todo ardió en un incendio provocado por un motín. Vaya semana pasamos. Y todo porque corrió el rumor que nos servían comida pasada.
+
+Visto el éxito de las cartas me propusieron enseñar a leer y escribir. Me pareció una gran idea y enseguida me puse manos a la obra. Al principio no vino mucha gente. Nadie tenía mucho interés. Ya tenían quién les escribiera y leyera las cartas. Pero un día todo cambió. Angelito llegó a clase con todo su séquito. Prácticamente llenaron la clase. Tras ellos vinieron más.
 
 Las clases las orienté principalmente para que los compañeros de prisión pudieran escribir sus propias cartas. Tenía la esperanza que unos meses después una parte de ellos lo consiguiera. Aún así siguieron acudiendo a mí durante más tiempo del esperado.
 
@@ -99,14 +99,14 @@ En dos meses se va a cumplir el aniversario de mi entrada en prisión. Treinta y
 
 Pude haberme defendido. Habían pruebas que demostraban que no era culpable. Tenía una coartada. Pero me negué esa posibilidad.
 
-Estaba hasta los cojones de mi vida. Bien que podía haberme ido a viajar. Dudo que hubiese cambiado mucho la cosa. No había nada por lo que mereciera la pena esa libertad de postín. Me pareció mucho más atractiva la idea de un techo y comida asegurados. También es cierto que tuve en cuenta la dureza de la cárcel. Aun así no arrepiento. Podrías pensar lo contrario pero para qué engañarte. Estaría mintiéndome a mí mismo. En realidad aquí hay una mayor libertad de espíritu, menos atado a convenciones sociales.
+Estaba hasta los cojones de mi vida. Bien que podía haberme ido a viajar por el mundo. Dudo que hubiese cambiado mucho la cosa. No había nada por lo que mereciera la pena esa libertad de postín. Me pareció mucho más atractiva la idea de un techo y comida asegurados. También es cierto que no tuve en cuenta la dureza de la cárcel. Aun así no arrepiento. Podrías pensar lo contrario pero para qué engañarte. Estaría mintiéndome a mí mismo. En realidad aquí hay una mayor libertad de espíritu, menos atado a convenciones sociales.
 
-Libertad. He tenido mucho tiempo para pensar en en ella durante este retiro. No creo que haya exista una definición absoluta del término. Por lo visto cada cual la interpreta como le viene en gana. ¿Qué hay de libertad en un préstamo hipotecario? De veinte a cuarenta años devolviendo lo prestado. Más intereses. Incluso pudiendo ser hereditaria. Esta idea de crédito es aceptada de manera unánime. Sin embargo no deja de ser un grillete más. ¿Entonces cual es la libertad? ¿La posibilidad de elegir a qué banco someterse? ¿Un crédito más alto? ¿Más bajo? ¿Un mayor salario? ¿Qué ocurre con los impuestos, trabajo, pareja, hijos, educación, coche, perro, gato, iguana? Responsabilidad lo llaman. Esclavitud. Ahí radica lo hipócrita del asunto. ¿Libertad? Vete al campo. No. La libertad no es para todos. Pocos la podrían soportar. Mejor sometido ¡Vivan las caenas!
+Libertad. He tenido mucho tiempo para pensar en en ella durante este retiro. No creo que exista una definición absoluta del término. Por lo visto cada cual la interpreta como le viene en gana. ¿Qué hay de libertad en un préstamo hipotecario? De veinte a cuarenta años devolviendo lo prestado. Más intereses. Incluso pudiendo ser hereditaria. Esta idea de crédito es aceptada de manera unánime. Sin embargo no deja de ser un grillete más. ¿Entonces cual es la libertad? ¿La posibilidad de elegir a qué banco someterse? ¿Un crédito más alto? ¿Más bajo? ¿Un mayor salario? ¿Qué ocurre con los impuestos, trabajo, pareja, hijos, educación, coche, perro, gato, iguana? Responsabilidad lo llaman. Esclavitud. Ahí radica lo hipócrita del asunto. ¿Libertad? Vete al campo. No. La libertad no es para todos. Pocos la podrían soportar. Mejor sometido ¡Vivan las caenas!
 
 Tampoco nos pasemos. Autoritarismo en su justa medida.
 
 Lo cierto es que aquí todas las necesidades básicas quedan cubiertas. Problemas como las cuestas de septiembre o enero me son totalmente ajenas. Entre estas cuatro paredes tengo lo que necesito sin ningún tipo de intercambio económico o relación social.
-Tampoco hay que preocuparse por la comida. Hay un menú variado y equilibrado. No todos piensan lo mismo y aunque la comida no sea exquisita a mi me apaña. Tengo mi propia habitación. No es lo habitual, de hecho durante muchos años estuve compartiendo celda. Aunque de un tiempo a esta parte me han permitido estar solo. También tenemos una biblioteca de lo más completa. Hay clásicos, novelas, educativos, algunas rarezas y hasta novedades. Muchas novedades. Al contrario de lo tradicionalmente se ha creído, la imagen de un preso leyendo «crimen y castigo» en la soledad de su celda es un invento popular. Los reos no son tan ávidos lectores. Que los estantes estén bien repletos se debe los funcionarios de prisiones son unos ávidos lectores. La demanda de libros nuevos se hace en base a sus caprichos.
+Tampoco hay que preocuparse por la comida. Hay un menú variado y equilibrado. No todos piensan lo mismo y aunque la comida no sea exquisita a mi me apaña. Tengo mi propia habitación. No es lo habitual, de hecho durante muchos años estuve compartiendo celda. Aunque de un tiempo a esta parte me han permitido estar solo. También tenemos una biblioteca de lo más completa. Hay clásicos, novelas, educativos, algunas rarezas y hasta novedades. Muchas novedades. Al contrario de lo tradicionalmente se ha creído, la imagen de un preso leyendo «crimen y castigo» en la soledad de su celda es un invento popular. Los reos no son tan ávidos lectores. Que los estantes estén bien repletos se debe a que los funcionarios de prisiones son unos lectores empedernidos. La demanda de libros nuevos se hace en base a sus caprichos.
 
 Una actividad muy común entre los reclusos es hacer deporte. En esto se adscriben al tópico. Se tiran horas en el gimnasio o jugando a futbito. Otros tan solo se pasan el día sentados viendo jugar a los primeros. Como si no tuvieran otra cosa que hacer. Y no será porque no se dediquen recursos a materias formativas. Suelen impartirse talleres de manualidades una vez a la semana. También hay ayudas para estudiar formación profesional. Incluso una carrera universitaria si uno se lo propone. En lo concerniente al ocio, a parte de la lectura, también se proyecta habitualmente alguna que otra película en la capilla. Ya hace tiempo que dejó de usarse para su propósito inicial.
 
@@ -171,6 +171,6 @@ Miró al suelo. Asintió. Se puso en pie. Se fue igual que vino. A cámara lenta
 
 Lloré. Lloré como no estaba escrito. No lo había hecho desde mi entrada en prisión. Tampoco antes. No recuerdo cuándo fue la última vez. Ese día lloré. Por primera y última vez. Me sequé. Lo poco que quedaba de niñez se evaporó.
 
-Día más tarde mi amante apareció muerto en la duchas. Tenía el pene fracturado entre otros signos de tortura. Sufrió mucho. Debió gritar como un cerdo. Me alegré.
+Días más tarde mi amante apareció muerto en la duchas. Tenía el pene fracturado entre otros signos de tortura. Sufrió mucho. Debió gritar como un cerdo. Me alegré.
 
 Sin embargo esa no fue la única muerte en la que me vi involucrado. No en vano estoy en entre rejas por algo.
