@@ -179,6 +179,6 @@ Lloré. Lloré como no estaba escrito. No lo había hecho desde mi entrada en pr
 
 Días más tarde mi amante apareció muerto en la duchas. Tenía el pene fracturado entre otros signos de tortura. Sufrió mucho. Debió gritar como un cerdo. Me alegré.
 
-Al final no se trató de ninguna prueba. El tipo lo pagó caro.
+Al final no se trató de ninguna prueba. El tipo lo pagó bien caro.
 
 Sin embargo esa no fue la única muerte en la que me vi involucrado. No en vano estoy en entre rejas por algún motivo.
